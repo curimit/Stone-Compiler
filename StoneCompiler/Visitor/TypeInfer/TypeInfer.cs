@@ -191,9 +191,17 @@ namespace Stone.Compiler
 
             node.expr.accept(this);
 
+            if (node.expr.type == BaseType.ERROR)
+            {
+                node.symbol.info.type = BaseType.ERROR;
+                return;
+            }
+
             if (!(node.expr.type is ArrayType))
             {
-                Debug.Assert(false);
+                error_handle.push(new NotEnumerableError(node.expr.pos, node.expr.type));
+                node.symbol.info.type = BaseType.ERROR;
+                return;
             }
 
             ArrayType array_type = node.expr.type as ArrayType;

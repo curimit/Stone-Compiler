@@ -640,7 +640,7 @@ namespace Stone.Compiler
 
         public override void visit(ExprNewData node)
         {
-            IL.Emit(OpCodes.Newobj, node.type.get_type());
+            IL.Emit(OpCodes.Newobj, node.type.get_type().GetConstructor(new Type[] { }));
             var fields = node.type.get_type().GetFields();
             for (int i = 0; i < node.args.Count; i++)
             {

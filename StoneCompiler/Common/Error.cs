@@ -130,4 +130,20 @@ namespace Stone.Compiler
             return String.Format("{0}: Element's type in array must be same.", pos);
         }
     }
+
+    class NotEnumerableError : Error
+    {
+        StoneType type;
+
+        public NotEnumerableError(Position pos, StoneType type)
+        {
+            this.pos = pos;
+            this.type = type;
+        }
+
+        public override string ToString()
+        {
+            return String.Format("{0}: {1} doesn't implement IEnumerable.", pos, type);
+        }
+    }
 }

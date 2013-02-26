@@ -111,7 +111,7 @@ public parse
 	;
 
 module_def
-	: NEWLINE* 'module' UIDENT NEWLINE (INDENT module_inner NEWLINE* DEDENT) -> ^(Module_Def UIDENT module_inner)
+	: NEWLINE* 'module' IDENT NEWLINE (INDENT module_inner NEWLINE* DEDENT) -> ^(Module_Def IDENT module_inner)
 	;
 
 module_inner
@@ -129,7 +129,7 @@ block
 
 // data
 data_def
-	: NEWLINE* 'data' UIDENT NEWLINE (INDENT data_def_inner NEWLINE* DEDENT) -> ^(Data_Def UIDENT data_def_inner)
+	: NEWLINE* 'data' IDENT NEWLINE (INDENT data_def_inner NEWLINE* DEDENT) -> ^(Data_Def IDENT data_def_inner)
 	;
 
 data_def_inner
@@ -138,12 +138,12 @@ data_def_inner
 	;
 
 data_def_item
-	: NEWLINE* LIDENT '::' type -> ^(Data_Def_Item LIDENT type)
+	: NEWLINE* IDENT '::' type -> ^(Data_Def_Item IDENT type)
 	;
 
 // class
 class_def
-	: NEWLINE* 'class' UIDENT NEWLINE (INDENT class_def_inner NEWLINE* DEDENT) -> ^(Class_Def UIDENT class_def_inner)
+	: NEWLINE* 'class' IDENT NEWLINE (INDENT class_def_inner NEWLINE* DEDENT) -> ^(Class_Def IDENT class_def_inner)
 	;
 
 class_def_inner
@@ -153,7 +153,7 @@ class_def_inner
 
 // proxy
 proxy_def
-	: NEWLINE* 'proxy' UIDENT ':' UIDENT NEWLINE (INDENT proxy_def_inner NEWLINE* DEDENT) -> ^(Proxy_Def UIDENT UIDENT proxy_def_inner)
+	: NEWLINE* 'proxy' IDENT ':' IDENT NEWLINE (INDENT proxy_def_inner NEWLINE* DEDENT) -> ^(Proxy_Def IDENT IDENT proxy_def_inner)
 	;
 
 proxy_def_inner
@@ -163,11 +163,11 @@ proxy_def_inner
 
 // message
 message_declare
-	: NEWLINE* LIDENT '::' type NEWLINE -> ^(Message_Declare LIDENT type)
+	: NEWLINE* IDENT '::' type NEWLINE -> ^(Message_Declare IDENT type)
 	;
 
 message_def
-	:  message_declare NEWLINE* LIDENT message_def_args NEWLINE stmt_block -> ^(Message_Def LIDENT message_declare message_def_args stmt_block)
+	:  message_declare NEWLINE* IDENT message_def_args NEWLINE stmt_block -> ^(Message_Def IDENT message_declare message_def_args stmt_block)
 	;
 
 message_def_args
@@ -176,11 +176,11 @@ message_def_args
 
 // func
 func_declare
-	: NEWLINE* LIDENT '::' type NEWLINE -> ^(Func_Declare LIDENT type)
+	: NEWLINE* IDENT '::' type NEWLINE -> ^(Func_Declare IDENT type)
 	;
 
 func_def
-	:  func_declare NEWLINE* LIDENT func_def_args NEWLINE stmt_block -> ^(Func_Def LIDENT func_declare func_def_args stmt_block)
+	:  func_declare NEWLINE* IDENT func_def_args NEWLINE stmt_block -> ^(Func_Def IDENT func_declare func_def_args stmt_block)
 	;
 
 func_def_args
@@ -202,7 +202,7 @@ options{
 	;
 
 match_var
-	: LIDENT -> ^(Match_Var LIDENT)
+	: IDENT -> ^(Match_Var IDENT)
 	| '(' match ')' -> match
 	;
 
@@ -230,7 +230,7 @@ options{
 	;
 
 type_atom
-	: UIDENT -> ^(Type_Atom UIDENT)
+	: IDENT -> ^(Type_Atom IDENT)
 	| '(' type ')' -> type
 	;
 
@@ -256,15 +256,15 @@ stmt_return
 	;
 	
 stmt_alloc
-	: '|' LIDENT '|' '=' expr NEWLINE -> ^(Stmt_Alloc LIDENT expr)
+	: '|' IDENT '|' '=' expr NEWLINE -> ^(Stmt_Alloc IDENT expr)
 	;
 
 stmt_assign
-	: LIDENT '=' expr NEWLINE -> ^(Stmt_Assign LIDENT expr)
+	: IDENT '=' expr NEWLINE -> ^(Stmt_Assign IDENT expr)
 	;
 
 stmt_call
-	: LIDENT '(' args_list? ')' NEWLINE -> ^(Stmt_Call LIDENT args_list?)
+	: IDENT '(' args_list? ')' NEWLINE -> ^(Stmt_Call IDENT args_list?)
 	;
 
 stmt_if
@@ -276,7 +276,7 @@ stmt_while
 	;
 
 stmt_for
-	: 'for' '|' LIDENT '|' 'in' expr NEWLINE (INDENT stmt_block NEWLINE* DEDENT) -> ^(Stmt_For LIDENT expr stmt_block)
+	: 'for' '|' IDENT '|' 'in' expr NEWLINE (INDENT stmt_block NEWLINE* DEDENT) -> ^(Stmt_For IDENT expr stmt_block)
 	;
 
 // expr
@@ -316,7 +316,7 @@ options{
 	;
 
 message_item
-	: LIDENT ('(' args_list ')' )? -> ^(Message_Item LIDENT args_list?)
+	: IDENT '(' args_list? ')' -> ^(Message_Item IDENT args_list?)
 	;
 
 args_list
@@ -332,20 +332,20 @@ mul_expr
 	;
 
 call_expr
-	: LIDENT '(' args_list? ')' -> ^(Expr_Call LIDENT args_list?)
+	: IDENT '(' args_list? ')' -> ^(Expr_Call IDENT args_list?)
 	| access_expr
 	;
 
 access_expr
-	: atom_expr (Expr_Access^ LIDENT)*
+	: atom_expr (Expr_Access^ IDENT)*
 	;
 
 atom_expr
-	: LIDENT
+	: IDENT
 	| INT
 	| DOUBLE
 	| NORMAL_STRING
-	| UIDENT '(' args_list ')' -> ^(Expr_New_Data UIDENT args_list)
+	| 'new' IDENT '(' args_list ')' -> ^(Expr_New_Data IDENT args_list)
 	| '(' expr ')' -> expr
 	;
 
@@ -386,8 +386,7 @@ NEWLINE
 }
 ;
 
-LIDENT: (('A'..'Z') ('a'..'z' | 'A'..'Z')* '.')* ('a'..'z') ('a'..'z' | 'A'..'Z')* ('0'..'9')*;
-UIDENT: (('A'..'Z') ('a'..'z' | 'A'..'Z')* '.')* ('A'..'Z') ('a'..'z' | 'A'..'Z')* ('0'..'9')*;
+IDENT: (('a'..'z' | 'A'..'Z')+ ':')* ('a'..'z' | 'A'..'Z')+ ('0'..'9')*;
 
 // string
 NORMAL_STRING

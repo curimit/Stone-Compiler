@@ -42,7 +42,7 @@ namespace Stone.Compiler
                 case StoneParser.Expr_New_Data:
                     return visit_expr_new_data(T);
 
-                case StoneParser.LIDENT:
+                case StoneParser.IDENT:
                     return visit_expr_var(T);
 
                 case StoneParser.INT:

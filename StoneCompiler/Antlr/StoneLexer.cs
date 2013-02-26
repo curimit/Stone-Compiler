@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.4 Stone.g 2013-02-26 11:33:06
+// $ANTLR 3.4 Stone.g 2013-02-26 17:17:35
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -31,6 +31,7 @@ namespace  Stone.Compiler
 public partial class StoneLexer : Antlr.Runtime.Lexer
 {
 	public const int EOF=-1;
+	public const int T__59=59;
 	public const int T__60=60;
 	public const int T__61=61;
 	public const int T__62=62;
@@ -69,9 +70,9 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 	public const int Func_Args=18;
 	public const int Func_Declare=19;
 	public const int Func_Def=20;
-	public const int INDENT=21;
-	public const int INT=22;
-	public const int LIDENT=23;
+	public const int IDENT=21;
+	public const int INDENT=22;
+	public const int INT=23;
 	public const int Lambda_Args=24;
 	public const int Match_Cross=25;
 	public const int Match_Var=26;
@@ -106,8 +107,7 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 	public const int Type_Atom=55;
 	public const int Type_Cross=56;
 	public const int Type_Func=57;
-	public const int UIDENT=58;
-	public const int WS=59;
+	public const int WS=58;
 
 		int CurrentIndent = 0;
 
@@ -547,19 +547,19 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 	}
 	// $ANTLR end "OP_PLUS"
 
-	partial void EnterRule_T__60();
-	partial void LeaveRule_T__60();
+	partial void EnterRule_T__59();
+	partial void LeaveRule_T__59();
 
-	// $ANTLR start "T__60"
-	[GrammarRule("T__60")]
-	private void mT__60()
+	// $ANTLR start "T__59"
+	[GrammarRule("T__59")]
+	private void mT__59()
 	{
-		EnterRule_T__60();
-		EnterRule("T__60", 12);
-		TraceIn("T__60", 12);
+		EnterRule_T__59();
+		EnterRule("T__59", 12);
+		TraceIn("T__59", 12);
 		try
 		{
-			int _type = T__60;
+			int _type = T__59;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:47:7: ( '(' )
 			DebugEnterAlt(1);
@@ -575,26 +575,26 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__60", 12);
-			LeaveRule("T__60", 12);
-			LeaveRule_T__60();
+			TraceOut("T__59", 12);
+			LeaveRule("T__59", 12);
+			LeaveRule_T__59();
 		}
 	}
-	// $ANTLR end "T__60"
+	// $ANTLR end "T__59"
 
-	partial void EnterRule_T__61();
-	partial void LeaveRule_T__61();
+	partial void EnterRule_T__60();
+	partial void LeaveRule_T__60();
 
-	// $ANTLR start "T__61"
-	[GrammarRule("T__61")]
-	private void mT__61()
+	// $ANTLR start "T__60"
+	[GrammarRule("T__60")]
+	private void mT__60()
 	{
-		EnterRule_T__61();
-		EnterRule("T__61", 13);
-		TraceIn("T__61", 13);
+		EnterRule_T__60();
+		EnterRule("T__60", 13);
+		TraceIn("T__60", 13);
 		try
 		{
-			int _type = T__61;
+			int _type = T__60;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:48:7: ( ')' )
 			DebugEnterAlt(1);
@@ -610,26 +610,26 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__61", 13);
-			LeaveRule("T__61", 13);
-			LeaveRule_T__61();
+			TraceOut("T__60", 13);
+			LeaveRule("T__60", 13);
+			LeaveRule_T__60();
 		}
 	}
-	// $ANTLR end "T__61"
+	// $ANTLR end "T__60"
 
-	partial void EnterRule_T__62();
-	partial void LeaveRule_T__62();
+	partial void EnterRule_T__61();
+	partial void LeaveRule_T__61();
 
-	// $ANTLR start "T__62"
-	[GrammarRule("T__62")]
-	private void mT__62()
+	// $ANTLR start "T__61"
+	[GrammarRule("T__61")]
+	private void mT__61()
 	{
-		EnterRule_T__62();
-		EnterRule("T__62", 14);
-		TraceIn("T__62", 14);
+		EnterRule_T__61();
+		EnterRule("T__61", 14);
+		TraceIn("T__61", 14);
 		try
 		{
-			int _type = T__62;
+			int _type = T__61;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:49:7: ( ',' )
 			DebugEnterAlt(1);
@@ -645,26 +645,26 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__62", 14);
-			LeaveRule("T__62", 14);
-			LeaveRule_T__62();
+			TraceOut("T__61", 14);
+			LeaveRule("T__61", 14);
+			LeaveRule_T__61();
 		}
 	}
-	// $ANTLR end "T__62"
+	// $ANTLR end "T__61"
 
-	partial void EnterRule_T__63();
-	partial void LeaveRule_T__63();
+	partial void EnterRule_T__62();
+	partial void LeaveRule_T__62();
 
-	// $ANTLR start "T__63"
-	[GrammarRule("T__63")]
-	private void mT__63()
+	// $ANTLR start "T__62"
+	[GrammarRule("T__62")]
+	private void mT__62()
 	{
-		EnterRule_T__63();
-		EnterRule("T__63", 15);
-		TraceIn("T__63", 15);
+		EnterRule_T__62();
+		EnterRule("T__62", 15);
+		TraceIn("T__62", 15);
 		try
 		{
-			int _type = T__63;
+			int _type = T__62;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:50:7: ( '->' )
 			DebugEnterAlt(1);
@@ -681,26 +681,26 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__63", 15);
-			LeaveRule("T__63", 15);
-			LeaveRule_T__63();
+			TraceOut("T__62", 15);
+			LeaveRule("T__62", 15);
+			LeaveRule_T__62();
 		}
 	}
-	// $ANTLR end "T__63"
+	// $ANTLR end "T__62"
 
-	partial void EnterRule_T__64();
-	partial void LeaveRule_T__64();
+	partial void EnterRule_T__63();
+	partial void LeaveRule_T__63();
 
-	// $ANTLR start "T__64"
-	[GrammarRule("T__64")]
-	private void mT__64()
+	// $ANTLR start "T__63"
+	[GrammarRule("T__63")]
+	private void mT__63()
 	{
-		EnterRule_T__64();
-		EnterRule("T__64", 16);
-		TraceIn("T__64", 16);
+		EnterRule_T__63();
+		EnterRule("T__63", 16);
+		TraceIn("T__63", 16);
 		try
 		{
-			int _type = T__64;
+			int _type = T__63;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:51:7: ( ':' )
 			DebugEnterAlt(1);
@@ -716,26 +716,26 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__64", 16);
-			LeaveRule("T__64", 16);
-			LeaveRule_T__64();
+			TraceOut("T__63", 16);
+			LeaveRule("T__63", 16);
+			LeaveRule_T__63();
 		}
 	}
-	// $ANTLR end "T__64"
+	// $ANTLR end "T__63"
 
-	partial void EnterRule_T__65();
-	partial void LeaveRule_T__65();
+	partial void EnterRule_T__64();
+	partial void LeaveRule_T__64();
 
-	// $ANTLR start "T__65"
-	[GrammarRule("T__65")]
-	private void mT__65()
+	// $ANTLR start "T__64"
+	[GrammarRule("T__64")]
+	private void mT__64()
 	{
-		EnterRule_T__65();
-		EnterRule("T__65", 17);
-		TraceIn("T__65", 17);
+		EnterRule_T__64();
+		EnterRule("T__64", 17);
+		TraceIn("T__64", 17);
 		try
 		{
-			int _type = T__65;
+			int _type = T__64;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:52:7: ( '::' )
 			DebugEnterAlt(1);
@@ -752,26 +752,26 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__65", 17);
-			LeaveRule("T__65", 17);
-			LeaveRule_T__65();
+			TraceOut("T__64", 17);
+			LeaveRule("T__64", 17);
+			LeaveRule_T__64();
 		}
 	}
-	// $ANTLR end "T__65"
+	// $ANTLR end "T__64"
 
-	partial void EnterRule_T__66();
-	partial void LeaveRule_T__66();
+	partial void EnterRule_T__65();
+	partial void LeaveRule_T__65();
 
-	// $ANTLR start "T__66"
-	[GrammarRule("T__66")]
-	private void mT__66()
+	// $ANTLR start "T__65"
+	[GrammarRule("T__65")]
+	private void mT__65()
 	{
-		EnterRule_T__66();
-		EnterRule("T__66", 18);
-		TraceIn("T__66", 18);
+		EnterRule_T__65();
+		EnterRule("T__65", 18);
+		TraceIn("T__65", 18);
 		try
 		{
-			int _type = T__66;
+			int _type = T__65;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:53:7: ( '=' )
 			DebugEnterAlt(1);
@@ -787,26 +787,26 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__66", 18);
-			LeaveRule("T__66", 18);
-			LeaveRule_T__66();
+			TraceOut("T__65", 18);
+			LeaveRule("T__65", 18);
+			LeaveRule_T__65();
 		}
 	}
-	// $ANTLR end "T__66"
+	// $ANTLR end "T__65"
 
-	partial void EnterRule_T__67();
-	partial void LeaveRule_T__67();
+	partial void EnterRule_T__66();
+	partial void LeaveRule_T__66();
 
-	// $ANTLR start "T__67"
-	[GrammarRule("T__67")]
-	private void mT__67()
+	// $ANTLR start "T__66"
+	[GrammarRule("T__66")]
+	private void mT__66()
 	{
-		EnterRule_T__67();
-		EnterRule("T__67", 19);
-		TraceIn("T__67", 19);
+		EnterRule_T__66();
+		EnterRule("T__66", 19);
+		TraceIn("T__66", 19);
 		try
 		{
-			int _type = T__67;
+			int _type = T__66;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:54:7: ( '=>' )
 			DebugEnterAlt(1);
@@ -823,26 +823,26 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__67", 19);
-			LeaveRule("T__67", 19);
-			LeaveRule_T__67();
+			TraceOut("T__66", 19);
+			LeaveRule("T__66", 19);
+			LeaveRule_T__66();
 		}
 	}
-	// $ANTLR end "T__67"
+	// $ANTLR end "T__66"
 
-	partial void EnterRule_T__68();
-	partial void LeaveRule_T__68();
+	partial void EnterRule_T__67();
+	partial void LeaveRule_T__67();
 
-	// $ANTLR start "T__68"
-	[GrammarRule("T__68")]
-	private void mT__68()
+	// $ANTLR start "T__67"
+	[GrammarRule("T__67")]
+	private void mT__67()
 	{
-		EnterRule_T__68();
-		EnterRule("T__68", 20);
-		TraceIn("T__68", 20);
+		EnterRule_T__67();
+		EnterRule("T__67", 20);
+		TraceIn("T__67", 20);
 		try
 		{
-			int _type = T__68;
+			int _type = T__67;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:55:7: ( '[' )
 			DebugEnterAlt(1);
@@ -858,26 +858,26 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__68", 20);
-			LeaveRule("T__68", 20);
-			LeaveRule_T__68();
+			TraceOut("T__67", 20);
+			LeaveRule("T__67", 20);
+			LeaveRule_T__67();
 		}
 	}
-	// $ANTLR end "T__68"
+	// $ANTLR end "T__67"
 
-	partial void EnterRule_T__69();
-	partial void LeaveRule_T__69();
+	partial void EnterRule_T__68();
+	partial void LeaveRule_T__68();
 
-	// $ANTLR start "T__69"
-	[GrammarRule("T__69")]
-	private void mT__69()
+	// $ANTLR start "T__68"
+	[GrammarRule("T__68")]
+	private void mT__68()
 	{
-		EnterRule_T__69();
-		EnterRule("T__69", 21);
-		TraceIn("T__69", 21);
+		EnterRule_T__68();
+		EnterRule("T__68", 21);
+		TraceIn("T__68", 21);
 		try
 		{
-			int _type = T__69;
+			int _type = T__68;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:56:7: ( '\\\\' )
 			DebugEnterAlt(1);
@@ -893,26 +893,26 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__69", 21);
-			LeaveRule("T__69", 21);
-			LeaveRule_T__69();
+			TraceOut("T__68", 21);
+			LeaveRule("T__68", 21);
+			LeaveRule_T__68();
 		}
 	}
-	// $ANTLR end "T__69"
+	// $ANTLR end "T__68"
 
-	partial void EnterRule_T__70();
-	partial void LeaveRule_T__70();
+	partial void EnterRule_T__69();
+	partial void LeaveRule_T__69();
 
-	// $ANTLR start "T__70"
-	[GrammarRule("T__70")]
-	private void mT__70()
+	// $ANTLR start "T__69"
+	[GrammarRule("T__69")]
+	private void mT__69()
 	{
-		EnterRule_T__70();
-		EnterRule("T__70", 22);
-		TraceIn("T__70", 22);
+		EnterRule_T__69();
+		EnterRule("T__69", 22);
+		TraceIn("T__69", 22);
 		try
 		{
-			int _type = T__70;
+			int _type = T__69;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:57:7: ( ']' )
 			DebugEnterAlt(1);
@@ -928,26 +928,26 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__70", 22);
-			LeaveRule("T__70", 22);
-			LeaveRule_T__70();
+			TraceOut("T__69", 22);
+			LeaveRule("T__69", 22);
+			LeaveRule_T__69();
 		}
 	}
-	// $ANTLR end "T__70"
+	// $ANTLR end "T__69"
 
-	partial void EnterRule_T__71();
-	partial void LeaveRule_T__71();
+	partial void EnterRule_T__70();
+	partial void LeaveRule_T__70();
 
-	// $ANTLR start "T__71"
-	[GrammarRule("T__71")]
-	private void mT__71()
+	// $ANTLR start "T__70"
+	[GrammarRule("T__70")]
+	private void mT__70()
 	{
-		EnterRule_T__71();
-		EnterRule("T__71", 23);
-		TraceIn("T__71", 23);
+		EnterRule_T__70();
+		EnterRule("T__70", 23);
+		TraceIn("T__70", 23);
 		try
 		{
-			int _type = T__71;
+			int _type = T__70;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:58:7: ( 'class' )
 			DebugEnterAlt(1);
@@ -964,26 +964,26 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__71", 23);
-			LeaveRule("T__71", 23);
-			LeaveRule_T__71();
+			TraceOut("T__70", 23);
+			LeaveRule("T__70", 23);
+			LeaveRule_T__70();
 		}
 	}
-	// $ANTLR end "T__71"
+	// $ANTLR end "T__70"
 
-	partial void EnterRule_T__72();
-	partial void LeaveRule_T__72();
+	partial void EnterRule_T__71();
+	partial void LeaveRule_T__71();
 
-	// $ANTLR start "T__72"
-	[GrammarRule("T__72")]
-	private void mT__72()
+	// $ANTLR start "T__71"
+	[GrammarRule("T__71")]
+	private void mT__71()
 	{
-		EnterRule_T__72();
-		EnterRule("T__72", 24);
-		TraceIn("T__72", 24);
+		EnterRule_T__71();
+		EnterRule("T__71", 24);
+		TraceIn("T__71", 24);
 		try
 		{
-			int _type = T__72;
+			int _type = T__71;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:59:7: ( 'data' )
 			DebugEnterAlt(1);
@@ -1000,26 +1000,26 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__72", 24);
-			LeaveRule("T__72", 24);
-			LeaveRule_T__72();
+			TraceOut("T__71", 24);
+			LeaveRule("T__71", 24);
+			LeaveRule_T__71();
 		}
 	}
-	// $ANTLR end "T__72"
+	// $ANTLR end "T__71"
 
-	partial void EnterRule_T__73();
-	partial void LeaveRule_T__73();
+	partial void EnterRule_T__72();
+	partial void LeaveRule_T__72();
 
-	// $ANTLR start "T__73"
-	[GrammarRule("T__73")]
-	private void mT__73()
+	// $ANTLR start "T__72"
+	[GrammarRule("T__72")]
+	private void mT__72()
 	{
-		EnterRule_T__73();
-		EnterRule("T__73", 25);
-		TraceIn("T__73", 25);
+		EnterRule_T__72();
+		EnterRule("T__72", 25);
+		TraceIn("T__72", 25);
 		try
 		{
-			int _type = T__73;
+			int _type = T__72;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:60:7: ( 'for' )
 			DebugEnterAlt(1);
@@ -1036,26 +1036,26 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__73", 25);
-			LeaveRule("T__73", 25);
-			LeaveRule_T__73();
+			TraceOut("T__72", 25);
+			LeaveRule("T__72", 25);
+			LeaveRule_T__72();
 		}
 	}
-	// $ANTLR end "T__73"
+	// $ANTLR end "T__72"
 
-	partial void EnterRule_T__74();
-	partial void LeaveRule_T__74();
+	partial void EnterRule_T__73();
+	partial void LeaveRule_T__73();
 
-	// $ANTLR start "T__74"
-	[GrammarRule("T__74")]
-	private void mT__74()
+	// $ANTLR start "T__73"
+	[GrammarRule("T__73")]
+	private void mT__73()
 	{
-		EnterRule_T__74();
-		EnterRule("T__74", 26);
-		TraceIn("T__74", 26);
+		EnterRule_T__73();
+		EnterRule("T__73", 26);
+		TraceIn("T__73", 26);
 		try
 		{
-			int _type = T__74;
+			int _type = T__73;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:61:7: ( 'if' )
 			DebugEnterAlt(1);
@@ -1072,26 +1072,26 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__74", 26);
-			LeaveRule("T__74", 26);
-			LeaveRule_T__74();
+			TraceOut("T__73", 26);
+			LeaveRule("T__73", 26);
+			LeaveRule_T__73();
 		}
 	}
-	// $ANTLR end "T__74"
+	// $ANTLR end "T__73"
 
-	partial void EnterRule_T__75();
-	partial void LeaveRule_T__75();
+	partial void EnterRule_T__74();
+	partial void LeaveRule_T__74();
 
-	// $ANTLR start "T__75"
-	[GrammarRule("T__75")]
-	private void mT__75()
+	// $ANTLR start "T__74"
+	[GrammarRule("T__74")]
+	private void mT__74()
 	{
-		EnterRule_T__75();
-		EnterRule("T__75", 27);
-		TraceIn("T__75", 27);
+		EnterRule_T__74();
+		EnterRule("T__74", 27);
+		TraceIn("T__74", 27);
 		try
 		{
-			int _type = T__75;
+			int _type = T__74;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:62:7: ( 'in' )
 			DebugEnterAlt(1);
@@ -1108,26 +1108,26 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__75", 27);
-			LeaveRule("T__75", 27);
-			LeaveRule_T__75();
+			TraceOut("T__74", 27);
+			LeaveRule("T__74", 27);
+			LeaveRule_T__74();
 		}
 	}
-	// $ANTLR end "T__75"
+	// $ANTLR end "T__74"
 
-	partial void EnterRule_T__76();
-	partial void LeaveRule_T__76();
+	partial void EnterRule_T__75();
+	partial void LeaveRule_T__75();
 
-	// $ANTLR start "T__76"
-	[GrammarRule("T__76")]
-	private void mT__76()
+	// $ANTLR start "T__75"
+	[GrammarRule("T__75")]
+	private void mT__75()
 	{
-		EnterRule_T__76();
-		EnterRule("T__76", 28);
-		TraceIn("T__76", 28);
+		EnterRule_T__75();
+		EnterRule("T__75", 28);
+		TraceIn("T__75", 28);
 		try
 		{
-			int _type = T__76;
+			int _type = T__75;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:63:7: ( 'module' )
 			DebugEnterAlt(1);
@@ -1144,8 +1144,44 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__76", 28);
-			LeaveRule("T__76", 28);
+			TraceOut("T__75", 28);
+			LeaveRule("T__75", 28);
+			LeaveRule_T__75();
+		}
+	}
+	// $ANTLR end "T__75"
+
+	partial void EnterRule_T__76();
+	partial void LeaveRule_T__76();
+
+	// $ANTLR start "T__76"
+	[GrammarRule("T__76")]
+	private void mT__76()
+	{
+		EnterRule_T__76();
+		EnterRule("T__76", 29);
+		TraceIn("T__76", 29);
+		try
+		{
+			int _type = T__76;
+			int _channel = DefaultTokenChannel;
+			// Stone.g:64:7: ( 'new' )
+			DebugEnterAlt(1);
+			// Stone.g:64:9: 'new'
+			{
+			DebugLocation(64, 9);
+			Match("new"); 
+
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("T__76", 29);
+			LeaveRule("T__76", 29);
 			LeaveRule_T__76();
 		}
 	}
@@ -1159,17 +1195,17 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 	private void mT__77()
 	{
 		EnterRule_T__77();
-		EnterRule("T__77", 29);
-		TraceIn("T__77", 29);
+		EnterRule("T__77", 30);
+		TraceIn("T__77", 30);
 		try
 		{
 			int _type = T__77;
 			int _channel = DefaultTokenChannel;
-			// Stone.g:64:7: ( 'proxy' )
+			// Stone.g:65:7: ( 'proxy' )
 			DebugEnterAlt(1);
-			// Stone.g:64:9: 'proxy'
+			// Stone.g:65:9: 'proxy'
 			{
-			DebugLocation(64, 9);
+			DebugLocation(65, 9);
 			Match("proxy"); 
 
 
@@ -1180,8 +1216,8 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__77", 29);
-			LeaveRule("T__77", 29);
+			TraceOut("T__77", 30);
+			LeaveRule("T__77", 30);
 			LeaveRule_T__77();
 		}
 	}
@@ -1195,17 +1231,17 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 	private void mT__78()
 	{
 		EnterRule_T__78();
-		EnterRule("T__78", 30);
-		TraceIn("T__78", 30);
+		EnterRule("T__78", 31);
+		TraceIn("T__78", 31);
 		try
 		{
 			int _type = T__78;
 			int _channel = DefaultTokenChannel;
-			// Stone.g:65:7: ( 'return' )
+			// Stone.g:66:7: ( 'return' )
 			DebugEnterAlt(1);
-			// Stone.g:65:9: 'return'
+			// Stone.g:66:9: 'return'
 			{
-			DebugLocation(65, 9);
+			DebugLocation(66, 9);
 			Match("return"); 
 
 
@@ -1216,8 +1252,8 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__78", 30);
-			LeaveRule("T__78", 30);
+			TraceOut("T__78", 31);
+			LeaveRule("T__78", 31);
 			LeaveRule_T__78();
 		}
 	}
@@ -1231,17 +1267,17 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 	private void mT__79()
 	{
 		EnterRule_T__79();
-		EnterRule("T__79", 31);
-		TraceIn("T__79", 31);
+		EnterRule("T__79", 32);
+		TraceIn("T__79", 32);
 		try
 		{
 			int _type = T__79;
 			int _channel = DefaultTokenChannel;
-			// Stone.g:66:7: ( 'while' )
+			// Stone.g:67:7: ( 'while' )
 			DebugEnterAlt(1);
-			// Stone.g:66:9: 'while'
+			// Stone.g:67:9: 'while'
 			{
-			DebugLocation(66, 9);
+			DebugLocation(67, 9);
 			Match("while"); 
 
 
@@ -1252,8 +1288,8 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__79", 31);
-			LeaveRule("T__79", 31);
+			TraceOut("T__79", 32);
+			LeaveRule("T__79", 32);
 			LeaveRule_T__79();
 		}
 	}
@@ -1267,17 +1303,17 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 	private void mT__80()
 	{
 		EnterRule_T__80();
-		EnterRule("T__80", 32);
-		TraceIn("T__80", 32);
+		EnterRule("T__80", 33);
+		TraceIn("T__80", 33);
 		try
 		{
 			int _type = T__80;
 			int _channel = DefaultTokenChannel;
-			// Stone.g:67:7: ( '|' )
+			// Stone.g:68:7: ( '|' )
 			DebugEnterAlt(1);
-			// Stone.g:67:9: '|'
+			// Stone.g:68:9: '|'
 			{
-			DebugLocation(67, 9);
+			DebugLocation(68, 9);
 			Match('|'); 
 
 			}
@@ -1287,8 +1323,8 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__80", 32);
-			LeaveRule("T__80", 32);
+			TraceOut("T__80", 33);
+			LeaveRule("T__80", 33);
 			LeaveRule_T__80();
 		}
 	}
@@ -1302,8 +1338,8 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 	private void mNEWLINE()
 	{
 		EnterRule_NEWLINE();
-		EnterRule("NEWLINE", 33);
-		TraceIn("NEWLINE", 33);
+		EnterRule("NEWLINE", 34);
+		TraceIn("NEWLINE", 34);
 		try
 		{
 			int _type = NEWLINE;
@@ -1436,58 +1472,57 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("NEWLINE", 33);
-			LeaveRule("NEWLINE", 33);
+			TraceOut("NEWLINE", 34);
+			LeaveRule("NEWLINE", 34);
 			LeaveRule_NEWLINE();
 		}
 	}
 	// $ANTLR end "NEWLINE"
 
-	partial void EnterRule_LIDENT();
-	partial void LeaveRule_LIDENT();
+	partial void EnterRule_IDENT();
+	partial void LeaveRule_IDENT();
 
-	// $ANTLR start "LIDENT"
-	[GrammarRule("LIDENT")]
-	private void mLIDENT()
+	// $ANTLR start "IDENT"
+	[GrammarRule("IDENT")]
+	private void mIDENT()
 	{
-		EnterRule_LIDENT();
-		EnterRule("LIDENT", 34);
-		TraceIn("LIDENT", 34);
+		EnterRule_IDENT();
+		EnterRule("IDENT", 35);
+		TraceIn("IDENT", 35);
 		try
 		{
-			int _type = LIDENT;
+			int _type = IDENT;
 			int _channel = DefaultTokenChannel;
-			// Stone.g:389:7: ( ( ( 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' )* '.' )* ( 'a' .. 'z' ) ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )* )
+			// Stone.g:389:6: ( ( ( 'a' .. 'z' | 'A' .. 'Z' )+ ':' )* ( 'a' .. 'z' | 'A' .. 'Z' )+ ( '0' .. '9' )* )
 			DebugEnterAlt(1);
-			// Stone.g:389:9: ( ( 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' )* '.' )* ( 'a' .. 'z' ) ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )*
+			// Stone.g:389:8: ( ( 'a' .. 'z' | 'A' .. 'Z' )+ ':' )* ( 'a' .. 'z' | 'A' .. 'Z' )+ ( '0' .. '9' )*
 			{
-			DebugLocation(389, 9);
-			// Stone.g:389:9: ( ( 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' )* '.' )*
+			DebugLocation(389, 8);
+			// Stone.g:389:8: ( ( 'a' .. 'z' | 'A' .. 'Z' )+ ':' )*
 			try { DebugEnterSubRule(4);
 			while (true)
 			{
 				int alt4=2;
 				try { DebugEnterDecision(4, false);
-				int LA4_0 = input.LA(1);
-
-				if (((LA4_0>='A' && LA4_0<='Z')))
+				try
 				{
-					alt4 = 1;
+					alt4 = dfa4.Predict(input);
 				}
-
-
+				catch (NoViableAltException nvae)
+				{
+					DebugRecognitionException(nvae);
+					throw;
+				}
 				} finally { DebugExitDecision(4); }
 				switch ( alt4 )
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Stone.g:389:10: ( 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' )* '.'
+					// Stone.g:389:9: ( 'a' .. 'z' | 'A' .. 'Z' )+ ':'
 					{
-					DebugLocation(389, 10);
-					input.Consume();
-
-					DebugLocation(389, 21);
-					// Stone.g:389:21: ( 'a' .. 'z' | 'A' .. 'Z' )*
+					DebugLocation(389, 9);
+					// Stone.g:389:9: ( 'a' .. 'z' | 'A' .. 'Z' )+
+					int cnt3=0;
 					try { DebugEnterSubRule(3);
 					while (true)
 					{
@@ -1502,13 +1537,13 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 
 
 						} finally { DebugExitDecision(3); }
-						switch ( alt3 )
+						switch (alt3)
 						{
 						case 1:
 							DebugEnterAlt(1);
 							// Stone.g:
 							{
-							DebugLocation(389, 21);
+							DebugLocation(389, 9);
 							input.Consume();
 
 
@@ -1516,17 +1551,22 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 							break;
 
 						default:
-							goto loop3;
-						}
-					}
+							if (cnt3 >= 1)
+								goto loop3;
 
+							EarlyExitException eee3 = new EarlyExitException( 3, input );
+							DebugRecognitionException(eee3);
+							throw eee3;
+						}
+						cnt3++;
+					}
 					loop3:
 						;
 
 					} finally { DebugExitSubRule(3); }
 
-					DebugLocation(389, 44);
-					Match('.'); 
+					DebugLocation(389, 32);
+					Match(':'); 
 
 					}
 					break;
@@ -1541,21 +1581,9 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 
 			} finally { DebugExitSubRule(4); }
 
-			DebugLocation(389, 50);
-			if ((input.LA(1)>='a' && input.LA(1)<='z'))
-			{
-				input.Consume();
-			}
-			else
-			{
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(389, 61);
-			// Stone.g:389:61: ( 'a' .. 'z' | 'A' .. 'Z' )*
+			DebugLocation(389, 38);
+			// Stone.g:389:38: ( 'a' .. 'z' | 'A' .. 'Z' )+
+			int cnt5=0;
 			try { DebugEnterSubRule(5);
 			while (true)
 			{
@@ -1570,13 +1598,13 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 
 
 				} finally { DebugExitDecision(5); }
-				switch ( alt5 )
+				switch (alt5)
 				{
 				case 1:
 					DebugEnterAlt(1);
 					// Stone.g:
 					{
-					DebugLocation(389, 61);
+					DebugLocation(389, 38);
 					input.Consume();
 
 
@@ -1584,17 +1612,22 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 					break;
 
 				default:
-					goto loop5;
-				}
-			}
+					if (cnt5 >= 1)
+						goto loop5;
 
+					EarlyExitException eee5 = new EarlyExitException( 5, input );
+					DebugRecognitionException(eee5);
+					throw eee5;
+				}
+				cnt5++;
+			}
 			loop5:
 				;
 
 			} finally { DebugExitSubRule(5); }
 
-			DebugLocation(389, 84);
-			// Stone.g:389:84: ( '0' .. '9' )*
+			DebugLocation(389, 61);
+			// Stone.g:389:61: ( '0' .. '9' )*
 			try { DebugEnterSubRule(6);
 			while (true)
 			{
@@ -1615,7 +1648,7 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// Stone.g:
 					{
-					DebugLocation(389, 84);
+					DebugLocation(389, 61);
 					input.Consume();
 
 
@@ -1640,217 +1673,12 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("LIDENT", 34);
-			LeaveRule("LIDENT", 34);
-			LeaveRule_LIDENT();
+			TraceOut("IDENT", 35);
+			LeaveRule("IDENT", 35);
+			LeaveRule_IDENT();
 		}
 	}
-	// $ANTLR end "LIDENT"
-
-	partial void EnterRule_UIDENT();
-	partial void LeaveRule_UIDENT();
-
-	// $ANTLR start "UIDENT"
-	[GrammarRule("UIDENT")]
-	private void mUIDENT()
-	{
-		EnterRule_UIDENT();
-		EnterRule("UIDENT", 35);
-		TraceIn("UIDENT", 35);
-		try
-		{
-			int _type = UIDENT;
-			int _channel = DefaultTokenChannel;
-			// Stone.g:390:7: ( ( ( 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' )* '.' )* ( 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )* )
-			DebugEnterAlt(1);
-			// Stone.g:390:9: ( ( 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' )* '.' )* ( 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )*
-			{
-			DebugLocation(390, 9);
-			// Stone.g:390:9: ( ( 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' )* '.' )*
-			try { DebugEnterSubRule(8);
-			while (true)
-			{
-				int alt8=2;
-				try { DebugEnterDecision(8, false);
-				try
-				{
-					alt8 = dfa8.Predict(input);
-				}
-				catch (NoViableAltException nvae)
-				{
-					DebugRecognitionException(nvae);
-					throw;
-				}
-				} finally { DebugExitDecision(8); }
-				switch ( alt8 )
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// Stone.g:390:10: ( 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' )* '.'
-					{
-					DebugLocation(390, 10);
-					input.Consume();
-
-					DebugLocation(390, 21);
-					// Stone.g:390:21: ( 'a' .. 'z' | 'A' .. 'Z' )*
-					try { DebugEnterSubRule(7);
-					while (true)
-					{
-						int alt7=2;
-						try { DebugEnterDecision(7, false);
-						int LA7_0 = input.LA(1);
-
-						if (((LA7_0>='A' && LA7_0<='Z')||(LA7_0>='a' && LA7_0<='z')))
-						{
-							alt7 = 1;
-						}
-
-
-						} finally { DebugExitDecision(7); }
-						switch ( alt7 )
-						{
-						case 1:
-							DebugEnterAlt(1);
-							// Stone.g:
-							{
-							DebugLocation(390, 21);
-							input.Consume();
-
-
-							}
-							break;
-
-						default:
-							goto loop7;
-						}
-					}
-
-					loop7:
-						;
-
-					} finally { DebugExitSubRule(7); }
-
-					DebugLocation(390, 44);
-					Match('.'); 
-
-					}
-					break;
-
-				default:
-					goto loop8;
-				}
-			}
-
-			loop8:
-				;
-
-			} finally { DebugExitSubRule(8); }
-
-			DebugLocation(390, 50);
-			if ((input.LA(1)>='A' && input.LA(1)<='Z'))
-			{
-				input.Consume();
-			}
-			else
-			{
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(390, 61);
-			// Stone.g:390:61: ( 'a' .. 'z' | 'A' .. 'Z' )*
-			try { DebugEnterSubRule(9);
-			while (true)
-			{
-				int alt9=2;
-				try { DebugEnterDecision(9, false);
-				int LA9_0 = input.LA(1);
-
-				if (((LA9_0>='A' && LA9_0<='Z')||(LA9_0>='a' && LA9_0<='z')))
-				{
-					alt9 = 1;
-				}
-
-
-				} finally { DebugExitDecision(9); }
-				switch ( alt9 )
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// Stone.g:
-					{
-					DebugLocation(390, 61);
-					input.Consume();
-
-
-					}
-					break;
-
-				default:
-					goto loop9;
-				}
-			}
-
-			loop9:
-				;
-
-			} finally { DebugExitSubRule(9); }
-
-			DebugLocation(390, 84);
-			// Stone.g:390:84: ( '0' .. '9' )*
-			try { DebugEnterSubRule(10);
-			while (true)
-			{
-				int alt10=2;
-				try { DebugEnterDecision(10, false);
-				int LA10_0 = input.LA(1);
-
-				if (((LA10_0>='0' && LA10_0<='9')))
-				{
-					alt10 = 1;
-				}
-
-
-				} finally { DebugExitDecision(10); }
-				switch ( alt10 )
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// Stone.g:
-					{
-					DebugLocation(390, 84);
-					input.Consume();
-
-
-					}
-					break;
-
-				default:
-					goto loop10;
-				}
-			}
-
-			loop10:
-				;
-
-			} finally { DebugExitSubRule(10); }
-
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally
-		{
-			TraceOut("UIDENT", 35);
-			LeaveRule("UIDENT", 35);
-			LeaveRule_UIDENT();
-		}
-	}
-	// $ANTLR end "UIDENT"
+	// $ANTLR end "IDENT"
 
 	partial void EnterRule_NORMAL_STRING();
 	partial void LeaveRule_NORMAL_STRING();
@@ -1866,57 +1694,57 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		{
 			int _type = NORMAL_STRING;
 			int _channel = DefaultTokenChannel;
-			// Stone.g:394:2: ( '\"' (~ '\"' )* '\"' | '\\'' (~ '\\'' )* '\\'' )
-			int alt13=2;
-			try { DebugEnterDecision(13, false);
-			int LA13_0 = input.LA(1);
+			// Stone.g:393:2: ( '\"' (~ '\"' )* '\"' | '\\'' (~ '\\'' )* '\\'' )
+			int alt9=2;
+			try { DebugEnterDecision(9, false);
+			int LA9_0 = input.LA(1);
 
-			if ((LA13_0=='\"'))
+			if ((LA9_0=='\"'))
 			{
-				alt13 = 1;
+				alt9 = 1;
 			}
-			else if ((LA13_0=='\''))
+			else if ((LA9_0=='\''))
 			{
-				alt13 = 2;
+				alt9 = 2;
 			}
 			else
 			{
-				NoViableAltException nvae = new NoViableAltException("", 13, 0, input);
+				NoViableAltException nvae = new NoViableAltException("", 9, 0, input);
 				DebugRecognitionException(nvae);
 				throw nvae;
 			}
-			} finally { DebugExitDecision(13); }
-			switch (alt13)
+			} finally { DebugExitDecision(9); }
+			switch (alt9)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// Stone.g:394:4: '\"' (~ '\"' )* '\"'
+				// Stone.g:393:4: '\"' (~ '\"' )* '\"'
 				{
-				DebugLocation(394, 4);
+				DebugLocation(393, 4);
 				Match('\"'); 
-				DebugLocation(394, 8);
-				// Stone.g:394:8: (~ '\"' )*
-				try { DebugEnterSubRule(11);
+				DebugLocation(393, 8);
+				// Stone.g:393:8: (~ '\"' )*
+				try { DebugEnterSubRule(7);
 				while (true)
 				{
-					int alt11=2;
-					try { DebugEnterDecision(11, false);
-					int LA11_0 = input.LA(1);
+					int alt7=2;
+					try { DebugEnterDecision(7, false);
+					int LA7_0 = input.LA(1);
 
-					if (((LA11_0>='\u0000' && LA11_0<='!')||(LA11_0>='#' && LA11_0<='\uFFFF')))
+					if (((LA7_0>='\u0000' && LA7_0<='!')||(LA7_0>='#' && LA7_0<='\uFFFF')))
 					{
-						alt11 = 1;
+						alt7 = 1;
 					}
 
 
-					} finally { DebugExitDecision(11); }
-					switch ( alt11 )
+					} finally { DebugExitDecision(7); }
+					switch ( alt7 )
 					{
 					case 1:
 						DebugEnterAlt(1);
 						// Stone.g:
 						{
-						DebugLocation(394, 8);
+						DebugLocation(393, 8);
 						input.Consume();
 
 
@@ -1924,49 +1752,49 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 						break;
 
 					default:
-						goto loop11;
+						goto loop7;
 					}
 				}
 
-				loop11:
+				loop7:
 					;
 
-				} finally { DebugExitSubRule(11); }
+				} finally { DebugExitSubRule(7); }
 
-				DebugLocation(394, 16);
+				DebugLocation(393, 16);
 				Match('\"'); 
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// Stone.g:395:4: '\\'' (~ '\\'' )* '\\''
+				// Stone.g:394:4: '\\'' (~ '\\'' )* '\\''
 				{
-				DebugLocation(395, 4);
+				DebugLocation(394, 4);
 				Match('\''); 
-				DebugLocation(395, 9);
-				// Stone.g:395:9: (~ '\\'' )*
-				try { DebugEnterSubRule(12);
+				DebugLocation(394, 9);
+				// Stone.g:394:9: (~ '\\'' )*
+				try { DebugEnterSubRule(8);
 				while (true)
 				{
-					int alt12=2;
-					try { DebugEnterDecision(12, false);
-					int LA12_0 = input.LA(1);
+					int alt8=2;
+					try { DebugEnterDecision(8, false);
+					int LA8_0 = input.LA(1);
 
-					if (((LA12_0>='\u0000' && LA12_0<='&')||(LA12_0>='(' && LA12_0<='\uFFFF')))
+					if (((LA8_0>='\u0000' && LA8_0<='&')||(LA8_0>='(' && LA8_0<='\uFFFF')))
 					{
-						alt12 = 1;
+						alt8 = 1;
 					}
 
 
-					} finally { DebugExitDecision(12); }
-					switch ( alt12 )
+					} finally { DebugExitDecision(8); }
+					switch ( alt8 )
 					{
 					case 1:
 						DebugEnterAlt(1);
 						// Stone.g:
 						{
-						DebugLocation(395, 9);
+						DebugLocation(394, 9);
 						input.Consume();
 
 
@@ -1974,16 +1802,16 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 						break;
 
 					default:
-						goto loop12;
+						goto loop8;
 					}
 				}
 
-				loop12:
+				loop8:
 					;
 
-				} finally { DebugExitSubRule(12); }
+				} finally { DebugExitSubRule(8); }
 
-				DebugLocation(395, 18);
+				DebugLocation(394, 18);
 				Match('\''); 
 
 				}
@@ -2016,34 +1844,34 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		{
 			int _type = INT;
 			int _channel = DefaultTokenChannel;
-			// Stone.g:399:7: ( ( '0' .. '9' )+ )
+			// Stone.g:398:7: ( ( '0' .. '9' )+ )
 			DebugEnterAlt(1);
-			// Stone.g:399:9: ( '0' .. '9' )+
+			// Stone.g:398:9: ( '0' .. '9' )+
 			{
-			DebugLocation(399, 9);
-			// Stone.g:399:9: ( '0' .. '9' )+
-			int cnt14=0;
-			try { DebugEnterSubRule(14);
+			DebugLocation(398, 9);
+			// Stone.g:398:9: ( '0' .. '9' )+
+			int cnt10=0;
+			try { DebugEnterSubRule(10);
 			while (true)
 			{
-				int alt14=2;
-				try { DebugEnterDecision(14, false);
-				int LA14_0 = input.LA(1);
+				int alt10=2;
+				try { DebugEnterDecision(10, false);
+				int LA10_0 = input.LA(1);
 
-				if (((LA14_0>='0' && LA14_0<='9')))
+				if (((LA10_0>='0' && LA10_0<='9')))
 				{
-					alt14 = 1;
+					alt10 = 1;
 				}
 
 
-				} finally { DebugExitDecision(14); }
-				switch (alt14)
+				} finally { DebugExitDecision(10); }
+				switch (alt10)
 				{
 				case 1:
 					DebugEnterAlt(1);
 					// Stone.g:
 					{
-					DebugLocation(399, 9);
+					DebugLocation(398, 9);
 					input.Consume();
 
 
@@ -2051,19 +1879,19 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 					break;
 
 				default:
-					if (cnt14 >= 1)
-						goto loop14;
+					if (cnt10 >= 1)
+						goto loop10;
 
-					EarlyExitException eee14 = new EarlyExitException( 14, input );
-					DebugRecognitionException(eee14);
-					throw eee14;
+					EarlyExitException eee10 = new EarlyExitException( 10, input );
+					DebugRecognitionException(eee10);
+					throw eee10;
 				}
-				cnt14++;
+				cnt10++;
 			}
-			loop14:
+			loop10:
 				;
 
-			} finally { DebugExitSubRule(14); }
+			} finally { DebugExitSubRule(10); }
 
 
 			}
@@ -2094,49 +1922,49 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		{
 			int _type = DOUBLE;
 			int _channel = DefaultTokenChannel;
-			// Stone.g:403:5: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT )
-			int alt21=3;
-			try { DebugEnterDecision(21, false);
+			// Stone.g:402:5: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT )
+			int alt17=3;
+			try { DebugEnterDecision(17, false);
 			try
 			{
-				alt21 = dfa21.Predict(input);
+				alt17 = dfa17.Predict(input);
 			}
 			catch (NoViableAltException nvae)
 			{
 				DebugRecognitionException(nvae);
 				throw;
 			}
-			} finally { DebugExitDecision(21); }
-			switch (alt21)
+			} finally { DebugExitDecision(17); }
+			switch (alt17)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// Stone.g:403:7: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )?
+				// Stone.g:402:7: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )?
 				{
-				DebugLocation(403, 7);
-				// Stone.g:403:7: ( '0' .. '9' )+
-				int cnt15=0;
-				try { DebugEnterSubRule(15);
+				DebugLocation(402, 7);
+				// Stone.g:402:7: ( '0' .. '9' )+
+				int cnt11=0;
+				try { DebugEnterSubRule(11);
 				while (true)
 				{
-					int alt15=2;
-					try { DebugEnterDecision(15, false);
-					int LA15_0 = input.LA(1);
+					int alt11=2;
+					try { DebugEnterDecision(11, false);
+					int LA11_0 = input.LA(1);
 
-					if (((LA15_0>='0' && LA15_0<='9')))
+					if (((LA11_0>='0' && LA11_0<='9')))
 					{
-						alt15 = 1;
+						alt11 = 1;
 					}
 
 
-					} finally { DebugExitDecision(15); }
-					switch (alt15)
+					} finally { DebugExitDecision(11); }
+					switch (alt11)
 					{
 					case 1:
 						DebugEnterAlt(1);
 						// Stone.g:
 						{
-						DebugLocation(403, 7);
+						DebugLocation(402, 7);
 						input.Consume();
 
 
@@ -2144,24 +1972,179 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 						break;
 
 					default:
-						if (cnt15 >= 1)
-							goto loop15;
+						if (cnt11 >= 1)
+							goto loop11;
 
-						EarlyExitException eee15 = new EarlyExitException( 15, input );
-						DebugRecognitionException(eee15);
-						throw eee15;
+						EarlyExitException eee11 = new EarlyExitException( 11, input );
+						DebugRecognitionException(eee11);
+						throw eee11;
 					}
-					cnt15++;
+					cnt11++;
 				}
-				loop15:
+				loop11:
 					;
 
+				} finally { DebugExitSubRule(11); }
+
+				DebugLocation(402, 19);
+				Match('.'); 
+				DebugLocation(402, 23);
+				// Stone.g:402:23: ( '0' .. '9' )*
+				try { DebugEnterSubRule(12);
+				while (true)
+				{
+					int alt12=2;
+					try { DebugEnterDecision(12, false);
+					int LA12_0 = input.LA(1);
+
+					if (((LA12_0>='0' && LA12_0<='9')))
+					{
+						alt12 = 1;
+					}
+
+
+					} finally { DebugExitDecision(12); }
+					switch ( alt12 )
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// Stone.g:
+						{
+						DebugLocation(402, 23);
+						input.Consume();
+
+
+						}
+						break;
+
+					default:
+						goto loop12;
+					}
+				}
+
+				loop12:
+					;
+
+				} finally { DebugExitSubRule(12); }
+
+				DebugLocation(402, 35);
+				// Stone.g:402:35: ( EXPONENT )?
+				int alt13=2;
+				try { DebugEnterSubRule(13);
+				try { DebugEnterDecision(13, false);
+				int LA13_0 = input.LA(1);
+
+				if ((LA13_0=='E'||LA13_0=='e'))
+				{
+					alt13 = 1;
+				}
+				} finally { DebugExitDecision(13); }
+				switch (alt13)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// Stone.g:402:35: EXPONENT
+					{
+					DebugLocation(402, 35);
+					mEXPONENT(); 
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(13); }
+
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// Stone.g:403:7: '.' ( '0' .. '9' )+ ( EXPONENT )?
+				{
+				DebugLocation(403, 7);
+				Match('.'); 
+				DebugLocation(403, 11);
+				// Stone.g:403:11: ( '0' .. '9' )+
+				int cnt14=0;
+				try { DebugEnterSubRule(14);
+				while (true)
+				{
+					int alt14=2;
+					try { DebugEnterDecision(14, false);
+					int LA14_0 = input.LA(1);
+
+					if (((LA14_0>='0' && LA14_0<='9')))
+					{
+						alt14 = 1;
+					}
+
+
+					} finally { DebugExitDecision(14); }
+					switch (alt14)
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// Stone.g:
+						{
+						DebugLocation(403, 11);
+						input.Consume();
+
+
+						}
+						break;
+
+					default:
+						if (cnt14 >= 1)
+							goto loop14;
+
+						EarlyExitException eee14 = new EarlyExitException( 14, input );
+						DebugRecognitionException(eee14);
+						throw eee14;
+					}
+					cnt14++;
+				}
+				loop14:
+					;
+
+				} finally { DebugExitSubRule(14); }
+
+				DebugLocation(403, 23);
+				// Stone.g:403:23: ( EXPONENT )?
+				int alt15=2;
+				try { DebugEnterSubRule(15);
+				try { DebugEnterDecision(15, false);
+				int LA15_0 = input.LA(1);
+
+				if ((LA15_0=='E'||LA15_0=='e'))
+				{
+					alt15 = 1;
+				}
+				} finally { DebugExitDecision(15); }
+				switch (alt15)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// Stone.g:403:23: EXPONENT
+					{
+					DebugLocation(403, 23);
+					mEXPONENT(); 
+
+					}
+					break;
+
+				}
 				} finally { DebugExitSubRule(15); }
 
-				DebugLocation(403, 19);
-				Match('.'); 
-				DebugLocation(403, 23);
-				// Stone.g:403:23: ( '0' .. '9' )*
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// Stone.g:404:7: ( '0' .. '9' )+ EXPONENT
+				{
+				DebugLocation(404, 7);
+				// Stone.g:404:7: ( '0' .. '9' )+
+				int cnt16=0;
 				try { DebugEnterSubRule(16);
 				while (true)
 				{
@@ -2176,13 +2159,13 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 
 
 					} finally { DebugExitDecision(16); }
-					switch ( alt16 )
+					switch (alt16)
 					{
 					case 1:
 						DebugEnterAlt(1);
 						// Stone.g:
 						{
-						DebugLocation(403, 23);
+						DebugLocation(404, 7);
 						input.Consume();
 
 
@@ -2190,176 +2173,21 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 						break;
 
 					default:
-						goto loop16;
-					}
-				}
+						if (cnt16 >= 1)
+							goto loop16;
 
+						EarlyExitException eee16 = new EarlyExitException( 16, input );
+						DebugRecognitionException(eee16);
+						throw eee16;
+					}
+					cnt16++;
+				}
 				loop16:
 					;
 
 				} finally { DebugExitSubRule(16); }
 
-				DebugLocation(403, 35);
-				// Stone.g:403:35: ( EXPONENT )?
-				int alt17=2;
-				try { DebugEnterSubRule(17);
-				try { DebugEnterDecision(17, false);
-				int LA17_0 = input.LA(1);
-
-				if ((LA17_0=='E'||LA17_0=='e'))
-				{
-					alt17 = 1;
-				}
-				} finally { DebugExitDecision(17); }
-				switch (alt17)
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// Stone.g:403:35: EXPONENT
-					{
-					DebugLocation(403, 35);
-					mEXPONENT(); 
-
-					}
-					break;
-
-				}
-				} finally { DebugExitSubRule(17); }
-
-
-				}
-				break;
-			case 2:
-				DebugEnterAlt(2);
-				// Stone.g:404:7: '.' ( '0' .. '9' )+ ( EXPONENT )?
-				{
-				DebugLocation(404, 7);
-				Match('.'); 
-				DebugLocation(404, 11);
-				// Stone.g:404:11: ( '0' .. '9' )+
-				int cnt18=0;
-				try { DebugEnterSubRule(18);
-				while (true)
-				{
-					int alt18=2;
-					try { DebugEnterDecision(18, false);
-					int LA18_0 = input.LA(1);
-
-					if (((LA18_0>='0' && LA18_0<='9')))
-					{
-						alt18 = 1;
-					}
-
-
-					} finally { DebugExitDecision(18); }
-					switch (alt18)
-					{
-					case 1:
-						DebugEnterAlt(1);
-						// Stone.g:
-						{
-						DebugLocation(404, 11);
-						input.Consume();
-
-
-						}
-						break;
-
-					default:
-						if (cnt18 >= 1)
-							goto loop18;
-
-						EarlyExitException eee18 = new EarlyExitException( 18, input );
-						DebugRecognitionException(eee18);
-						throw eee18;
-					}
-					cnt18++;
-				}
-				loop18:
-					;
-
-				} finally { DebugExitSubRule(18); }
-
-				DebugLocation(404, 23);
-				// Stone.g:404:23: ( EXPONENT )?
-				int alt19=2;
-				try { DebugEnterSubRule(19);
-				try { DebugEnterDecision(19, false);
-				int LA19_0 = input.LA(1);
-
-				if ((LA19_0=='E'||LA19_0=='e'))
-				{
-					alt19 = 1;
-				}
-				} finally { DebugExitDecision(19); }
-				switch (alt19)
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// Stone.g:404:23: EXPONENT
-					{
-					DebugLocation(404, 23);
-					mEXPONENT(); 
-
-					}
-					break;
-
-				}
-				} finally { DebugExitSubRule(19); }
-
-
-				}
-				break;
-			case 3:
-				DebugEnterAlt(3);
-				// Stone.g:405:7: ( '0' .. '9' )+ EXPONENT
-				{
-				DebugLocation(405, 7);
-				// Stone.g:405:7: ( '0' .. '9' )+
-				int cnt20=0;
-				try { DebugEnterSubRule(20);
-				while (true)
-				{
-					int alt20=2;
-					try { DebugEnterDecision(20, false);
-					int LA20_0 = input.LA(1);
-
-					if (((LA20_0>='0' && LA20_0<='9')))
-					{
-						alt20 = 1;
-					}
-
-
-					} finally { DebugExitDecision(20); }
-					switch (alt20)
-					{
-					case 1:
-						DebugEnterAlt(1);
-						// Stone.g:
-						{
-						DebugLocation(405, 7);
-						input.Consume();
-
-
-						}
-						break;
-
-					default:
-						if (cnt20 >= 1)
-							goto loop20;
-
-						EarlyExitException eee20 = new EarlyExitException( 20, input );
-						DebugRecognitionException(eee20);
-						throw eee20;
-					}
-					cnt20++;
-				}
-				loop20:
-					;
-
-				} finally { DebugExitSubRule(20); }
-
-				DebugLocation(405, 19);
+				DebugLocation(404, 19);
 				mEXPONENT(); 
 
 				}
@@ -2390,11 +2218,11 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		TraceIn("EXPONENT", 39);
 		try
 		{
-			// Stone.g:411:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
+			// Stone.g:410:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
 			DebugEnterAlt(1);
-			// Stone.g:412:5: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
+			// Stone.g:411:5: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
 			{
-			DebugLocation(412, 5);
+			DebugLocation(411, 5);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -2407,25 +2235,25 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(412, 15);
-			// Stone.g:412:15: ( '+' | '-' )?
-			int alt22=2;
-			try { DebugEnterSubRule(22);
-			try { DebugEnterDecision(22, false);
-			int LA22_0 = input.LA(1);
+			DebugLocation(411, 15);
+			// Stone.g:411:15: ( '+' | '-' )?
+			int alt18=2;
+			try { DebugEnterSubRule(18);
+			try { DebugEnterDecision(18, false);
+			int LA18_0 = input.LA(1);
 
-			if ((LA22_0=='+'||LA22_0=='-'))
+			if ((LA18_0=='+'||LA18_0=='-'))
 			{
-				alt22 = 1;
+				alt18 = 1;
 			}
-			} finally { DebugExitDecision(22); }
-			switch (alt22)
+			} finally { DebugExitDecision(18); }
+			switch (alt18)
 			{
 			case 1:
 				DebugEnterAlt(1);
 				// Stone.g:
 				{
-				DebugLocation(412, 15);
+				DebugLocation(411, 15);
 				input.Consume();
 
 
@@ -2433,32 +2261,32 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 				break;
 
 			}
-			} finally { DebugExitSubRule(22); }
+			} finally { DebugExitSubRule(18); }
 
-			DebugLocation(412, 26);
-			// Stone.g:412:26: ( '0' .. '9' )+
-			int cnt23=0;
-			try { DebugEnterSubRule(23);
+			DebugLocation(411, 26);
+			// Stone.g:411:26: ( '0' .. '9' )+
+			int cnt19=0;
+			try { DebugEnterSubRule(19);
 			while (true)
 			{
-				int alt23=2;
-				try { DebugEnterDecision(23, false);
-				int LA23_0 = input.LA(1);
+				int alt19=2;
+				try { DebugEnterDecision(19, false);
+				int LA19_0 = input.LA(1);
 
-				if (((LA23_0>='0' && LA23_0<='9')))
+				if (((LA19_0>='0' && LA19_0<='9')))
 				{
-					alt23 = 1;
+					alt19 = 1;
 				}
 
 
-				} finally { DebugExitDecision(23); }
-				switch (alt23)
+				} finally { DebugExitDecision(19); }
+				switch (alt19)
 				{
 				case 1:
 					DebugEnterAlt(1);
 					// Stone.g:
 					{
-					DebugLocation(412, 26);
+					DebugLocation(411, 26);
 					input.Consume();
 
 
@@ -2466,19 +2294,19 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 					break;
 
 				default:
-					if (cnt23 >= 1)
-						goto loop23;
+					if (cnt19 >= 1)
+						goto loop19;
 
-					EarlyExitException eee23 = new EarlyExitException( 23, input );
-					DebugRecognitionException(eee23);
-					throw eee23;
+					EarlyExitException eee19 = new EarlyExitException( 19, input );
+					DebugRecognitionException(eee19);
+					throw eee19;
 				}
-				cnt23++;
+				cnt19++;
 			}
-			loop23:
+			loop19:
 				;
 
-			} finally { DebugExitSubRule(23); }
+			} finally { DebugExitSubRule(19); }
 
 
 			}
@@ -2507,11 +2335,11 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		{
 			int _type = INDENT;
 			int _channel = DefaultTokenChannel;
-			// Stone.g:414:7: ( 'nothing_will_match_this_indent' )
+			// Stone.g:413:7: ( 'nothing_will_match_this_indent' )
 			DebugEnterAlt(1);
-			// Stone.g:414:9: 'nothing_will_match_this_indent'
+			// Stone.g:413:9: 'nothing_will_match_this_indent'
 			{
-			DebugLocation(414, 9);
+			DebugLocation(413, 9);
 			Match("nothing_will_match_this_indent"); 
 
 
@@ -2543,11 +2371,11 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		{
 			int _type = DEDENT;
 			int _channel = DefaultTokenChannel;
-			// Stone.g:415:7: ( 'nothing_will_match_this_dedent' )
+			// Stone.g:414:7: ( 'nothing_will_match_this_dedent' )
 			DebugEnterAlt(1);
-			// Stone.g:415:9: 'nothing_will_match_this_dedent'
+			// Stone.g:414:9: 'nothing_will_match_this_dedent'
 			{
-			DebugLocation(415, 9);
+			DebugLocation(414, 9);
 			Match("nothing_will_match_this_dedent"); 
 
 
@@ -2579,13 +2407,13 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		{
 			int _type = WS;
 			int _channel = DefaultTokenChannel;
-			// Stone.g:417:3: ( ' ' )
+			// Stone.g:416:3: ( ' ' )
 			DebugEnterAlt(1);
-			// Stone.g:417:5: ' '
+			// Stone.g:416:5: ' '
 			{
-			DebugLocation(417, 5);
+			DebugLocation(416, 5);
 			Match(' '); 
-			DebugLocation(417, 9);
+			DebugLocation(416, 9);
 			 Skip(); 
 
 			}
@@ -2604,20 +2432,20 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 
 	public override void mTokens()
 	{
-		// Stone.g:1:8: ( Expr_Access | OP_DIV | OP_EQU | OP_GEQ | OP_GTR | OP_LEQ | OP_LSS | OP_MINUS | OP_MUL | OP_NEQ | OP_PLUS | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | NEWLINE | LIDENT | UIDENT | NORMAL_STRING | INT | DOUBLE | INDENT | DEDENT | WS )
-		int alt24=41;
-		try { DebugEnterDecision(24, false);
+		// Stone.g:1:8: ( Expr_Access | OP_DIV | OP_EQU | OP_GEQ | OP_GTR | OP_LEQ | OP_LSS | OP_MINUS | OP_MUL | OP_NEQ | OP_PLUS | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | NEWLINE | IDENT | NORMAL_STRING | INT | DOUBLE | INDENT | DEDENT | WS )
+		int alt20=41;
+		try { DebugEnterDecision(20, false);
 		try
 		{
-			alt24 = dfa24.Predict(input);
+			alt20 = dfa20.Predict(input);
 		}
 		catch (NoViableAltException nvae)
 		{
 			DebugRecognitionException(nvae);
 			throw;
 		}
-		} finally { DebugExitDecision(24); }
-		switch (alt24)
+		} finally { DebugExitDecision(20); }
+		switch (alt20)
 		{
 		case 1:
 			DebugEnterAlt(1);
@@ -2720,270 +2548,270 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 			break;
 		case 12:
 			DebugEnterAlt(12);
-			// Stone.g:1:95: T__60
+			// Stone.g:1:95: T__59
 			{
 			DebugLocation(1, 95);
-			mT__60(); 
+			mT__59(); 
 
 			}
 			break;
 		case 13:
 			DebugEnterAlt(13);
-			// Stone.g:1:101: T__61
+			// Stone.g:1:101: T__60
 			{
 			DebugLocation(1, 101);
-			mT__61(); 
+			mT__60(); 
 
 			}
 			break;
 		case 14:
 			DebugEnterAlt(14);
-			// Stone.g:1:107: T__62
+			// Stone.g:1:107: T__61
 			{
 			DebugLocation(1, 107);
-			mT__62(); 
+			mT__61(); 
 
 			}
 			break;
 		case 15:
 			DebugEnterAlt(15);
-			// Stone.g:1:113: T__63
+			// Stone.g:1:113: T__62
 			{
 			DebugLocation(1, 113);
-			mT__63(); 
+			mT__62(); 
 
 			}
 			break;
 		case 16:
 			DebugEnterAlt(16);
-			// Stone.g:1:119: T__64
+			// Stone.g:1:119: T__63
 			{
 			DebugLocation(1, 119);
-			mT__64(); 
+			mT__63(); 
 
 			}
 			break;
 		case 17:
 			DebugEnterAlt(17);
-			// Stone.g:1:125: T__65
+			// Stone.g:1:125: T__64
 			{
 			DebugLocation(1, 125);
-			mT__65(); 
+			mT__64(); 
 
 			}
 			break;
 		case 18:
 			DebugEnterAlt(18);
-			// Stone.g:1:131: T__66
+			// Stone.g:1:131: T__65
 			{
 			DebugLocation(1, 131);
-			mT__66(); 
+			mT__65(); 
 
 			}
 			break;
 		case 19:
 			DebugEnterAlt(19);
-			// Stone.g:1:137: T__67
+			// Stone.g:1:137: T__66
 			{
 			DebugLocation(1, 137);
-			mT__67(); 
+			mT__66(); 
 
 			}
 			break;
 		case 20:
 			DebugEnterAlt(20);
-			// Stone.g:1:143: T__68
+			// Stone.g:1:143: T__67
 			{
 			DebugLocation(1, 143);
-			mT__68(); 
+			mT__67(); 
 
 			}
 			break;
 		case 21:
 			DebugEnterAlt(21);
-			// Stone.g:1:149: T__69
+			// Stone.g:1:149: T__68
 			{
 			DebugLocation(1, 149);
-			mT__69(); 
+			mT__68(); 
 
 			}
 			break;
 		case 22:
 			DebugEnterAlt(22);
-			// Stone.g:1:155: T__70
+			// Stone.g:1:155: T__69
 			{
 			DebugLocation(1, 155);
-			mT__70(); 
+			mT__69(); 
 
 			}
 			break;
 		case 23:
 			DebugEnterAlt(23);
-			// Stone.g:1:161: T__71
+			// Stone.g:1:161: T__70
 			{
 			DebugLocation(1, 161);
-			mT__71(); 
+			mT__70(); 
 
 			}
 			break;
 		case 24:
 			DebugEnterAlt(24);
-			// Stone.g:1:167: T__72
+			// Stone.g:1:167: T__71
 			{
 			DebugLocation(1, 167);
-			mT__72(); 
+			mT__71(); 
 
 			}
 			break;
 		case 25:
 			DebugEnterAlt(25);
-			// Stone.g:1:173: T__73
+			// Stone.g:1:173: T__72
 			{
 			DebugLocation(1, 173);
-			mT__73(); 
+			mT__72(); 
 
 			}
 			break;
 		case 26:
 			DebugEnterAlt(26);
-			// Stone.g:1:179: T__74
+			// Stone.g:1:179: T__73
 			{
 			DebugLocation(1, 179);
-			mT__74(); 
+			mT__73(); 
 
 			}
 			break;
 		case 27:
 			DebugEnterAlt(27);
-			// Stone.g:1:185: T__75
+			// Stone.g:1:185: T__74
 			{
 			DebugLocation(1, 185);
-			mT__75(); 
+			mT__74(); 
 
 			}
 			break;
 		case 28:
 			DebugEnterAlt(28);
-			// Stone.g:1:191: T__76
+			// Stone.g:1:191: T__75
 			{
 			DebugLocation(1, 191);
-			mT__76(); 
+			mT__75(); 
 
 			}
 			break;
 		case 29:
 			DebugEnterAlt(29);
-			// Stone.g:1:197: T__77
+			// Stone.g:1:197: T__76
 			{
 			DebugLocation(1, 197);
-			mT__77(); 
+			mT__76(); 
 
 			}
 			break;
 		case 30:
 			DebugEnterAlt(30);
-			// Stone.g:1:203: T__78
+			// Stone.g:1:203: T__77
 			{
 			DebugLocation(1, 203);
-			mT__78(); 
+			mT__77(); 
 
 			}
 			break;
 		case 31:
 			DebugEnterAlt(31);
-			// Stone.g:1:209: T__79
+			// Stone.g:1:209: T__78
 			{
 			DebugLocation(1, 209);
-			mT__79(); 
+			mT__78(); 
 
 			}
 			break;
 		case 32:
 			DebugEnterAlt(32);
-			// Stone.g:1:215: T__80
+			// Stone.g:1:215: T__79
 			{
 			DebugLocation(1, 215);
-			mT__80(); 
+			mT__79(); 
 
 			}
 			break;
 		case 33:
 			DebugEnterAlt(33);
-			// Stone.g:1:221: NEWLINE
+			// Stone.g:1:221: T__80
 			{
 			DebugLocation(1, 221);
-			mNEWLINE(); 
+			mT__80(); 
 
 			}
 			break;
 		case 34:
 			DebugEnterAlt(34);
-			// Stone.g:1:229: LIDENT
+			// Stone.g:1:227: NEWLINE
 			{
-			DebugLocation(1, 229);
-			mLIDENT(); 
+			DebugLocation(1, 227);
+			mNEWLINE(); 
 
 			}
 			break;
 		case 35:
 			DebugEnterAlt(35);
-			// Stone.g:1:236: UIDENT
+			// Stone.g:1:235: IDENT
 			{
-			DebugLocation(1, 236);
-			mUIDENT(); 
+			DebugLocation(1, 235);
+			mIDENT(); 
 
 			}
 			break;
 		case 36:
 			DebugEnterAlt(36);
-			// Stone.g:1:243: NORMAL_STRING
+			// Stone.g:1:241: NORMAL_STRING
 			{
-			DebugLocation(1, 243);
+			DebugLocation(1, 241);
 			mNORMAL_STRING(); 
 
 			}
 			break;
 		case 37:
 			DebugEnterAlt(37);
-			// Stone.g:1:257: INT
+			// Stone.g:1:255: INT
 			{
-			DebugLocation(1, 257);
+			DebugLocation(1, 255);
 			mINT(); 
 
 			}
 			break;
 		case 38:
 			DebugEnterAlt(38);
-			// Stone.g:1:261: DOUBLE
+			// Stone.g:1:259: DOUBLE
 			{
-			DebugLocation(1, 261);
+			DebugLocation(1, 259);
 			mDOUBLE(); 
 
 			}
 			break;
 		case 39:
 			DebugEnterAlt(39);
-			// Stone.g:1:268: INDENT
+			// Stone.g:1:266: INDENT
 			{
-			DebugLocation(1, 268);
+			DebugLocation(1, 266);
 			mINDENT(); 
 
 			}
 			break;
 		case 40:
 			DebugEnterAlt(40);
-			// Stone.g:1:275: DEDENT
+			// Stone.g:1:273: DEDENT
 			{
-			DebugLocation(1, 275);
+			DebugLocation(1, 273);
 			mDEDENT(); 
 
 			}
 			break;
 		case 41:
 			DebugEnterAlt(41);
-			// Stone.g:1:282: WS
+			// Stone.g:1:280: WS
 			{
-			DebugLocation(1, 282);
+			DebugLocation(1, 280);
 			mWS(); 
 
 			}
@@ -2995,73 +2823,72 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 
 
 	#region DFA
-	DFA8 dfa8;
-	DFA21 dfa21;
-	DFA24 dfa24;
+	DFA4 dfa4;
+	DFA17 dfa17;
+	DFA20 dfa20;
 
 	protected override void InitDFAs()
 	{
 		base.InitDFAs();
-		dfa8 = new DFA8(this);
-		dfa21 = new DFA21(this);
-		dfa24 = new DFA24(this);
+		dfa4 = new DFA4(this);
+		dfa17 = new DFA17(this);
+		dfa20 = new DFA20(this);
 	}
 
-	private class DFA8 : DFA
+	private class DFA4 : DFA
 	{
-		private const string DFA8_eotS =
-			"\x1\xFFFF\x2\x3\x2\xFFFF";
-		private const string DFA8_eofS =
-			"\x5\xFFFF";
-		private const string DFA8_minS =
-			"\x1\x41\x2\x2E\x2\xFFFF";
-		private const string DFA8_maxS =
-			"\x1\x5A\x2\x7A\x2\xFFFF";
-		private const string DFA8_acceptS =
-			"\x3\xFFFF\x1\x2\x1\x1";
-		private const string DFA8_specialS =
-			"\x5\xFFFF}>";
-		private static readonly string[] DFA8_transitionS =
+		private const string DFA4_eotS =
+			"\x1\xFFFF\x1\x2\x2\xFFFF";
+		private const string DFA4_eofS =
+			"\x4\xFFFF";
+		private const string DFA4_minS =
+			"\x1\x41\x1\x3A\x2\xFFFF";
+		private const string DFA4_maxS =
+			"\x2\x7A\x2\xFFFF";
+		private const string DFA4_acceptS =
+			"\x2\xFFFF\x1\x2\x1\x1";
+		private const string DFA4_specialS =
+			"\x4\xFFFF}>";
+		private static readonly string[] DFA4_transitionS =
 			{
-				"\x1A\x1",
-				"\x1\x4\x12\xFFFF\x1A\x2\x6\xFFFF\x1A\x2",
-				"\x1\x4\x12\xFFFF\x1A\x2\x6\xFFFF\x1A\x2",
+				"\x1A\x1\x6\xFFFF\x1A\x1",
+				"\x1\x3\x6\xFFFF\x1A\x1\x6\xFFFF\x1A\x1",
 				"",
 				""
 			};
 
-		private static readonly short[] DFA8_eot = DFA.UnpackEncodedString(DFA8_eotS);
-		private static readonly short[] DFA8_eof = DFA.UnpackEncodedString(DFA8_eofS);
-		private static readonly char[] DFA8_min = DFA.UnpackEncodedStringToUnsignedChars(DFA8_minS);
-		private static readonly char[] DFA8_max = DFA.UnpackEncodedStringToUnsignedChars(DFA8_maxS);
-		private static readonly short[] DFA8_accept = DFA.UnpackEncodedString(DFA8_acceptS);
-		private static readonly short[] DFA8_special = DFA.UnpackEncodedString(DFA8_specialS);
-		private static readonly short[][] DFA8_transition;
+		private static readonly short[] DFA4_eot = DFA.UnpackEncodedString(DFA4_eotS);
+		private static readonly short[] DFA4_eof = DFA.UnpackEncodedString(DFA4_eofS);
+		private static readonly char[] DFA4_min = DFA.UnpackEncodedStringToUnsignedChars(DFA4_minS);
+		private static readonly char[] DFA4_max = DFA.UnpackEncodedStringToUnsignedChars(DFA4_maxS);
+		private static readonly short[] DFA4_accept = DFA.UnpackEncodedString(DFA4_acceptS);
+		private static readonly short[] DFA4_special = DFA.UnpackEncodedString(DFA4_specialS);
+		private static readonly short[][] DFA4_transition;
 
-		static DFA8()
+		static DFA4()
 		{
-			int numStates = DFA8_transitionS.Length;
-			DFA8_transition = new short[numStates][];
+			int numStates = DFA4_transitionS.Length;
+			DFA4_transition = new short[numStates][];
 			for ( int i=0; i < numStates; i++ )
 			{
-				DFA8_transition[i] = DFA.UnpackEncodedString(DFA8_transitionS[i]);
+				DFA4_transition[i] = DFA.UnpackEncodedString(DFA4_transitionS[i]);
 			}
 		}
 
-		public DFA8( BaseRecognizer recognizer )
+		public DFA4( BaseRecognizer recognizer )
 		{
 			this.recognizer = recognizer;
-			this.decisionNumber = 8;
-			this.eot = DFA8_eot;
-			this.eof = DFA8_eof;
-			this.min = DFA8_min;
-			this.max = DFA8_max;
-			this.accept = DFA8_accept;
-			this.special = DFA8_special;
-			this.transition = DFA8_transition;
+			this.decisionNumber = 4;
+			this.eot = DFA4_eot;
+			this.eof = DFA4_eof;
+			this.min = DFA4_min;
+			this.max = DFA4_max;
+			this.accept = DFA4_accept;
+			this.special = DFA4_special;
+			this.transition = DFA4_transition;
 		}
 
-		public override string Description { get { return "()* loopback of 390:9: ( ( 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' )* '.' )*"; } }
+		public override string Description { get { return "()* loopback of 389:8: ( ( 'a' .. 'z' | 'A' .. 'Z' )+ ':' )*"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{
@@ -3069,21 +2896,21 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 	}
 
-	private class DFA21 : DFA
+	private class DFA17 : DFA
 	{
-		private const string DFA21_eotS =
+		private const string DFA17_eotS =
 			"\x5\xFFFF";
-		private const string DFA21_eofS =
+		private const string DFA17_eofS =
 			"\x5\xFFFF";
-		private const string DFA21_minS =
+		private const string DFA17_minS =
 			"\x2\x2E\x3\xFFFF";
-		private const string DFA21_maxS =
+		private const string DFA17_maxS =
 			"\x1\x39\x1\x65\x3\xFFFF";
-		private const string DFA21_acceptS =
+		private const string DFA17_acceptS =
 			"\x2\xFFFF\x1\x2\x1\x1\x1\x3";
-		private const string DFA21_specialS =
+		private const string DFA17_specialS =
 			"\x5\xFFFF}>";
-		private static readonly string[] DFA21_transitionS =
+		private static readonly string[] DFA17_transitionS =
 			{
 				"\x1\x2\x1\xFFFF\xA\x1",
 				"\x1\x3\x1\xFFFF\xA\x1\xB\xFFFF\x1\x4\x1F\xFFFF\x1\x4",
@@ -3092,38 +2919,38 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 				""
 			};
 
-		private static readonly short[] DFA21_eot = DFA.UnpackEncodedString(DFA21_eotS);
-		private static readonly short[] DFA21_eof = DFA.UnpackEncodedString(DFA21_eofS);
-		private static readonly char[] DFA21_min = DFA.UnpackEncodedStringToUnsignedChars(DFA21_minS);
-		private static readonly char[] DFA21_max = DFA.UnpackEncodedStringToUnsignedChars(DFA21_maxS);
-		private static readonly short[] DFA21_accept = DFA.UnpackEncodedString(DFA21_acceptS);
-		private static readonly short[] DFA21_special = DFA.UnpackEncodedString(DFA21_specialS);
-		private static readonly short[][] DFA21_transition;
+		private static readonly short[] DFA17_eot = DFA.UnpackEncodedString(DFA17_eotS);
+		private static readonly short[] DFA17_eof = DFA.UnpackEncodedString(DFA17_eofS);
+		private static readonly char[] DFA17_min = DFA.UnpackEncodedStringToUnsignedChars(DFA17_minS);
+		private static readonly char[] DFA17_max = DFA.UnpackEncodedStringToUnsignedChars(DFA17_maxS);
+		private static readonly short[] DFA17_accept = DFA.UnpackEncodedString(DFA17_acceptS);
+		private static readonly short[] DFA17_special = DFA.UnpackEncodedString(DFA17_specialS);
+		private static readonly short[][] DFA17_transition;
 
-		static DFA21()
+		static DFA17()
 		{
-			int numStates = DFA21_transitionS.Length;
-			DFA21_transition = new short[numStates][];
+			int numStates = DFA17_transitionS.Length;
+			DFA17_transition = new short[numStates][];
 			for ( int i=0; i < numStates; i++ )
 			{
-				DFA21_transition[i] = DFA.UnpackEncodedString(DFA21_transitionS[i]);
+				DFA17_transition[i] = DFA.UnpackEncodedString(DFA17_transitionS[i]);
 			}
 		}
 
-		public DFA21( BaseRecognizer recognizer )
+		public DFA17( BaseRecognizer recognizer )
 		{
 			this.recognizer = recognizer;
-			this.decisionNumber = 21;
-			this.eot = DFA21_eot;
-			this.eof = DFA21_eof;
-			this.min = DFA21_min;
-			this.max = DFA21_max;
-			this.accept = DFA21_accept;
-			this.special = DFA21_special;
-			this.transition = DFA21_transition;
+			this.decisionNumber = 17;
+			this.eot = DFA17_eot;
+			this.eof = DFA17_eof;
+			this.min = DFA17_min;
+			this.max = DFA17_max;
+			this.accept = DFA17_accept;
+			this.special = DFA17_special;
+			this.transition = DFA17_transition;
 		}
 
-		public override string Description { get { return "402:1: DOUBLE : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT );"; } }
+		public override string Description { get { return "401:1: DOUBLE : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT );"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{
@@ -3131,144 +2958,143 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 	}
 
-	private class DFA24 : DFA
+	private class DFA20 : DFA
 	{
-		private const string DFA24_eotS =
-			"\x1\xFFFF\x1\x21\x1\xFFFF\x1\x25\x1\x27\x1\x29\x1\x2B\x6\xFFFF\x1\x2D"+
-			"\x3\xFFFF\x8\x1F\x2\xFFFF\x1\x39\x1\x1F\x1\xFFFF\x1\x3B\xF\xFFFF\x3\x1F"+
-			"\x1\x3F\x1\x40\x4\x1F\x1\x39\x2\xFFFF\x1\x1F\x1\xFFFF\x2\x1F\x1\x48\x2"+
-			"\xFFFF\x6\x1F\x1\x4F\x1\xFFFF\x5\x1F\x1\x55\x1\xFFFF\x1\x1F\x1\x57\x1"+
-			"\x1F\x1\x59\x1\x1F\x1\xFFFF\x1\x5B\x1\xFFFF\x1\x5C\x1\xFFFF\x1\x1F\x2"+
-			"\xFFFF\x1\x1F\x13\xFFFF";
-		private const string DFA24_eofS =
-			"\x71\xFFFF";
-		private const string DFA24_minS =
+		private const string DFA20_eotS =
+			"\x1\xFFFF\x1\x20\x1\xFFFF\x1\x24\x1\x26\x1\x28\x1\x2A\x6\xFFFF\x1\x2C"+
+			"\x3\xFFFF\x9\x1C\x4\xFFFF\x1\x38\xE\xFFFF\x3\x1C\x1\x3C\x1\x3D\x6\x1C"+
+			"\x1\xFFFF\x2\x1C\x1\x46\x2\xFFFF\x1\x1C\x1\x48\x5\x1C\x1\x4E\x1\xFFFF"+
+			"\x1\x1C\x1\xFFFF\x4\x1C\x1\x54\x1\xFFFF\x2\x1C\x1\x57\x1\x1C\x1\x59\x1"+
+			"\xFFFF\x1\x5A\x1\x1C\x1\xFFFF\x1\x5C\x2\xFFFF\x1\x1C\x14\xFFFF";
+		private const string DFA20_eofS =
+			"\x70\xFFFF";
+		private const string DFA20_minS =
 			"\x1\xA\x1\x30\x1\xFFFF\x3\x3D\x1\x3E\x6\xFFFF\x1\x3A\x3\xFFFF\x1\x6C"+
-			"\x1\x61\x1\x6F\x1\x66\x1\x6F\x1\x72\x1\x65\x1\x68\x2\xFFFF\x1\x2E\x1"+
-			"\x6F\x1\xFFFF\x1\x2E\xF\xFFFF\x1\x61\x1\x74\x1\x72\x2\x30\x1\x64\x1\x6F"+
-			"\x1\x74\x1\x69\x1\x2E\x1\x41\x1\xFFFF\x1\x74\x1\xFFFF\x1\x73\x1\x61\x1"+
-			"\x30\x2\xFFFF\x1\x75\x1\x78\x1\x75\x1\x6C\x1\x68\x1\x73\x1\x30\x1\xFFFF"+
-			"\x1\x6C\x1\x79\x1\x72\x1\x65\x1\x69\x1\x30\x1\xFFFF\x1\x65\x1\x30\x1"+
-			"\x6E\x1\x30\x1\x6E\x1\xFFFF\x1\x30\x1\xFFFF\x1\x30\x1\xFFFF\x1\x67\x2"+
-			"\xFFFF\x1\x5F\x1\x77\x1\x69\x2\x6C\x1\x5F\x1\x6D\x1\x61\x1\x74\x1\x63"+
-			"\x1\x68\x1\x5F\x1\x74\x1\x68\x1\x69\x1\x73\x1\x5F\x1\x64\x2\xFFFF";
-		private const string DFA24_maxS =
+			"\x1\x61\x1\x6F\x1\x66\x1\x6F\x1\x65\x1\x72\x1\x65\x1\x68\x4\xFFFF\x1"+
+			"\x2E\xE\xFFFF\x1\x61\x1\x74\x1\x72\x2\x30\x1\x64\x1\x77\x1\x74\x1\x6F"+
+			"\x1\x74\x1\x69\x1\xFFFF\x1\x73\x1\x61\x1\x30\x2\xFFFF\x1\x75\x1\x30\x1"+
+			"\x68\x1\x78\x1\x75\x1\x6C\x1\x73\x1\x30\x1\xFFFF\x1\x6C\x1\xFFFF\x1\x69"+
+			"\x1\x79\x1\x72\x1\x65\x1\x30\x1\xFFFF\x1\x65\x1\x6E\x1\x30\x1\x6E\x1"+
+			"\x30\x1\xFFFF\x1\x30\x1\x67\x1\xFFFF\x1\x30\x2\xFFFF\x1\x5F\x1\xFFFF"+
+			"\x1\x77\x1\x69\x2\x6C\x1\x5F\x1\x6D\x1\x61\x1\x74\x1\x63\x1\x68\x1\x5F"+
+			"\x1\x74\x1\x68\x1\x69\x1\x73\x1\x5F\x1\x64\x2\xFFFF";
+		private const string DFA20_maxS =
 			"\x1\x7C\x1\x39\x1\xFFFF\x1\x3E\x2\x3D\x1\x3E\x6\xFFFF\x1\x3A\x3\xFFFF"+
-			"\x1\x6C\x1\x61\x1\x6F\x1\x6E\x1\x6F\x1\x72\x1\x65\x1\x68\x2\xFFFF\x1"+
-			"\x7A\x1\x6F\x1\xFFFF\x1\x65\xF\xFFFF\x1\x61\x1\x74\x1\x72\x2\x7A\x1\x64"+
-			"\x1\x6F\x1\x74\x1\x69\x2\x7A\x1\xFFFF\x1\x74\x1\xFFFF\x1\x73\x1\x61\x1"+
-			"\x7A\x2\xFFFF\x1\x75\x1\x78\x1\x75\x1\x6C\x1\x68\x1\x73\x1\x7A\x1\xFFFF"+
-			"\x1\x6C\x1\x79\x1\x72\x1\x65\x1\x69\x1\x7A\x1\xFFFF\x1\x65\x1\x7A\x1"+
-			"\x6E\x1\x7A\x1\x6E\x1\xFFFF\x1\x7A\x1\xFFFF\x1\x7A\x1\xFFFF\x1\x67\x2"+
-			"\xFFFF\x1\x5F\x1\x77\x1\x69\x2\x6C\x1\x5F\x1\x6D\x1\x61\x1\x74\x1\x63"+
-			"\x1\x68\x1\x5F\x1\x74\x1\x68\x1\x69\x1\x73\x1\x5F\x1\x69\x2\xFFFF";
-		private const string DFA24_acceptS =
+			"\x1\x6C\x1\x61\x1\x6F\x1\x6E\x2\x6F\x1\x72\x1\x65\x1\x68\x4\xFFFF\x1"+
+			"\x65\xE\xFFFF\x1\x61\x1\x74\x1\x72\x2\x7A\x1\x64\x1\x77\x1\x74\x1\x6F"+
+			"\x1\x74\x1\x69\x1\xFFFF\x1\x73\x1\x61\x1\x7A\x2\xFFFF\x1\x75\x1\x7A\x1"+
+			"\x68\x1\x78\x1\x75\x1\x6C\x1\x73\x1\x7A\x1\xFFFF\x1\x6C\x1\xFFFF\x1\x69"+
+			"\x1\x79\x1\x72\x1\x65\x1\x7A\x1\xFFFF\x1\x65\x1\x6E\x1\x7A\x1\x6E\x1"+
+			"\x7A\x1\xFFFF\x1\x7A\x1\x67\x1\xFFFF\x1\x7A\x2\xFFFF\x1\x5F\x1\xFFFF"+
+			"\x1\x77\x1\x69\x2\x6C\x1\x5F\x1\x6D\x1\x61\x1\x74\x1\x63\x1\x68\x1\x5F"+
+			"\x1\x74\x1\x68\x1\x69\x1\x73\x1\x5F\x1\x69\x2\xFFFF";
+		private const string DFA20_acceptS =
 			"\x2\xFFFF\x1\x2\x4\xFFFF\x1\x9\x1\xA\x1\xB\x1\xC\x1\xD\x1\xE\x1\xFFFF"+
-			"\x1\x14\x1\x15\x1\x16\x8\xFFFF\x1\x20\x1\x21\x2\xFFFF\x1\x24\x1\xFFFF"+
-			"\x1\x22\x1\x29\x1\x1\x1\x26\x1\x3\x1\x13\x1\x12\x1\x4\x1\x5\x1\x6\x1"+
-			"\x7\x1\xF\x1\x8\x1\x11\x1\x10\xB\xFFFF\x1\x23\x1\xFFFF\x1\x25\x3\xFFFF"+
-			"\x1\x1A\x1\x1B\x7\xFFFF\x1\x19\x6\xFFFF\x1\x18\x5\xFFFF\x1\x17\x1\xFFFF"+
-			"\x1\x1D\x1\xFFFF\x1\x1F\x1\xFFFF\x1\x1C\x1\x1E\x12\xFFFF\x1\x27\x1\x28";
-		private const string DFA24_specialS =
-			"\x71\xFFFF}>";
-		private static readonly string[] DFA24_transitionS =
+			"\x1\x14\x1\x15\x1\x16\x9\xFFFF\x1\x21\x1\x22\x1\x23\x1\x24\x1\xFFFF\x1"+
+			"\x29\x1\x1\x1\x26\x1\x3\x1\x13\x1\x12\x1\x4\x1\x5\x1\x6\x1\x7\x1\xF\x1"+
+			"\x8\x1\x11\x1\x10\xB\xFFFF\x1\x25\x3\xFFFF\x1\x1A\x1\x1B\x8\xFFFF\x1"+
+			"\x19\x1\xFFFF\x1\x1D\x5\xFFFF\x1\x18\x5\xFFFF\x1\x17\x2\xFFFF\x1\x1E"+
+			"\x1\xFFFF\x1\x20\x1\x1C\x1\xFFFF\x1\x1F\x11\xFFFF\x1\x27\x1\x28";
+		private const string DFA20_specialS =
+			"\x70\xFFFF}>";
+		private static readonly string[] DFA20_transitionS =
 			{
-				"\x1\x1A\x15\xFFFF\x1\x20\x1\x8\x1\x1D\x4\xFFFF\x1\x1D\x1\xA\x1\xB\x1"+
+				"\x1\x1B\x15\xFFFF\x1\x1F\x1\x8\x1\x1D\x4\xFFFF\x1\x1D\x1\xA\x1\xB\x1"+
 				"\x7\x1\x9\x1\xC\x1\x6\x1\x1\x1\x2\xA\x1E\x1\xD\x1\xFFFF\x1\x5\x1\x3"+
-				"\x1\x4\x2\xFFFF\x1A\x1B\x1\xE\x1\xF\x1\x10\x3\xFFFF\x2\x1F\x1\x11\x1"+
-				"\x12\x1\x1F\x1\x13\x2\x1F\x1\x14\x3\x1F\x1\x15\x1\x1C\x1\x1F\x1\x16"+
-				"\x1\x1F\x1\x17\x4\x1F\x1\x18\x3\x1F\x1\xFFFF\x1\x19",
-				"\xA\x22",
+				"\x1\x4\x2\xFFFF\x1A\x1C\x1\xE\x1\xF\x1\x10\x3\xFFFF\x2\x1C\x1\x11\x1"+
+				"\x12\x1\x1C\x1\x13\x2\x1C\x1\x14\x3\x1C\x1\x15\x1\x16\x1\x1C\x1\x17"+
+				"\x1\x1C\x1\x18\x4\x1C\x1\x19\x3\x1C\x1\xFFFF\x1\x1A",
+				"\xA\x21",
 				"",
-				"\x1\x23\x1\x24",
-				"\x1\x26",
-				"\x1\x28",
-				"\x1\x2A",
-				"",
-				"",
+				"\x1\x22\x1\x23",
+				"\x1\x25",
+				"\x1\x27",
+				"\x1\x29",
 				"",
 				"",
 				"",
 				"",
-				"\x1\x2C",
+				"",
+				"",
+				"\x1\x2B",
 				"",
 				"",
 				"",
+				"\x1\x2D",
 				"\x1\x2E",
 				"\x1\x2F",
-				"\x1\x30",
-				"\x1\x31\x7\xFFFF\x1\x32",
-				"\x1\x33",
-				"\x1\x34",
+				"\x1\x30\x7\xFFFF\x1\x31",
+				"\x1\x32",
+				"\x1\x33\x9\xFFFF\x1\x34",
 				"\x1\x35",
 				"\x1\x36",
+				"\x1\x37",
 				"",
 				"",
-				"\x1\x38\x12\xFFFF\x1A\x37\x6\xFFFF\x1A\x37",
+				"",
+				"",
+				"\x1\x21\x1\xFFFF\xA\x1E\xB\xFFFF\x1\x21\x1F\xFFFF\x1\x21",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"\x1\x39",
 				"\x1\x3A",
-				"",
-				"\x1\x22\x1\xFFFF\xA\x1E\xB\xFFFF\x1\x22\x1F\xFFFF\x1\x22",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"\x1\x3C",
-				"\x1\x3D",
+				"\x1\x3B",
+				"\xB\x1C\x6\xFFFF\x1A\x1C\x6\xFFFF\x1A\x1C",
+				"\xB\x1C\x6\xFFFF\x1A\x1C\x6\xFFFF\x1A\x1C",
 				"\x1\x3E",
-				"\xA\x1F\x7\xFFFF\x1A\x1F\x6\xFFFF\x1A\x1F",
-				"\xA\x1F\x7\xFFFF\x1A\x1F\x6\xFFFF\x1A\x1F",
+				"\x1\x3F",
+				"\x1\x40",
 				"\x1\x41",
 				"\x1\x42",
 				"\x1\x43",
+				"",
 				"\x1\x44",
-				"\x1\x38\x12\xFFFF\x1A\x37\x6\xFFFF\x1A\x37",
-				"\x1A\x1B\x6\xFFFF\x1A\x1F",
-				"",
 				"\x1\x45",
+				"\xB\x1C\x6\xFFFF\x1A\x1C\x6\xFFFF\x1A\x1C",
 				"",
-				"\x1\x46",
+				"",
 				"\x1\x47",
-				"\xA\x1F\x7\xFFFF\x1A\x1F\x6\xFFFF\x1A\x1F",
-				"",
-				"",
+				"\xB\x1C\x6\xFFFF\x1A\x1C\x6\xFFFF\x1A\x1C",
 				"\x1\x49",
 				"\x1\x4A",
 				"\x1\x4B",
 				"\x1\x4C",
 				"\x1\x4D",
-				"\x1\x4E",
-				"\xA\x1F\x7\xFFFF\x1A\x1F\x6\xFFFF\x1A\x1F",
+				"\xB\x1C\x6\xFFFF\x1A\x1C\x6\xFFFF\x1A\x1C",
+				"",
+				"\x1\x4F",
 				"",
 				"\x1\x50",
 				"\x1\x51",
 				"\x1\x52",
 				"\x1\x53",
-				"\x1\x54",
-				"\xA\x1F\x7\xFFFF\x1A\x1F\x6\xFFFF\x1A\x1F",
+				"\xB\x1C\x6\xFFFF\x1A\x1C\x6\xFFFF\x1A\x1C",
 				"",
+				"\x1\x55",
 				"\x1\x56",
-				"\xA\x1F\x7\xFFFF\x1A\x1F\x6\xFFFF\x1A\x1F",
+				"\xB\x1C\x6\xFFFF\x1A\x1C\x6\xFFFF\x1A\x1C",
 				"\x1\x58",
-				"\xA\x1F\x7\xFFFF\x1A\x1F\x6\xFFFF\x1A\x1F",
-				"\x1\x5A",
+				"\xB\x1C\x6\xFFFF\x1A\x1C\x6\xFFFF\x1A\x1C",
 				"",
-				"\xA\x1F\x7\xFFFF\x1A\x1F\x6\xFFFF\x1A\x1F",
+				"\xB\x1C\x6\xFFFF\x1A\x1C\x6\xFFFF\x1A\x1C",
+				"\x1\x5B",
 				"",
-				"\xA\x1F\x7\xFFFF\x1A\x1F\x6\xFFFF\x1A\x1F",
+				"\xB\x1C\x6\xFFFF\x1A\x1C\x6\xFFFF\x1A\x1C",
+				"",
 				"",
 				"\x1\x5D",
-				"",
 				"",
 				"\x1\x5E",
 				"\x1\x5F",
@@ -3286,44 +3112,43 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 				"\x1\x6B",
 				"\x1\x6C",
 				"\x1\x6D",
-				"\x1\x6E",
-				"\x1\x70\x4\xFFFF\x1\x6F",
+				"\x1\x6F\x4\xFFFF\x1\x6E",
 				"",
 				""
 			};
 
-		private static readonly short[] DFA24_eot = DFA.UnpackEncodedString(DFA24_eotS);
-		private static readonly short[] DFA24_eof = DFA.UnpackEncodedString(DFA24_eofS);
-		private static readonly char[] DFA24_min = DFA.UnpackEncodedStringToUnsignedChars(DFA24_minS);
-		private static readonly char[] DFA24_max = DFA.UnpackEncodedStringToUnsignedChars(DFA24_maxS);
-		private static readonly short[] DFA24_accept = DFA.UnpackEncodedString(DFA24_acceptS);
-		private static readonly short[] DFA24_special = DFA.UnpackEncodedString(DFA24_specialS);
-		private static readonly short[][] DFA24_transition;
+		private static readonly short[] DFA20_eot = DFA.UnpackEncodedString(DFA20_eotS);
+		private static readonly short[] DFA20_eof = DFA.UnpackEncodedString(DFA20_eofS);
+		private static readonly char[] DFA20_min = DFA.UnpackEncodedStringToUnsignedChars(DFA20_minS);
+		private static readonly char[] DFA20_max = DFA.UnpackEncodedStringToUnsignedChars(DFA20_maxS);
+		private static readonly short[] DFA20_accept = DFA.UnpackEncodedString(DFA20_acceptS);
+		private static readonly short[] DFA20_special = DFA.UnpackEncodedString(DFA20_specialS);
+		private static readonly short[][] DFA20_transition;
 
-		static DFA24()
+		static DFA20()
 		{
-			int numStates = DFA24_transitionS.Length;
-			DFA24_transition = new short[numStates][];
+			int numStates = DFA20_transitionS.Length;
+			DFA20_transition = new short[numStates][];
 			for ( int i=0; i < numStates; i++ )
 			{
-				DFA24_transition[i] = DFA.UnpackEncodedString(DFA24_transitionS[i]);
+				DFA20_transition[i] = DFA.UnpackEncodedString(DFA20_transitionS[i]);
 			}
 		}
 
-		public DFA24( BaseRecognizer recognizer )
+		public DFA20( BaseRecognizer recognizer )
 		{
 			this.recognizer = recognizer;
-			this.decisionNumber = 24;
-			this.eot = DFA24_eot;
-			this.eof = DFA24_eof;
-			this.min = DFA24_min;
-			this.max = DFA24_max;
-			this.accept = DFA24_accept;
-			this.special = DFA24_special;
-			this.transition = DFA24_transition;
+			this.decisionNumber = 20;
+			this.eot = DFA20_eot;
+			this.eof = DFA20_eof;
+			this.min = DFA20_min;
+			this.max = DFA20_max;
+			this.accept = DFA20_accept;
+			this.special = DFA20_special;
+			this.transition = DFA20_transition;
 		}
 
-		public override string Description { get { return "1:1: Tokens : ( Expr_Access | OP_DIV | OP_EQU | OP_GEQ | OP_GTR | OP_LEQ | OP_LSS | OP_MINUS | OP_MUL | OP_NEQ | OP_PLUS | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | NEWLINE | LIDENT | UIDENT | NORMAL_STRING | INT | DOUBLE | INDENT | DEDENT | WS );"; } }
+		public override string Description { get { return "1:1: Tokens : ( Expr_Access | OP_DIV | OP_EQU | OP_GEQ | OP_GTR | OP_LEQ | OP_LSS | OP_MINUS | OP_MUL | OP_NEQ | OP_PLUS | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | NEWLINE | IDENT | NORMAL_STRING | INT | DOUBLE | INDENT | DEDENT | WS );"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{
