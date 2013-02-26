@@ -35,7 +35,7 @@ namespace Stone.Compiler.Node
         public String owner;
         public Expr expr;
 
-        public LocalVar symbol;
+        public VarSymbol symbol;
 
         public override void accept(Visitor visitor)
         {
@@ -62,6 +62,50 @@ namespace Stone.Compiler.Node
         public List<Expr> args = new List<Expr>();
 
         public StoneType type;
+
+        public override void accept(Visitor visitor)
+        {
+            visitor.visit(this);
+        }
+    }
+
+    class StmtIf : Stmt
+    {
+        public Expr condition;
+        public StmtBlock if_true;
+
+        public LocalScope scope;
+
+        public override void accept(Visitor visitor)
+        {
+            visitor.visit(this);
+        }
+    }
+
+    class StmtWhile : Stmt
+    {
+        public Expr condition;
+        public StmtBlock body;
+
+        public LocalScope scope;
+
+        public override void accept(Visitor visitor)
+        {
+            visitor.visit(this);
+        }
+    }
+
+    class StmtFor : Stmt
+    {
+        public String owner;
+        public Expr expr;
+        public StmtBlock body;
+
+        public VarSymbol symbol;
+
+        public Position var_pos;
+
+        public LocalScope scope;
 
         public override void accept(Visitor visitor)
         {

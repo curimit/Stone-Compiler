@@ -85,6 +85,11 @@ namespace Stone.Compiler
 
                 return func_type;
             }
+            if (this is ArrayType)
+            {
+                Type member_type = (this as ArrayType).member_type.get_type();
+                return member_type.MakeArrayType();
+            }
             Debug.Assert(false);
             return null;
         }
@@ -202,6 +207,21 @@ namespace Stone.Compiler
                 sb.Append(item.ToString());
             }
             return sb.ToString();
+        }
+    }
+
+    class ArrayType : StoneType
+    {
+        public StoneType member_type;
+
+        public ArrayType(StoneType member_type)
+        {
+            this.member_type = member_type;
+        }
+
+        public override string ToString()
+        {
+            return String.Format("[{0}]", member_type.ToString());
         }
     }
 }

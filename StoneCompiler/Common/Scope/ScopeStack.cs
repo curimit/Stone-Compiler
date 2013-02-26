@@ -10,7 +10,7 @@ namespace Stone.Compiler
 {
     class ScopeStack
     {
-        public Stack<FormalScope> stack = new Stack<FormalScope>();
+        public Stack<LocalScope> stack = new Stack<LocalScope>();
 
         public Boolean try_push_var(VarSymbol var)
         {
@@ -27,7 +27,7 @@ namespace Stone.Compiler
             return null;
         }
 
-        public void open(FormalScope scope)
+        public void open(LocalScope scope)
         {
             stack.Push(scope);
         }

@@ -30,13 +30,13 @@ namespace Stone.Compiler
         // then load sub field by ref_scope
         // so this_var will be like this.<>anonymous_value_1.x
         public FieldBuilder this_field, sub_field;
-        public FormalScope ref_scope;
+        public LocalScope ref_scope;
     }
 
     class ObjectVar : VarSymbol
     {
         // load ref_scope, then load field
-        public FormalScope ref_scope;
+        public LocalScope ref_scope;
         public FieldBuilder field;
     }
 }

@@ -263,6 +263,21 @@ namespace Stone.Compiler
                         if (stmt != null) block.list.Add(stmt);
                         break;
 
+                    case StoneParser.Stmt_If:
+                        stmt = visit_stmt_if(item);
+                        if (stmt != null) block.list.Add(stmt);
+                        break;
+
+                    case StoneParser.Stmt_While:
+                        stmt = visit_stmt_while(item);
+                        if (stmt != null) block.list.Add(stmt);
+                        break;
+
+                    case StoneParser.Stmt_For:
+                        stmt = visit_stmt_for(item);
+                        if (stmt != null) block.list.Add(stmt);
+                        break;
+
                     default:
                         Debug.Assert(false);
                         break;

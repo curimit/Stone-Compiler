@@ -170,9 +170,11 @@ namespace Stone.Compiler
             enter(node.scope);
 
             if (node.name.EndsWith(".main") || node.name == "main") root.entry_method = node.method_builder;
+
+            node.stmt_block.accept(this);
         }
 
-        public void enter(FormalScope scope)
+        public void enter(LocalScope scope)
         {
             if (!scope.closure_scope.has_closure_value) return;
 
@@ -210,6 +212,10 @@ namespace Stone.Compiler
 
         public override void visit(StmtBlock node)
         {
+            foreach (var item in node.list)
+            {
+                item.accept(this);
+            }
         }
 
         public override void visit(StmtAlloc node)
@@ -232,8 +238,27 @@ namespace Stone.Compiler
         {
         }
 
+        public override void visit(ExprArray node)
+        {
+        }
+
         public override void visit(StmtReturn node)
         {
+        }
+
+        public override void visit(StmtIf node)
+        {
+            enter(node.scope);
+        }
+
+        public override void visit(StmtWhile node)
+        {
+            enter(node.scope);
+        }
+
+        public override void visit(StmtFor node)
+        {
+            enter(node.scope);
         }
 
         public override void visit(Const node)

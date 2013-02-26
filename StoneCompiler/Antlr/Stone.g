@@ -46,13 +46,17 @@ tokens {
 	Stmt_Call;
 
 	Stmt_If;
+	Stmt_While;
+	Stmt_For;
 
 	Expr_Message;
 	Message_Item;
 
 	Expr_Call;
-
+	
 	Expr_New_Data;
+
+	Expr_Array;
 
 	Expr_Lambda;
 	Lambda_Args;
@@ -61,6 +65,13 @@ tokens {
 	OP_MINUS = '-';
 	OP_MUL   = '*';
 	OP_DIV   = '/';
+	
+	OP_EQU = '==';
+	OP_NEQ = '!=';
+	OP_LSS = '<';
+	OP_LEQ = '<=';
+	OP_GTR = '>';
+	OP_GEQ = '>=';
 
 	Expr_Access = '.';
 }
@@ -214,7 +225,7 @@ options{
 	backtrack=true;
 	memoize=true;
 }
-	: type_atom ('¡Á' type_atom)+ -> ^(Type_Cross type_atom+)
+	: type_atom ('*' type_atom)+ -> ^(Type_Cross type_atom+)
 	| type_atom
 	;
 
@@ -235,6 +246,8 @@ stmt
 	| stmt_assign
 	| stmt_call
 	| stmt_if
+	| stmt_while
+	| stmt_for
 	;
 
 // special stmt
@@ -258,18 +271,39 @@ stmt_if
 	: 'if' expr NEWLINE (INDENT stmt_block NEWLINE* DEDENT) -> ^(Stmt_If expr stmt_block)
 	;
 
+stmt_while
+	: 'while' expr NEWLINE (INDENT stmt_block NEWLINE* DEDENT) -> ^(Stmt_While expr stmt_block)
+	;
+
+stmt_for
+	: 'for' '|' LIDENT '|' 'in' expr NEWLINE (INDENT stmt_block NEWLINE* DEDENT) -> ^(Stmt_For LIDENT expr stmt_block)
+	;
+
 // expr
 expr
-	: message_expr
+	: logic_expr
 	| lambda_expr
+	| array_expr
 	;
 
 lambda_expr
-	: '¦Ë' lambda_args '=>' type NEWLINE (INDENT stmt_block NEWLINE* DEDENT) -> ^(Expr_Lambda lambda_args type stmt_block)
+	: '\\' lambda_args '=>' type NEWLINE (INDENT stmt_block NEWLINE* DEDENT) -> ^(Expr_Lambda lambda_args type stmt_block)
 	;
 
 lambda_args
-	: match? -> ^(Lambda_Args match)
+	: match? -> ^(Lambda_Args match?)
+	;
+
+array_expr
+	: '[' array_list ']' -> ^(Expr_Array array_list)
+	;
+
+array_list
+	: (expr (',' expr)*)? -> expr*
+	;
+
+logic_expr
+	: message_expr ((OP_EQU | OP_NEQ | OP_LSS | OP_LEQ | OP_GTR | OP_GEQ)^ message_expr)*
 	;
 
 message_expr
@@ -320,7 +354,7 @@ NEWLINE
 : '\n'+ ( ' ' | '\t' )*
 {
        int indent = Text.Length;
-	   while (indent != 0 && Text[Text.Length - indent] == '\n') indent--;
+	   while (indent != 0 && Text[Text.Length - indent] != '\t' && Text[Text.Length - indent] != ' ') indent--;
 	   IToken token_newline = new CommonToken(NEWLINE, "NEWLINE");
 	   token_newline.StartIndex = CharIndex;
 	   token_newline.StopIndex = CharIndex;

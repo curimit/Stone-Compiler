@@ -40,6 +40,10 @@ namespace Stone.Compiler
         public abstract void visit(StmtAssign node);
         public abstract void visit(StmtReturn node);
 
+        public abstract void visit(StmtIf node);
+        public abstract void visit(StmtWhile node);
+        public abstract void visit(StmtFor node);
+
         public abstract void visit(Const node);
         public abstract void visit(ExprBin node);
         public abstract void visit(ExprVar node);
@@ -47,6 +51,7 @@ namespace Stone.Compiler
         public abstract void visit(ExprAccess node);
         public abstract void visit(ExprNewData node);
         public abstract void visit(ExprCall node);
+        public abstract void visit(ExprArray node);
 
         public abstract void visit(ExprLambda node);
     }

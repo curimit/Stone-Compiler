@@ -32,7 +32,7 @@ namespace Stone.Compiler.Node
 
         public Match args;
 
-        public FormalScope scope;
+        public LocalScope scope;
 
         public Proxy defined_in;
 
@@ -68,7 +68,7 @@ namespace Stone.Compiler.Node
 
         public Match args;
 
-        public FormalScope scope;
+        public LocalScope scope;
 
         // IL Info
         public MethodBuilder method_builder;

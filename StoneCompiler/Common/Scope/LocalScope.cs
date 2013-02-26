@@ -22,7 +22,7 @@ namespace Stone.Compiler
         }
     }
 
-    class FormalScope
+    class LocalScope
     {
         public Dictionary<String, VarSymbol> var = new Dictionary<String, VarSymbol>();
 

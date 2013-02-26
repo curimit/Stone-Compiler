@@ -29,6 +29,12 @@ namespace Stone.Compiler.Node
                 case StoneParser.OP_MINUS: return "-";
                 case StoneParser.OP_MUL: return "*";
                 case StoneParser.OP_DIV: return "/";
+                case StoneParser.OP_EQU: return "==";
+                case StoneParser.OP_NEQ: return "!=";
+                case StoneParser.OP_LSS: return "<";
+                case StoneParser.OP_LEQ: return "<=";
+                case StoneParser.OP_GTR: return ">";
+                case StoneParser.OP_GEQ: return ">=";
             }
             return "???";
         }
@@ -57,12 +63,12 @@ namespace Stone.Compiler.Node
 
         public LambdaClass lambda_class;
 
-        public FormalScope scope;
+        public LocalScope scope;
         public HashSet<RefScope> ref_scopes = new HashSet<RefScope>();
 
         public class RefScope
         {
-            public FormalScope scope;
+            public LocalScope scope;
             public FieldBuilder field;
 
             public override int GetHashCode()
@@ -124,6 +130,16 @@ namespace Stone.Compiler.Node
     {
         public String data_name;
         public List<Expr> args = new List<Expr>();
+
+        public override void accept(Visitor visitor)
+        {
+            visitor.visit(this);
+        }
+    }
+
+    class ExprArray : Expr
+    {
+        public List<Expr> values = new List<Expr>();
 
         public override void accept(Visitor visitor)
         {

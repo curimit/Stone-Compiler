@@ -246,6 +246,18 @@ namespace Stone.Compiler
         {
         }
 
+        public override void visit(StmtIf node)
+        {
+        }
+
+        public override void visit(StmtWhile node)
+        {
+        }
+
+        public override void visit(StmtFor node)
+        {
+        }
+
         public override void visit(Const node)
         {
         }
@@ -259,6 +271,10 @@ namespace Stone.Compiler
         }
 
         public override void visit(ExprLambda node)
+        {
+        }
+
+        public override void visit(ExprArray node)
         {
         }
 

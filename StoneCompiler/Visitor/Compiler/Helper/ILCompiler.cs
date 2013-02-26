@@ -51,19 +51,19 @@ namespace Stone.Compiler
             public FieldBuilder field_builder;
         }
 
-        Dictionary<FormalScope, ScopeVar> scope_var = new Dictionary<FormalScope, ScopeVar>();
+        Dictionary<LocalScope, ScopeVar> scope_var = new Dictionary<LocalScope, ScopeVar>();
 
-        public void Push(FormalScope scope, LocalBuilder local_builder)
+        public void Push(LocalScope scope, LocalBuilder local_builder)
         {
             scope_var[scope] = new ScopeVar { type = ScopeVarType.LocalVar, local_builder = local_builder };
         }
 
-        public void Push(FormalScope scope, FieldBuilder field_builder)
+        public void Push(LocalScope scope, FieldBuilder field_builder)
         {
             scope_var[scope] = new ScopeVar { type = ScopeVarType.ThisVar, field_builder = field_builder };
         }
 
-        public void LoadScopeVar(FormalScope scope)
+        public void LoadScopeVar(LocalScope scope)
         {
             ScopeVar var = scope_var[scope];
             if (var.type == ScopeVarType.LocalVar)

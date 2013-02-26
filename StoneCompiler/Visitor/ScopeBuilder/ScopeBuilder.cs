@@ -78,11 +78,6 @@ namespace Stone.Compiler
 
         public override void visit(LambdaClass node)
         {
-            /*scope_stack.open(node.lambda_expr.scope);
-            scope_stack.enter_name_space(node.name_space);
-
-            scope_stack.pop_name_space();
-            scope_stack.close();*/
         }
 
         public override void visit(MessageDeclare node)
@@ -186,6 +181,11 @@ namespace Stone.Compiler
 
             node.symbol = scope_stack.try_find_var(node.owner, node.pos);
 
+            if (lambda_stack.Count() > 0)
+            {
+                closure_up_value(node.owner);
+            }
+
             if (node.symbol == null)
             {
                 error_handle.push(new UndefinedVarError(node.pos, node.owner));
@@ -213,6 +213,46 @@ namespace Stone.Compiler
             node.expr.accept(this);
         }
 
+        public override void visit(StmtIf node)
+        {
+            scope_stack.open(node.scope);
+
+            node.condition.accept(this);
+            node.if_true.accept(this);
+
+            scope_stack.close();
+        }
+
+        public override void visit(StmtWhile node)
+        {
+            scope_stack.open(node.scope);
+
+            node.condition.accept(this);
+            node.body.accept(this);
+
+            scope_stack.close();
+        }
+
+        public override void visit(StmtFor node)
+        {
+            scope_stack.open(node.scope);
+
+            node.symbol = new LocalVar();
+            node.symbol.info.name = node.owner;
+            node.symbol.info.pos = node.var_pos;
+
+            if (!scope_stack.try_push_var(node.symbol))
+            {
+                Position earlier = scope_stack.try_find_var(node.symbol.info.name, node.pos).info.pos;
+                error_handle.push(new DeclConflictError(node.pos, node.symbol.info.name, earlier));
+            }
+
+            node.expr.accept(this);
+            node.body.accept(this);
+
+            scope_stack.close();
+        }
+
         public override void visit(Const node)
         {
         }
@@ -237,11 +277,22 @@ namespace Stone.Compiler
             scope_stack.open(node.scope);
             lambda_stack.Push(node);
 
-            node.args.accept(this);
+            if (node.args != null)
+            {
+                node.args.accept(this);
+            }
             node.stmt_block.accept(this);
 
             lambda_stack.Pop();
             scope_stack.close();
+        }
+
+        public override void visit(ExprArray node)
+        {
+            foreach (var item in node.values)
+            {
+                item.accept(this);
+            }
         }
 
         public override void visit(ExprVar node)
@@ -257,7 +308,7 @@ namespace Stone.Compiler
                 {
                     if (lambda_stack.Count() > 0)
                     {
-                        closure_up_value(node);
+                        closure_up_value(node.name);
                     }
                 }
             }
@@ -271,19 +322,19 @@ namespace Stone.Compiler
             }
         }
 
-        public void closure_up_value(ExprVar node)
+        public void closure_up_value(String var_name)
         {
             Boolean ref_out = false;
-            FormalScope formal_scope = null;
+            LocalScope formal_scope = null;
             Stack<ExprLambda> expr_lambda_list = new Stack<ExprLambda>();
             VarSymbol var_symbol = null;
             foreach (var scope in scope_stack.stack)
             {
-                if (scope.var.ContainsKey(node.name) && !(scope.var[node.name] is ThisVar))
+                if (scope.var.ContainsKey(var_name) && !(scope.var[var_name] is ThisVar))
                 {
                     if (!ref_out) return;
                     formal_scope = scope;
-                    var_symbol = scope.var[node.name];
+                    var_symbol = scope.var[var_name];
                     break;
                 }
                 if (scope.ref_lambda != null)
@@ -296,23 +347,23 @@ namespace Stone.Compiler
             foreach (var expr_lambda in expr_lambda_list)
             {
                 // up_value for lambda_expr
-                if (!expr_lambda.lambda_class.up_var.Contains(node.name))
+                if (!expr_lambda.lambda_class.up_var.Contains(var_name))
                 {
-                    expr_lambda.lambda_class.up_var.Add(node.name);
-                    Debug.Assert(!expr_lambda.scope.var.ContainsKey(node.name));
+                    expr_lambda.lambda_class.up_var.Add(var_name);
+                    Debug.Assert(!expr_lambda.scope.var.ContainsKey(var_name));
 
                     ThisVar var = new ThisVar();
                     var.info = var_symbol.info;
                     var.ref_scope = formal_scope;
-                    expr_lambda.scope.var[node.name] = var;
+                    expr_lambda.scope.var[var_name] = var;
                 }
                 // closure_value in this scope
-                if (!formal_scope.closure_scope.closure_var.ContainsKey(node.name))
+                if (!formal_scope.closure_scope.closure_var.ContainsKey(var_name))
                 {
-                    formal_scope.closure_scope.closure_var[node.name] = null;
+                    formal_scope.closure_scope.closure_var[var_name] = null;
                     ObjectVar var = new ObjectVar();
                     var.info = var_symbol.info;
-                    formal_scope.var[node.name] = var;
+                    formal_scope.var[var_name] = var;
                 }
                 expr_lambda.ref_scopes.Add(new ExprLambda.RefScope { scope = formal_scope });
             }

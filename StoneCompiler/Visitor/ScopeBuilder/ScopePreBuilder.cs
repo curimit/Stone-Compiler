@@ -191,7 +191,7 @@ namespace Stone.Compiler
         {
             node.stmt_block.accept(this);
             node.name_space = name_space;
-            node.scope = new FormalScope();
+            node.scope = new LocalScope();
             node.scope.closure_scope.name = get_closure_type();
         }
 
@@ -202,7 +202,7 @@ namespace Stone.Compiler
         public override void visit(FuncDef node)
         {
             node.declare.accept(this);
-            node.scope = new FormalScope();
+            node.scope = new LocalScope();
             node.scope.closure_scope.name = get_closure_type();
             node.name = name_in_name_space(node.name);
             node.name_space = name_space;
@@ -258,6 +258,33 @@ namespace Stone.Compiler
             }
         }
 
+        public override void visit(StmtIf node)
+        {
+            node.scope = new LocalScope();
+            node.scope.closure_scope.name = get_closure_type();
+            node.condition.accept(this);
+            node.if_true.accept(this);
+        }
+
+        public override void visit(StmtWhile node)
+        {
+            node.scope = new LocalScope();
+            node.scope.closure_scope.name = get_closure_type();
+            node.condition.accept(this);
+            node.body.accept(this);
+        }
+
+        public override void visit(StmtFor node)
+        {
+            node.scope = new LocalScope();
+            node.scope.closure_scope.name = get_closure_type();
+
+            node.expr.accept(this);
+            node.body.accept(this);
+
+            node.body.accept(this);
+        }
+
         public override void visit(ExprCall node)
         {
             foreach (var item in node.args)
@@ -294,7 +321,7 @@ namespace Stone.Compiler
 
         public override void visit(ExprLambda node)
         {
-            node.scope = new FormalScope();
+            node.scope = new LocalScope();
             node.scope.closure_scope.name = get_closure_type();
             node.scope.ref_lambda = node;
 
@@ -306,6 +333,14 @@ namespace Stone.Compiler
             node.lambda_class = lambda_class;
 
             node.stmt_block.accept(this);
+        }
+
+        public override void visit(ExprArray node)
+        {
+            foreach (var item in node.values)
+            {
+                item.accept(this);
+            }
         }
 
         public override void visit(ExprVar node)

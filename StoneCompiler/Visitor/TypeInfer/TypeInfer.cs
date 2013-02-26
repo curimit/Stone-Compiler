@@ -141,7 +141,7 @@ namespace Stone.Compiler
             // Type Check
             if (node.symbol.info.type.not_match(node.expr.type))
             {
-                error_handle.push(new AssignTypeMissMatchError(node.symbol.info.type.ToString(), node.expr.type.ToString()));
+                error_handle.push(new AssignTypeMissMatchError(node.pos, node.symbol.info.type.ToString(), node.expr.type.ToString()));
             }
         }
 
@@ -163,6 +163,45 @@ namespace Stone.Compiler
             FuncDef func = func_list.First();
             Debug.Assert(func.declare.type is FuncType);
             node.type = (func.declare.type as FuncType).return_type;
+        }
+
+        public override void visit(StmtIf node)
+        {
+            scope_stack.open(node.scope);
+
+            node.condition.accept(this);
+            node.if_true.accept(this);
+
+            scope_stack.close();
+        }
+
+        public override void visit(StmtWhile node)
+        {
+            scope_stack.open(node.scope);
+
+            node.condition.accept(this);
+            node.body.accept(this);
+
+            scope_stack.close();
+        }
+
+        public override void visit(StmtFor node)
+        {
+            scope_stack.open(node.scope);
+
+            node.expr.accept(this);
+
+            if (!(node.expr.type is ArrayType))
+            {
+                Debug.Assert(false);
+            }
+
+            ArrayType array_type = node.expr.type as ArrayType;
+            node.symbol.info.type = array_type.member_type;
+
+            node.body.accept(this);
+
+            scope_stack.close();
         }
 
         public override void visit(ExprCall node)
@@ -277,6 +316,24 @@ namespace Stone.Compiler
             node.ast_type.accept(this);
 
             node.type = node.ast_type.type;
+        }
+
+        public override void visit(ExprArray node)
+        {
+            foreach (var item in node.values)
+            {
+                item.accept(this);
+            }
+
+            // types in array must be exactly same
+            if (node.values.Exists(x => x.type != node.values.First().type))
+            {
+                error_handle.push(new ArrayExprTypeMissMatchError(node.pos));
+                node.type = BaseType.ERROR;
+                return;
+            }
+
+            node.type = new ArrayType(node.values.First().type);
         }
 
         public override void visit(ExprVar node)

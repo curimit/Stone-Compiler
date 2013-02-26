@@ -49,7 +49,7 @@ namespace Stone.Compiler
 
     class DeclConflictError : Error
     {
-        private Position pos, earlier;
+        private Position earlier;
         private String name;
 
         public DeclConflictError(Position pos, String name, Position earlier)
@@ -67,7 +67,6 @@ namespace Stone.Compiler
 
     class UndefinedVarError : Error
     {
-        private Position pos;
         private String name;
 
         public UndefinedVarError(Position pos, String name)
@@ -106,8 +105,9 @@ namespace Stone.Compiler
         private String type_left;
         private String type_right;
 
-        public AssignTypeMissMatchError(String type_left, String type_right)
+        public AssignTypeMissMatchError(Position pos, String type_left, String type_right)
         {
+            this.pos = pos;
             this.type_left = type_left;
             this.type_right = type_right;
         }
@@ -115,6 +115,19 @@ namespace Stone.Compiler
         public override string ToString()
         {
             return String.Format("{0}: You can't put {1} into {2}", pos, type_right, type_left);
+        }
+    }
+
+    class ArrayExprTypeMissMatchError : Error
+    {
+        public ArrayExprTypeMissMatchError(Position pos)
+        {
+            this.pos = pos;
+        }
+
+        public override string ToString()
+        {
+            return String.Format("{0}: Element's type in array must be same.", pos);
         }
     }
 }

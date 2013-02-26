@@ -75,11 +75,12 @@
   <ItemGroup>
     <Compile Include="Antlr\StoneLexer.cs" />
     <Compile Include="Antlr\StoneParser.cs" />
+    <Compile Include="AstBuilder\AstBuilder3.cs" />
     <Compile Include="Common\Error.cs" />
     <Compile Include="Common\Position.cs" />
     <Compile Include="Common\Scope\ClassScope.cs" />
     <Compile Include="Common\Scope\DataScope.cs" />
-    <Compile Include="Common\Scope\FormalScope.cs" />
+    <Compile Include="Common\Scope\LocalScope.cs" />
     <Compile Include="Common\Scope\GlobalScope.cs" />
     <Compile Include="Common\Scope\ProxyScope.cs" />
     <Compile Include="Common\Scope\ScopeStack.cs" />
