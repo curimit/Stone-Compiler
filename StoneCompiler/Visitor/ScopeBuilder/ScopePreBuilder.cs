@@ -7,14 +7,16 @@ using System.Diagnostics;
 
 namespace Stone.Compiler
 {
-    // Deal with namespace, move all data, class, proxy, func to global with full path
+    // Deal with namespace, move all data, class, proxy, func to global with full namespace
     // After this, we will never use module
-    // also, create all of scopes
+    // By the way, create all of scopes
     class ScopePreBuilder : Visitor
     {
         private ErrorHandle error_handle = new ErrorHandle();
 
         private Root root;
+
+        private FormalScope current_formal_scope;
 
         private Stack<String> name_space_stack = new Stack<String>();
 
@@ -66,6 +68,12 @@ namespace Stone.Compiler
         public String get_closure_type()
         {
             return name_in_name_space(String.Format("<>Anonymous_Closure_{0}", anonymous_closure_count++));
+        }
+
+        private int anonymous_yield_count = 0;
+        public String get_yield_type()
+        {
+            return name_in_name_space(String.Format("<>Anonymous_Yield_{0}", anonymous_yield_count++));
         }
 
         public ScopePreBuilder(ErrorHandle error_handle)
@@ -189,10 +197,14 @@ namespace Stone.Compiler
 
         public override void visit(MessageDef node)
         {
-            node.stmt_block.accept(this);
             node.name_space = name_space;
-            node.scope = new LocalScope();
-            node.scope.closure_scope.name = get_closure_type();
+
+            node.scope = new FormalScope();
+            node.scope.local_scope.closure_scope.name = get_closure_type();
+            node.scope.yield_scope.name = get_yield_type();
+            current_formal_scope = node.scope;
+
+            node.stmt_block.accept(this);
         }
 
         public override void visit(FuncDeclare node)
@@ -202,8 +214,12 @@ namespace Stone.Compiler
         public override void visit(FuncDef node)
         {
             node.declare.accept(this);
-            node.scope = new LocalScope();
-            node.scope.closure_scope.name = get_closure_type();
+
+            node.scope = new FormalScope();
+            node.scope.local_scope.closure_scope.name = get_closure_type();
+            node.scope.yield_scope.name = get_yield_type();
+            current_formal_scope = node.scope;
+
             node.name = name_in_name_space(node.name);
             node.name_space = name_space;
 
@@ -216,7 +232,11 @@ namespace Stone.Compiler
         {
         }
 
-        public override void visit(MatchVar node)
+        public override void visit(MatchAssignVar node)
+        {
+        }
+
+        public override void visit(MatchAllocVar node)
         {
         }
 
@@ -229,6 +249,10 @@ namespace Stone.Compiler
         }
 
         public override void visit(AstAtomType node)
+        {
+        }
+
+        public override void visit(AstEnumType node)
         {
         }
 
@@ -262,6 +286,7 @@ namespace Stone.Compiler
         {
             node.scope = new LocalScope();
             node.scope.closure_scope.name = get_closure_type();
+            node.scope.closure_scope.anonymous_target = new LocalVar();
             node.condition.accept(this);
             node.if_true.accept(this);
         }
@@ -270,6 +295,7 @@ namespace Stone.Compiler
         {
             node.scope = new LocalScope();
             node.scope.closure_scope.name = get_closure_type();
+            node.scope.closure_scope.anonymous_target = new LocalVar();
             node.condition.accept(this);
             node.body.accept(this);
         }
@@ -278,9 +304,9 @@ namespace Stone.Compiler
         {
             node.scope = new LocalScope();
             node.scope.closure_scope.name = get_closure_type();
+            node.scope.closure_scope.anonymous_target = new LocalVar();
 
             node.expr.accept(this);
-            node.body.accept(this);
 
             node.body.accept(this);
         }
@@ -299,6 +325,15 @@ namespace Stone.Compiler
             {
                 node.expr.accept(this);
             }
+        }
+
+        public override void visit(StmtYield node)
+        {
+            node.expr.accept(this);
+
+            current_formal_scope.has_yield = true;
+            node.yield_order = current_formal_scope.yield_count;
+            current_formal_scope.yield_count++;
         }
 
         public override void visit(Const node)
@@ -323,6 +358,7 @@ namespace Stone.Compiler
         {
             node.scope = new LocalScope();
             node.scope.closure_scope.name = get_closure_type();
+            node.scope.closure_scope.anonymous_target = new LocalVar();
             node.scope.ref_lambda = node;
 
             LambdaClass lambda_class = new LambdaClass();

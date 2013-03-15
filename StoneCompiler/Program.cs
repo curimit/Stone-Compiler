@@ -18,7 +18,7 @@ namespace Stone.Compiler
             //ILCompiler.test();
             //return;
 
-            String input = File.ReadAllText("../code/case6.txt");
+            String input = File.ReadAllText("../code/case7.txt");
 
             ErrorHandle error_handle = new ErrorHandle();
 

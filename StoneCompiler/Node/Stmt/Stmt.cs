@@ -30,6 +30,17 @@ namespace Stone.Compiler.Node
         }
     }
 
+    class StmtYield : Stmt
+    {
+        public Expr expr = null;
+        public int yield_order;
+
+        public override void accept(Visitor visitor)
+        {
+            visitor.visit(this);
+        }
+    }
+
     class StmtAlloc : Stmt
     {
         public String owner;
@@ -102,10 +113,15 @@ namespace Stone.Compiler.Node
         public StmtBlock body;
 
         public VarSymbol symbol;
+        public VarSymbol iterator;
 
         public Position var_pos;
 
         public LocalScope scope;
+
+        public Type iterator_member_type;
+        public Type iterator_enumerator_type;
+        public Type iterator_enumerable_type;
 
         public override void accept(Visitor visitor)
         {

@@ -32,6 +32,11 @@ namespace Stone.Compiler
             stack.Push(scope);
         }
 
+        public void open(FormalScope scope)
+        {
+            stack.Push(scope.local_scope);
+        }
+
         public void close()
         {
             stack.Pop();

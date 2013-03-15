@@ -20,11 +20,23 @@ namespace Stone.Compiler.Node
         }
     }
 
-    class MatchVar : Match
+    class MatchAssignVar : Match
     {
         public String name;
 
-        public LocalVar symbol;
+        public VarSymbol symbol;
+
+        public override void accept(Visitor visitor)
+        {
+            visitor.visit(this);
+        }
+    }
+
+    class MatchAllocVar : Match
+    {
+        public String name;
+
+        public VarSymbol symbol;
 
         public override void accept(Visitor visitor)
         {

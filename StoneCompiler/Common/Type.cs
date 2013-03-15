@@ -54,41 +54,86 @@ namespace Stone.Compiler
             {
                 FuncType func = this as FuncType;
 
-                Debug.Assert(func.return_type != BaseType.VOID);
-
-                List<Type> list = new List<Type>();
-                foreach (var item in func.args_type.get_types()) list.Add(item);
-                list.Add(func.return_type.get_type());
-
-                Type func_type = null;
-                switch (list.Count)
+                if (func.return_type != BaseType.VOID)
                 {
-                    case 1:
-                        func_type = typeof(Func<>);
-                        break;
+                    List<Type> list = new List<Type>();
+                    foreach (var item in func.args_type.get_types()) list.Add(item);
+                    list.Add(func.return_type.get_type());
 
-                    case 2:
-                        func_type = typeof(Func<,>);
-                        break;
+                    Type func_type = null;
+                    switch (list.Count)
+                    {
+                        case 1:
+                            func_type = typeof(Func<>);
+                            break;
 
-                    case 3:
-                        func_type = typeof(Func<,,>);
-                        break;
+                        case 2:
+                            func_type = typeof(Func<,>);
+                            break;
 
-                    default:
-                        Debug.Assert(false);
-                        break;
+                        case 3:
+                            func_type = typeof(Func<,,>);
+                            break;
+
+                        default:
+                            Debug.Assert(false);
+                            break;
+                    }
+
+
+                    func_type = func_type.MakeGenericType(list.ToArray());
+
+                    return func_type;
                 }
+                else
+                {
+                    List<Type> list = new List<Type>();
+                    foreach (var item in func.args_type.get_types()) list.Add(item);
+
+                    Type func_type = null;
+                    switch (list.Count)
+                    {
+                        case 0:
+                            func_type = typeof(Action);
+                            break;
+
+                        case 1:
+                            func_type = typeof(Action<>);
+                            break;
+
+                        case 2:
+                            func_type = typeof(Action<,>);
+                            break;
+
+                        case 3:
+                            func_type = typeof(Action<,,>);
+                            break;
+
+                        default:
+                            Debug.Assert(false);
+                            break;
+                    }
 
 
-                func_type = func_type.MakeGenericType(list.ToArray());
+                    if (list.Count > 0)
+                    {
+                        func_type = func_type.MakeGenericType(list.ToArray());
+                    }
 
-                return func_type;
+                    return func_type;
+                }
             }
-            if (this is ArrayType)
+            if (this is EnumType)
             {
-                Type member_type = (this as ArrayType).member_type.get_type();
-                return member_type.MakeArrayType();
+                EnumType enum_type = this as EnumType;
+                Type type = typeof(IEnumerable<>).MakeGenericType(enum_type.member_type.get_type());
+                return type;
+            }
+            if (this is IterType)
+            {
+                IterType enum_type = this as IterType;
+                Type type = typeof(IEnumerator<>).MakeGenericType(enum_type.member_type.get_type());
+                return type;
             }
             Debug.Assert(false);
             return null;
@@ -96,6 +141,8 @@ namespace Stone.Compiler
 
         public Type[] get_types()
         {
+            if (this == BaseType.VOID) return Type.EmptyTypes;
+
             if (this is CrossType)
             {
                 CrossType cross_type = this as CrossType;
@@ -210,18 +257,33 @@ namespace Stone.Compiler
         }
     }
 
-    class ArrayType : StoneType
+    class EnumType : StoneType
     {
         public StoneType member_type;
 
-        public ArrayType(StoneType member_type)
+        public EnumType(StoneType type)
         {
-            this.member_type = member_type;
+            member_type = type;
         }
 
         public override string ToString()
         {
-            return String.Format("[{0}]", member_type.ToString());
+            return String.Format("(Enum {0})", member_type.ToString());
+        }
+    }
+
+    class IterType : StoneType
+    {
+        public StoneType member_type;
+
+        public IterType(StoneType type)
+        {
+            member_type = type;
+        }
+
+        public override string ToString()
+        {
+            return String.Format("(Iter {0})", member_type.ToString());
         }
     }
 }

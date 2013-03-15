@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.4 Stone.g 2013-02-26 17:17:35
+// $ANTLR 3.4 Stone.g 2013-03-15 08:22:32
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -31,9 +31,6 @@ namespace  Stone.Compiler
 public partial class StoneLexer : Antlr.Runtime.Lexer
 {
 	public const int EOF=-1;
-	public const int T__59=59;
-	public const int T__60=60;
-	public const int T__61=61;
 	public const int T__62=62;
 	public const int T__63=63;
 	public const int T__64=64;
@@ -53,6 +50,10 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 	public const int T__78=78;
 	public const int T__79=79;
 	public const int T__80=80;
+	public const int T__81=81;
+	public const int T__82=82;
+	public const int T__83=83;
+	public const int T__84=84;
 	public const int Class_Def=4;
 	public const int Class_Def_Body=5;
 	public const int DEDENT=6;
@@ -74,40 +75,43 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 	public const int INDENT=22;
 	public const int INT=23;
 	public const int Lambda_Args=24;
-	public const int Match_Cross=25;
-	public const int Match_Var=26;
-	public const int Message_Args=27;
-	public const int Message_Declare=28;
-	public const int Message_Def=29;
-	public const int Message_Item=30;
-	public const int Module_Def=31;
-	public const int NEWLINE=32;
-	public const int NORMAL_STRING=33;
-	public const int OP_DIV=34;
-	public const int OP_EQU=35;
-	public const int OP_GEQ=36;
-	public const int OP_GTR=37;
-	public const int OP_LEQ=38;
-	public const int OP_LSS=39;
-	public const int OP_MINUS=40;
-	public const int OP_MUL=41;
-	public const int OP_NEQ=42;
-	public const int OP_PLUS=43;
-	public const int Proxy_Def=44;
-	public const int Proxy_Def_Body=45;
-	public const int Root=46;
-	public const int Stmt_Alloc=47;
-	public const int Stmt_Assign=48;
-	public const int Stmt_Block=49;
-	public const int Stmt_Call=50;
-	public const int Stmt_For=51;
-	public const int Stmt_If=52;
-	public const int Stmt_Return=53;
-	public const int Stmt_While=54;
-	public const int Type_Atom=55;
-	public const int Type_Cross=56;
-	public const int Type_Func=57;
-	public const int WS=58;
+	public const int Match_Alloc_Var=25;
+	public const int Match_Assign_Var=26;
+	public const int Match_Cross=27;
+	public const int Message_Args=28;
+	public const int Message_Declare=29;
+	public const int Message_Def=30;
+	public const int Message_Item=31;
+	public const int Module_Def=32;
+	public const int NEWLINE=33;
+	public const int NORMAL_STRING=34;
+	public const int OP_DIV=35;
+	public const int OP_EQU=36;
+	public const int OP_GEQ=37;
+	public const int OP_GTR=38;
+	public const int OP_LEQ=39;
+	public const int OP_LSS=40;
+	public const int OP_MINUS=41;
+	public const int OP_MUL=42;
+	public const int OP_NEQ=43;
+	public const int OP_PLUS=44;
+	public const int Proxy_Def=45;
+	public const int Proxy_Def_Body=46;
+	public const int Root=47;
+	public const int Stmt_Alloc=48;
+	public const int Stmt_Assign=49;
+	public const int Stmt_Block=50;
+	public const int Stmt_Call=51;
+	public const int Stmt_For=52;
+	public const int Stmt_If=53;
+	public const int Stmt_Return=54;
+	public const int Stmt_While=55;
+	public const int Stmt_Yield=56;
+	public const int Type_Atom=57;
+	public const int Type_Cross=58;
+	public const int Type_Enum=59;
+	public const int Type_Func=60;
+	public const int WS=61;
 
 		int CurrentIndent = 0;
 
@@ -547,19 +551,19 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 	}
 	// $ANTLR end "OP_PLUS"
 
-	partial void EnterRule_T__59();
-	partial void LeaveRule_T__59();
+	partial void EnterRule_T__62();
+	partial void LeaveRule_T__62();
 
-	// $ANTLR start "T__59"
-	[GrammarRule("T__59")]
-	private void mT__59()
+	// $ANTLR start "T__62"
+	[GrammarRule("T__62")]
+	private void mT__62()
 	{
-		EnterRule_T__59();
-		EnterRule("T__59", 12);
-		TraceIn("T__59", 12);
+		EnterRule_T__62();
+		EnterRule("T__62", 12);
+		TraceIn("T__62", 12);
 		try
 		{
-			int _type = T__59;
+			int _type = T__62;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:47:7: ( '(' )
 			DebugEnterAlt(1);
@@ -575,26 +579,26 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__59", 12);
-			LeaveRule("T__59", 12);
-			LeaveRule_T__59();
+			TraceOut("T__62", 12);
+			LeaveRule("T__62", 12);
+			LeaveRule_T__62();
 		}
 	}
-	// $ANTLR end "T__59"
+	// $ANTLR end "T__62"
 
-	partial void EnterRule_T__60();
-	partial void LeaveRule_T__60();
+	partial void EnterRule_T__63();
+	partial void LeaveRule_T__63();
 
-	// $ANTLR start "T__60"
-	[GrammarRule("T__60")]
-	private void mT__60()
+	// $ANTLR start "T__63"
+	[GrammarRule("T__63")]
+	private void mT__63()
 	{
-		EnterRule_T__60();
-		EnterRule("T__60", 13);
-		TraceIn("T__60", 13);
+		EnterRule_T__63();
+		EnterRule("T__63", 13);
+		TraceIn("T__63", 13);
 		try
 		{
-			int _type = T__60;
+			int _type = T__63;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:48:7: ( ')' )
 			DebugEnterAlt(1);
@@ -610,26 +614,26 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__60", 13);
-			LeaveRule("T__60", 13);
-			LeaveRule_T__60();
+			TraceOut("T__63", 13);
+			LeaveRule("T__63", 13);
+			LeaveRule_T__63();
 		}
 	}
-	// $ANTLR end "T__60"
+	// $ANTLR end "T__63"
 
-	partial void EnterRule_T__61();
-	partial void LeaveRule_T__61();
+	partial void EnterRule_T__64();
+	partial void LeaveRule_T__64();
 
-	// $ANTLR start "T__61"
-	[GrammarRule("T__61")]
-	private void mT__61()
+	// $ANTLR start "T__64"
+	[GrammarRule("T__64")]
+	private void mT__64()
 	{
-		EnterRule_T__61();
-		EnterRule("T__61", 14);
-		TraceIn("T__61", 14);
+		EnterRule_T__64();
+		EnterRule("T__64", 14);
+		TraceIn("T__64", 14);
 		try
 		{
-			int _type = T__61;
+			int _type = T__64;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:49:7: ( ',' )
 			DebugEnterAlt(1);
@@ -645,26 +649,26 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__61", 14);
-			LeaveRule("T__61", 14);
-			LeaveRule_T__61();
+			TraceOut("T__64", 14);
+			LeaveRule("T__64", 14);
+			LeaveRule_T__64();
 		}
 	}
-	// $ANTLR end "T__61"
+	// $ANTLR end "T__64"
 
-	partial void EnterRule_T__62();
-	partial void LeaveRule_T__62();
+	partial void EnterRule_T__65();
+	partial void LeaveRule_T__65();
 
-	// $ANTLR start "T__62"
-	[GrammarRule("T__62")]
-	private void mT__62()
+	// $ANTLR start "T__65"
+	[GrammarRule("T__65")]
+	private void mT__65()
 	{
-		EnterRule_T__62();
-		EnterRule("T__62", 15);
-		TraceIn("T__62", 15);
+		EnterRule_T__65();
+		EnterRule("T__65", 15);
+		TraceIn("T__65", 15);
 		try
 		{
-			int _type = T__62;
+			int _type = T__65;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:50:7: ( '->' )
 			DebugEnterAlt(1);
@@ -681,26 +685,26 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__62", 15);
-			LeaveRule("T__62", 15);
-			LeaveRule_T__62();
+			TraceOut("T__65", 15);
+			LeaveRule("T__65", 15);
+			LeaveRule_T__65();
 		}
 	}
-	// $ANTLR end "T__62"
+	// $ANTLR end "T__65"
 
-	partial void EnterRule_T__63();
-	partial void LeaveRule_T__63();
+	partial void EnterRule_T__66();
+	partial void LeaveRule_T__66();
 
-	// $ANTLR start "T__63"
-	[GrammarRule("T__63")]
-	private void mT__63()
+	// $ANTLR start "T__66"
+	[GrammarRule("T__66")]
+	private void mT__66()
 	{
-		EnterRule_T__63();
-		EnterRule("T__63", 16);
-		TraceIn("T__63", 16);
+		EnterRule_T__66();
+		EnterRule("T__66", 16);
+		TraceIn("T__66", 16);
 		try
 		{
-			int _type = T__63;
+			int _type = T__66;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:51:7: ( ':' )
 			DebugEnterAlt(1);
@@ -716,26 +720,26 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__63", 16);
-			LeaveRule("T__63", 16);
-			LeaveRule_T__63();
+			TraceOut("T__66", 16);
+			LeaveRule("T__66", 16);
+			LeaveRule_T__66();
 		}
 	}
-	// $ANTLR end "T__63"
+	// $ANTLR end "T__66"
 
-	partial void EnterRule_T__64();
-	partial void LeaveRule_T__64();
+	partial void EnterRule_T__67();
+	partial void LeaveRule_T__67();
 
-	// $ANTLR start "T__64"
-	[GrammarRule("T__64")]
-	private void mT__64()
+	// $ANTLR start "T__67"
+	[GrammarRule("T__67")]
+	private void mT__67()
 	{
-		EnterRule_T__64();
-		EnterRule("T__64", 17);
-		TraceIn("T__64", 17);
+		EnterRule_T__67();
+		EnterRule("T__67", 17);
+		TraceIn("T__67", 17);
 		try
 		{
-			int _type = T__64;
+			int _type = T__67;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:52:7: ( '::' )
 			DebugEnterAlt(1);
@@ -752,26 +756,26 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__64", 17);
-			LeaveRule("T__64", 17);
-			LeaveRule_T__64();
+			TraceOut("T__67", 17);
+			LeaveRule("T__67", 17);
+			LeaveRule_T__67();
 		}
 	}
-	// $ANTLR end "T__64"
+	// $ANTLR end "T__67"
 
-	partial void EnterRule_T__65();
-	partial void LeaveRule_T__65();
+	partial void EnterRule_T__68();
+	partial void LeaveRule_T__68();
 
-	// $ANTLR start "T__65"
-	[GrammarRule("T__65")]
-	private void mT__65()
+	// $ANTLR start "T__68"
+	[GrammarRule("T__68")]
+	private void mT__68()
 	{
-		EnterRule_T__65();
-		EnterRule("T__65", 18);
-		TraceIn("T__65", 18);
+		EnterRule_T__68();
+		EnterRule("T__68", 18);
+		TraceIn("T__68", 18);
 		try
 		{
-			int _type = T__65;
+			int _type = T__68;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:53:7: ( '=' )
 			DebugEnterAlt(1);
@@ -787,26 +791,26 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__65", 18);
-			LeaveRule("T__65", 18);
-			LeaveRule_T__65();
+			TraceOut("T__68", 18);
+			LeaveRule("T__68", 18);
+			LeaveRule_T__68();
 		}
 	}
-	// $ANTLR end "T__65"
+	// $ANTLR end "T__68"
 
-	partial void EnterRule_T__66();
-	partial void LeaveRule_T__66();
+	partial void EnterRule_T__69();
+	partial void LeaveRule_T__69();
 
-	// $ANTLR start "T__66"
-	[GrammarRule("T__66")]
-	private void mT__66()
+	// $ANTLR start "T__69"
+	[GrammarRule("T__69")]
+	private void mT__69()
 	{
-		EnterRule_T__66();
-		EnterRule("T__66", 19);
-		TraceIn("T__66", 19);
+		EnterRule_T__69();
+		EnterRule("T__69", 19);
+		TraceIn("T__69", 19);
 		try
 		{
-			int _type = T__66;
+			int _type = T__69;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:54:7: ( '=>' )
 			DebugEnterAlt(1);
@@ -823,26 +827,26 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__66", 19);
-			LeaveRule("T__66", 19);
-			LeaveRule_T__66();
+			TraceOut("T__69", 19);
+			LeaveRule("T__69", 19);
+			LeaveRule_T__69();
 		}
 	}
-	// $ANTLR end "T__66"
+	// $ANTLR end "T__69"
 
-	partial void EnterRule_T__67();
-	partial void LeaveRule_T__67();
+	partial void EnterRule_T__70();
+	partial void LeaveRule_T__70();
 
-	// $ANTLR start "T__67"
-	[GrammarRule("T__67")]
-	private void mT__67()
+	// $ANTLR start "T__70"
+	[GrammarRule("T__70")]
+	private void mT__70()
 	{
-		EnterRule_T__67();
-		EnterRule("T__67", 20);
-		TraceIn("T__67", 20);
+		EnterRule_T__70();
+		EnterRule("T__70", 20);
+		TraceIn("T__70", 20);
 		try
 		{
-			int _type = T__67;
+			int _type = T__70;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:55:7: ( '[' )
 			DebugEnterAlt(1);
@@ -858,26 +862,26 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__67", 20);
-			LeaveRule("T__67", 20);
-			LeaveRule_T__67();
+			TraceOut("T__70", 20);
+			LeaveRule("T__70", 20);
+			LeaveRule_T__70();
 		}
 	}
-	// $ANTLR end "T__67"
+	// $ANTLR end "T__70"
 
-	partial void EnterRule_T__68();
-	partial void LeaveRule_T__68();
+	partial void EnterRule_T__71();
+	partial void LeaveRule_T__71();
 
-	// $ANTLR start "T__68"
-	[GrammarRule("T__68")]
-	private void mT__68()
+	// $ANTLR start "T__71"
+	[GrammarRule("T__71")]
+	private void mT__71()
 	{
-		EnterRule_T__68();
-		EnterRule("T__68", 21);
-		TraceIn("T__68", 21);
+		EnterRule_T__71();
+		EnterRule("T__71", 21);
+		TraceIn("T__71", 21);
 		try
 		{
-			int _type = T__68;
+			int _type = T__71;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:56:7: ( '\\\\' )
 			DebugEnterAlt(1);
@@ -893,26 +897,26 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__68", 21);
-			LeaveRule("T__68", 21);
-			LeaveRule_T__68();
+			TraceOut("T__71", 21);
+			LeaveRule("T__71", 21);
+			LeaveRule_T__71();
 		}
 	}
-	// $ANTLR end "T__68"
+	// $ANTLR end "T__71"
 
-	partial void EnterRule_T__69();
-	partial void LeaveRule_T__69();
+	partial void EnterRule_T__72();
+	partial void LeaveRule_T__72();
 
-	// $ANTLR start "T__69"
-	[GrammarRule("T__69")]
-	private void mT__69()
+	// $ANTLR start "T__72"
+	[GrammarRule("T__72")]
+	private void mT__72()
 	{
-		EnterRule_T__69();
-		EnterRule("T__69", 22);
-		TraceIn("T__69", 22);
+		EnterRule_T__72();
+		EnterRule("T__72", 22);
+		TraceIn("T__72", 22);
 		try
 		{
-			int _type = T__69;
+			int _type = T__72;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:57:7: ( ']' )
 			DebugEnterAlt(1);
@@ -928,26 +932,26 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__69", 22);
-			LeaveRule("T__69", 22);
-			LeaveRule_T__69();
+			TraceOut("T__72", 22);
+			LeaveRule("T__72", 22);
+			LeaveRule_T__72();
 		}
 	}
-	// $ANTLR end "T__69"
+	// $ANTLR end "T__72"
 
-	partial void EnterRule_T__70();
-	partial void LeaveRule_T__70();
+	partial void EnterRule_T__73();
+	partial void LeaveRule_T__73();
 
-	// $ANTLR start "T__70"
-	[GrammarRule("T__70")]
-	private void mT__70()
+	// $ANTLR start "T__73"
+	[GrammarRule("T__73")]
+	private void mT__73()
 	{
-		EnterRule_T__70();
-		EnterRule("T__70", 23);
-		TraceIn("T__70", 23);
+		EnterRule_T__73();
+		EnterRule("T__73", 23);
+		TraceIn("T__73", 23);
 		try
 		{
-			int _type = T__70;
+			int _type = T__73;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:58:7: ( 'class' )
 			DebugEnterAlt(1);
@@ -964,26 +968,26 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__70", 23);
-			LeaveRule("T__70", 23);
-			LeaveRule_T__70();
+			TraceOut("T__73", 23);
+			LeaveRule("T__73", 23);
+			LeaveRule_T__73();
 		}
 	}
-	// $ANTLR end "T__70"
+	// $ANTLR end "T__73"
 
-	partial void EnterRule_T__71();
-	partial void LeaveRule_T__71();
+	partial void EnterRule_T__74();
+	partial void LeaveRule_T__74();
 
-	// $ANTLR start "T__71"
-	[GrammarRule("T__71")]
-	private void mT__71()
+	// $ANTLR start "T__74"
+	[GrammarRule("T__74")]
+	private void mT__74()
 	{
-		EnterRule_T__71();
-		EnterRule("T__71", 24);
-		TraceIn("T__71", 24);
+		EnterRule_T__74();
+		EnterRule("T__74", 24);
+		TraceIn("T__74", 24);
 		try
 		{
-			int _type = T__71;
+			int _type = T__74;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:59:7: ( 'data' )
 			DebugEnterAlt(1);
@@ -1000,26 +1004,26 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__71", 24);
-			LeaveRule("T__71", 24);
-			LeaveRule_T__71();
+			TraceOut("T__74", 24);
+			LeaveRule("T__74", 24);
+			LeaveRule_T__74();
 		}
 	}
-	// $ANTLR end "T__71"
+	// $ANTLR end "T__74"
 
-	partial void EnterRule_T__72();
-	partial void LeaveRule_T__72();
+	partial void EnterRule_T__75();
+	partial void LeaveRule_T__75();
 
-	// $ANTLR start "T__72"
-	[GrammarRule("T__72")]
-	private void mT__72()
+	// $ANTLR start "T__75"
+	[GrammarRule("T__75")]
+	private void mT__75()
 	{
-		EnterRule_T__72();
-		EnterRule("T__72", 25);
-		TraceIn("T__72", 25);
+		EnterRule_T__75();
+		EnterRule("T__75", 25);
+		TraceIn("T__75", 25);
 		try
 		{
-			int _type = T__72;
+			int _type = T__75;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:60:7: ( 'for' )
 			DebugEnterAlt(1);
@@ -1036,26 +1040,26 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__72", 25);
-			LeaveRule("T__72", 25);
-			LeaveRule_T__72();
+			TraceOut("T__75", 25);
+			LeaveRule("T__75", 25);
+			LeaveRule_T__75();
 		}
 	}
-	// $ANTLR end "T__72"
+	// $ANTLR end "T__75"
 
-	partial void EnterRule_T__73();
-	partial void LeaveRule_T__73();
+	partial void EnterRule_T__76();
+	partial void LeaveRule_T__76();
 
-	// $ANTLR start "T__73"
-	[GrammarRule("T__73")]
-	private void mT__73()
+	// $ANTLR start "T__76"
+	[GrammarRule("T__76")]
+	private void mT__76()
 	{
-		EnterRule_T__73();
-		EnterRule("T__73", 26);
-		TraceIn("T__73", 26);
+		EnterRule_T__76();
+		EnterRule("T__76", 26);
+		TraceIn("T__76", 26);
 		try
 		{
-			int _type = T__73;
+			int _type = T__76;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:61:7: ( 'if' )
 			DebugEnterAlt(1);
@@ -1072,26 +1076,26 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__73", 26);
-			LeaveRule("T__73", 26);
-			LeaveRule_T__73();
+			TraceOut("T__76", 26);
+			LeaveRule("T__76", 26);
+			LeaveRule_T__76();
 		}
 	}
-	// $ANTLR end "T__73"
+	// $ANTLR end "T__76"
 
-	partial void EnterRule_T__74();
-	partial void LeaveRule_T__74();
+	partial void EnterRule_T__77();
+	partial void LeaveRule_T__77();
 
-	// $ANTLR start "T__74"
-	[GrammarRule("T__74")]
-	private void mT__74()
+	// $ANTLR start "T__77"
+	[GrammarRule("T__77")]
+	private void mT__77()
 	{
-		EnterRule_T__74();
-		EnterRule("T__74", 27);
-		TraceIn("T__74", 27);
+		EnterRule_T__77();
+		EnterRule("T__77", 27);
+		TraceIn("T__77", 27);
 		try
 		{
-			int _type = T__74;
+			int _type = T__77;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:62:7: ( 'in' )
 			DebugEnterAlt(1);
@@ -1108,26 +1112,26 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__74", 27);
-			LeaveRule("T__74", 27);
-			LeaveRule_T__74();
+			TraceOut("T__77", 27);
+			LeaveRule("T__77", 27);
+			LeaveRule_T__77();
 		}
 	}
-	// $ANTLR end "T__74"
+	// $ANTLR end "T__77"
 
-	partial void EnterRule_T__75();
-	partial void LeaveRule_T__75();
+	partial void EnterRule_T__78();
+	partial void LeaveRule_T__78();
 
-	// $ANTLR start "T__75"
-	[GrammarRule("T__75")]
-	private void mT__75()
+	// $ANTLR start "T__78"
+	[GrammarRule("T__78")]
+	private void mT__78()
 	{
-		EnterRule_T__75();
-		EnterRule("T__75", 28);
-		TraceIn("T__75", 28);
+		EnterRule_T__78();
+		EnterRule("T__78", 28);
+		TraceIn("T__78", 28);
 		try
 		{
-			int _type = T__75;
+			int _type = T__78;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:63:7: ( 'module' )
 			DebugEnterAlt(1);
@@ -1144,26 +1148,26 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__75", 28);
-			LeaveRule("T__75", 28);
-			LeaveRule_T__75();
+			TraceOut("T__78", 28);
+			LeaveRule("T__78", 28);
+			LeaveRule_T__78();
 		}
 	}
-	// $ANTLR end "T__75"
+	// $ANTLR end "T__78"
 
-	partial void EnterRule_T__76();
-	partial void LeaveRule_T__76();
+	partial void EnterRule_T__79();
+	partial void LeaveRule_T__79();
 
-	// $ANTLR start "T__76"
-	[GrammarRule("T__76")]
-	private void mT__76()
+	// $ANTLR start "T__79"
+	[GrammarRule("T__79")]
+	private void mT__79()
 	{
-		EnterRule_T__76();
-		EnterRule("T__76", 29);
-		TraceIn("T__76", 29);
+		EnterRule_T__79();
+		EnterRule("T__79", 29);
+		TraceIn("T__79", 29);
 		try
 		{
-			int _type = T__76;
+			int _type = T__79;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:64:7: ( 'new' )
 			DebugEnterAlt(1);
@@ -1180,26 +1184,26 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__76", 29);
-			LeaveRule("T__76", 29);
-			LeaveRule_T__76();
+			TraceOut("T__79", 29);
+			LeaveRule("T__79", 29);
+			LeaveRule_T__79();
 		}
 	}
-	// $ANTLR end "T__76"
+	// $ANTLR end "T__79"
 
-	partial void EnterRule_T__77();
-	partial void LeaveRule_T__77();
+	partial void EnterRule_T__80();
+	partial void LeaveRule_T__80();
 
-	// $ANTLR start "T__77"
-	[GrammarRule("T__77")]
-	private void mT__77()
+	// $ANTLR start "T__80"
+	[GrammarRule("T__80")]
+	private void mT__80()
 	{
-		EnterRule_T__77();
-		EnterRule("T__77", 30);
-		TraceIn("T__77", 30);
+		EnterRule_T__80();
+		EnterRule("T__80", 30);
+		TraceIn("T__80", 30);
 		try
 		{
-			int _type = T__77;
+			int _type = T__80;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:65:7: ( 'proxy' )
 			DebugEnterAlt(1);
@@ -1216,26 +1220,26 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__77", 30);
-			LeaveRule("T__77", 30);
-			LeaveRule_T__77();
+			TraceOut("T__80", 30);
+			LeaveRule("T__80", 30);
+			LeaveRule_T__80();
 		}
 	}
-	// $ANTLR end "T__77"
+	// $ANTLR end "T__80"
 
-	partial void EnterRule_T__78();
-	partial void LeaveRule_T__78();
+	partial void EnterRule_T__81();
+	partial void LeaveRule_T__81();
 
-	// $ANTLR start "T__78"
-	[GrammarRule("T__78")]
-	private void mT__78()
+	// $ANTLR start "T__81"
+	[GrammarRule("T__81")]
+	private void mT__81()
 	{
-		EnterRule_T__78();
-		EnterRule("T__78", 31);
-		TraceIn("T__78", 31);
+		EnterRule_T__81();
+		EnterRule("T__81", 31);
+		TraceIn("T__81", 31);
 		try
 		{
-			int _type = T__78;
+			int _type = T__81;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:66:7: ( 'return' )
 			DebugEnterAlt(1);
@@ -1252,26 +1256,26 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__78", 31);
-			LeaveRule("T__78", 31);
-			LeaveRule_T__78();
+			TraceOut("T__81", 31);
+			LeaveRule("T__81", 31);
+			LeaveRule_T__81();
 		}
 	}
-	// $ANTLR end "T__78"
+	// $ANTLR end "T__81"
 
-	partial void EnterRule_T__79();
-	partial void LeaveRule_T__79();
+	partial void EnterRule_T__82();
+	partial void LeaveRule_T__82();
 
-	// $ANTLR start "T__79"
-	[GrammarRule("T__79")]
-	private void mT__79()
+	// $ANTLR start "T__82"
+	[GrammarRule("T__82")]
+	private void mT__82()
 	{
-		EnterRule_T__79();
-		EnterRule("T__79", 32);
-		TraceIn("T__79", 32);
+		EnterRule_T__82();
+		EnterRule("T__82", 32);
+		TraceIn("T__82", 32);
 		try
 		{
-			int _type = T__79;
+			int _type = T__82;
 			int _channel = DefaultTokenChannel;
 			// Stone.g:67:7: ( 'while' )
 			DebugEnterAlt(1);
@@ -1288,32 +1292,68 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__79", 32);
-			LeaveRule("T__79", 32);
-			LeaveRule_T__79();
+			TraceOut("T__82", 32);
+			LeaveRule("T__82", 32);
+			LeaveRule_T__82();
 		}
 	}
-	// $ANTLR end "T__79"
+	// $ANTLR end "T__82"
 
-	partial void EnterRule_T__80();
-	partial void LeaveRule_T__80();
+	partial void EnterRule_T__83();
+	partial void LeaveRule_T__83();
 
-	// $ANTLR start "T__80"
-	[GrammarRule("T__80")]
-	private void mT__80()
+	// $ANTLR start "T__83"
+	[GrammarRule("T__83")]
+	private void mT__83()
 	{
-		EnterRule_T__80();
-		EnterRule("T__80", 33);
-		TraceIn("T__80", 33);
+		EnterRule_T__83();
+		EnterRule("T__83", 33);
+		TraceIn("T__83", 33);
 		try
 		{
-			int _type = T__80;
+			int _type = T__83;
 			int _channel = DefaultTokenChannel;
-			// Stone.g:68:7: ( '|' )
+			// Stone.g:68:7: ( 'yield' )
 			DebugEnterAlt(1);
-			// Stone.g:68:9: '|'
+			// Stone.g:68:9: 'yield'
 			{
 			DebugLocation(68, 9);
+			Match("yield"); 
+
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("T__83", 33);
+			LeaveRule("T__83", 33);
+			LeaveRule_T__83();
+		}
+	}
+	// $ANTLR end "T__83"
+
+	partial void EnterRule_T__84();
+	partial void LeaveRule_T__84();
+
+	// $ANTLR start "T__84"
+	[GrammarRule("T__84")]
+	private void mT__84()
+	{
+		EnterRule_T__84();
+		EnterRule("T__84", 34);
+		TraceIn("T__84", 34);
+		try
+		{
+			int _type = T__84;
+			int _channel = DefaultTokenChannel;
+			// Stone.g:69:7: ( '|' )
+			DebugEnterAlt(1);
+			// Stone.g:69:9: '|'
+			{
+			DebugLocation(69, 9);
 			Match('|'); 
 
 			}
@@ -1323,12 +1363,12 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__80", 33);
-			LeaveRule("T__80", 33);
-			LeaveRule_T__80();
+			TraceOut("T__84", 34);
+			LeaveRule("T__84", 34);
+			LeaveRule_T__84();
 		}
 	}
-	// $ANTLR end "T__80"
+	// $ANTLR end "T__84"
 
 	partial void EnterRule_NEWLINE();
 	partial void LeaveRule_NEWLINE();
@@ -1338,18 +1378,18 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 	private void mNEWLINE()
 	{
 		EnterRule_NEWLINE();
-		EnterRule("NEWLINE", 34);
-		TraceIn("NEWLINE", 34);
+		EnterRule("NEWLINE", 35);
+		TraceIn("NEWLINE", 35);
 		try
 		{
 			int _type = NEWLINE;
 			int _channel = DefaultTokenChannel;
-			// Stone.g:354:3: ( ( '\\n' )+ ( ' ' | '\\t' )* )
+			// Stone.g:365:3: ( ( '\\n' )+ ( ' ' | '\\t' )* )
 			DebugEnterAlt(1);
-			// Stone.g:354:3: ( '\\n' )+ ( ' ' | '\\t' )*
+			// Stone.g:365:3: ( '\\n' )+ ( ' ' | '\\t' )*
 			{
-			DebugLocation(354, 3);
-			// Stone.g:354:3: ( '\\n' )+
+			DebugLocation(365, 3);
+			// Stone.g:365:3: ( '\\n' )+
 			int cnt1=0;
 			try { DebugEnterSubRule(1);
 			while (true)
@@ -1369,9 +1409,9 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Stone.g:354:3: '\\n'
+					// Stone.g:365:3: '\\n'
 					{
-					DebugLocation(354, 3);
+					DebugLocation(365, 3);
 					Match('\n'); 
 
 					}
@@ -1392,8 +1432,8 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 
 			} finally { DebugExitSubRule(1); }
 
-			DebugLocation(354, 9);
-			// Stone.g:354:9: ( ' ' | '\\t' )*
+			DebugLocation(365, 9);
+			// Stone.g:365:9: ( ' ' | '\\t' )*
 			try { DebugEnterSubRule(2);
 			while (true)
 			{
@@ -1414,7 +1454,7 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// Stone.g:
 					{
-					DebugLocation(354, 9);
+					DebugLocation(365, 9);
 					input.Consume();
 
 
@@ -1431,7 +1471,7 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 
 			} finally { DebugExitSubRule(2); }
 
-			DebugLocation(355, 1);
+			DebugLocation(366, 1);
 
 			       int indent = Text.Length;
 				   while (indent != 0 && Text[Text.Length - indent] != '\t' && Text[Text.Length - indent] != ' ') indent--;
@@ -1472,8 +1512,8 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("NEWLINE", 34);
-			LeaveRule("NEWLINE", 34);
+			TraceOut("NEWLINE", 35);
+			LeaveRule("NEWLINE", 35);
 			LeaveRule_NEWLINE();
 		}
 	}
@@ -1487,18 +1527,18 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 	private void mIDENT()
 	{
 		EnterRule_IDENT();
-		EnterRule("IDENT", 35);
-		TraceIn("IDENT", 35);
+		EnterRule("IDENT", 36);
+		TraceIn("IDENT", 36);
 		try
 		{
 			int _type = IDENT;
 			int _channel = DefaultTokenChannel;
-			// Stone.g:389:6: ( ( ( 'a' .. 'z' | 'A' .. 'Z' )+ ':' )* ( 'a' .. 'z' | 'A' .. 'Z' )+ ( '0' .. '9' )* )
+			// Stone.g:400:6: ( ( ( 'a' .. 'z' | 'A' .. 'Z' )+ ':' )* ( 'a' .. 'z' | 'A' .. 'Z' )+ ( '0' .. '9' )* )
 			DebugEnterAlt(1);
-			// Stone.g:389:8: ( ( 'a' .. 'z' | 'A' .. 'Z' )+ ':' )* ( 'a' .. 'z' | 'A' .. 'Z' )+ ( '0' .. '9' )*
+			// Stone.g:400:8: ( ( 'a' .. 'z' | 'A' .. 'Z' )+ ':' )* ( 'a' .. 'z' | 'A' .. 'Z' )+ ( '0' .. '9' )*
 			{
-			DebugLocation(389, 8);
-			// Stone.g:389:8: ( ( 'a' .. 'z' | 'A' .. 'Z' )+ ':' )*
+			DebugLocation(400, 8);
+			// Stone.g:400:8: ( ( 'a' .. 'z' | 'A' .. 'Z' )+ ':' )*
 			try { DebugEnterSubRule(4);
 			while (true)
 			{
@@ -1518,10 +1558,10 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Stone.g:389:9: ( 'a' .. 'z' | 'A' .. 'Z' )+ ':'
+					// Stone.g:400:9: ( 'a' .. 'z' | 'A' .. 'Z' )+ ':'
 					{
-					DebugLocation(389, 9);
-					// Stone.g:389:9: ( 'a' .. 'z' | 'A' .. 'Z' )+
+					DebugLocation(400, 9);
+					// Stone.g:400:9: ( 'a' .. 'z' | 'A' .. 'Z' )+
 					int cnt3=0;
 					try { DebugEnterSubRule(3);
 					while (true)
@@ -1543,7 +1583,7 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 							DebugEnterAlt(1);
 							// Stone.g:
 							{
-							DebugLocation(389, 9);
+							DebugLocation(400, 9);
 							input.Consume();
 
 
@@ -1565,7 +1605,7 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 
 					} finally { DebugExitSubRule(3); }
 
-					DebugLocation(389, 32);
+					DebugLocation(400, 32);
 					Match(':'); 
 
 					}
@@ -1581,8 +1621,8 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 
 			} finally { DebugExitSubRule(4); }
 
-			DebugLocation(389, 38);
-			// Stone.g:389:38: ( 'a' .. 'z' | 'A' .. 'Z' )+
+			DebugLocation(400, 38);
+			// Stone.g:400:38: ( 'a' .. 'z' | 'A' .. 'Z' )+
 			int cnt5=0;
 			try { DebugEnterSubRule(5);
 			while (true)
@@ -1604,7 +1644,7 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// Stone.g:
 					{
-					DebugLocation(389, 38);
+					DebugLocation(400, 38);
 					input.Consume();
 
 
@@ -1626,8 +1666,8 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 
 			} finally { DebugExitSubRule(5); }
 
-			DebugLocation(389, 61);
-			// Stone.g:389:61: ( '0' .. '9' )*
+			DebugLocation(400, 61);
+			// Stone.g:400:61: ( '0' .. '9' )*
 			try { DebugEnterSubRule(6);
 			while (true)
 			{
@@ -1648,7 +1688,7 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// Stone.g:
 					{
-					DebugLocation(389, 61);
+					DebugLocation(400, 61);
 					input.Consume();
 
 
@@ -1673,8 +1713,8 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("IDENT", 35);
-			LeaveRule("IDENT", 35);
+			TraceOut("IDENT", 36);
+			LeaveRule("IDENT", 36);
 			LeaveRule_IDENT();
 		}
 	}
@@ -1688,13 +1728,13 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 	private void mNORMAL_STRING()
 	{
 		EnterRule_NORMAL_STRING();
-		EnterRule("NORMAL_STRING", 36);
-		TraceIn("NORMAL_STRING", 36);
+		EnterRule("NORMAL_STRING", 37);
+		TraceIn("NORMAL_STRING", 37);
 		try
 		{
 			int _type = NORMAL_STRING;
 			int _channel = DefaultTokenChannel;
-			// Stone.g:393:2: ( '\"' (~ '\"' )* '\"' | '\\'' (~ '\\'' )* '\\'' )
+			// Stone.g:404:2: ( '\"' (~ '\"' )* '\"' | '\\'' (~ '\\'' )* '\\'' )
 			int alt9=2;
 			try { DebugEnterDecision(9, false);
 			int LA9_0 = input.LA(1);
@@ -1718,12 +1758,12 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// Stone.g:393:4: '\"' (~ '\"' )* '\"'
+				// Stone.g:404:4: '\"' (~ '\"' )* '\"'
 				{
-				DebugLocation(393, 4);
+				DebugLocation(404, 4);
 				Match('\"'); 
-				DebugLocation(393, 8);
-				// Stone.g:393:8: (~ '\"' )*
+				DebugLocation(404, 8);
+				// Stone.g:404:8: (~ '\"' )*
 				try { DebugEnterSubRule(7);
 				while (true)
 				{
@@ -1744,7 +1784,7 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 						DebugEnterAlt(1);
 						// Stone.g:
 						{
-						DebugLocation(393, 8);
+						DebugLocation(404, 8);
 						input.Consume();
 
 
@@ -1761,19 +1801,19 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(7); }
 
-				DebugLocation(393, 16);
+				DebugLocation(404, 16);
 				Match('\"'); 
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// Stone.g:394:4: '\\'' (~ '\\'' )* '\\''
+				// Stone.g:405:4: '\\'' (~ '\\'' )* '\\''
 				{
-				DebugLocation(394, 4);
+				DebugLocation(405, 4);
 				Match('\''); 
-				DebugLocation(394, 9);
-				// Stone.g:394:9: (~ '\\'' )*
+				DebugLocation(405, 9);
+				// Stone.g:405:9: (~ '\\'' )*
 				try { DebugEnterSubRule(8);
 				while (true)
 				{
@@ -1794,7 +1834,7 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 						DebugEnterAlt(1);
 						// Stone.g:
 						{
-						DebugLocation(394, 9);
+						DebugLocation(405, 9);
 						input.Consume();
 
 
@@ -1811,7 +1851,7 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(8); }
 
-				DebugLocation(394, 18);
+				DebugLocation(405, 18);
 				Match('\''); 
 
 				}
@@ -1823,8 +1863,8 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("NORMAL_STRING", 36);
-			LeaveRule("NORMAL_STRING", 36);
+			TraceOut("NORMAL_STRING", 37);
+			LeaveRule("NORMAL_STRING", 37);
 			LeaveRule_NORMAL_STRING();
 		}
 	}
@@ -1838,18 +1878,18 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 	private void mINT()
 	{
 		EnterRule_INT();
-		EnterRule("INT", 37);
-		TraceIn("INT", 37);
+		EnterRule("INT", 38);
+		TraceIn("INT", 38);
 		try
 		{
 			int _type = INT;
 			int _channel = DefaultTokenChannel;
-			// Stone.g:398:7: ( ( '0' .. '9' )+ )
+			// Stone.g:409:7: ( ( '0' .. '9' )+ )
 			DebugEnterAlt(1);
-			// Stone.g:398:9: ( '0' .. '9' )+
+			// Stone.g:409:9: ( '0' .. '9' )+
 			{
-			DebugLocation(398, 9);
-			// Stone.g:398:9: ( '0' .. '9' )+
+			DebugLocation(409, 9);
+			// Stone.g:409:9: ( '0' .. '9' )+
 			int cnt10=0;
 			try { DebugEnterSubRule(10);
 			while (true)
@@ -1871,7 +1911,7 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// Stone.g:
 					{
-					DebugLocation(398, 9);
+					DebugLocation(409, 9);
 					input.Consume();
 
 
@@ -1901,8 +1941,8 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("INT", 37);
-			LeaveRule("INT", 37);
+			TraceOut("INT", 38);
+			LeaveRule("INT", 38);
 			LeaveRule_INT();
 		}
 	}
@@ -1916,13 +1956,13 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 	private void mDOUBLE()
 	{
 		EnterRule_DOUBLE();
-		EnterRule("DOUBLE", 38);
-		TraceIn("DOUBLE", 38);
+		EnterRule("DOUBLE", 39);
+		TraceIn("DOUBLE", 39);
 		try
 		{
 			int _type = DOUBLE;
 			int _channel = DefaultTokenChannel;
-			// Stone.g:402:5: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT )
+			// Stone.g:413:5: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT )
 			int alt17=3;
 			try { DebugEnterDecision(17, false);
 			try
@@ -1939,10 +1979,10 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// Stone.g:402:7: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )?
+				// Stone.g:413:7: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )?
 				{
-				DebugLocation(402, 7);
-				// Stone.g:402:7: ( '0' .. '9' )+
+				DebugLocation(413, 7);
+				// Stone.g:413:7: ( '0' .. '9' )+
 				int cnt11=0;
 				try { DebugEnterSubRule(11);
 				while (true)
@@ -1964,7 +2004,7 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 						DebugEnterAlt(1);
 						// Stone.g:
 						{
-						DebugLocation(402, 7);
+						DebugLocation(413, 7);
 						input.Consume();
 
 
@@ -1986,10 +2026,10 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(11); }
 
-				DebugLocation(402, 19);
+				DebugLocation(413, 19);
 				Match('.'); 
-				DebugLocation(402, 23);
-				// Stone.g:402:23: ( '0' .. '9' )*
+				DebugLocation(413, 23);
+				// Stone.g:413:23: ( '0' .. '9' )*
 				try { DebugEnterSubRule(12);
 				while (true)
 				{
@@ -2010,7 +2050,7 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 						DebugEnterAlt(1);
 						// Stone.g:
 						{
-						DebugLocation(402, 23);
+						DebugLocation(413, 23);
 						input.Consume();
 
 
@@ -2027,8 +2067,8 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(12); }
 
-				DebugLocation(402, 35);
-				// Stone.g:402:35: ( EXPONENT )?
+				DebugLocation(413, 35);
+				// Stone.g:413:35: ( EXPONENT )?
 				int alt13=2;
 				try { DebugEnterSubRule(13);
 				try { DebugEnterDecision(13, false);
@@ -2043,9 +2083,9 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Stone.g:402:35: EXPONENT
+					// Stone.g:413:35: EXPONENT
 					{
-					DebugLocation(402, 35);
+					DebugLocation(413, 35);
 					mEXPONENT(); 
 
 					}
@@ -2059,12 +2099,12 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// Stone.g:403:7: '.' ( '0' .. '9' )+ ( EXPONENT )?
+				// Stone.g:414:7: '.' ( '0' .. '9' )+ ( EXPONENT )?
 				{
-				DebugLocation(403, 7);
+				DebugLocation(414, 7);
 				Match('.'); 
-				DebugLocation(403, 11);
-				// Stone.g:403:11: ( '0' .. '9' )+
+				DebugLocation(414, 11);
+				// Stone.g:414:11: ( '0' .. '9' )+
 				int cnt14=0;
 				try { DebugEnterSubRule(14);
 				while (true)
@@ -2086,7 +2126,7 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 						DebugEnterAlt(1);
 						// Stone.g:
 						{
-						DebugLocation(403, 11);
+						DebugLocation(414, 11);
 						input.Consume();
 
 
@@ -2108,8 +2148,8 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(14); }
 
-				DebugLocation(403, 23);
-				// Stone.g:403:23: ( EXPONENT )?
+				DebugLocation(414, 23);
+				// Stone.g:414:23: ( EXPONENT )?
 				int alt15=2;
 				try { DebugEnterSubRule(15);
 				try { DebugEnterDecision(15, false);
@@ -2124,9 +2164,9 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Stone.g:403:23: EXPONENT
+					// Stone.g:414:23: EXPONENT
 					{
-					DebugLocation(403, 23);
+					DebugLocation(414, 23);
 					mEXPONENT(); 
 
 					}
@@ -2140,10 +2180,10 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// Stone.g:404:7: ( '0' .. '9' )+ EXPONENT
+				// Stone.g:415:7: ( '0' .. '9' )+ EXPONENT
 				{
-				DebugLocation(404, 7);
-				// Stone.g:404:7: ( '0' .. '9' )+
+				DebugLocation(415, 7);
+				// Stone.g:415:7: ( '0' .. '9' )+
 				int cnt16=0;
 				try { DebugEnterSubRule(16);
 				while (true)
@@ -2165,7 +2205,7 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 						DebugEnterAlt(1);
 						// Stone.g:
 						{
-						DebugLocation(404, 7);
+						DebugLocation(415, 7);
 						input.Consume();
 
 
@@ -2187,7 +2227,7 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(16); }
 
-				DebugLocation(404, 19);
+				DebugLocation(415, 19);
 				mEXPONENT(); 
 
 				}
@@ -2199,8 +2239,8 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("DOUBLE", 38);
-			LeaveRule("DOUBLE", 38);
+			TraceOut("DOUBLE", 39);
+			LeaveRule("DOUBLE", 39);
 			LeaveRule_DOUBLE();
 		}
 	}
@@ -2214,15 +2254,15 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 	private void mEXPONENT()
 	{
 		EnterRule_EXPONENT();
-		EnterRule("EXPONENT", 39);
-		TraceIn("EXPONENT", 39);
+		EnterRule("EXPONENT", 40);
+		TraceIn("EXPONENT", 40);
 		try
 		{
-			// Stone.g:410:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
+			// Stone.g:421:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
 			DebugEnterAlt(1);
-			// Stone.g:411:5: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
+			// Stone.g:422:5: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
 			{
-			DebugLocation(411, 5);
+			DebugLocation(422, 5);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -2235,8 +2275,8 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(411, 15);
-			// Stone.g:411:15: ( '+' | '-' )?
+			DebugLocation(422, 15);
+			// Stone.g:422:15: ( '+' | '-' )?
 			int alt18=2;
 			try { DebugEnterSubRule(18);
 			try { DebugEnterDecision(18, false);
@@ -2253,7 +2293,7 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 				DebugEnterAlt(1);
 				// Stone.g:
 				{
-				DebugLocation(411, 15);
+				DebugLocation(422, 15);
 				input.Consume();
 
 
@@ -2263,8 +2303,8 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 			}
 			} finally { DebugExitSubRule(18); }
 
-			DebugLocation(411, 26);
-			// Stone.g:411:26: ( '0' .. '9' )+
+			DebugLocation(422, 26);
+			// Stone.g:422:26: ( '0' .. '9' )+
 			int cnt19=0;
 			try { DebugEnterSubRule(19);
 			while (true)
@@ -2286,7 +2326,7 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// Stone.g:
 					{
-					DebugLocation(411, 26);
+					DebugLocation(422, 26);
 					input.Consume();
 
 
@@ -2314,8 +2354,8 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("EXPONENT", 39);
-			LeaveRule("EXPONENT", 39);
+			TraceOut("EXPONENT", 40);
+			LeaveRule("EXPONENT", 40);
 			LeaveRule_EXPONENT();
 		}
 	}
@@ -2329,17 +2369,17 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 	private void mINDENT()
 	{
 		EnterRule_INDENT();
-		EnterRule("INDENT", 40);
-		TraceIn("INDENT", 40);
+		EnterRule("INDENT", 41);
+		TraceIn("INDENT", 41);
 		try
 		{
 			int _type = INDENT;
 			int _channel = DefaultTokenChannel;
-			// Stone.g:413:7: ( 'nothing_will_match_this_indent' )
+			// Stone.g:424:7: ( 'nothing_will_match_this_indent' )
 			DebugEnterAlt(1);
-			// Stone.g:413:9: 'nothing_will_match_this_indent'
+			// Stone.g:424:9: 'nothing_will_match_this_indent'
 			{
-			DebugLocation(413, 9);
+			DebugLocation(424, 9);
 			Match("nothing_will_match_this_indent"); 
 
 
@@ -2350,8 +2390,8 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("INDENT", 40);
-			LeaveRule("INDENT", 40);
+			TraceOut("INDENT", 41);
+			LeaveRule("INDENT", 41);
 			LeaveRule_INDENT();
 		}
 	}
@@ -2365,17 +2405,17 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 	private void mDEDENT()
 	{
 		EnterRule_DEDENT();
-		EnterRule("DEDENT", 41);
-		TraceIn("DEDENT", 41);
+		EnterRule("DEDENT", 42);
+		TraceIn("DEDENT", 42);
 		try
 		{
 			int _type = DEDENT;
 			int _channel = DefaultTokenChannel;
-			// Stone.g:414:7: ( 'nothing_will_match_this_dedent' )
+			// Stone.g:425:7: ( 'nothing_will_match_this_dedent' )
 			DebugEnterAlt(1);
-			// Stone.g:414:9: 'nothing_will_match_this_dedent'
+			// Stone.g:425:9: 'nothing_will_match_this_dedent'
 			{
-			DebugLocation(414, 9);
+			DebugLocation(425, 9);
 			Match("nothing_will_match_this_dedent"); 
 
 
@@ -2386,8 +2426,8 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("DEDENT", 41);
-			LeaveRule("DEDENT", 41);
+			TraceOut("DEDENT", 42);
+			LeaveRule("DEDENT", 42);
 			LeaveRule_DEDENT();
 		}
 	}
@@ -2401,19 +2441,19 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 	private void mWS()
 	{
 		EnterRule_WS();
-		EnterRule("WS", 42);
-		TraceIn("WS", 42);
+		EnterRule("WS", 43);
+		TraceIn("WS", 43);
 		try
 		{
 			int _type = WS;
 			int _channel = DefaultTokenChannel;
-			// Stone.g:416:3: ( ' ' )
+			// Stone.g:427:3: ( ' ' )
 			DebugEnterAlt(1);
-			// Stone.g:416:5: ' '
+			// Stone.g:427:5: ' '
 			{
-			DebugLocation(416, 5);
+			DebugLocation(427, 5);
 			Match(' '); 
-			DebugLocation(416, 9);
+			DebugLocation(427, 9);
 			 Skip(); 
 
 			}
@@ -2423,8 +2463,8 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("WS", 42);
-			LeaveRule("WS", 42);
+			TraceOut("WS", 43);
+			LeaveRule("WS", 43);
 			LeaveRule_WS();
 		}
 	}
@@ -2432,8 +2472,8 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 
 	public override void mTokens()
 	{
-		// Stone.g:1:8: ( Expr_Access | OP_DIV | OP_EQU | OP_GEQ | OP_GTR | OP_LEQ | OP_LSS | OP_MINUS | OP_MUL | OP_NEQ | OP_PLUS | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | NEWLINE | IDENT | NORMAL_STRING | INT | DOUBLE | INDENT | DEDENT | WS )
-		int alt20=41;
+		// Stone.g:1:8: ( Expr_Access | OP_DIV | OP_EQU | OP_GEQ | OP_GTR | OP_LEQ | OP_LSS | OP_MINUS | OP_MUL | OP_NEQ | OP_PLUS | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | NEWLINE | IDENT | NORMAL_STRING | INT | DOUBLE | INDENT | DEDENT | WS )
+		int alt20=42;
 		try { DebugEnterDecision(20, false);
 		try
 		{
@@ -2548,270 +2588,279 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 			break;
 		case 12:
 			DebugEnterAlt(12);
-			// Stone.g:1:95: T__59
+			// Stone.g:1:95: T__62
 			{
 			DebugLocation(1, 95);
-			mT__59(); 
+			mT__62(); 
 
 			}
 			break;
 		case 13:
 			DebugEnterAlt(13);
-			// Stone.g:1:101: T__60
+			// Stone.g:1:101: T__63
 			{
 			DebugLocation(1, 101);
-			mT__60(); 
+			mT__63(); 
 
 			}
 			break;
 		case 14:
 			DebugEnterAlt(14);
-			// Stone.g:1:107: T__61
+			// Stone.g:1:107: T__64
 			{
 			DebugLocation(1, 107);
-			mT__61(); 
+			mT__64(); 
 
 			}
 			break;
 		case 15:
 			DebugEnterAlt(15);
-			// Stone.g:1:113: T__62
+			// Stone.g:1:113: T__65
 			{
 			DebugLocation(1, 113);
-			mT__62(); 
+			mT__65(); 
 
 			}
 			break;
 		case 16:
 			DebugEnterAlt(16);
-			// Stone.g:1:119: T__63
+			// Stone.g:1:119: T__66
 			{
 			DebugLocation(1, 119);
-			mT__63(); 
+			mT__66(); 
 
 			}
 			break;
 		case 17:
 			DebugEnterAlt(17);
-			// Stone.g:1:125: T__64
+			// Stone.g:1:125: T__67
 			{
 			DebugLocation(1, 125);
-			mT__64(); 
+			mT__67(); 
 
 			}
 			break;
 		case 18:
 			DebugEnterAlt(18);
-			// Stone.g:1:131: T__65
+			// Stone.g:1:131: T__68
 			{
 			DebugLocation(1, 131);
-			mT__65(); 
+			mT__68(); 
 
 			}
 			break;
 		case 19:
 			DebugEnterAlt(19);
-			// Stone.g:1:137: T__66
+			// Stone.g:1:137: T__69
 			{
 			DebugLocation(1, 137);
-			mT__66(); 
+			mT__69(); 
 
 			}
 			break;
 		case 20:
 			DebugEnterAlt(20);
-			// Stone.g:1:143: T__67
+			// Stone.g:1:143: T__70
 			{
 			DebugLocation(1, 143);
-			mT__67(); 
+			mT__70(); 
 
 			}
 			break;
 		case 21:
 			DebugEnterAlt(21);
-			// Stone.g:1:149: T__68
+			// Stone.g:1:149: T__71
 			{
 			DebugLocation(1, 149);
-			mT__68(); 
+			mT__71(); 
 
 			}
 			break;
 		case 22:
 			DebugEnterAlt(22);
-			// Stone.g:1:155: T__69
+			// Stone.g:1:155: T__72
 			{
 			DebugLocation(1, 155);
-			mT__69(); 
+			mT__72(); 
 
 			}
 			break;
 		case 23:
 			DebugEnterAlt(23);
-			// Stone.g:1:161: T__70
+			// Stone.g:1:161: T__73
 			{
 			DebugLocation(1, 161);
-			mT__70(); 
+			mT__73(); 
 
 			}
 			break;
 		case 24:
 			DebugEnterAlt(24);
-			// Stone.g:1:167: T__71
+			// Stone.g:1:167: T__74
 			{
 			DebugLocation(1, 167);
-			mT__71(); 
+			mT__74(); 
 
 			}
 			break;
 		case 25:
 			DebugEnterAlt(25);
-			// Stone.g:1:173: T__72
+			// Stone.g:1:173: T__75
 			{
 			DebugLocation(1, 173);
-			mT__72(); 
+			mT__75(); 
 
 			}
 			break;
 		case 26:
 			DebugEnterAlt(26);
-			// Stone.g:1:179: T__73
+			// Stone.g:1:179: T__76
 			{
 			DebugLocation(1, 179);
-			mT__73(); 
+			mT__76(); 
 
 			}
 			break;
 		case 27:
 			DebugEnterAlt(27);
-			// Stone.g:1:185: T__74
+			// Stone.g:1:185: T__77
 			{
 			DebugLocation(1, 185);
-			mT__74(); 
+			mT__77(); 
 
 			}
 			break;
 		case 28:
 			DebugEnterAlt(28);
-			// Stone.g:1:191: T__75
+			// Stone.g:1:191: T__78
 			{
 			DebugLocation(1, 191);
-			mT__75(); 
+			mT__78(); 
 
 			}
 			break;
 		case 29:
 			DebugEnterAlt(29);
-			// Stone.g:1:197: T__76
+			// Stone.g:1:197: T__79
 			{
 			DebugLocation(1, 197);
-			mT__76(); 
+			mT__79(); 
 
 			}
 			break;
 		case 30:
 			DebugEnterAlt(30);
-			// Stone.g:1:203: T__77
+			// Stone.g:1:203: T__80
 			{
 			DebugLocation(1, 203);
-			mT__77(); 
+			mT__80(); 
 
 			}
 			break;
 		case 31:
 			DebugEnterAlt(31);
-			// Stone.g:1:209: T__78
+			// Stone.g:1:209: T__81
 			{
 			DebugLocation(1, 209);
-			mT__78(); 
+			mT__81(); 
 
 			}
 			break;
 		case 32:
 			DebugEnterAlt(32);
-			// Stone.g:1:215: T__79
+			// Stone.g:1:215: T__82
 			{
 			DebugLocation(1, 215);
-			mT__79(); 
+			mT__82(); 
 
 			}
 			break;
 		case 33:
 			DebugEnterAlt(33);
-			// Stone.g:1:221: T__80
+			// Stone.g:1:221: T__83
 			{
 			DebugLocation(1, 221);
-			mT__80(); 
+			mT__83(); 
 
 			}
 			break;
 		case 34:
 			DebugEnterAlt(34);
-			// Stone.g:1:227: NEWLINE
+			// Stone.g:1:227: T__84
 			{
 			DebugLocation(1, 227);
-			mNEWLINE(); 
+			mT__84(); 
 
 			}
 			break;
 		case 35:
 			DebugEnterAlt(35);
-			// Stone.g:1:235: IDENT
+			// Stone.g:1:233: NEWLINE
 			{
-			DebugLocation(1, 235);
-			mIDENT(); 
+			DebugLocation(1, 233);
+			mNEWLINE(); 
 
 			}
 			break;
 		case 36:
 			DebugEnterAlt(36);
-			// Stone.g:1:241: NORMAL_STRING
+			// Stone.g:1:241: IDENT
 			{
 			DebugLocation(1, 241);
-			mNORMAL_STRING(); 
+			mIDENT(); 
 
 			}
 			break;
 		case 37:
 			DebugEnterAlt(37);
-			// Stone.g:1:255: INT
+			// Stone.g:1:247: NORMAL_STRING
 			{
-			DebugLocation(1, 255);
-			mINT(); 
+			DebugLocation(1, 247);
+			mNORMAL_STRING(); 
 
 			}
 			break;
 		case 38:
 			DebugEnterAlt(38);
-			// Stone.g:1:259: DOUBLE
+			// Stone.g:1:261: INT
 			{
-			DebugLocation(1, 259);
-			mDOUBLE(); 
+			DebugLocation(1, 261);
+			mINT(); 
 
 			}
 			break;
 		case 39:
 			DebugEnterAlt(39);
-			// Stone.g:1:266: INDENT
+			// Stone.g:1:265: DOUBLE
 			{
-			DebugLocation(1, 266);
-			mINDENT(); 
+			DebugLocation(1, 265);
+			mDOUBLE(); 
 
 			}
 			break;
 		case 40:
 			DebugEnterAlt(40);
-			// Stone.g:1:273: DEDENT
+			// Stone.g:1:272: INDENT
 			{
-			DebugLocation(1, 273);
-			mDEDENT(); 
+			DebugLocation(1, 272);
+			mINDENT(); 
 
 			}
 			break;
 		case 41:
 			DebugEnterAlt(41);
-			// Stone.g:1:280: WS
+			// Stone.g:1:279: DEDENT
 			{
-			DebugLocation(1, 280);
+			DebugLocation(1, 279);
+			mDEDENT(); 
+
+			}
+			break;
+		case 42:
+			DebugEnterAlt(42);
+			// Stone.g:1:286: WS
+			{
+			DebugLocation(1, 286);
 			mWS(); 
 
 			}
@@ -2888,7 +2937,7 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 			this.transition = DFA4_transition;
 		}
 
-		public override string Description { get { return "()* loopback of 389:8: ( ( 'a' .. 'z' | 'A' .. 'Z' )+ ':' )*"; } }
+		public override string Description { get { return "()* loopback of 400:8: ( ( 'a' .. 'z' | 'A' .. 'Z' )+ ':' )*"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{
@@ -2950,7 +2999,7 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 			this.transition = DFA17_transition;
 		}
 
-		public override string Description { get { return "401:1: DOUBLE : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT );"; } }
+		public override string Description { get { return "412:1: DOUBLE : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT );"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{
@@ -2961,147 +3010,147 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 	private class DFA20 : DFA
 	{
 		private const string DFA20_eotS =
-			"\x1\xFFFF\x1\x20\x1\xFFFF\x1\x24\x1\x26\x1\x28\x1\x2A\x6\xFFFF\x1\x2C"+
-			"\x3\xFFFF\x9\x1C\x4\xFFFF\x1\x38\xE\xFFFF\x3\x1C\x1\x3C\x1\x3D\x6\x1C"+
-			"\x1\xFFFF\x2\x1C\x1\x46\x2\xFFFF\x1\x1C\x1\x48\x5\x1C\x1\x4E\x1\xFFFF"+
-			"\x1\x1C\x1\xFFFF\x4\x1C\x1\x54\x1\xFFFF\x2\x1C\x1\x57\x1\x1C\x1\x59\x1"+
-			"\xFFFF\x1\x5A\x1\x1C\x1\xFFFF\x1\x5C\x2\xFFFF\x1\x1C\x14\xFFFF";
+			"\x1\xFFFF\x1\x21\x1\xFFFF\x1\x25\x1\x27\x1\x29\x1\x2B\x6\xFFFF\x1\x2D"+
+			"\x3\xFFFF\xA\x1D\x4\xFFFF\x1\x3A\xE\xFFFF\x3\x1D\x1\x3E\x1\x3F\x7\x1D"+
+			"\x1\xFFFF\x2\x1D\x1\x49\x2\xFFFF\x1\x1D\x1\x4B\x6\x1D\x1\x52\x1\xFFFF"+
+			"\x1\x1D\x1\xFFFF\x5\x1D\x1\x59\x1\xFFFF\x2\x1D\x1\x5C\x1\x1D\x1\x5E\x1"+
+			"\x5F\x1\xFFFF\x1\x60\x1\x1D\x1\xFFFF\x1\x62\x3\xFFFF\x1\x1D\x14\xFFFF";
 		private const string DFA20_eofS =
-			"\x70\xFFFF";
+			"\x76\xFFFF";
 		private const string DFA20_minS =
 			"\x1\xA\x1\x30\x1\xFFFF\x3\x3D\x1\x3E\x6\xFFFF\x1\x3A\x3\xFFFF\x1\x6C"+
-			"\x1\x61\x1\x6F\x1\x66\x1\x6F\x1\x65\x1\x72\x1\x65\x1\x68\x4\xFFFF\x1"+
-			"\x2E\xE\xFFFF\x1\x61\x1\x74\x1\x72\x2\x30\x1\x64\x1\x77\x1\x74\x1\x6F"+
-			"\x1\x74\x1\x69\x1\xFFFF\x1\x73\x1\x61\x1\x30\x2\xFFFF\x1\x75\x1\x30\x1"+
-			"\x68\x1\x78\x1\x75\x1\x6C\x1\x73\x1\x30\x1\xFFFF\x1\x6C\x1\xFFFF\x1\x69"+
-			"\x1\x79\x1\x72\x1\x65\x1\x30\x1\xFFFF\x1\x65\x1\x6E\x1\x30\x1\x6E\x1"+
-			"\x30\x1\xFFFF\x1\x30\x1\x67\x1\xFFFF\x1\x30\x2\xFFFF\x1\x5F\x1\xFFFF"+
-			"\x1\x77\x1\x69\x2\x6C\x1\x5F\x1\x6D\x1\x61\x1\x74\x1\x63\x1\x68\x1\x5F"+
-			"\x1\x74\x1\x68\x1\x69\x1\x73\x1\x5F\x1\x64\x2\xFFFF";
+			"\x1\x61\x1\x6F\x1\x66\x1\x6F\x1\x65\x1\x72\x1\x65\x1\x68\x1\x69\x4\xFFFF"+
+			"\x1\x2E\xE\xFFFF\x1\x61\x1\x74\x1\x72\x2\x30\x1\x64\x1\x77\x1\x74\x1"+
+			"\x6F\x1\x74\x1\x69\x1\x65\x1\xFFFF\x1\x73\x1\x61\x1\x30\x2\xFFFF\x1\x75"+
+			"\x1\x30\x1\x68\x1\x78\x1\x75\x2\x6C\x1\x73\x1\x30\x1\xFFFF\x1\x6C\x1"+
+			"\xFFFF\x1\x69\x1\x79\x1\x72\x1\x65\x1\x64\x1\x30\x1\xFFFF\x1\x65\x1\x6E"+
+			"\x1\x30\x1\x6E\x2\x30\x1\xFFFF\x1\x30\x1\x67\x1\xFFFF\x1\x30\x3\xFFFF"+
+			"\x1\x5F\x1\xFFFF\x1\x77\x1\x69\x2\x6C\x1\x5F\x1\x6D\x1\x61\x1\x74\x1"+
+			"\x63\x1\x68\x1\x5F\x1\x74\x1\x68\x1\x69\x1\x73\x1\x5F\x1\x64\x2\xFFFF";
 		private const string DFA20_maxS =
 			"\x1\x7C\x1\x39\x1\xFFFF\x1\x3E\x2\x3D\x1\x3E\x6\xFFFF\x1\x3A\x3\xFFFF"+
-			"\x1\x6C\x1\x61\x1\x6F\x1\x6E\x2\x6F\x1\x72\x1\x65\x1\x68\x4\xFFFF\x1"+
-			"\x65\xE\xFFFF\x1\x61\x1\x74\x1\x72\x2\x7A\x1\x64\x1\x77\x1\x74\x1\x6F"+
-			"\x1\x74\x1\x69\x1\xFFFF\x1\x73\x1\x61\x1\x7A\x2\xFFFF\x1\x75\x1\x7A\x1"+
-			"\x68\x1\x78\x1\x75\x1\x6C\x1\x73\x1\x7A\x1\xFFFF\x1\x6C\x1\xFFFF\x1\x69"+
-			"\x1\x79\x1\x72\x1\x65\x1\x7A\x1\xFFFF\x1\x65\x1\x6E\x1\x7A\x1\x6E\x1"+
-			"\x7A\x1\xFFFF\x1\x7A\x1\x67\x1\xFFFF\x1\x7A\x2\xFFFF\x1\x5F\x1\xFFFF"+
-			"\x1\x77\x1\x69\x2\x6C\x1\x5F\x1\x6D\x1\x61\x1\x74\x1\x63\x1\x68\x1\x5F"+
-			"\x1\x74\x1\x68\x1\x69\x1\x73\x1\x5F\x1\x69\x2\xFFFF";
+			"\x1\x6C\x1\x61\x1\x6F\x1\x6E\x2\x6F\x1\x72\x1\x65\x1\x68\x1\x69\x4\xFFFF"+
+			"\x1\x65\xE\xFFFF\x1\x61\x1\x74\x1\x72\x2\x7A\x1\x64\x1\x77\x1\x74\x1"+
+			"\x6F\x1\x74\x1\x69\x1\x65\x1\xFFFF\x1\x73\x1\x61\x1\x7A\x2\xFFFF\x1\x75"+
+			"\x1\x7A\x1\x68\x1\x78\x1\x75\x2\x6C\x1\x73\x1\x7A\x1\xFFFF\x1\x6C\x1"+
+			"\xFFFF\x1\x69\x1\x79\x1\x72\x1\x65\x1\x64\x1\x7A\x1\xFFFF\x1\x65\x1\x6E"+
+			"\x1\x7A\x1\x6E\x2\x7A\x1\xFFFF\x1\x7A\x1\x67\x1\xFFFF\x1\x7A\x3\xFFFF"+
+			"\x1\x5F\x1\xFFFF\x1\x77\x1\x69\x2\x6C\x1\x5F\x1\x6D\x1\x61\x1\x74\x1"+
+			"\x63\x1\x68\x1\x5F\x1\x74\x1\x68\x1\x69\x1\x73\x1\x5F\x1\x69\x2\xFFFF";
 		private const string DFA20_acceptS =
 			"\x2\xFFFF\x1\x2\x4\xFFFF\x1\x9\x1\xA\x1\xB\x1\xC\x1\xD\x1\xE\x1\xFFFF"+
-			"\x1\x14\x1\x15\x1\x16\x9\xFFFF\x1\x21\x1\x22\x1\x23\x1\x24\x1\xFFFF\x1"+
-			"\x29\x1\x1\x1\x26\x1\x3\x1\x13\x1\x12\x1\x4\x1\x5\x1\x6\x1\x7\x1\xF\x1"+
-			"\x8\x1\x11\x1\x10\xB\xFFFF\x1\x25\x3\xFFFF\x1\x1A\x1\x1B\x8\xFFFF\x1"+
-			"\x19\x1\xFFFF\x1\x1D\x5\xFFFF\x1\x18\x5\xFFFF\x1\x17\x2\xFFFF\x1\x1E"+
-			"\x1\xFFFF\x1\x20\x1\x1C\x1\xFFFF\x1\x1F\x11\xFFFF\x1\x27\x1\x28";
+			"\x1\x14\x1\x15\x1\x16\xA\xFFFF\x1\x22\x1\x23\x1\x24\x1\x25\x1\xFFFF\x1"+
+			"\x2A\x1\x1\x1\x27\x1\x3\x1\x13\x1\x12\x1\x4\x1\x5\x1\x6\x1\x7\x1\xF\x1"+
+			"\x8\x1\x11\x1\x10\xC\xFFFF\x1\x26\x3\xFFFF\x1\x1A\x1\x1B\x9\xFFFF\x1"+
+			"\x19\x1\xFFFF\x1\x1D\x6\xFFFF\x1\x18\x6\xFFFF\x1\x17\x2\xFFFF\x1\x1E"+
+			"\x1\xFFFF\x1\x20\x1\x21\x1\x1C\x1\xFFFF\x1\x1F\x11\xFFFF\x1\x28\x1\x29";
 		private const string DFA20_specialS =
-			"\x70\xFFFF}>";
+			"\x76\xFFFF}>";
 		private static readonly string[] DFA20_transitionS =
 			{
-				"\x1\x1B\x15\xFFFF\x1\x1F\x1\x8\x1\x1D\x4\xFFFF\x1\x1D\x1\xA\x1\xB\x1"+
-				"\x7\x1\x9\x1\xC\x1\x6\x1\x1\x1\x2\xA\x1E\x1\xD\x1\xFFFF\x1\x5\x1\x3"+
-				"\x1\x4\x2\xFFFF\x1A\x1C\x1\xE\x1\xF\x1\x10\x3\xFFFF\x2\x1C\x1\x11\x1"+
-				"\x12\x1\x1C\x1\x13\x2\x1C\x1\x14\x3\x1C\x1\x15\x1\x16\x1\x1C\x1\x17"+
-				"\x1\x1C\x1\x18\x4\x1C\x1\x19\x3\x1C\x1\xFFFF\x1\x1A",
-				"\xA\x21",
+				"\x1\x1C\x15\xFFFF\x1\x20\x1\x8\x1\x1E\x4\xFFFF\x1\x1E\x1\xA\x1\xB\x1"+
+				"\x7\x1\x9\x1\xC\x1\x6\x1\x1\x1\x2\xA\x1F\x1\xD\x1\xFFFF\x1\x5\x1\x3"+
+				"\x1\x4\x2\xFFFF\x1A\x1D\x1\xE\x1\xF\x1\x10\x3\xFFFF\x2\x1D\x1\x11\x1"+
+				"\x12\x1\x1D\x1\x13\x2\x1D\x1\x14\x3\x1D\x1\x15\x1\x16\x1\x1D\x1\x17"+
+				"\x1\x1D\x1\x18\x4\x1D\x1\x19\x1\x1D\x1\x1A\x1\x1D\x1\xFFFF\x1\x1B",
+				"\xA\x22",
 				"",
-				"\x1\x22\x1\x23",
-				"\x1\x25",
-				"\x1\x27",
-				"\x1\x29",
-				"",
-				"",
+				"\x1\x23\x1\x24",
+				"\x1\x26",
+				"\x1\x28",
+				"\x1\x2A",
 				"",
 				"",
 				"",
 				"",
-				"\x1\x2B",
+				"",
+				"",
+				"\x1\x2C",
 				"",
 				"",
 				"",
-				"\x1\x2D",
 				"\x1\x2E",
 				"\x1\x2F",
-				"\x1\x30\x7\xFFFF\x1\x31",
-				"\x1\x32",
-				"\x1\x33\x9\xFFFF\x1\x34",
-				"\x1\x35",
+				"\x1\x30",
+				"\x1\x31\x7\xFFFF\x1\x32",
+				"\x1\x33",
+				"\x1\x34\x9\xFFFF\x1\x35",
 				"\x1\x36",
 				"\x1\x37",
-				"",
-				"",
-				"",
-				"",
-				"\x1\x21\x1\xFFFF\xA\x1E\xB\xFFFF\x1\x21\x1F\xFFFF\x1\x21",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"",
+				"\x1\x38",
 				"\x1\x39",
-				"\x1\x3A",
+				"",
+				"",
+				"",
+				"",
+				"\x1\x22\x1\xFFFF\xA\x1F\xB\xFFFF\x1\x22\x1F\xFFFF\x1\x22",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
 				"\x1\x3B",
-				"\xB\x1C\x6\xFFFF\x1A\x1C\x6\xFFFF\x1A\x1C",
-				"\xB\x1C\x6\xFFFF\x1A\x1C\x6\xFFFF\x1A\x1C",
-				"\x1\x3E",
-				"\x1\x3F",
+				"\x1\x3C",
+				"\x1\x3D",
+				"\xB\x1D\x6\xFFFF\x1A\x1D\x6\xFFFF\x1A\x1D",
+				"\xB\x1D\x6\xFFFF\x1A\x1D\x6\xFFFF\x1A\x1D",
 				"\x1\x40",
 				"\x1\x41",
 				"\x1\x42",
 				"\x1\x43",
-				"",
 				"\x1\x44",
 				"\x1\x45",
-				"\xB\x1C\x6\xFFFF\x1A\x1C\x6\xFFFF\x1A\x1C",
-				"",
+				"\x1\x46",
 				"",
 				"\x1\x47",
-				"\xB\x1C\x6\xFFFF\x1A\x1C\x6\xFFFF\x1A\x1C",
-				"\x1\x49",
+				"\x1\x48",
+				"\xB\x1D\x6\xFFFF\x1A\x1D\x6\xFFFF\x1A\x1D",
+				"",
+				"",
 				"\x1\x4A",
-				"\x1\x4B",
+				"\xB\x1D\x6\xFFFF\x1A\x1D\x6\xFFFF\x1A\x1D",
 				"\x1\x4C",
 				"\x1\x4D",
-				"\xB\x1C\x6\xFFFF\x1A\x1C\x6\xFFFF\x1A\x1C",
-				"",
+				"\x1\x4E",
 				"\x1\x4F",
-				"",
 				"\x1\x50",
 				"\x1\x51",
-				"\x1\x52",
-				"\x1\x53",
-				"\xB\x1C\x6\xFFFF\x1A\x1C\x6\xFFFF\x1A\x1C",
+				"\xB\x1D\x6\xFFFF\x1A\x1D\x6\xFFFF\x1A\x1D",
 				"",
+				"\x1\x53",
+				"",
+				"\x1\x54",
 				"\x1\x55",
 				"\x1\x56",
-				"\xB\x1C\x6\xFFFF\x1A\x1C\x6\xFFFF\x1A\x1C",
+				"\x1\x57",
 				"\x1\x58",
-				"\xB\x1C\x6\xFFFF\x1A\x1C\x6\xFFFF\x1A\x1C",
+				"\xB\x1D\x6\xFFFF\x1A\x1D\x6\xFFFF\x1A\x1D",
 				"",
-				"\xB\x1C\x6\xFFFF\x1A\x1C\x6\xFFFF\x1A\x1C",
+				"\x1\x5A",
 				"\x1\x5B",
-				"",
-				"\xB\x1C\x6\xFFFF\x1A\x1C\x6\xFFFF\x1A\x1C",
-				"",
-				"",
+				"\xB\x1D\x6\xFFFF\x1A\x1D\x6\xFFFF\x1A\x1D",
 				"\x1\x5D",
+				"\xB\x1D\x6\xFFFF\x1A\x1D\x6\xFFFF\x1A\x1D",
+				"\xB\x1D\x6\xFFFF\x1A\x1D\x6\xFFFF\x1A\x1D",
 				"",
-				"\x1\x5E",
-				"\x1\x5F",
-				"\x1\x60",
+				"\xB\x1D\x6\xFFFF\x1A\x1D\x6\xFFFF\x1A\x1D",
 				"\x1\x61",
-				"\x1\x62",
+				"",
+				"\xB\x1D\x6\xFFFF\x1A\x1D\x6\xFFFF\x1A\x1D",
+				"",
+				"",
+				"",
 				"\x1\x63",
+				"",
 				"\x1\x64",
 				"\x1\x65",
 				"\x1\x66",
@@ -3112,7 +3161,13 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 				"\x1\x6B",
 				"\x1\x6C",
 				"\x1\x6D",
-				"\x1\x6F\x4\xFFFF\x1\x6E",
+				"\x1\x6E",
+				"\x1\x6F",
+				"\x1\x70",
+				"\x1\x71",
+				"\x1\x72",
+				"\x1\x73",
+				"\x1\x75\x4\xFFFF\x1\x74",
 				"",
 				""
 			};
@@ -3148,7 +3203,7 @@ public partial class StoneLexer : Antlr.Runtime.Lexer
 			this.transition = DFA20_transition;
 		}
 
-		public override string Description { get { return "1:1: Tokens : ( Expr_Access | OP_DIV | OP_EQU | OP_GEQ | OP_GTR | OP_LEQ | OP_LSS | OP_MINUS | OP_MUL | OP_NEQ | OP_PLUS | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | NEWLINE | IDENT | NORMAL_STRING | INT | DOUBLE | INDENT | DEDENT | WS );"; } }
+		public override string Description { get { return "1:1: Tokens : ( Expr_Access | OP_DIV | OP_EQU | OP_GEQ | OP_GTR | OP_LEQ | OP_LSS | OP_MINUS | OP_MUL | OP_NEQ | OP_PLUS | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | NEWLINE | IDENT | NORMAL_STRING | INT | DOUBLE | INDENT | DEDENT | WS );"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{

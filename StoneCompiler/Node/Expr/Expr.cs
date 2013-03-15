@@ -64,6 +64,9 @@ namespace Stone.Compiler.Node
         public LambdaClass lambda_class;
 
         public LocalScope scope;
+
+        public HashSet<HeapVar> heap_vars = new HashSet<HeapVar>();
+
         public HashSet<RefScope> ref_scopes = new HashSet<RefScope>();
 
         public class RefScope

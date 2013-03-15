@@ -39,4 +39,14 @@ namespace Stone.Compiler.Node
             visitor.visit(this);
         }
     }
+
+    class AstEnumType : AstType
+    {
+        public AstType member_type;
+
+        public override void accept(Visitor visitor)
+        {
+            visitor.visit(this);
+        }
+    }
 }

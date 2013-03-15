@@ -107,6 +107,9 @@ namespace Stone.Compiler
                 case StoneParser.Type_Atom:
                     return visit_type_atom(T);
 
+                case StoneParser.Type_Enum:
+                    return visit_type_enum(T);
+
                 default:
                     Debug.Assert(false);
                     break;
@@ -144,6 +147,17 @@ namespace Stone.Compiler
             if (T is CommonErrorNode) return null;
 
             return new AstAtomType { type_name = T.GetChild(0).Text, pos = get_pos(T) };
+        }
+
+        public AstType visit_type_enum(CommonTree T)
+        {
+            if (T is CommonErrorNode) return null;
+
+            AstEnumType type = new AstEnumType();
+            type.member_type = visit_type(T.Children[0] as CommonTree);
+            if (type.member_type == null) return null;
+
+            return type;
         }
 
         // issue error
@@ -193,8 +207,11 @@ namespace Stone.Compiler
                 case StoneParser.Match_Cross:
                     return visit_match_cross(T);
 
-                case StoneParser.Match_Var:
-                    return visit_match_var(T);
+                case StoneParser.Match_Assign_Var:
+                    return visit_match_assign_var(T);
+
+                case StoneParser.Match_Alloc_Var:
+                    return visit_match_alloc_var(T);
             }
             Debug.Assert(false);
             return null;
@@ -213,11 +230,18 @@ namespace Stone.Compiler
             return cross;
         }
 
-        public Match visit_match_var(CommonTree T)
+        public Match visit_match_assign_var(CommonTree T)
         {
             if (T is CommonErrorNode) return null;
 
-            return new MatchVar { name = T.GetChild(0).Text, pos = get_pos(T) };
+            return new MatchAssignVar { name = T.GetChild(0).Text, pos = get_pos(T) };
+        }
+
+        public Match visit_match_alloc_var(CommonTree T)
+        {
+            if (T is CommonErrorNode) return null;
+
+            return new MatchAllocVar { name = T.GetChild(0).Text, pos = get_pos(T) };
         }
 
         // issue error
@@ -275,6 +299,11 @@ namespace Stone.Compiler
 
                     case StoneParser.Stmt_For:
                         stmt = visit_stmt_for(item);
+                        if (stmt != null) block.list.Add(stmt);
+                        break;
+
+                    case StoneParser.Stmt_Yield:
+                        stmt = visit_stmt_yield(item);
                         if (stmt != null) block.list.Add(stmt);
                         break;
 

@@ -24,13 +24,21 @@ namespace Stone.Compiler
         public LocalBuilder local_builder;
     }
 
-    class ThisVar : VarSymbol
+    class HeapVar : VarSymbol
     {
         // load arg0, then load field
         // then load sub field by ref_scope
-        // so this_var will be like this.<>anonymous_value_1.x
-        public FieldBuilder this_field, sub_field;
+        // so heap_var will be like this.<>anonymous_value_1.x
+        public FieldBuilder this_field, closure_field;
         public LocalScope ref_scope;
+        public ObjectVar ref_obj_var;
+    }
+
+    class ThisVar : VarSymbol
+    {
+        public FieldBuilder this_field;
+
+        public ClosureScope ref_scope = null;
     }
 
     class ObjectVar : VarSymbol

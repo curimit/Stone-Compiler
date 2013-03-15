@@ -7,14 +7,31 @@ using System.Text;
 
 namespace Stone.Compiler
 {
+    class Tuple<T1, T2>
+    {
+        public T1 Item1;
+        public T2 Item2;
+
+        public Tuple(T1 Item1, T2 Item2)
+        {
+            this.Item1 = Item1;
+            this.Item2 = Item2;
+        }
+    }
+
     class ClosureScope
     {
         // closure_var: All the variables that not on stack, and get the field ref to it
-        public Dictionary<String, FieldBuilder> closure_var = new Dictionary<String, FieldBuilder>();
+        public HashSet<ObjectVar> closure_var = new HashSet<ObjectVar>();
+
+        // hashset to prevent from add same variable twice
+        public HashSet<String> var_pushed = new HashSet<string>();
 
         public String name;
         public TypeBuilder anonymous_type;
-        public LocalBuilder anonymous_target;
+
+        // either local_var or this_var
+        public VarSymbol anonymous_target;
 
         public Boolean has_closure_value
         {

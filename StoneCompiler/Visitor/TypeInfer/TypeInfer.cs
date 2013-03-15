@@ -105,7 +105,11 @@ namespace Stone.Compiler
         {
         }
 
-        public override void visit(MatchVar node)
+        public override void visit(MatchAssignVar node)
+        {
+        }
+
+        public override void visit(MatchAllocVar node)
         {
         }
 
@@ -118,6 +122,10 @@ namespace Stone.Compiler
         }
 
         public override void visit(AstAtomType node)
+        {
+        }
+
+        public override void visit(AstEnumType node)
         {
         }
 
@@ -151,18 +159,25 @@ namespace Stone.Compiler
             {
                 item.accept(this);
             }
-            List <FuncDef> func_list = root.scope.try_find_func(node.owner);
-
-            // Maybe system function
-            if (func_list == null)
+            // try if node.owner is a var but type with function
+            VarSymbol var = scope_stack.try_find_var(node.owner, node.pos);
+            if (var != null && var.info.type is FuncType)
             {
-                if (node.owner == "print") return;
+                node.type = (var.info.type as FuncType).return_type;
             }
-
-            Debug.Assert(func_list.Count == 1);
-            FuncDef func = func_list.First();
-            Debug.Assert(func.declare.type is FuncType);
-            node.type = (func.declare.type as FuncType).return_type;
+            else if (node.owner == "print")
+            {
+                node.type = BaseType.VOID;
+                return;
+            }
+            else
+            {
+                List<FuncDef> func_list = root.scope.try_find_func(node.owner);
+                Debug.Assert(func_list.Count == 1);
+                FuncDef func = func_list.First();
+                Debug.Assert(func.declare.type is FuncType);
+                node.type = (func.declare.type as FuncType).return_type;
+            }
         }
 
         public override void visit(StmtIf node)
@@ -191,21 +206,33 @@ namespace Stone.Compiler
 
             node.expr.accept(this);
 
+            Debug.Assert(node.expr.type is EnumType);
+
+            EnumType type = node.expr.type as EnumType;
+
+            Type array_type = node.expr.type.get_type();
+            node.iterator_member_type = (node.expr.type as EnumType).member_type.get_type();
+            node.iterator_enumerator_type = typeof(IEnumerator<>).MakeGenericType(node.iterator_member_type);
+            node.iterator_enumerable_type = typeof(IEnumerable<>).MakeGenericType(node.iterator_member_type);
+
+
+            node.iterator.info.type = new IterType(type.member_type);
+
             if (node.expr.type == BaseType.ERROR)
             {
                 node.symbol.info.type = BaseType.ERROR;
                 return;
             }
 
-            if (!(node.expr.type is ArrayType))
+            if (!(node.expr.type is EnumType))
             {
                 error_handle.push(new NotEnumerableError(node.expr.pos, node.expr.type));
                 node.symbol.info.type = BaseType.ERROR;
                 return;
             }
 
-            ArrayType array_type = node.expr.type as ArrayType;
-            node.symbol.info.type = array_type.member_type;
+            EnumType enum_type = node.expr.type as EnumType;
+            node.symbol.info.type = enum_type.member_type;
 
             node.body.accept(this);
 
@@ -235,6 +262,14 @@ namespace Stone.Compiler
         }
 
         public override void visit(StmtReturn node)
+        {
+            if (node.expr != null)
+            {
+                node.expr.accept(this);
+            }
+        }
+
+        public override void visit(StmtYield node)
         {
             node.expr.accept(this);
         }
@@ -341,7 +376,7 @@ namespace Stone.Compiler
                 return;
             }
 
-            node.type = new ArrayType(node.values.First().type);
+            node.type = new EnumType(node.values.First().type);
         }
 
         public override void visit(ExprVar node)

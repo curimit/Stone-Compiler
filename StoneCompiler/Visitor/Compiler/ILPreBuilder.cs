@@ -9,6 +9,7 @@ using System.Diagnostics.SymbolStore;
 using System.Diagnostics;
 using System.IO;
 using System.Threading;
+using System.Collections;
 
 namespace Stone.Compiler
 {
@@ -165,13 +166,68 @@ namespace Stone.Compiler
         public override void visit(FuncDef node)
         {
             var type = to_func_type(node.declare.type);
-            node.method_builder = module_builder.DefineGlobalMethod(node.name, MethodAttributes.Public | MethodAttributes.Static, type.Item2, type.Item1);
 
-            enter(node.scope);
+            if (!node.scope.has_yield)
+            {
+                node.method_builder = module_builder.DefineGlobalMethod(node.name, MethodAttributes.Public | MethodAttributes.Static, type.Item2, type.Item1);
+            }
+            else
+            {
+                node.method_builder = module_builder.DefineGlobalMethod(node.name, MethodAttributes.Public | MethodAttributes.Static, type.Item2, type.Item1);
+                Type enumerator = typeof(IEnumerator<>).MakeGenericType(type.Item2.GetGenericArguments());
+
+                node.scope.yield_scope.type_builder = module_builder.DefineType(node.scope.yield_scope.name, TypeAttributes.Public, null, Type.EmptyTypes);
+                node.scope.yield_scope.type_builder.AddInterfaceImplementation(type.Item2);
+                node.scope.yield_scope.type_builder.AddInterfaceImplementation(enumerator);
+                node.scope.yield_scope.type_builder.AddInterfaceImplementation(typeof(IEnumerable));
+                node.scope.yield_scope.type_builder.AddInterfaceImplementation(typeof(IEnumerator));
+                node.scope.yield_scope.type_builder.AddInterfaceImplementation(typeof(IDisposable));
+
+                // declear interface function
+                node.scope.yield_scope.move_next = node.scope.yield_scope.type_builder.DefineMethod("MoveNext", MethodAttributes.Public | MethodAttributes.Virtual, typeof(Boolean), Type.EmptyTypes);
+
+                node.scope.yield_scope.get_enumerator = node.scope.yield_scope.type_builder.DefineMethod("GetEnumerator", MethodAttributes.Public | MethodAttributes.Virtual, enumerator, Type.EmptyTypes);
+
+                node.scope.yield_scope.get_enumerator2 = node.scope.yield_scope.type_builder.DefineMethod("GetEnumerator", MethodAttributes.Public | MethodAttributes.Virtual, typeof(IEnumerator), Type.EmptyTypes);
+
+                node.scope.yield_scope.get_current = node.scope.yield_scope.type_builder.DefineMethod("get_Current", MethodAttributes.Public | MethodAttributes.Virtual, type.Item2.GetGenericArguments()[0], Type.EmptyTypes);
+
+                node.scope.yield_scope.get_current2 = node.scope.yield_scope.type_builder.DefineMethod("get_Current", MethodAttributes.Public | MethodAttributes.Virtual, typeof(object), Type.EmptyTypes);
+
+                node.scope.yield_scope.dispose = node.scope.yield_scope.type_builder.DefineMethod("Dispose", MethodAttributes.Public | MethodAttributes.Virtual, null, Type.EmptyTypes);
+
+                node.scope.yield_scope.reset = node.scope.yield_scope.type_builder.DefineMethod("Reset", MethodAttributes.Public | MethodAttributes.Virtual, null, Type.EmptyTypes);
+
+                node.scope.yield_scope.state_field = node.scope.yield_scope.type_builder.DefineField("<>yield_state", typeof(Int32), FieldAttributes.Public);
+                node.scope.yield_scope.current_field = node.scope.yield_scope.type_builder.DefineField("<>yield_current", type.Item2.GetGenericArguments()[0], FieldAttributes.Private);
+            }
 
             if (node.name.EndsWith(".main") || node.name == "main") root.entry_method = node.method_builder;
 
             node.stmt_block.accept(this);
+
+            enter(node.scope);
+        }
+
+        // FormalScope
+        public void enter(FormalScope scope)
+        {
+            if (scope.has_yield)
+            {
+                foreach (var this_var in scope.yield_scope.this_var)
+                {
+                    if (this_var.ref_scope == null)
+                    {
+                        this_var.this_field = scope.yield_scope.type_builder.DefineField(this_var.info.name, this_var.info.type.get_type(), FieldAttributes.Public);
+                    }
+                    else
+                    {
+                        this_var.this_field = scope.yield_scope.type_builder.DefineField(this_var.info.name, this_var.ref_scope.anonymous_type, FieldAttributes.Public);
+                    }
+                }
+            }
+
+            enter(scope.local_scope);
         }
 
         public void enter(LocalScope scope)
@@ -179,14 +235,12 @@ namespace Stone.Compiler
             if (!scope.closure_scope.has_closure_value) return;
 
             scope.closure_scope.anonymous_type = module_builder.DefineType(scope.closure_scope.name, TypeAttributes.Public);
-            foreach (var var_name in scope.closure_scope.closure_var.Keys.ToArray())
+            foreach (var var in scope.closure_scope.closure_var)
             {
-                Debug.Assert(scope.var[var_name] is ObjectVar);
-                ObjectVar var = scope.var[var_name] as ObjectVar;
                 var.ref_scope = scope;
                 var.field = scope.closure_scope.anonymous_type.DefineField(var.info.name, var.info.type.get_type(), FieldAttributes.Public);
-                scope.closure_scope.closure_var[var.info.name] = var.field;
             }
+
             scope.closure_scope.anonymous_type.CreateType();
         }
 
@@ -194,7 +248,11 @@ namespace Stone.Compiler
         {
         }
 
-        public override void visit(MatchVar node)
+        public override void visit(MatchAssignVar node)
+        {
+        }
+
+        public override void visit(MatchAllocVar node)
         {
         }
 
@@ -207,6 +265,10 @@ namespace Stone.Compiler
         }
 
         public override void visit(AstAtomType node)
+        {
+        }
+
+        public override void visit(AstEnumType node)
         {
         }
 
@@ -246,6 +308,10 @@ namespace Stone.Compiler
         {
         }
 
+        public override void visit(StmtYield node)
+        {
+        }
+
         public override void visit(StmtIf node)
         {
             enter(node.scope);
@@ -259,6 +325,7 @@ namespace Stone.Compiler
         public override void visit(StmtFor node)
         {
             enter(node.scope);
+            node.body.accept(this);
         }
 
         public override void visit(Const node)

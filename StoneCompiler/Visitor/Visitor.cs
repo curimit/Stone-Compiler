@@ -30,15 +30,19 @@ namespace Stone.Compiler
         public abstract void visit(AstFuncType node);
         public abstract void visit(AstCrossType node);
         public abstract void visit(AstAtomType node);
+        public abstract void visit(AstEnumType node);
 
         public abstract void visit(MatchCross node);
-        public abstract void visit(MatchVar var);
+        public abstract void visit(MatchAssignVar var);
+        public abstract void visit(MatchAllocVar var);
 
         public abstract void visit(StmtBlock node);
         public abstract void visit(StmtCall node);
         public abstract void visit(StmtAlloc node);
         public abstract void visit(StmtAssign node);
         public abstract void visit(StmtReturn node);
+
+        public abstract void visit(StmtYield node);
 
         public abstract void visit(StmtIf node);
         public abstract void visit(StmtWhile node);

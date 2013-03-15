@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.4 Stone.g 2013-02-26 17:17:35
+// $ANTLR 3.4 Stone.g 2013-03-15 08:22:32
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -35,12 +35,9 @@ namespace  Stone.Compiler
 public partial class StoneParser : Antlr.Runtime.Parser
 {
 	internal static readonly string[] tokenNames = new string[] {
-		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "Class_Def", "Class_Def_Body", "DEDENT", "DOUBLE", "Data_Body", "Data_Def", "Data_Def_Item", "EXPONENT", "Expr_Access", "Expr_Array", "Expr_Call", "Expr_Lambda", "Expr_Message", "Expr_New_Data", "Func_Args", "Func_Declare", "Func_Def", "IDENT", "INDENT", "INT", "Lambda_Args", "Match_Cross", "Match_Var", "Message_Args", "Message_Declare", "Message_Def", "Message_Item", "Module_Def", "NEWLINE", "NORMAL_STRING", "OP_DIV", "OP_EQU", "OP_GEQ", "OP_GTR", "OP_LEQ", "OP_LSS", "OP_MINUS", "OP_MUL", "OP_NEQ", "OP_PLUS", "Proxy_Def", "Proxy_Def_Body", "Root", "Stmt_Alloc", "Stmt_Assign", "Stmt_Block", "Stmt_Call", "Stmt_For", "Stmt_If", "Stmt_Return", "Stmt_While", "Type_Atom", "Type_Cross", "Type_Func", "WS", "'('", "')'", "','", "'->'", "':'", "'::'", "'='", "'=>'", "'['", "'\\\\'", "']'", "'class'", "'data'", "'for'", "'if'", "'in'", "'module'", "'new'", "'proxy'", "'return'", "'while'", "'|'"
+		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "Class_Def", "Class_Def_Body", "DEDENT", "DOUBLE", "Data_Body", "Data_Def", "Data_Def_Item", "EXPONENT", "Expr_Access", "Expr_Array", "Expr_Call", "Expr_Lambda", "Expr_Message", "Expr_New_Data", "Func_Args", "Func_Declare", "Func_Def", "IDENT", "INDENT", "INT", "Lambda_Args", "Match_Alloc_Var", "Match_Assign_Var", "Match_Cross", "Message_Args", "Message_Declare", "Message_Def", "Message_Item", "Module_Def", "NEWLINE", "NORMAL_STRING", "OP_DIV", "OP_EQU", "OP_GEQ", "OP_GTR", "OP_LEQ", "OP_LSS", "OP_MINUS", "OP_MUL", "OP_NEQ", "OP_PLUS", "Proxy_Def", "Proxy_Def_Body", "Root", "Stmt_Alloc", "Stmt_Assign", "Stmt_Block", "Stmt_Call", "Stmt_For", "Stmt_If", "Stmt_Return", "Stmt_While", "Stmt_Yield", "Type_Atom", "Type_Cross", "Type_Enum", "Type_Func", "WS", "'('", "')'", "','", "'->'", "':'", "'::'", "'='", "'=>'", "'['", "'\\\\'", "']'", "'class'", "'data'", "'for'", "'if'", "'in'", "'module'", "'new'", "'proxy'", "'return'", "'while'", "'yield'", "'|'"
 	};
 	public const int EOF=-1;
-	public const int T__59=59;
-	public const int T__60=60;
-	public const int T__61=61;
 	public const int T__62=62;
 	public const int T__63=63;
 	public const int T__64=64;
@@ -60,6 +57,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	public const int T__78=78;
 	public const int T__79=79;
 	public const int T__80=80;
+	public const int T__81=81;
+	public const int T__82=82;
+	public const int T__83=83;
+	public const int T__84=84;
 	public const int Class_Def=4;
 	public const int Class_Def_Body=5;
 	public const int DEDENT=6;
@@ -81,40 +82,43 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	public const int INDENT=22;
 	public const int INT=23;
 	public const int Lambda_Args=24;
-	public const int Match_Cross=25;
-	public const int Match_Var=26;
-	public const int Message_Args=27;
-	public const int Message_Declare=28;
-	public const int Message_Def=29;
-	public const int Message_Item=30;
-	public const int Module_Def=31;
-	public const int NEWLINE=32;
-	public const int NORMAL_STRING=33;
-	public const int OP_DIV=34;
-	public const int OP_EQU=35;
-	public const int OP_GEQ=36;
-	public const int OP_GTR=37;
-	public const int OP_LEQ=38;
-	public const int OP_LSS=39;
-	public const int OP_MINUS=40;
-	public const int OP_MUL=41;
-	public const int OP_NEQ=42;
-	public const int OP_PLUS=43;
-	public const int Proxy_Def=44;
-	public const int Proxy_Def_Body=45;
-	public const int Root=46;
-	public const int Stmt_Alloc=47;
-	public const int Stmt_Assign=48;
-	public const int Stmt_Block=49;
-	public const int Stmt_Call=50;
-	public const int Stmt_For=51;
-	public const int Stmt_If=52;
-	public const int Stmt_Return=53;
-	public const int Stmt_While=54;
-	public const int Type_Atom=55;
-	public const int Type_Cross=56;
-	public const int Type_Func=57;
-	public const int WS=58;
+	public const int Match_Alloc_Var=25;
+	public const int Match_Assign_Var=26;
+	public const int Match_Cross=27;
+	public const int Message_Args=28;
+	public const int Message_Declare=29;
+	public const int Message_Def=30;
+	public const int Message_Item=31;
+	public const int Module_Def=32;
+	public const int NEWLINE=33;
+	public const int NORMAL_STRING=34;
+	public const int OP_DIV=35;
+	public const int OP_EQU=36;
+	public const int OP_GEQ=37;
+	public const int OP_GTR=38;
+	public const int OP_LEQ=39;
+	public const int OP_LSS=40;
+	public const int OP_MINUS=41;
+	public const int OP_MUL=42;
+	public const int OP_NEQ=43;
+	public const int OP_PLUS=44;
+	public const int Proxy_Def=45;
+	public const int Proxy_Def_Body=46;
+	public const int Root=47;
+	public const int Stmt_Alloc=48;
+	public const int Stmt_Assign=49;
+	public const int Stmt_Block=50;
+	public const int Stmt_Call=51;
+	public const int Stmt_For=52;
+	public const int Stmt_If=53;
+	public const int Stmt_Return=54;
+	public const int Stmt_While=55;
+	public const int Stmt_Yield=56;
+	public const int Type_Atom=57;
+	public const int Type_Cross=58;
+	public const int Type_Enum=59;
+	public const int Type_Func=60;
+	public const int WS=61;
 
 	public StoneParser(ITokenStream input)
 		: this(input, new RecognizerSharedState())
@@ -123,7 +127,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	public StoneParser(ITokenStream input, RecognizerSharedState state)
 		: base(input, state)
 	{
-		this.state.ruleMemo = new System.Collections.Generic.Dictionary<int, int>[51+1];
+		this.state.ruleMemo = new System.Collections.Generic.Dictionary<int, int>[52+1];
 
 
 		ITreeAdaptor treeAdaptor = default(ITreeAdaptor);
@@ -162,7 +166,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_parse();
 
 	// $ANTLR start "parse"
-	// Stone.g:109:8: public parse : ( module_def )+ ( NEWLINE )* EOF -> ^( Root ( module_def )+ ) ;
+	// Stone.g:113:8: public parse : ( module_def )+ ( NEWLINE )* EOF -> ^( Root ( module_def )+ ) ;
 	[GrammarRule("parse")]
 	public AstParserRuleReturnScope<CommonTree, CommonToken> parse()
 	{
@@ -184,15 +188,15 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		RewriteRuleITokenStream stream_EOF=new RewriteRuleITokenStream(adaptor,"token EOF");
 		RewriteRuleSubtreeStream stream_module_def=new RewriteRuleSubtreeStream(adaptor,"rule module_def");
 		try { DebugEnterRule(GrammarFileName, "parse");
-		DebugLocation(109, 1);
+		DebugLocation(113, 1);
 		try
 		{
-			// Stone.g:110:2: ( ( module_def )+ ( NEWLINE )* EOF -> ^( Root ( module_def )+ ) )
+			// Stone.g:114:2: ( ( module_def )+ ( NEWLINE )* EOF -> ^( Root ( module_def )+ ) )
 			DebugEnterAlt(1);
-			// Stone.g:110:4: ( module_def )+ ( NEWLINE )* EOF
+			// Stone.g:114:4: ( module_def )+ ( NEWLINE )* EOF
 			{
-			DebugLocation(110, 4);
-			// Stone.g:110:4: ( module_def )+
+			DebugLocation(114, 4);
+			// Stone.g:114:4: ( module_def )+
 			int cnt1=0;
 			try { DebugEnterSubRule(1);
 			while (true)
@@ -213,10 +217,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Stone.g:110:4: module_def
+					// Stone.g:114:4: module_def
 					{
-					DebugLocation(110, 4);
-					PushFollow(Follow._module_def_in_parse360);
+					DebugLocation(114, 4);
+					PushFollow(Follow._module_def_in_parse373);
 					module_def1=module_def();
 					PopFollow();
 					if (state.failed) return retval;
@@ -241,8 +245,8 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 			} finally { DebugExitSubRule(1); }
 
-			DebugLocation(110, 16);
-			// Stone.g:110:16: ( NEWLINE )*
+			DebugLocation(114, 16);
+			// Stone.g:114:16: ( NEWLINE )*
 			try { DebugEnterSubRule(2);
 			while (true)
 			{
@@ -261,10 +265,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Stone.g:110:16: NEWLINE
+					// Stone.g:114:16: NEWLINE
 					{
-					DebugLocation(110, 16);
-					NEWLINE2=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_parse363); if (state.failed) return retval; 
+					DebugLocation(114, 16);
+					NEWLINE2=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_parse376); if (state.failed) return retval; 
 					if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE2);
 
 
@@ -281,8 +285,8 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 			} finally { DebugExitSubRule(2); }
 
-			DebugLocation(110, 25);
-			EOF3=(CommonToken)Match(input,EOF,Follow._EOF_in_parse366); if (state.failed) return retval; 
+			DebugLocation(114, 25);
+			EOF3=(CommonToken)Match(input,EOF,Follow._EOF_in_parse379); if (state.failed) return retval; 
 			if (state.backtracking == 0) stream_EOF.Add(EOF3);
 
 
@@ -300,23 +304,23 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 110:29: -> ^( Root ( module_def )+ )
+			// 114:29: -> ^( Root ( module_def )+ )
 			{
-				DebugLocation(110, 32);
-				// Stone.g:110:32: ^( Root ( module_def )+ )
+				DebugLocation(114, 32);
+				// Stone.g:114:32: ^( Root ( module_def )+ )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(110, 34);
+				DebugLocation(114, 34);
 				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Root, "Root"), root_1);
 
-				DebugLocation(110, 39);
+				DebugLocation(114, 39);
 				if (!(stream_module_def.HasNext))
 				{
 					throw new RewriteEarlyExitException();
 				}
 				while ( stream_module_def.HasNext )
 				{
-					DebugLocation(110, 39);
+					DebugLocation(114, 39);
 					adaptor.AddChild(root_1, stream_module_def.NextTree());
 
 				}
@@ -353,7 +357,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			LeaveRule("parse", 1);
 			LeaveRule_parse();
 		}
-		DebugLocation(111, 1);
+		DebugLocation(115, 1);
 		} finally { DebugExitRule(GrammarFileName, "parse"); }
 		return retval;
 
@@ -364,7 +368,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_module_def();
 
 	// $ANTLR start "module_def"
-	// Stone.g:113:1: module_def : ( NEWLINE )* 'module' IDENT NEWLINE ( INDENT module_inner ( NEWLINE )* DEDENT ) -> ^( Module_Def IDENT module_inner ) ;
+	// Stone.g:117:1: module_def : ( NEWLINE )* 'module' IDENT NEWLINE ( INDENT module_inner ( NEWLINE )* DEDENT ) -> ^( Module_Def IDENT module_inner ) ;
 	[GrammarRule("module_def")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> module_def()
 	{
@@ -392,22 +396,22 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		CommonTree INDENT8_tree = default(CommonTree);
 		CommonTree NEWLINE10_tree = default(CommonTree);
 		CommonTree DEDENT11_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_78=new RewriteRuleITokenStream(adaptor,"token 78");
 		RewriteRuleITokenStream stream_IDENT=new RewriteRuleITokenStream(adaptor,"token IDENT");
 		RewriteRuleITokenStream stream_DEDENT=new RewriteRuleITokenStream(adaptor,"token DEDENT");
 		RewriteRuleITokenStream stream_NEWLINE=new RewriteRuleITokenStream(adaptor,"token NEWLINE");
 		RewriteRuleITokenStream stream_INDENT=new RewriteRuleITokenStream(adaptor,"token INDENT");
-		RewriteRuleITokenStream stream_75=new RewriteRuleITokenStream(adaptor,"token 75");
 		RewriteRuleSubtreeStream stream_module_inner=new RewriteRuleSubtreeStream(adaptor,"rule module_inner");
 		try { DebugEnterRule(GrammarFileName, "module_def");
-		DebugLocation(113, 1);
+		DebugLocation(117, 1);
 		try
 		{
-			// Stone.g:114:2: ( ( NEWLINE )* 'module' IDENT NEWLINE ( INDENT module_inner ( NEWLINE )* DEDENT ) -> ^( Module_Def IDENT module_inner ) )
+			// Stone.g:118:2: ( ( NEWLINE )* 'module' IDENT NEWLINE ( INDENT module_inner ( NEWLINE )* DEDENT ) -> ^( Module_Def IDENT module_inner ) )
 			DebugEnterAlt(1);
-			// Stone.g:114:4: ( NEWLINE )* 'module' IDENT NEWLINE ( INDENT module_inner ( NEWLINE )* DEDENT )
+			// Stone.g:118:4: ( NEWLINE )* 'module' IDENT NEWLINE ( INDENT module_inner ( NEWLINE )* DEDENT )
 			{
-			DebugLocation(114, 4);
-			// Stone.g:114:4: ( NEWLINE )*
+			DebugLocation(118, 4);
+			// Stone.g:118:4: ( NEWLINE )*
 			try { DebugEnterSubRule(3);
 			while (true)
 			{
@@ -426,10 +430,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Stone.g:114:4: NEWLINE
+					// Stone.g:118:4: NEWLINE
 					{
-					DebugLocation(114, 4);
-					NEWLINE4=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_module_def386); if (state.failed) return retval; 
+					DebugLocation(118, 4);
+					NEWLINE4=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_module_def399); if (state.failed) return retval; 
 					if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE4);
 
 
@@ -446,35 +450,35 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 			} finally { DebugExitSubRule(3); }
 
-			DebugLocation(114, 13);
-			string_literal5=(CommonToken)Match(input,75,Follow._75_in_module_def389); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_75.Add(string_literal5);
+			DebugLocation(118, 13);
+			string_literal5=(CommonToken)Match(input,78,Follow._78_in_module_def402); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_78.Add(string_literal5);
 
-			DebugLocation(114, 22);
-			IDENT6=(CommonToken)Match(input,IDENT,Follow._IDENT_in_module_def391); if (state.failed) return retval; 
+			DebugLocation(118, 22);
+			IDENT6=(CommonToken)Match(input,IDENT,Follow._IDENT_in_module_def404); if (state.failed) return retval; 
 			if (state.backtracking == 0) stream_IDENT.Add(IDENT6);
 
-			DebugLocation(114, 28);
-			NEWLINE7=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_module_def393); if (state.failed) return retval; 
+			DebugLocation(118, 28);
+			NEWLINE7=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_module_def406); if (state.failed) return retval; 
 			if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE7);
 
-			DebugLocation(114, 36);
-			// Stone.g:114:36: ( INDENT module_inner ( NEWLINE )* DEDENT )
+			DebugLocation(118, 36);
+			// Stone.g:118:36: ( INDENT module_inner ( NEWLINE )* DEDENT )
 			DebugEnterAlt(1);
-			// Stone.g:114:37: INDENT module_inner ( NEWLINE )* DEDENT
+			// Stone.g:118:37: INDENT module_inner ( NEWLINE )* DEDENT
 			{
-			DebugLocation(114, 37);
-			INDENT8=(CommonToken)Match(input,INDENT,Follow._INDENT_in_module_def396); if (state.failed) return retval; 
+			DebugLocation(118, 37);
+			INDENT8=(CommonToken)Match(input,INDENT,Follow._INDENT_in_module_def409); if (state.failed) return retval; 
 			if (state.backtracking == 0) stream_INDENT.Add(INDENT8);
 
-			DebugLocation(114, 44);
-			PushFollow(Follow._module_inner_in_module_def398);
+			DebugLocation(118, 44);
+			PushFollow(Follow._module_inner_in_module_def411);
 			module_inner9=module_inner();
 			PopFollow();
 			if (state.failed) return retval;
 			if (state.backtracking == 0) stream_module_inner.Add(module_inner9.Tree);
-			DebugLocation(114, 57);
-			// Stone.g:114:57: ( NEWLINE )*
+			DebugLocation(118, 57);
+			// Stone.g:118:57: ( NEWLINE )*
 			try { DebugEnterSubRule(4);
 			while (true)
 			{
@@ -493,10 +497,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Stone.g:114:57: NEWLINE
+					// Stone.g:118:57: NEWLINE
 					{
-					DebugLocation(114, 57);
-					NEWLINE10=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_module_def400); if (state.failed) return retval; 
+					DebugLocation(118, 57);
+					NEWLINE10=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_module_def413); if (state.failed) return retval; 
 					if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE10);
 
 
@@ -513,8 +517,8 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 			} finally { DebugExitSubRule(4); }
 
-			DebugLocation(114, 66);
-			DEDENT11=(CommonToken)Match(input,DEDENT,Follow._DEDENT_in_module_def403); if (state.failed) return retval; 
+			DebugLocation(118, 66);
+			DEDENT11=(CommonToken)Match(input,DEDENT,Follow._DEDENT_in_module_def416); if (state.failed) return retval; 
 			if (state.backtracking == 0) stream_DEDENT.Add(DEDENT11);
 
 
@@ -535,18 +539,18 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 114:74: -> ^( Module_Def IDENT module_inner )
+			// 118:74: -> ^( Module_Def IDENT module_inner )
 			{
-				DebugLocation(114, 77);
-				// Stone.g:114:77: ^( Module_Def IDENT module_inner )
+				DebugLocation(118, 77);
+				// Stone.g:118:77: ^( Module_Def IDENT module_inner )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(114, 79);
+				DebugLocation(118, 79);
 				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Module_Def, "Module_Def"), root_1);
 
-				DebugLocation(114, 90);
+				DebugLocation(118, 90);
 				adaptor.AddChild(root_1, stream_IDENT.NextNode());
-				DebugLocation(114, 96);
+				DebugLocation(118, 96);
 				adaptor.AddChild(root_1, stream_module_inner.NextTree());
 
 				adaptor.AddChild(root_0, root_1);
@@ -580,7 +584,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			LeaveRule("module_def", 2);
 			LeaveRule_module_def();
 		}
-		DebugLocation(115, 1);
+		DebugLocation(119, 1);
 		} finally { DebugExitRule(GrammarFileName, "module_def"); }
 		return retval;
 
@@ -591,7 +595,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_module_inner();
 
 	// $ANTLR start "module_inner"
-	// Stone.g:117:1: module_inner : ( ( block )+ -> ( block )+ | INDENT module_inner ( NEWLINE )* DEDENT -> module_inner );
+	// Stone.g:121:1: module_inner : ( ( block )+ -> ( block )+ | INDENT module_inner ( NEWLINE )* DEDENT -> module_inner );
 	[GrammarRule("module_inner")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> module_inner()
 	{
@@ -618,15 +622,15 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		RewriteRuleSubtreeStream stream_block=new RewriteRuleSubtreeStream(adaptor,"rule block");
 		RewriteRuleSubtreeStream stream_module_inner=new RewriteRuleSubtreeStream(adaptor,"rule module_inner");
 		try { DebugEnterRule(GrammarFileName, "module_inner");
-		DebugLocation(117, 1);
+		DebugLocation(121, 1);
 		try
 		{
-			// Stone.g:118:2: ( ( block )+ -> ( block )+ | INDENT module_inner ( NEWLINE )* DEDENT -> module_inner )
+			// Stone.g:122:2: ( ( block )+ -> ( block )+ | INDENT module_inner ( NEWLINE )* DEDENT -> module_inner )
 			int alt7=2;
 			try { DebugEnterDecision(7, false);
 			int LA7_0 = input.LA(1);
 
-			if ((LA7_0==IDENT||LA7_0==NEWLINE||(LA7_0>=70 && LA7_0<=71)||LA7_0==75||LA7_0==77))
+			if ((LA7_0==IDENT||LA7_0==NEWLINE||(LA7_0>=73 && LA7_0<=74)||LA7_0==78||LA7_0==80))
 			{
 				alt7 = 1;
 			}
@@ -646,10 +650,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// Stone.g:118:4: ( block )+
+				// Stone.g:122:4: ( block )+
 				{
-				DebugLocation(118, 4);
-				// Stone.g:118:4: ( block )+
+				DebugLocation(122, 4);
+				// Stone.g:122:4: ( block )+
 				int cnt5=0;
 				try { DebugEnterSubRule(5);
 				while (true)
@@ -670,10 +674,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// Stone.g:118:4: block
+						// Stone.g:122:4: block
 						{
-						DebugLocation(118, 4);
-						PushFollow(Follow._block_in_module_inner425);
+						DebugLocation(122, 4);
+						PushFollow(Follow._block_in_module_inner438);
 						block12=block();
 						PopFollow();
 						if (state.failed) return retval;
@@ -713,16 +717,16 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 				root_0 = (CommonTree)adaptor.Nil();
-				// 118:11: -> ( block )+
+				// 122:11: -> ( block )+
 				{
-					DebugLocation(118, 14);
+					DebugLocation(122, 14);
 					if (!(stream_block.HasNext))
 					{
 						throw new RewriteEarlyExitException();
 					}
 					while ( stream_block.HasNext )
 					{
-						DebugLocation(118, 14);
+						DebugLocation(122, 14);
 						adaptor.AddChild(root_0, stream_block.NextTree());
 
 					}
@@ -738,20 +742,20 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// Stone.g:119:4: INDENT module_inner ( NEWLINE )* DEDENT
+				// Stone.g:123:4: INDENT module_inner ( NEWLINE )* DEDENT
 				{
-				DebugLocation(119, 4);
-				INDENT13=(CommonToken)Match(input,INDENT,Follow._INDENT_in_module_inner436); if (state.failed) return retval; 
+				DebugLocation(123, 4);
+				INDENT13=(CommonToken)Match(input,INDENT,Follow._INDENT_in_module_inner449); if (state.failed) return retval; 
 				if (state.backtracking == 0) stream_INDENT.Add(INDENT13);
 
-				DebugLocation(119, 11);
-				PushFollow(Follow._module_inner_in_module_inner438);
+				DebugLocation(123, 11);
+				PushFollow(Follow._module_inner_in_module_inner451);
 				module_inner14=module_inner();
 				PopFollow();
 				if (state.failed) return retval;
 				if (state.backtracking == 0) stream_module_inner.Add(module_inner14.Tree);
-				DebugLocation(119, 24);
-				// Stone.g:119:24: ( NEWLINE )*
+				DebugLocation(123, 24);
+				// Stone.g:123:24: ( NEWLINE )*
 				try { DebugEnterSubRule(6);
 				while (true)
 				{
@@ -770,10 +774,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// Stone.g:119:24: NEWLINE
+						// Stone.g:123:24: NEWLINE
 						{
-						DebugLocation(119, 24);
-						NEWLINE15=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_module_inner440); if (state.failed) return retval; 
+						DebugLocation(123, 24);
+						NEWLINE15=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_module_inner453); if (state.failed) return retval; 
 						if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE15);
 
 
@@ -790,8 +794,8 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 				} finally { DebugExitSubRule(6); }
 
-				DebugLocation(119, 33);
-				DEDENT16=(CommonToken)Match(input,DEDENT,Follow._DEDENT_in_module_inner443); if (state.failed) return retval; 
+				DebugLocation(123, 33);
+				DEDENT16=(CommonToken)Match(input,DEDENT,Follow._DEDENT_in_module_inner456); if (state.failed) return retval; 
 				if (state.backtracking == 0) stream_DEDENT.Add(DEDENT16);
 
 
@@ -809,9 +813,9 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 				root_0 = (CommonTree)adaptor.Nil();
-				// 119:40: -> module_inner
+				// 123:40: -> module_inner
 				{
-					DebugLocation(119, 43);
+					DebugLocation(123, 43);
 					adaptor.AddChild(root_0, stream_module_inner.NextTree());
 
 				}
@@ -844,7 +848,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			LeaveRule("module_inner", 3);
 			LeaveRule_module_inner();
 		}
-		DebugLocation(120, 1);
+		DebugLocation(124, 1);
 		} finally { DebugExitRule(GrammarFileName, "module_inner"); }
 		return retval;
 
@@ -855,7 +859,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_block();
 
 	// $ANTLR start "block"
-	// Stone.g:122:1: block : ( data_def | class_def | proxy_def | func_def | module_def );
+	// Stone.g:126:1: block : ( data_def | class_def | proxy_def | func_def | module_def );
 	[GrammarRule("block")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> block()
 	{
@@ -874,10 +878,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		AstParserRuleReturnScope<CommonTree, CommonToken> module_def21 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
 
 		try { DebugEnterRule(GrammarFileName, "block");
-		DebugLocation(122, 1);
+		DebugLocation(126, 1);
 		try
 		{
-			// Stone.g:123:2: ( data_def | class_def | proxy_def | func_def | module_def )
+			// Stone.g:127:2: ( data_def | class_def | proxy_def | func_def | module_def )
 			int alt8=5;
 			try { DebugEnterDecision(8, false);
 			try
@@ -894,12 +898,12 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// Stone.g:123:4: data_def
+				// Stone.g:127:4: data_def
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
-				DebugLocation(123, 4);
-				PushFollow(Follow._data_def_in_block458);
+				DebugLocation(127, 4);
+				PushFollow(Follow._data_def_in_block471);
 				data_def17=data_def();
 				PopFollow();
 				if (state.failed) return retval;
@@ -909,12 +913,12 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// Stone.g:124:4: class_def
+				// Stone.g:128:4: class_def
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
-				DebugLocation(124, 4);
-				PushFollow(Follow._class_def_in_block463);
+				DebugLocation(128, 4);
+				PushFollow(Follow._class_def_in_block476);
 				class_def18=class_def();
 				PopFollow();
 				if (state.failed) return retval;
@@ -924,12 +928,12 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// Stone.g:125:4: proxy_def
+				// Stone.g:129:4: proxy_def
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
-				DebugLocation(125, 4);
-				PushFollow(Follow._proxy_def_in_block468);
+				DebugLocation(129, 4);
+				PushFollow(Follow._proxy_def_in_block481);
 				proxy_def19=proxy_def();
 				PopFollow();
 				if (state.failed) return retval;
@@ -939,12 +943,12 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// Stone.g:126:4: func_def
+				// Stone.g:130:4: func_def
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
-				DebugLocation(126, 4);
-				PushFollow(Follow._func_def_in_block473);
+				DebugLocation(130, 4);
+				PushFollow(Follow._func_def_in_block486);
 				func_def20=func_def();
 				PopFollow();
 				if (state.failed) return retval;
@@ -954,12 +958,12 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// Stone.g:127:4: module_def
+				// Stone.g:131:4: module_def
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
-				DebugLocation(127, 4);
-				PushFollow(Follow._module_def_in_block478);
+				DebugLocation(131, 4);
+				PushFollow(Follow._module_def_in_block491);
 				module_def21=module_def();
 				PopFollow();
 				if (state.failed) return retval;
@@ -989,7 +993,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			LeaveRule("block", 4);
 			LeaveRule_block();
 		}
-		DebugLocation(128, 1);
+		DebugLocation(132, 1);
 		} finally { DebugExitRule(GrammarFileName, "block"); }
 		return retval;
 
@@ -1000,7 +1004,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_data_def();
 
 	// $ANTLR start "data_def"
-	// Stone.g:131:1: data_def : ( NEWLINE )* 'data' IDENT NEWLINE ( INDENT data_def_inner ( NEWLINE )* DEDENT ) -> ^( Data_Def IDENT data_def_inner ) ;
+	// Stone.g:135:1: data_def : ( NEWLINE )* 'data' IDENT NEWLINE ( INDENT data_def_inner ( NEWLINE )* DEDENT ) -> ^( Data_Def IDENT data_def_inner ) ;
 	[GrammarRule("data_def")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> data_def()
 	{
@@ -1031,19 +1035,19 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		RewriteRuleITokenStream stream_IDENT=new RewriteRuleITokenStream(adaptor,"token IDENT");
 		RewriteRuleITokenStream stream_DEDENT=new RewriteRuleITokenStream(adaptor,"token DEDENT");
 		RewriteRuleITokenStream stream_NEWLINE=new RewriteRuleITokenStream(adaptor,"token NEWLINE");
-		RewriteRuleITokenStream stream_71=new RewriteRuleITokenStream(adaptor,"token 71");
 		RewriteRuleITokenStream stream_INDENT=new RewriteRuleITokenStream(adaptor,"token INDENT");
+		RewriteRuleITokenStream stream_74=new RewriteRuleITokenStream(adaptor,"token 74");
 		RewriteRuleSubtreeStream stream_data_def_inner=new RewriteRuleSubtreeStream(adaptor,"rule data_def_inner");
 		try { DebugEnterRule(GrammarFileName, "data_def");
-		DebugLocation(131, 1);
+		DebugLocation(135, 1);
 		try
 		{
-			// Stone.g:132:2: ( ( NEWLINE )* 'data' IDENT NEWLINE ( INDENT data_def_inner ( NEWLINE )* DEDENT ) -> ^( Data_Def IDENT data_def_inner ) )
+			// Stone.g:136:2: ( ( NEWLINE )* 'data' IDENT NEWLINE ( INDENT data_def_inner ( NEWLINE )* DEDENT ) -> ^( Data_Def IDENT data_def_inner ) )
 			DebugEnterAlt(1);
-			// Stone.g:132:4: ( NEWLINE )* 'data' IDENT NEWLINE ( INDENT data_def_inner ( NEWLINE )* DEDENT )
+			// Stone.g:136:4: ( NEWLINE )* 'data' IDENT NEWLINE ( INDENT data_def_inner ( NEWLINE )* DEDENT )
 			{
-			DebugLocation(132, 4);
-			// Stone.g:132:4: ( NEWLINE )*
+			DebugLocation(136, 4);
+			// Stone.g:136:4: ( NEWLINE )*
 			try { DebugEnterSubRule(9);
 			while (true)
 			{
@@ -1062,10 +1066,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Stone.g:132:4: NEWLINE
+					// Stone.g:136:4: NEWLINE
 					{
-					DebugLocation(132, 4);
-					NEWLINE22=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_data_def490); if (state.failed) return retval; 
+					DebugLocation(136, 4);
+					NEWLINE22=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_data_def503); if (state.failed) return retval; 
 					if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE22);
 
 
@@ -1082,35 +1086,35 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 			} finally { DebugExitSubRule(9); }
 
-			DebugLocation(132, 13);
-			string_literal23=(CommonToken)Match(input,71,Follow._71_in_data_def493); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_71.Add(string_literal23);
+			DebugLocation(136, 13);
+			string_literal23=(CommonToken)Match(input,74,Follow._74_in_data_def506); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_74.Add(string_literal23);
 
-			DebugLocation(132, 20);
-			IDENT24=(CommonToken)Match(input,IDENT,Follow._IDENT_in_data_def495); if (state.failed) return retval; 
+			DebugLocation(136, 20);
+			IDENT24=(CommonToken)Match(input,IDENT,Follow._IDENT_in_data_def508); if (state.failed) return retval; 
 			if (state.backtracking == 0) stream_IDENT.Add(IDENT24);
 
-			DebugLocation(132, 26);
-			NEWLINE25=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_data_def497); if (state.failed) return retval; 
+			DebugLocation(136, 26);
+			NEWLINE25=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_data_def510); if (state.failed) return retval; 
 			if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE25);
 
-			DebugLocation(132, 34);
-			// Stone.g:132:34: ( INDENT data_def_inner ( NEWLINE )* DEDENT )
+			DebugLocation(136, 34);
+			// Stone.g:136:34: ( INDENT data_def_inner ( NEWLINE )* DEDENT )
 			DebugEnterAlt(1);
-			// Stone.g:132:35: INDENT data_def_inner ( NEWLINE )* DEDENT
+			// Stone.g:136:35: INDENT data_def_inner ( NEWLINE )* DEDENT
 			{
-			DebugLocation(132, 35);
-			INDENT26=(CommonToken)Match(input,INDENT,Follow._INDENT_in_data_def500); if (state.failed) return retval; 
+			DebugLocation(136, 35);
+			INDENT26=(CommonToken)Match(input,INDENT,Follow._INDENT_in_data_def513); if (state.failed) return retval; 
 			if (state.backtracking == 0) stream_INDENT.Add(INDENT26);
 
-			DebugLocation(132, 42);
-			PushFollow(Follow._data_def_inner_in_data_def502);
+			DebugLocation(136, 42);
+			PushFollow(Follow._data_def_inner_in_data_def515);
 			data_def_inner27=data_def_inner();
 			PopFollow();
 			if (state.failed) return retval;
 			if (state.backtracking == 0) stream_data_def_inner.Add(data_def_inner27.Tree);
-			DebugLocation(132, 57);
-			// Stone.g:132:57: ( NEWLINE )*
+			DebugLocation(136, 57);
+			// Stone.g:136:57: ( NEWLINE )*
 			try { DebugEnterSubRule(10);
 			while (true)
 			{
@@ -1129,10 +1133,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Stone.g:132:57: NEWLINE
+					// Stone.g:136:57: NEWLINE
 					{
-					DebugLocation(132, 57);
-					NEWLINE28=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_data_def504); if (state.failed) return retval; 
+					DebugLocation(136, 57);
+					NEWLINE28=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_data_def517); if (state.failed) return retval; 
 					if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE28);
 
 
@@ -1149,8 +1153,8 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 			} finally { DebugExitSubRule(10); }
 
-			DebugLocation(132, 66);
-			DEDENT29=(CommonToken)Match(input,DEDENT,Follow._DEDENT_in_data_def507); if (state.failed) return retval; 
+			DebugLocation(136, 66);
+			DEDENT29=(CommonToken)Match(input,DEDENT,Follow._DEDENT_in_data_def520); if (state.failed) return retval; 
 			if (state.backtracking == 0) stream_DEDENT.Add(DEDENT29);
 
 
@@ -1160,7 +1164,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 			{
 			// AST REWRITE
-			// elements: IDENT, data_def_inner
+			// elements: data_def_inner, IDENT
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -1171,18 +1175,18 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 132:74: -> ^( Data_Def IDENT data_def_inner )
+			// 136:74: -> ^( Data_Def IDENT data_def_inner )
 			{
-				DebugLocation(132, 77);
-				// Stone.g:132:77: ^( Data_Def IDENT data_def_inner )
+				DebugLocation(136, 77);
+				// Stone.g:136:77: ^( Data_Def IDENT data_def_inner )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(132, 79);
+				DebugLocation(136, 79);
 				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Data_Def, "Data_Def"), root_1);
 
-				DebugLocation(132, 88);
+				DebugLocation(136, 88);
 				adaptor.AddChild(root_1, stream_IDENT.NextNode());
-				DebugLocation(132, 94);
+				DebugLocation(136, 94);
 				adaptor.AddChild(root_1, stream_data_def_inner.NextTree());
 
 				adaptor.AddChild(root_0, root_1);
@@ -1216,7 +1220,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			LeaveRule("data_def", 5);
 			LeaveRule_data_def();
 		}
-		DebugLocation(133, 1);
+		DebugLocation(137, 1);
 		} finally { DebugExitRule(GrammarFileName, "data_def"); }
 		return retval;
 
@@ -1227,7 +1231,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_data_def_inner();
 
 	// $ANTLR start "data_def_inner"
-	// Stone.g:135:1: data_def_inner : ( ( data_def_item )+ -> ^( Data_Body ( data_def_item )+ ) | INDENT data_def_inner ( NEWLINE )* DEDENT -> data_def_inner );
+	// Stone.g:139:1: data_def_inner : ( ( data_def_item )+ -> ^( Data_Body ( data_def_item )+ ) | INDENT data_def_inner ( NEWLINE )* DEDENT -> data_def_inner );
 	[GrammarRule("data_def_inner")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> data_def_inner()
 	{
@@ -1254,10 +1258,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		RewriteRuleSubtreeStream stream_data_def_inner=new RewriteRuleSubtreeStream(adaptor,"rule data_def_inner");
 		RewriteRuleSubtreeStream stream_data_def_item=new RewriteRuleSubtreeStream(adaptor,"rule data_def_item");
 		try { DebugEnterRule(GrammarFileName, "data_def_inner");
-		DebugLocation(135, 1);
+		DebugLocation(139, 1);
 		try
 		{
-			// Stone.g:136:2: ( ( data_def_item )+ -> ^( Data_Body ( data_def_item )+ ) | INDENT data_def_inner ( NEWLINE )* DEDENT -> data_def_inner )
+			// Stone.g:140:2: ( ( data_def_item )+ -> ^( Data_Body ( data_def_item )+ ) | INDENT data_def_inner ( NEWLINE )* DEDENT -> data_def_inner )
 			int alt13=2;
 			try { DebugEnterDecision(13, false);
 			int LA13_0 = input.LA(1);
@@ -1282,10 +1286,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// Stone.g:136:4: ( data_def_item )+
+				// Stone.g:140:4: ( data_def_item )+
 				{
-				DebugLocation(136, 4);
-				// Stone.g:136:4: ( data_def_item )+
+				DebugLocation(140, 4);
+				// Stone.g:140:4: ( data_def_item )+
 				int cnt11=0;
 				try { DebugEnterSubRule(11);
 				while (true)
@@ -1306,10 +1310,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// Stone.g:136:4: data_def_item
+						// Stone.g:140:4: data_def_item
 						{
-						DebugLocation(136, 4);
-						PushFollow(Follow._data_def_item_in_data_def_inner529);
+						DebugLocation(140, 4);
+						PushFollow(Follow._data_def_item_in_data_def_inner542);
 						data_def_item30=data_def_item();
 						PopFollow();
 						if (state.failed) return retval;
@@ -1349,23 +1353,23 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 				root_0 = (CommonTree)adaptor.Nil();
-				// 136:19: -> ^( Data_Body ( data_def_item )+ )
+				// 140:19: -> ^( Data_Body ( data_def_item )+ )
 				{
-					DebugLocation(136, 22);
-					// Stone.g:136:22: ^( Data_Body ( data_def_item )+ )
+					DebugLocation(140, 22);
+					// Stone.g:140:22: ^( Data_Body ( data_def_item )+ )
 					{
 					CommonTree root_1 = (CommonTree)adaptor.Nil();
-					DebugLocation(136, 24);
+					DebugLocation(140, 24);
 					root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Data_Body, "Data_Body"), root_1);
 
-					DebugLocation(136, 34);
+					DebugLocation(140, 34);
 					if (!(stream_data_def_item.HasNext))
 					{
 						throw new RewriteEarlyExitException();
 					}
 					while ( stream_data_def_item.HasNext )
 					{
-						DebugLocation(136, 34);
+						DebugLocation(140, 34);
 						adaptor.AddChild(root_1, stream_data_def_item.NextTree());
 
 					}
@@ -1384,20 +1388,20 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// Stone.g:137:4: INDENT data_def_inner ( NEWLINE )* DEDENT
+				// Stone.g:141:4: INDENT data_def_inner ( NEWLINE )* DEDENT
 				{
-				DebugLocation(137, 4);
-				INDENT31=(CommonToken)Match(input,INDENT,Follow._INDENT_in_data_def_inner544); if (state.failed) return retval; 
+				DebugLocation(141, 4);
+				INDENT31=(CommonToken)Match(input,INDENT,Follow._INDENT_in_data_def_inner557); if (state.failed) return retval; 
 				if (state.backtracking == 0) stream_INDENT.Add(INDENT31);
 
-				DebugLocation(137, 11);
-				PushFollow(Follow._data_def_inner_in_data_def_inner546);
+				DebugLocation(141, 11);
+				PushFollow(Follow._data_def_inner_in_data_def_inner559);
 				data_def_inner32=data_def_inner();
 				PopFollow();
 				if (state.failed) return retval;
 				if (state.backtracking == 0) stream_data_def_inner.Add(data_def_inner32.Tree);
-				DebugLocation(137, 26);
-				// Stone.g:137:26: ( NEWLINE )*
+				DebugLocation(141, 26);
+				// Stone.g:141:26: ( NEWLINE )*
 				try { DebugEnterSubRule(12);
 				while (true)
 				{
@@ -1416,10 +1420,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// Stone.g:137:26: NEWLINE
+						// Stone.g:141:26: NEWLINE
 						{
-						DebugLocation(137, 26);
-						NEWLINE33=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_data_def_inner548); if (state.failed) return retval; 
+						DebugLocation(141, 26);
+						NEWLINE33=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_data_def_inner561); if (state.failed) return retval; 
 						if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE33);
 
 
@@ -1436,8 +1440,8 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 				} finally { DebugExitSubRule(12); }
 
-				DebugLocation(137, 35);
-				DEDENT34=(CommonToken)Match(input,DEDENT,Follow._DEDENT_in_data_def_inner551); if (state.failed) return retval; 
+				DebugLocation(141, 35);
+				DEDENT34=(CommonToken)Match(input,DEDENT,Follow._DEDENT_in_data_def_inner564); if (state.failed) return retval; 
 				if (state.backtracking == 0) stream_DEDENT.Add(DEDENT34);
 
 
@@ -1455,9 +1459,9 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 				root_0 = (CommonTree)adaptor.Nil();
-				// 137:42: -> data_def_inner
+				// 141:42: -> data_def_inner
 				{
-					DebugLocation(137, 45);
+					DebugLocation(141, 45);
 					adaptor.AddChild(root_0, stream_data_def_inner.NextTree());
 
 				}
@@ -1490,7 +1494,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			LeaveRule("data_def_inner", 6);
 			LeaveRule_data_def_inner();
 		}
-		DebugLocation(138, 1);
+		DebugLocation(142, 1);
 		} finally { DebugExitRule(GrammarFileName, "data_def_inner"); }
 		return retval;
 
@@ -1501,7 +1505,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_data_def_item();
 
 	// $ANTLR start "data_def_item"
-	// Stone.g:140:1: data_def_item : ( NEWLINE )* IDENT '::' type -> ^( Data_Def_Item IDENT type ) ;
+	// Stone.g:144:1: data_def_item : ( NEWLINE )* IDENT '::' type -> ^( Data_Def_Item IDENT type ) ;
 	[GrammarRule("data_def_item")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> data_def_item()
 	{
@@ -1521,20 +1525,20 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		CommonTree NEWLINE35_tree = default(CommonTree);
 		CommonTree IDENT36_tree = default(CommonTree);
 		CommonTree string_literal37_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_67=new RewriteRuleITokenStream(adaptor,"token 67");
 		RewriteRuleITokenStream stream_IDENT=new RewriteRuleITokenStream(adaptor,"token IDENT");
 		RewriteRuleITokenStream stream_NEWLINE=new RewriteRuleITokenStream(adaptor,"token NEWLINE");
-		RewriteRuleITokenStream stream_64=new RewriteRuleITokenStream(adaptor,"token 64");
 		RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type");
 		try { DebugEnterRule(GrammarFileName, "data_def_item");
-		DebugLocation(140, 1);
+		DebugLocation(144, 1);
 		try
 		{
-			// Stone.g:141:2: ( ( NEWLINE )* IDENT '::' type -> ^( Data_Def_Item IDENT type ) )
+			// Stone.g:145:2: ( ( NEWLINE )* IDENT '::' type -> ^( Data_Def_Item IDENT type ) )
 			DebugEnterAlt(1);
-			// Stone.g:141:4: ( NEWLINE )* IDENT '::' type
+			// Stone.g:145:4: ( NEWLINE )* IDENT '::' type
 			{
-			DebugLocation(141, 4);
-			// Stone.g:141:4: ( NEWLINE )*
+			DebugLocation(145, 4);
+			// Stone.g:145:4: ( NEWLINE )*
 			try { DebugEnterSubRule(14);
 			while (true)
 			{
@@ -1553,10 +1557,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Stone.g:141:4: NEWLINE
+					// Stone.g:145:4: NEWLINE
 					{
-					DebugLocation(141, 4);
-					NEWLINE35=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_data_def_item566); if (state.failed) return retval; 
+					DebugLocation(145, 4);
+					NEWLINE35=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_data_def_item579); if (state.failed) return retval; 
 					if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE35);
 
 
@@ -1573,16 +1577,16 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 			} finally { DebugExitSubRule(14); }
 
-			DebugLocation(141, 13);
-			IDENT36=(CommonToken)Match(input,IDENT,Follow._IDENT_in_data_def_item569); if (state.failed) return retval; 
+			DebugLocation(145, 13);
+			IDENT36=(CommonToken)Match(input,IDENT,Follow._IDENT_in_data_def_item582); if (state.failed) return retval; 
 			if (state.backtracking == 0) stream_IDENT.Add(IDENT36);
 
-			DebugLocation(141, 19);
-			string_literal37=(CommonToken)Match(input,64,Follow._64_in_data_def_item571); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_64.Add(string_literal37);
+			DebugLocation(145, 19);
+			string_literal37=(CommonToken)Match(input,67,Follow._67_in_data_def_item584); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_67.Add(string_literal37);
 
-			DebugLocation(141, 24);
-			PushFollow(Follow._type_in_data_def_item573);
+			DebugLocation(145, 24);
+			PushFollow(Follow._type_in_data_def_item586);
 			type38=type();
 			PopFollow();
 			if (state.failed) return retval;
@@ -1602,18 +1606,18 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 141:29: -> ^( Data_Def_Item IDENT type )
+			// 145:29: -> ^( Data_Def_Item IDENT type )
 			{
-				DebugLocation(141, 32);
-				// Stone.g:141:32: ^( Data_Def_Item IDENT type )
+				DebugLocation(145, 32);
+				// Stone.g:145:32: ^( Data_Def_Item IDENT type )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(141, 34);
+				DebugLocation(145, 34);
 				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Data_Def_Item, "Data_Def_Item"), root_1);
 
-				DebugLocation(141, 48);
+				DebugLocation(145, 48);
 				adaptor.AddChild(root_1, stream_IDENT.NextNode());
-				DebugLocation(141, 54);
+				DebugLocation(145, 54);
 				adaptor.AddChild(root_1, stream_type.NextTree());
 
 				adaptor.AddChild(root_0, root_1);
@@ -1647,7 +1651,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			LeaveRule("data_def_item", 7);
 			LeaveRule_data_def_item();
 		}
-		DebugLocation(142, 1);
+		DebugLocation(146, 1);
 		} finally { DebugExitRule(GrammarFileName, "data_def_item"); }
 		return retval;
 
@@ -1658,7 +1662,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_class_def();
 
 	// $ANTLR start "class_def"
-	// Stone.g:145:1: class_def : ( NEWLINE )* 'class' IDENT NEWLINE ( INDENT class_def_inner ( NEWLINE )* DEDENT ) -> ^( Class_Def IDENT class_def_inner ) ;
+	// Stone.g:149:1: class_def : ( NEWLINE )* 'class' IDENT NEWLINE ( INDENT class_def_inner ( NEWLINE )* DEDENT ) -> ^( Class_Def IDENT class_def_inner ) ;
 	[GrammarRule("class_def")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> class_def()
 	{
@@ -1689,19 +1693,19 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		RewriteRuleITokenStream stream_IDENT=new RewriteRuleITokenStream(adaptor,"token IDENT");
 		RewriteRuleITokenStream stream_DEDENT=new RewriteRuleITokenStream(adaptor,"token DEDENT");
 		RewriteRuleITokenStream stream_NEWLINE=new RewriteRuleITokenStream(adaptor,"token NEWLINE");
-		RewriteRuleITokenStream stream_70=new RewriteRuleITokenStream(adaptor,"token 70");
+		RewriteRuleITokenStream stream_73=new RewriteRuleITokenStream(adaptor,"token 73");
 		RewriteRuleITokenStream stream_INDENT=new RewriteRuleITokenStream(adaptor,"token INDENT");
 		RewriteRuleSubtreeStream stream_class_def_inner=new RewriteRuleSubtreeStream(adaptor,"rule class_def_inner");
 		try { DebugEnterRule(GrammarFileName, "class_def");
-		DebugLocation(145, 1);
+		DebugLocation(149, 1);
 		try
 		{
-			// Stone.g:146:2: ( ( NEWLINE )* 'class' IDENT NEWLINE ( INDENT class_def_inner ( NEWLINE )* DEDENT ) -> ^( Class_Def IDENT class_def_inner ) )
+			// Stone.g:150:2: ( ( NEWLINE )* 'class' IDENT NEWLINE ( INDENT class_def_inner ( NEWLINE )* DEDENT ) -> ^( Class_Def IDENT class_def_inner ) )
 			DebugEnterAlt(1);
-			// Stone.g:146:4: ( NEWLINE )* 'class' IDENT NEWLINE ( INDENT class_def_inner ( NEWLINE )* DEDENT )
+			// Stone.g:150:4: ( NEWLINE )* 'class' IDENT NEWLINE ( INDENT class_def_inner ( NEWLINE )* DEDENT )
 			{
-			DebugLocation(146, 4);
-			// Stone.g:146:4: ( NEWLINE )*
+			DebugLocation(150, 4);
+			// Stone.g:150:4: ( NEWLINE )*
 			try { DebugEnterSubRule(15);
 			while (true)
 			{
@@ -1720,10 +1724,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Stone.g:146:4: NEWLINE
+					// Stone.g:150:4: NEWLINE
 					{
-					DebugLocation(146, 4);
-					NEWLINE39=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_class_def595); if (state.failed) return retval; 
+					DebugLocation(150, 4);
+					NEWLINE39=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_class_def608); if (state.failed) return retval; 
 					if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE39);
 
 
@@ -1740,35 +1744,35 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 			} finally { DebugExitSubRule(15); }
 
-			DebugLocation(146, 13);
-			string_literal40=(CommonToken)Match(input,70,Follow._70_in_class_def598); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_70.Add(string_literal40);
+			DebugLocation(150, 13);
+			string_literal40=(CommonToken)Match(input,73,Follow._73_in_class_def611); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_73.Add(string_literal40);
 
-			DebugLocation(146, 21);
-			IDENT41=(CommonToken)Match(input,IDENT,Follow._IDENT_in_class_def600); if (state.failed) return retval; 
+			DebugLocation(150, 21);
+			IDENT41=(CommonToken)Match(input,IDENT,Follow._IDENT_in_class_def613); if (state.failed) return retval; 
 			if (state.backtracking == 0) stream_IDENT.Add(IDENT41);
 
-			DebugLocation(146, 27);
-			NEWLINE42=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_class_def602); if (state.failed) return retval; 
+			DebugLocation(150, 27);
+			NEWLINE42=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_class_def615); if (state.failed) return retval; 
 			if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE42);
 
-			DebugLocation(146, 35);
-			// Stone.g:146:35: ( INDENT class_def_inner ( NEWLINE )* DEDENT )
+			DebugLocation(150, 35);
+			// Stone.g:150:35: ( INDENT class_def_inner ( NEWLINE )* DEDENT )
 			DebugEnterAlt(1);
-			// Stone.g:146:36: INDENT class_def_inner ( NEWLINE )* DEDENT
+			// Stone.g:150:36: INDENT class_def_inner ( NEWLINE )* DEDENT
 			{
-			DebugLocation(146, 36);
-			INDENT43=(CommonToken)Match(input,INDENT,Follow._INDENT_in_class_def605); if (state.failed) return retval; 
+			DebugLocation(150, 36);
+			INDENT43=(CommonToken)Match(input,INDENT,Follow._INDENT_in_class_def618); if (state.failed) return retval; 
 			if (state.backtracking == 0) stream_INDENT.Add(INDENT43);
 
-			DebugLocation(146, 43);
-			PushFollow(Follow._class_def_inner_in_class_def607);
+			DebugLocation(150, 43);
+			PushFollow(Follow._class_def_inner_in_class_def620);
 			class_def_inner44=class_def_inner();
 			PopFollow();
 			if (state.failed) return retval;
 			if (state.backtracking == 0) stream_class_def_inner.Add(class_def_inner44.Tree);
-			DebugLocation(146, 59);
-			// Stone.g:146:59: ( NEWLINE )*
+			DebugLocation(150, 59);
+			// Stone.g:150:59: ( NEWLINE )*
 			try { DebugEnterSubRule(16);
 			while (true)
 			{
@@ -1787,10 +1791,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Stone.g:146:59: NEWLINE
+					// Stone.g:150:59: NEWLINE
 					{
-					DebugLocation(146, 59);
-					NEWLINE45=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_class_def609); if (state.failed) return retval; 
+					DebugLocation(150, 59);
+					NEWLINE45=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_class_def622); if (state.failed) return retval; 
 					if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE45);
 
 
@@ -1807,8 +1811,8 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 			} finally { DebugExitSubRule(16); }
 
-			DebugLocation(146, 68);
-			DEDENT46=(CommonToken)Match(input,DEDENT,Follow._DEDENT_in_class_def612); if (state.failed) return retval; 
+			DebugLocation(150, 68);
+			DEDENT46=(CommonToken)Match(input,DEDENT,Follow._DEDENT_in_class_def625); if (state.failed) return retval; 
 			if (state.backtracking == 0) stream_DEDENT.Add(DEDENT46);
 
 
@@ -1818,7 +1822,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 			{
 			// AST REWRITE
-			// elements: IDENT, class_def_inner
+			// elements: class_def_inner, IDENT
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -1829,18 +1833,18 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 146:76: -> ^( Class_Def IDENT class_def_inner )
+			// 150:76: -> ^( Class_Def IDENT class_def_inner )
 			{
-				DebugLocation(146, 79);
-				// Stone.g:146:79: ^( Class_Def IDENT class_def_inner )
+				DebugLocation(150, 79);
+				// Stone.g:150:79: ^( Class_Def IDENT class_def_inner )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(146, 81);
+				DebugLocation(150, 81);
 				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Class_Def, "Class_Def"), root_1);
 
-				DebugLocation(146, 91);
+				DebugLocation(150, 91);
 				adaptor.AddChild(root_1, stream_IDENT.NextNode());
-				DebugLocation(146, 97);
+				DebugLocation(150, 97);
 				adaptor.AddChild(root_1, stream_class_def_inner.NextTree());
 
 				adaptor.AddChild(root_0, root_1);
@@ -1874,7 +1878,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			LeaveRule("class_def", 8);
 			LeaveRule_class_def();
 		}
-		DebugLocation(147, 1);
+		DebugLocation(151, 1);
 		} finally { DebugExitRule(GrammarFileName, "class_def"); }
 		return retval;
 
@@ -1885,7 +1889,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_class_def_inner();
 
 	// $ANTLR start "class_def_inner"
-	// Stone.g:149:1: class_def_inner : ( ( message_declare )+ -> ^( Class_Def_Body ( message_declare )+ ) | INDENT class_def_inner ( NEWLINE )* DEDENT -> class_def_inner );
+	// Stone.g:153:1: class_def_inner : ( ( message_declare )+ -> ^( Class_Def_Body ( message_declare )+ ) | INDENT class_def_inner ( NEWLINE )* DEDENT -> class_def_inner );
 	[GrammarRule("class_def_inner")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> class_def_inner()
 	{
@@ -1912,10 +1916,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		RewriteRuleSubtreeStream stream_class_def_inner=new RewriteRuleSubtreeStream(adaptor,"rule class_def_inner");
 		RewriteRuleSubtreeStream stream_message_declare=new RewriteRuleSubtreeStream(adaptor,"rule message_declare");
 		try { DebugEnterRule(GrammarFileName, "class_def_inner");
-		DebugLocation(149, 1);
+		DebugLocation(153, 1);
 		try
 		{
-			// Stone.g:150:2: ( ( message_declare )+ -> ^( Class_Def_Body ( message_declare )+ ) | INDENT class_def_inner ( NEWLINE )* DEDENT -> class_def_inner )
+			// Stone.g:154:2: ( ( message_declare )+ -> ^( Class_Def_Body ( message_declare )+ ) | INDENT class_def_inner ( NEWLINE )* DEDENT -> class_def_inner )
 			int alt19=2;
 			try { DebugEnterDecision(19, false);
 			int LA19_0 = input.LA(1);
@@ -1940,10 +1944,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// Stone.g:150:4: ( message_declare )+
+				// Stone.g:154:4: ( message_declare )+
 				{
-				DebugLocation(150, 4);
-				// Stone.g:150:4: ( message_declare )+
+				DebugLocation(154, 4);
+				// Stone.g:154:4: ( message_declare )+
 				int cnt17=0;
 				try { DebugEnterSubRule(17);
 				while (true)
@@ -1964,10 +1968,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// Stone.g:150:4: message_declare
+						// Stone.g:154:4: message_declare
 						{
-						DebugLocation(150, 4);
-						PushFollow(Follow._message_declare_in_class_def_inner634);
+						DebugLocation(154, 4);
+						PushFollow(Follow._message_declare_in_class_def_inner647);
 						message_declare47=message_declare();
 						PopFollow();
 						if (state.failed) return retval;
@@ -2007,23 +2011,23 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 				root_0 = (CommonTree)adaptor.Nil();
-				// 150:21: -> ^( Class_Def_Body ( message_declare )+ )
+				// 154:21: -> ^( Class_Def_Body ( message_declare )+ )
 				{
-					DebugLocation(150, 24);
-					// Stone.g:150:24: ^( Class_Def_Body ( message_declare )+ )
+					DebugLocation(154, 24);
+					// Stone.g:154:24: ^( Class_Def_Body ( message_declare )+ )
 					{
 					CommonTree root_1 = (CommonTree)adaptor.Nil();
-					DebugLocation(150, 26);
+					DebugLocation(154, 26);
 					root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Class_Def_Body, "Class_Def_Body"), root_1);
 
-					DebugLocation(150, 41);
+					DebugLocation(154, 41);
 					if (!(stream_message_declare.HasNext))
 					{
 						throw new RewriteEarlyExitException();
 					}
 					while ( stream_message_declare.HasNext )
 					{
-						DebugLocation(150, 41);
+						DebugLocation(154, 41);
 						adaptor.AddChild(root_1, stream_message_declare.NextTree());
 
 					}
@@ -2042,20 +2046,20 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// Stone.g:151:4: INDENT class_def_inner ( NEWLINE )* DEDENT
+				// Stone.g:155:4: INDENT class_def_inner ( NEWLINE )* DEDENT
 				{
-				DebugLocation(151, 4);
-				INDENT48=(CommonToken)Match(input,INDENT,Follow._INDENT_in_class_def_inner649); if (state.failed) return retval; 
+				DebugLocation(155, 4);
+				INDENT48=(CommonToken)Match(input,INDENT,Follow._INDENT_in_class_def_inner662); if (state.failed) return retval; 
 				if (state.backtracking == 0) stream_INDENT.Add(INDENT48);
 
-				DebugLocation(151, 11);
-				PushFollow(Follow._class_def_inner_in_class_def_inner651);
+				DebugLocation(155, 11);
+				PushFollow(Follow._class_def_inner_in_class_def_inner664);
 				class_def_inner49=class_def_inner();
 				PopFollow();
 				if (state.failed) return retval;
 				if (state.backtracking == 0) stream_class_def_inner.Add(class_def_inner49.Tree);
-				DebugLocation(151, 27);
-				// Stone.g:151:27: ( NEWLINE )*
+				DebugLocation(155, 27);
+				// Stone.g:155:27: ( NEWLINE )*
 				try { DebugEnterSubRule(18);
 				while (true)
 				{
@@ -2074,10 +2078,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// Stone.g:151:27: NEWLINE
+						// Stone.g:155:27: NEWLINE
 						{
-						DebugLocation(151, 27);
-						NEWLINE50=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_class_def_inner653); if (state.failed) return retval; 
+						DebugLocation(155, 27);
+						NEWLINE50=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_class_def_inner666); if (state.failed) return retval; 
 						if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE50);
 
 
@@ -2094,8 +2098,8 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 				} finally { DebugExitSubRule(18); }
 
-				DebugLocation(151, 36);
-				DEDENT51=(CommonToken)Match(input,DEDENT,Follow._DEDENT_in_class_def_inner656); if (state.failed) return retval; 
+				DebugLocation(155, 36);
+				DEDENT51=(CommonToken)Match(input,DEDENT,Follow._DEDENT_in_class_def_inner669); if (state.failed) return retval; 
 				if (state.backtracking == 0) stream_DEDENT.Add(DEDENT51);
 
 
@@ -2113,9 +2117,9 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 				root_0 = (CommonTree)adaptor.Nil();
-				// 151:43: -> class_def_inner
+				// 155:43: -> class_def_inner
 				{
-					DebugLocation(151, 46);
+					DebugLocation(155, 46);
 					adaptor.AddChild(root_0, stream_class_def_inner.NextTree());
 
 				}
@@ -2148,7 +2152,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			LeaveRule("class_def_inner", 9);
 			LeaveRule_class_def_inner();
 		}
-		DebugLocation(152, 1);
+		DebugLocation(156, 1);
 		} finally { DebugExitRule(GrammarFileName, "class_def_inner"); }
 		return retval;
 
@@ -2159,7 +2163,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_proxy_def();
 
 	// $ANTLR start "proxy_def"
-	// Stone.g:155:1: proxy_def : ( NEWLINE )* 'proxy' IDENT ':' IDENT NEWLINE ( INDENT proxy_def_inner ( NEWLINE )* DEDENT ) -> ^( Proxy_Def IDENT IDENT proxy_def_inner ) ;
+	// Stone.g:159:1: proxy_def : ( NEWLINE )* 'proxy' IDENT ':' IDENT NEWLINE ( INDENT proxy_def_inner ( NEWLINE )* DEDENT ) -> ^( Proxy_Def IDENT IDENT proxy_def_inner ) ;
 	[GrammarRule("proxy_def")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> proxy_def()
 	{
@@ -2191,23 +2195,23 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		CommonTree INDENT58_tree = default(CommonTree);
 		CommonTree NEWLINE60_tree = default(CommonTree);
 		CommonTree DEDENT61_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_66=new RewriteRuleITokenStream(adaptor,"token 66");
 		RewriteRuleITokenStream stream_IDENT=new RewriteRuleITokenStream(adaptor,"token IDENT");
-		RewriteRuleITokenStream stream_77=new RewriteRuleITokenStream(adaptor,"token 77");
 		RewriteRuleITokenStream stream_DEDENT=new RewriteRuleITokenStream(adaptor,"token DEDENT");
 		RewriteRuleITokenStream stream_NEWLINE=new RewriteRuleITokenStream(adaptor,"token NEWLINE");
-		RewriteRuleITokenStream stream_63=new RewriteRuleITokenStream(adaptor,"token 63");
+		RewriteRuleITokenStream stream_80=new RewriteRuleITokenStream(adaptor,"token 80");
 		RewriteRuleITokenStream stream_INDENT=new RewriteRuleITokenStream(adaptor,"token INDENT");
 		RewriteRuleSubtreeStream stream_proxy_def_inner=new RewriteRuleSubtreeStream(adaptor,"rule proxy_def_inner");
 		try { DebugEnterRule(GrammarFileName, "proxy_def");
-		DebugLocation(155, 1);
+		DebugLocation(159, 1);
 		try
 		{
-			// Stone.g:156:2: ( ( NEWLINE )* 'proxy' IDENT ':' IDENT NEWLINE ( INDENT proxy_def_inner ( NEWLINE )* DEDENT ) -> ^( Proxy_Def IDENT IDENT proxy_def_inner ) )
+			// Stone.g:160:2: ( ( NEWLINE )* 'proxy' IDENT ':' IDENT NEWLINE ( INDENT proxy_def_inner ( NEWLINE )* DEDENT ) -> ^( Proxy_Def IDENT IDENT proxy_def_inner ) )
 			DebugEnterAlt(1);
-			// Stone.g:156:4: ( NEWLINE )* 'proxy' IDENT ':' IDENT NEWLINE ( INDENT proxy_def_inner ( NEWLINE )* DEDENT )
+			// Stone.g:160:4: ( NEWLINE )* 'proxy' IDENT ':' IDENT NEWLINE ( INDENT proxy_def_inner ( NEWLINE )* DEDENT )
 			{
-			DebugLocation(156, 4);
-			// Stone.g:156:4: ( NEWLINE )*
+			DebugLocation(160, 4);
+			// Stone.g:160:4: ( NEWLINE )*
 			try { DebugEnterSubRule(20);
 			while (true)
 			{
@@ -2226,10 +2230,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Stone.g:156:4: NEWLINE
+					// Stone.g:160:4: NEWLINE
 					{
-					DebugLocation(156, 4);
-					NEWLINE52=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_proxy_def672); if (state.failed) return retval; 
+					DebugLocation(160, 4);
+					NEWLINE52=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_proxy_def685); if (state.failed) return retval; 
 					if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE52);
 
 
@@ -2246,43 +2250,43 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 			} finally { DebugExitSubRule(20); }
 
-			DebugLocation(156, 13);
-			string_literal53=(CommonToken)Match(input,77,Follow._77_in_proxy_def675); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_77.Add(string_literal53);
+			DebugLocation(160, 13);
+			string_literal53=(CommonToken)Match(input,80,Follow._80_in_proxy_def688); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_80.Add(string_literal53);
 
-			DebugLocation(156, 21);
-			IDENT54=(CommonToken)Match(input,IDENT,Follow._IDENT_in_proxy_def677); if (state.failed) return retval; 
+			DebugLocation(160, 21);
+			IDENT54=(CommonToken)Match(input,IDENT,Follow._IDENT_in_proxy_def690); if (state.failed) return retval; 
 			if (state.backtracking == 0) stream_IDENT.Add(IDENT54);
 
-			DebugLocation(156, 27);
-			char_literal55=(CommonToken)Match(input,63,Follow._63_in_proxy_def679); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_63.Add(char_literal55);
+			DebugLocation(160, 27);
+			char_literal55=(CommonToken)Match(input,66,Follow._66_in_proxy_def692); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_66.Add(char_literal55);
 
-			DebugLocation(156, 31);
-			IDENT56=(CommonToken)Match(input,IDENT,Follow._IDENT_in_proxy_def681); if (state.failed) return retval; 
+			DebugLocation(160, 31);
+			IDENT56=(CommonToken)Match(input,IDENT,Follow._IDENT_in_proxy_def694); if (state.failed) return retval; 
 			if (state.backtracking == 0) stream_IDENT.Add(IDENT56);
 
-			DebugLocation(156, 37);
-			NEWLINE57=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_proxy_def683); if (state.failed) return retval; 
+			DebugLocation(160, 37);
+			NEWLINE57=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_proxy_def696); if (state.failed) return retval; 
 			if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE57);
 
-			DebugLocation(156, 45);
-			// Stone.g:156:45: ( INDENT proxy_def_inner ( NEWLINE )* DEDENT )
+			DebugLocation(160, 45);
+			// Stone.g:160:45: ( INDENT proxy_def_inner ( NEWLINE )* DEDENT )
 			DebugEnterAlt(1);
-			// Stone.g:156:46: INDENT proxy_def_inner ( NEWLINE )* DEDENT
+			// Stone.g:160:46: INDENT proxy_def_inner ( NEWLINE )* DEDENT
 			{
-			DebugLocation(156, 46);
-			INDENT58=(CommonToken)Match(input,INDENT,Follow._INDENT_in_proxy_def686); if (state.failed) return retval; 
+			DebugLocation(160, 46);
+			INDENT58=(CommonToken)Match(input,INDENT,Follow._INDENT_in_proxy_def699); if (state.failed) return retval; 
 			if (state.backtracking == 0) stream_INDENT.Add(INDENT58);
 
-			DebugLocation(156, 53);
-			PushFollow(Follow._proxy_def_inner_in_proxy_def688);
+			DebugLocation(160, 53);
+			PushFollow(Follow._proxy_def_inner_in_proxy_def701);
 			proxy_def_inner59=proxy_def_inner();
 			PopFollow();
 			if (state.failed) return retval;
 			if (state.backtracking == 0) stream_proxy_def_inner.Add(proxy_def_inner59.Tree);
-			DebugLocation(156, 69);
-			// Stone.g:156:69: ( NEWLINE )*
+			DebugLocation(160, 69);
+			// Stone.g:160:69: ( NEWLINE )*
 			try { DebugEnterSubRule(21);
 			while (true)
 			{
@@ -2301,10 +2305,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Stone.g:156:69: NEWLINE
+					// Stone.g:160:69: NEWLINE
 					{
-					DebugLocation(156, 69);
-					NEWLINE60=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_proxy_def690); if (state.failed) return retval; 
+					DebugLocation(160, 69);
+					NEWLINE60=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_proxy_def703); if (state.failed) return retval; 
 					if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE60);
 
 
@@ -2321,8 +2325,8 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 			} finally { DebugExitSubRule(21); }
 
-			DebugLocation(156, 78);
-			DEDENT61=(CommonToken)Match(input,DEDENT,Follow._DEDENT_in_proxy_def693); if (state.failed) return retval; 
+			DebugLocation(160, 78);
+			DEDENT61=(CommonToken)Match(input,DEDENT,Follow._DEDENT_in_proxy_def706); if (state.failed) return retval; 
 			if (state.backtracking == 0) stream_DEDENT.Add(DEDENT61);
 
 
@@ -2332,7 +2336,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 			{
 			// AST REWRITE
-			// elements: IDENT, IDENT, proxy_def_inner
+			// elements: proxy_def_inner, IDENT, IDENT
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -2343,20 +2347,20 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 156:86: -> ^( Proxy_Def IDENT IDENT proxy_def_inner )
+			// 160:86: -> ^( Proxy_Def IDENT IDENT proxy_def_inner )
 			{
-				DebugLocation(156, 89);
-				// Stone.g:156:89: ^( Proxy_Def IDENT IDENT proxy_def_inner )
+				DebugLocation(160, 89);
+				// Stone.g:160:89: ^( Proxy_Def IDENT IDENT proxy_def_inner )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(156, 91);
+				DebugLocation(160, 91);
 				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Proxy_Def, "Proxy_Def"), root_1);
 
-				DebugLocation(156, 101);
+				DebugLocation(160, 101);
 				adaptor.AddChild(root_1, stream_IDENT.NextNode());
-				DebugLocation(156, 107);
+				DebugLocation(160, 107);
 				adaptor.AddChild(root_1, stream_IDENT.NextNode());
-				DebugLocation(156, 113);
+				DebugLocation(160, 113);
 				adaptor.AddChild(root_1, stream_proxy_def_inner.NextTree());
 
 				adaptor.AddChild(root_0, root_1);
@@ -2390,7 +2394,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			LeaveRule("proxy_def", 10);
 			LeaveRule_proxy_def();
 		}
-		DebugLocation(157, 1);
+		DebugLocation(161, 1);
 		} finally { DebugExitRule(GrammarFileName, "proxy_def"); }
 		return retval;
 
@@ -2401,7 +2405,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_proxy_def_inner();
 
 	// $ANTLR start "proxy_def_inner"
-	// Stone.g:159:1: proxy_def_inner : ( ( message_def )+ -> ^( Proxy_Def_Body ( message_def )+ ) | INDENT proxy_def_inner ( NEWLINE )* DEDENT -> proxy_def_inner );
+	// Stone.g:163:1: proxy_def_inner : ( ( message_def )+ -> ^( Proxy_Def_Body ( message_def )+ ) | INDENT proxy_def_inner ( NEWLINE )* DEDENT -> proxy_def_inner );
 	[GrammarRule("proxy_def_inner")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> proxy_def_inner()
 	{
@@ -2428,10 +2432,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		RewriteRuleSubtreeStream stream_message_def=new RewriteRuleSubtreeStream(adaptor,"rule message_def");
 		RewriteRuleSubtreeStream stream_proxy_def_inner=new RewriteRuleSubtreeStream(adaptor,"rule proxy_def_inner");
 		try { DebugEnterRule(GrammarFileName, "proxy_def_inner");
-		DebugLocation(159, 1);
+		DebugLocation(163, 1);
 		try
 		{
-			// Stone.g:160:2: ( ( message_def )+ -> ^( Proxy_Def_Body ( message_def )+ ) | INDENT proxy_def_inner ( NEWLINE )* DEDENT -> proxy_def_inner )
+			// Stone.g:164:2: ( ( message_def )+ -> ^( Proxy_Def_Body ( message_def )+ ) | INDENT proxy_def_inner ( NEWLINE )* DEDENT -> proxy_def_inner )
 			int alt24=2;
 			try { DebugEnterDecision(24, false);
 			int LA24_0 = input.LA(1);
@@ -2456,10 +2460,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// Stone.g:160:4: ( message_def )+
+				// Stone.g:164:4: ( message_def )+
 				{
-				DebugLocation(160, 4);
-				// Stone.g:160:4: ( message_def )+
+				DebugLocation(164, 4);
+				// Stone.g:164:4: ( message_def )+
 				int cnt22=0;
 				try { DebugEnterSubRule(22);
 				while (true)
@@ -2480,10 +2484,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// Stone.g:160:4: message_def
+						// Stone.g:164:4: message_def
 						{
-						DebugLocation(160, 4);
-						PushFollow(Follow._message_def_in_proxy_def_inner717);
+						DebugLocation(164, 4);
+						PushFollow(Follow._message_def_in_proxy_def_inner730);
 						message_def62=message_def();
 						PopFollow();
 						if (state.failed) return retval;
@@ -2523,23 +2527,23 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 				root_0 = (CommonTree)adaptor.Nil();
-				// 160:17: -> ^( Proxy_Def_Body ( message_def )+ )
+				// 164:17: -> ^( Proxy_Def_Body ( message_def )+ )
 				{
-					DebugLocation(160, 20);
-					// Stone.g:160:20: ^( Proxy_Def_Body ( message_def )+ )
+					DebugLocation(164, 20);
+					// Stone.g:164:20: ^( Proxy_Def_Body ( message_def )+ )
 					{
 					CommonTree root_1 = (CommonTree)adaptor.Nil();
-					DebugLocation(160, 22);
+					DebugLocation(164, 22);
 					root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Proxy_Def_Body, "Proxy_Def_Body"), root_1);
 
-					DebugLocation(160, 37);
+					DebugLocation(164, 37);
 					if (!(stream_message_def.HasNext))
 					{
 						throw new RewriteEarlyExitException();
 					}
 					while ( stream_message_def.HasNext )
 					{
-						DebugLocation(160, 37);
+						DebugLocation(164, 37);
 						adaptor.AddChild(root_1, stream_message_def.NextTree());
 
 					}
@@ -2558,20 +2562,20 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// Stone.g:161:4: INDENT proxy_def_inner ( NEWLINE )* DEDENT
+				// Stone.g:165:4: INDENT proxy_def_inner ( NEWLINE )* DEDENT
 				{
-				DebugLocation(161, 4);
-				INDENT63=(CommonToken)Match(input,INDENT,Follow._INDENT_in_proxy_def_inner732); if (state.failed) return retval; 
+				DebugLocation(165, 4);
+				INDENT63=(CommonToken)Match(input,INDENT,Follow._INDENT_in_proxy_def_inner745); if (state.failed) return retval; 
 				if (state.backtracking == 0) stream_INDENT.Add(INDENT63);
 
-				DebugLocation(161, 11);
-				PushFollow(Follow._proxy_def_inner_in_proxy_def_inner734);
+				DebugLocation(165, 11);
+				PushFollow(Follow._proxy_def_inner_in_proxy_def_inner747);
 				proxy_def_inner64=proxy_def_inner();
 				PopFollow();
 				if (state.failed) return retval;
 				if (state.backtracking == 0) stream_proxy_def_inner.Add(proxy_def_inner64.Tree);
-				DebugLocation(161, 27);
-				// Stone.g:161:27: ( NEWLINE )*
+				DebugLocation(165, 27);
+				// Stone.g:165:27: ( NEWLINE )*
 				try { DebugEnterSubRule(23);
 				while (true)
 				{
@@ -2590,10 +2594,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// Stone.g:161:27: NEWLINE
+						// Stone.g:165:27: NEWLINE
 						{
-						DebugLocation(161, 27);
-						NEWLINE65=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_proxy_def_inner736); if (state.failed) return retval; 
+						DebugLocation(165, 27);
+						NEWLINE65=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_proxy_def_inner749); if (state.failed) return retval; 
 						if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE65);
 
 
@@ -2610,8 +2614,8 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 				} finally { DebugExitSubRule(23); }
 
-				DebugLocation(161, 36);
-				DEDENT66=(CommonToken)Match(input,DEDENT,Follow._DEDENT_in_proxy_def_inner739); if (state.failed) return retval; 
+				DebugLocation(165, 36);
+				DEDENT66=(CommonToken)Match(input,DEDENT,Follow._DEDENT_in_proxy_def_inner752); if (state.failed) return retval; 
 				if (state.backtracking == 0) stream_DEDENT.Add(DEDENT66);
 
 
@@ -2629,9 +2633,9 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 				root_0 = (CommonTree)adaptor.Nil();
-				// 161:43: -> proxy_def_inner
+				// 165:43: -> proxy_def_inner
 				{
-					DebugLocation(161, 46);
+					DebugLocation(165, 46);
 					adaptor.AddChild(root_0, stream_proxy_def_inner.NextTree());
 
 				}
@@ -2664,7 +2668,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			LeaveRule("proxy_def_inner", 11);
 			LeaveRule_proxy_def_inner();
 		}
-		DebugLocation(162, 1);
+		DebugLocation(166, 1);
 		} finally { DebugExitRule(GrammarFileName, "proxy_def_inner"); }
 		return retval;
 
@@ -2675,7 +2679,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_message_declare();
 
 	// $ANTLR start "message_declare"
-	// Stone.g:165:1: message_declare : ( NEWLINE )* IDENT '::' type NEWLINE -> ^( Message_Declare IDENT type ) ;
+	// Stone.g:169:1: message_declare : ( NEWLINE )* IDENT '::' type NEWLINE -> ^( Message_Declare IDENT type ) ;
 	[GrammarRule("message_declare")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> message_declare()
 	{
@@ -2697,20 +2701,20 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		CommonTree IDENT68_tree = default(CommonTree);
 		CommonTree string_literal69_tree = default(CommonTree);
 		CommonTree NEWLINE71_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_67=new RewriteRuleITokenStream(adaptor,"token 67");
 		RewriteRuleITokenStream stream_IDENT=new RewriteRuleITokenStream(adaptor,"token IDENT");
 		RewriteRuleITokenStream stream_NEWLINE=new RewriteRuleITokenStream(adaptor,"token NEWLINE");
-		RewriteRuleITokenStream stream_64=new RewriteRuleITokenStream(adaptor,"token 64");
 		RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type");
 		try { DebugEnterRule(GrammarFileName, "message_declare");
-		DebugLocation(165, 1);
+		DebugLocation(169, 1);
 		try
 		{
-			// Stone.g:166:2: ( ( NEWLINE )* IDENT '::' type NEWLINE -> ^( Message_Declare IDENT type ) )
+			// Stone.g:170:2: ( ( NEWLINE )* IDENT '::' type NEWLINE -> ^( Message_Declare IDENT type ) )
 			DebugEnterAlt(1);
-			// Stone.g:166:4: ( NEWLINE )* IDENT '::' type NEWLINE
+			// Stone.g:170:4: ( NEWLINE )* IDENT '::' type NEWLINE
 			{
-			DebugLocation(166, 4);
-			// Stone.g:166:4: ( NEWLINE )*
+			DebugLocation(170, 4);
+			// Stone.g:170:4: ( NEWLINE )*
 			try { DebugEnterSubRule(25);
 			while (true)
 			{
@@ -2729,10 +2733,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Stone.g:166:4: NEWLINE
+					// Stone.g:170:4: NEWLINE
 					{
-					DebugLocation(166, 4);
-					NEWLINE67=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_message_declare755); if (state.failed) return retval; 
+					DebugLocation(170, 4);
+					NEWLINE67=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_message_declare768); if (state.failed) return retval; 
 					if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE67);
 
 
@@ -2749,29 +2753,29 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 			} finally { DebugExitSubRule(25); }
 
-			DebugLocation(166, 13);
-			IDENT68=(CommonToken)Match(input,IDENT,Follow._IDENT_in_message_declare758); if (state.failed) return retval; 
+			DebugLocation(170, 13);
+			IDENT68=(CommonToken)Match(input,IDENT,Follow._IDENT_in_message_declare771); if (state.failed) return retval; 
 			if (state.backtracking == 0) stream_IDENT.Add(IDENT68);
 
-			DebugLocation(166, 19);
-			string_literal69=(CommonToken)Match(input,64,Follow._64_in_message_declare760); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_64.Add(string_literal69);
+			DebugLocation(170, 19);
+			string_literal69=(CommonToken)Match(input,67,Follow._67_in_message_declare773); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_67.Add(string_literal69);
 
-			DebugLocation(166, 24);
-			PushFollow(Follow._type_in_message_declare762);
+			DebugLocation(170, 24);
+			PushFollow(Follow._type_in_message_declare775);
 			type70=type();
 			PopFollow();
 			if (state.failed) return retval;
 			if (state.backtracking == 0) stream_type.Add(type70.Tree);
-			DebugLocation(166, 29);
-			NEWLINE71=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_message_declare764); if (state.failed) return retval; 
+			DebugLocation(170, 29);
+			NEWLINE71=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_message_declare777); if (state.failed) return retval; 
 			if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE71);
 
 
 
 			{
 			// AST REWRITE
-			// elements: type, IDENT
+			// elements: IDENT, type
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -2782,18 +2786,18 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 166:37: -> ^( Message_Declare IDENT type )
+			// 170:37: -> ^( Message_Declare IDENT type )
 			{
-				DebugLocation(166, 40);
-				// Stone.g:166:40: ^( Message_Declare IDENT type )
+				DebugLocation(170, 40);
+				// Stone.g:170:40: ^( Message_Declare IDENT type )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(166, 42);
+				DebugLocation(170, 42);
 				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Message_Declare, "Message_Declare"), root_1);
 
-				DebugLocation(166, 58);
+				DebugLocation(170, 58);
 				adaptor.AddChild(root_1, stream_IDENT.NextNode());
-				DebugLocation(166, 64);
+				DebugLocation(170, 64);
 				adaptor.AddChild(root_1, stream_type.NextTree());
 
 				adaptor.AddChild(root_0, root_1);
@@ -2827,7 +2831,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			LeaveRule("message_declare", 12);
 			LeaveRule_message_declare();
 		}
-		DebugLocation(167, 1);
+		DebugLocation(171, 1);
 		} finally { DebugExitRule(GrammarFileName, "message_declare"); }
 		return retval;
 
@@ -2838,7 +2842,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_message_def();
 
 	// $ANTLR start "message_def"
-	// Stone.g:169:1: message_def : message_declare ( NEWLINE )* IDENT message_def_args NEWLINE stmt_block -> ^( Message_Def IDENT message_declare message_def_args stmt_block ) ;
+	// Stone.g:173:1: message_def : message_declare ( NEWLINE )* IDENT message_def_args NEWLINE stmt_block -> ^( Message_Def IDENT message_declare message_def_args stmt_block ) ;
 	[GrammarRule("message_def")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> message_def()
 	{
@@ -2866,21 +2870,21 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		RewriteRuleSubtreeStream stream_message_declare=new RewriteRuleSubtreeStream(adaptor,"rule message_declare");
 		RewriteRuleSubtreeStream stream_stmt_block=new RewriteRuleSubtreeStream(adaptor,"rule stmt_block");
 		try { DebugEnterRule(GrammarFileName, "message_def");
-		DebugLocation(169, 1);
+		DebugLocation(173, 1);
 		try
 		{
-			// Stone.g:170:2: ( message_declare ( NEWLINE )* IDENT message_def_args NEWLINE stmt_block -> ^( Message_Def IDENT message_declare message_def_args stmt_block ) )
+			// Stone.g:174:2: ( message_declare ( NEWLINE )* IDENT message_def_args NEWLINE stmt_block -> ^( Message_Def IDENT message_declare message_def_args stmt_block ) )
 			DebugEnterAlt(1);
-			// Stone.g:170:5: message_declare ( NEWLINE )* IDENT message_def_args NEWLINE stmt_block
+			// Stone.g:174:5: message_declare ( NEWLINE )* IDENT message_def_args NEWLINE stmt_block
 			{
-			DebugLocation(170, 5);
-			PushFollow(Follow._message_declare_in_message_def786);
+			DebugLocation(174, 5);
+			PushFollow(Follow._message_declare_in_message_def799);
 			message_declare72=message_declare();
 			PopFollow();
 			if (state.failed) return retval;
 			if (state.backtracking == 0) stream_message_declare.Add(message_declare72.Tree);
-			DebugLocation(170, 21);
-			// Stone.g:170:21: ( NEWLINE )*
+			DebugLocation(174, 21);
+			// Stone.g:174:21: ( NEWLINE )*
 			try { DebugEnterSubRule(26);
 			while (true)
 			{
@@ -2899,10 +2903,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Stone.g:170:21: NEWLINE
+					// Stone.g:174:21: NEWLINE
 					{
-					DebugLocation(170, 21);
-					NEWLINE73=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_message_def788); if (state.failed) return retval; 
+					DebugLocation(174, 21);
+					NEWLINE73=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_message_def801); if (state.failed) return retval; 
 					if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE73);
 
 
@@ -2919,22 +2923,22 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 			} finally { DebugExitSubRule(26); }
 
-			DebugLocation(170, 30);
-			IDENT74=(CommonToken)Match(input,IDENT,Follow._IDENT_in_message_def791); if (state.failed) return retval; 
+			DebugLocation(174, 30);
+			IDENT74=(CommonToken)Match(input,IDENT,Follow._IDENT_in_message_def804); if (state.failed) return retval; 
 			if (state.backtracking == 0) stream_IDENT.Add(IDENT74);
 
-			DebugLocation(170, 36);
-			PushFollow(Follow._message_def_args_in_message_def793);
+			DebugLocation(174, 36);
+			PushFollow(Follow._message_def_args_in_message_def806);
 			message_def_args75=message_def_args();
 			PopFollow();
 			if (state.failed) return retval;
 			if (state.backtracking == 0) stream_message_def_args.Add(message_def_args75.Tree);
-			DebugLocation(170, 53);
-			NEWLINE76=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_message_def795); if (state.failed) return retval; 
+			DebugLocation(174, 53);
+			NEWLINE76=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_message_def808); if (state.failed) return retval; 
 			if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE76);
 
-			DebugLocation(170, 61);
-			PushFollow(Follow._stmt_block_in_message_def797);
+			DebugLocation(174, 61);
+			PushFollow(Follow._stmt_block_in_message_def810);
 			stmt_block77=stmt_block();
 			PopFollow();
 			if (state.failed) return retval;
@@ -2943,7 +2947,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 			{
 			// AST REWRITE
-			// elements: message_def_args, stmt_block, message_declare, IDENT
+			// elements: stmt_block, IDENT, message_declare, message_def_args
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -2954,22 +2958,22 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 170:72: -> ^( Message_Def IDENT message_declare message_def_args stmt_block )
+			// 174:72: -> ^( Message_Def IDENT message_declare message_def_args stmt_block )
 			{
-				DebugLocation(170, 75);
-				// Stone.g:170:75: ^( Message_Def IDENT message_declare message_def_args stmt_block )
+				DebugLocation(174, 75);
+				// Stone.g:174:75: ^( Message_Def IDENT message_declare message_def_args stmt_block )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(170, 77);
+				DebugLocation(174, 77);
 				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Message_Def, "Message_Def"), root_1);
 
-				DebugLocation(170, 89);
+				DebugLocation(174, 89);
 				adaptor.AddChild(root_1, stream_IDENT.NextNode());
-				DebugLocation(170, 95);
+				DebugLocation(174, 95);
 				adaptor.AddChild(root_1, stream_message_declare.NextTree());
-				DebugLocation(170, 111);
+				DebugLocation(174, 111);
 				adaptor.AddChild(root_1, stream_message_def_args.NextTree());
-				DebugLocation(170, 128);
+				DebugLocation(174, 128);
 				adaptor.AddChild(root_1, stream_stmt_block.NextTree());
 
 				adaptor.AddChild(root_0, root_1);
@@ -3003,7 +3007,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			LeaveRule("message_def", 13);
 			LeaveRule_message_def();
 		}
-		DebugLocation(171, 1);
+		DebugLocation(175, 1);
 		} finally { DebugExitRule(GrammarFileName, "message_def"); }
 		return retval;
 
@@ -3014,7 +3018,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_message_def_args();
 
 	// $ANTLR start "message_def_args"
-	// Stone.g:173:1: message_def_args : ( match )? -> ^( Message_Args ( match )? ) ;
+	// Stone.g:177:1: message_def_args : ( match )? -> ^( Message_Args ( match )? ) ;
 	[GrammarRule("message_def_args")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> message_def_args()
 	{
@@ -3030,21 +3034,21 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 		RewriteRuleSubtreeStream stream_match=new RewriteRuleSubtreeStream(adaptor,"rule match");
 		try { DebugEnterRule(GrammarFileName, "message_def_args");
-		DebugLocation(173, 1);
+		DebugLocation(177, 1);
 		try
 		{
-			// Stone.g:174:2: ( ( match )? -> ^( Message_Args ( match )? ) )
+			// Stone.g:178:2: ( ( match )? -> ^( Message_Args ( match )? ) )
 			DebugEnterAlt(1);
-			// Stone.g:174:4: ( match )?
+			// Stone.g:178:4: ( match )?
 			{
-			DebugLocation(174, 4);
-			// Stone.g:174:4: ( match )?
+			DebugLocation(178, 4);
+			// Stone.g:178:4: ( match )?
 			int alt27=2;
 			try { DebugEnterSubRule(27);
 			try { DebugEnterDecision(27, false);
 			int LA27_0 = input.LA(1);
 
-			if ((LA27_0==IDENT||LA27_0==59))
+			if ((LA27_0==IDENT||LA27_0==62||LA27_0==84))
 			{
 				alt27 = 1;
 			}
@@ -3053,10 +3057,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// Stone.g:174:4: match
+				// Stone.g:178:4: match
 				{
-				DebugLocation(174, 4);
-				PushFollow(Follow._match_in_message_def_args822);
+				DebugLocation(178, 4);
+				PushFollow(Follow._match_in_message_def_args835);
 				match78=match();
 				PopFollow();
 				if (state.failed) return retval;
@@ -3083,20 +3087,20 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 174:11: -> ^( Message_Args ( match )? )
+			// 178:11: -> ^( Message_Args ( match )? )
 			{
-				DebugLocation(174, 14);
-				// Stone.g:174:14: ^( Message_Args ( match )? )
+				DebugLocation(178, 14);
+				// Stone.g:178:14: ^( Message_Args ( match )? )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(174, 16);
+				DebugLocation(178, 16);
 				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Message_Args, "Message_Args"), root_1);
 
-				DebugLocation(174, 29);
-				// Stone.g:174:29: ( match )?
+				DebugLocation(178, 29);
+				// Stone.g:178:29: ( match )?
 				if (stream_match.HasNext)
 				{
-					DebugLocation(174, 29);
+					DebugLocation(178, 29);
 					adaptor.AddChild(root_1, stream_match.NextTree());
 
 				}
@@ -3133,7 +3137,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			LeaveRule("message_def_args", 14);
 			LeaveRule_message_def_args();
 		}
-		DebugLocation(175, 1);
+		DebugLocation(179, 1);
 		} finally { DebugExitRule(GrammarFileName, "message_def_args"); }
 		return retval;
 
@@ -3144,7 +3148,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_func_declare();
 
 	// $ANTLR start "func_declare"
-	// Stone.g:178:1: func_declare : ( NEWLINE )* IDENT '::' type NEWLINE -> ^( Func_Declare IDENT type ) ;
+	// Stone.g:182:1: func_declare : ( NEWLINE )* IDENT '::' type NEWLINE -> ^( Func_Declare IDENT type ) ;
 	[GrammarRule("func_declare")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> func_declare()
 	{
@@ -3166,20 +3170,20 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		CommonTree IDENT80_tree = default(CommonTree);
 		CommonTree string_literal81_tree = default(CommonTree);
 		CommonTree NEWLINE83_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_67=new RewriteRuleITokenStream(adaptor,"token 67");
 		RewriteRuleITokenStream stream_IDENT=new RewriteRuleITokenStream(adaptor,"token IDENT");
 		RewriteRuleITokenStream stream_NEWLINE=new RewriteRuleITokenStream(adaptor,"token NEWLINE");
-		RewriteRuleITokenStream stream_64=new RewriteRuleITokenStream(adaptor,"token 64");
 		RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type");
 		try { DebugEnterRule(GrammarFileName, "func_declare");
-		DebugLocation(178, 1);
+		DebugLocation(182, 1);
 		try
 		{
-			// Stone.g:179:2: ( ( NEWLINE )* IDENT '::' type NEWLINE -> ^( Func_Declare IDENT type ) )
+			// Stone.g:183:2: ( ( NEWLINE )* IDENT '::' type NEWLINE -> ^( Func_Declare IDENT type ) )
 			DebugEnterAlt(1);
-			// Stone.g:179:4: ( NEWLINE )* IDENT '::' type NEWLINE
+			// Stone.g:183:4: ( NEWLINE )* IDENT '::' type NEWLINE
 			{
-			DebugLocation(179, 4);
-			// Stone.g:179:4: ( NEWLINE )*
+			DebugLocation(183, 4);
+			// Stone.g:183:4: ( NEWLINE )*
 			try { DebugEnterSubRule(28);
 			while (true)
 			{
@@ -3198,10 +3202,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Stone.g:179:4: NEWLINE
+					// Stone.g:183:4: NEWLINE
 					{
-					DebugLocation(179, 4);
-					NEWLINE79=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_func_declare844); if (state.failed) return retval; 
+					DebugLocation(183, 4);
+					NEWLINE79=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_func_declare857); if (state.failed) return retval; 
 					if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE79);
 
 
@@ -3218,29 +3222,29 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 			} finally { DebugExitSubRule(28); }
 
-			DebugLocation(179, 13);
-			IDENT80=(CommonToken)Match(input,IDENT,Follow._IDENT_in_func_declare847); if (state.failed) return retval; 
+			DebugLocation(183, 13);
+			IDENT80=(CommonToken)Match(input,IDENT,Follow._IDENT_in_func_declare860); if (state.failed) return retval; 
 			if (state.backtracking == 0) stream_IDENT.Add(IDENT80);
 
-			DebugLocation(179, 19);
-			string_literal81=(CommonToken)Match(input,64,Follow._64_in_func_declare849); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_64.Add(string_literal81);
+			DebugLocation(183, 19);
+			string_literal81=(CommonToken)Match(input,67,Follow._67_in_func_declare862); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_67.Add(string_literal81);
 
-			DebugLocation(179, 24);
-			PushFollow(Follow._type_in_func_declare851);
+			DebugLocation(183, 24);
+			PushFollow(Follow._type_in_func_declare864);
 			type82=type();
 			PopFollow();
 			if (state.failed) return retval;
 			if (state.backtracking == 0) stream_type.Add(type82.Tree);
-			DebugLocation(179, 29);
-			NEWLINE83=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_func_declare853); if (state.failed) return retval; 
+			DebugLocation(183, 29);
+			NEWLINE83=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_func_declare866); if (state.failed) return retval; 
 			if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE83);
 
 
 
 			{
 			// AST REWRITE
-			// elements: IDENT, type
+			// elements: type, IDENT
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -3251,18 +3255,18 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 179:37: -> ^( Func_Declare IDENT type )
+			// 183:37: -> ^( Func_Declare IDENT type )
 			{
-				DebugLocation(179, 40);
-				// Stone.g:179:40: ^( Func_Declare IDENT type )
+				DebugLocation(183, 40);
+				// Stone.g:183:40: ^( Func_Declare IDENT type )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(179, 42);
+				DebugLocation(183, 42);
 				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Func_Declare, "Func_Declare"), root_1);
 
-				DebugLocation(179, 55);
+				DebugLocation(183, 55);
 				adaptor.AddChild(root_1, stream_IDENT.NextNode());
-				DebugLocation(179, 61);
+				DebugLocation(183, 61);
 				adaptor.AddChild(root_1, stream_type.NextTree());
 
 				adaptor.AddChild(root_0, root_1);
@@ -3296,7 +3300,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			LeaveRule("func_declare", 15);
 			LeaveRule_func_declare();
 		}
-		DebugLocation(180, 1);
+		DebugLocation(184, 1);
 		} finally { DebugExitRule(GrammarFileName, "func_declare"); }
 		return retval;
 
@@ -3307,7 +3311,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_func_def();
 
 	// $ANTLR start "func_def"
-	// Stone.g:182:1: func_def : func_declare ( NEWLINE )* IDENT func_def_args NEWLINE stmt_block -> ^( Func_Def IDENT func_declare func_def_args stmt_block ) ;
+	// Stone.g:186:1: func_def : func_declare ( NEWLINE )* IDENT func_def_args NEWLINE stmt_block -> ^( Func_Def IDENT func_declare func_def_args stmt_block ) ;
 	[GrammarRule("func_def")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> func_def()
 	{
@@ -3335,21 +3339,21 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		RewriteRuleSubtreeStream stream_stmt_block=new RewriteRuleSubtreeStream(adaptor,"rule stmt_block");
 		RewriteRuleSubtreeStream stream_func_declare=new RewriteRuleSubtreeStream(adaptor,"rule func_declare");
 		try { DebugEnterRule(GrammarFileName, "func_def");
-		DebugLocation(182, 1);
+		DebugLocation(186, 1);
 		try
 		{
-			// Stone.g:183:2: ( func_declare ( NEWLINE )* IDENT func_def_args NEWLINE stmt_block -> ^( Func_Def IDENT func_declare func_def_args stmt_block ) )
+			// Stone.g:187:2: ( func_declare ( NEWLINE )* IDENT func_def_args NEWLINE stmt_block -> ^( Func_Def IDENT func_declare func_def_args stmt_block ) )
 			DebugEnterAlt(1);
-			// Stone.g:183:5: func_declare ( NEWLINE )* IDENT func_def_args NEWLINE stmt_block
+			// Stone.g:187:5: func_declare ( NEWLINE )* IDENT func_def_args NEWLINE stmt_block
 			{
-			DebugLocation(183, 5);
-			PushFollow(Follow._func_declare_in_func_def875);
+			DebugLocation(187, 5);
+			PushFollow(Follow._func_declare_in_func_def888);
 			func_declare84=func_declare();
 			PopFollow();
 			if (state.failed) return retval;
 			if (state.backtracking == 0) stream_func_declare.Add(func_declare84.Tree);
-			DebugLocation(183, 18);
-			// Stone.g:183:18: ( NEWLINE )*
+			DebugLocation(187, 18);
+			// Stone.g:187:18: ( NEWLINE )*
 			try { DebugEnterSubRule(29);
 			while (true)
 			{
@@ -3368,10 +3372,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Stone.g:183:18: NEWLINE
+					// Stone.g:187:18: NEWLINE
 					{
-					DebugLocation(183, 18);
-					NEWLINE85=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_func_def877); if (state.failed) return retval; 
+					DebugLocation(187, 18);
+					NEWLINE85=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_func_def890); if (state.failed) return retval; 
 					if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE85);
 
 
@@ -3388,22 +3392,22 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 			} finally { DebugExitSubRule(29); }
 
-			DebugLocation(183, 27);
-			IDENT86=(CommonToken)Match(input,IDENT,Follow._IDENT_in_func_def880); if (state.failed) return retval; 
+			DebugLocation(187, 27);
+			IDENT86=(CommonToken)Match(input,IDENT,Follow._IDENT_in_func_def893); if (state.failed) return retval; 
 			if (state.backtracking == 0) stream_IDENT.Add(IDENT86);
 
-			DebugLocation(183, 33);
-			PushFollow(Follow._func_def_args_in_func_def882);
+			DebugLocation(187, 33);
+			PushFollow(Follow._func_def_args_in_func_def895);
 			func_def_args87=func_def_args();
 			PopFollow();
 			if (state.failed) return retval;
 			if (state.backtracking == 0) stream_func_def_args.Add(func_def_args87.Tree);
-			DebugLocation(183, 47);
-			NEWLINE88=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_func_def884); if (state.failed) return retval; 
+			DebugLocation(187, 47);
+			NEWLINE88=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_func_def897); if (state.failed) return retval; 
 			if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE88);
 
-			DebugLocation(183, 55);
-			PushFollow(Follow._stmt_block_in_func_def886);
+			DebugLocation(187, 55);
+			PushFollow(Follow._stmt_block_in_func_def899);
 			stmt_block89=stmt_block();
 			PopFollow();
 			if (state.failed) return retval;
@@ -3412,7 +3416,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 			{
 			// AST REWRITE
-			// elements: func_def_args, stmt_block, func_declare, IDENT
+			// elements: IDENT, func_declare, func_def_args, stmt_block
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -3423,22 +3427,22 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 183:66: -> ^( Func_Def IDENT func_declare func_def_args stmt_block )
+			// 187:66: -> ^( Func_Def IDENT func_declare func_def_args stmt_block )
 			{
-				DebugLocation(183, 69);
-				// Stone.g:183:69: ^( Func_Def IDENT func_declare func_def_args stmt_block )
+				DebugLocation(187, 69);
+				// Stone.g:187:69: ^( Func_Def IDENT func_declare func_def_args stmt_block )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(183, 71);
+				DebugLocation(187, 71);
 				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Func_Def, "Func_Def"), root_1);
 
-				DebugLocation(183, 80);
+				DebugLocation(187, 80);
 				adaptor.AddChild(root_1, stream_IDENT.NextNode());
-				DebugLocation(183, 86);
+				DebugLocation(187, 86);
 				adaptor.AddChild(root_1, stream_func_declare.NextTree());
-				DebugLocation(183, 99);
+				DebugLocation(187, 99);
 				adaptor.AddChild(root_1, stream_func_def_args.NextTree());
-				DebugLocation(183, 113);
+				DebugLocation(187, 113);
 				adaptor.AddChild(root_1, stream_stmt_block.NextTree());
 
 				adaptor.AddChild(root_0, root_1);
@@ -3472,7 +3476,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			LeaveRule("func_def", 16);
 			LeaveRule_func_def();
 		}
-		DebugLocation(184, 1);
+		DebugLocation(188, 1);
 		} finally { DebugExitRule(GrammarFileName, "func_def"); }
 		return retval;
 
@@ -3483,7 +3487,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_func_def_args();
 
 	// $ANTLR start "func_def_args"
-	// Stone.g:186:1: func_def_args : ( match )? -> ^( Func_Args ( match )? ) ;
+	// Stone.g:190:1: func_def_args : ( match )? -> ^( Func_Args ( match )? ) ;
 	[GrammarRule("func_def_args")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> func_def_args()
 	{
@@ -3499,21 +3503,21 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 		RewriteRuleSubtreeStream stream_match=new RewriteRuleSubtreeStream(adaptor,"rule match");
 		try { DebugEnterRule(GrammarFileName, "func_def_args");
-		DebugLocation(186, 1);
+		DebugLocation(190, 1);
 		try
 		{
-			// Stone.g:187:2: ( ( match )? -> ^( Func_Args ( match )? ) )
+			// Stone.g:191:2: ( ( match )? -> ^( Func_Args ( match )? ) )
 			DebugEnterAlt(1);
-			// Stone.g:187:4: ( match )?
+			// Stone.g:191:4: ( match )?
 			{
-			DebugLocation(187, 4);
-			// Stone.g:187:4: ( match )?
+			DebugLocation(191, 4);
+			// Stone.g:191:4: ( match )?
 			int alt30=2;
 			try { DebugEnterSubRule(30);
 			try { DebugEnterDecision(30, false);
 			int LA30_0 = input.LA(1);
 
-			if ((LA30_0==IDENT||LA30_0==59))
+			if ((LA30_0==IDENT||LA30_0==62||LA30_0==84))
 			{
 				alt30 = 1;
 			}
@@ -3522,10 +3526,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// Stone.g:187:4: match
+				// Stone.g:191:4: match
 				{
-				DebugLocation(187, 4);
-				PushFollow(Follow._match_in_func_def_args911);
+				DebugLocation(191, 4);
+				PushFollow(Follow._match_in_func_def_args924);
 				match90=match();
 				PopFollow();
 				if (state.failed) return retval;
@@ -3552,20 +3556,20 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 187:11: -> ^( Func_Args ( match )? )
+			// 191:11: -> ^( Func_Args ( match )? )
 			{
-				DebugLocation(187, 14);
-				// Stone.g:187:14: ^( Func_Args ( match )? )
+				DebugLocation(191, 14);
+				// Stone.g:191:14: ^( Func_Args ( match )? )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(187, 16);
+				DebugLocation(191, 16);
 				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Func_Args, "Func_Args"), root_1);
 
-				DebugLocation(187, 26);
-				// Stone.g:187:26: ( match )?
+				DebugLocation(191, 26);
+				// Stone.g:191:26: ( match )?
 				if (stream_match.HasNext)
 				{
-					DebugLocation(187, 26);
+					DebugLocation(191, 26);
 					adaptor.AddChild(root_1, stream_match.NextTree());
 
 				}
@@ -3602,7 +3606,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			LeaveRule("func_def_args", 17);
 			LeaveRule_func_def_args();
 		}
-		DebugLocation(188, 1);
+		DebugLocation(192, 1);
 		} finally { DebugExitRule(GrammarFileName, "func_def_args"); }
 		return retval;
 
@@ -3613,7 +3617,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_match();
 
 	// $ANTLR start "match"
-	// Stone.g:191:1: match : match_cross ;
+	// Stone.g:195:1: match : match_cross ;
 	[GrammarRule("match")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> match()
 	{
@@ -3628,17 +3632,17 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		AstParserRuleReturnScope<CommonTree, CommonToken> match_cross91 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
 
 		try { DebugEnterRule(GrammarFileName, "match");
-		DebugLocation(191, 1);
+		DebugLocation(195, 1);
 		try
 		{
-			// Stone.g:192:2: ( match_cross )
+			// Stone.g:196:2: ( match_cross )
 			DebugEnterAlt(1);
-			// Stone.g:192:4: match_cross
+			// Stone.g:196:4: match_cross
 			{
 			root_0 = (CommonTree)adaptor.Nil();
 
-			DebugLocation(192, 4);
-			PushFollow(Follow._match_cross_in_match933);
+			DebugLocation(196, 4);
+			PushFollow(Follow._match_cross_in_match946);
 			match_cross91=match_cross();
 			PopFollow();
 			if (state.failed) return retval;
@@ -3666,7 +3670,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			LeaveRule("match", 18);
 			LeaveRule_match();
 		}
-		DebugLocation(193, 1);
+		DebugLocation(197, 1);
 		} finally { DebugExitRule(GrammarFileName, "match"); }
 		return retval;
 
@@ -3677,7 +3681,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_match_cross();
 
 	// $ANTLR start "match_cross"
-	// Stone.g:195:1: match_cross options {backtrack=true; memoize=true; } : ( match_var ( ',' match_var )+ -> ^( Match_Cross ( match_var )+ ) | match_var );
+	// Stone.g:199:1: match_cross options {backtrack=true; memoize=true; } : ( match_var ( ',' match_var )+ -> ^( Match_Cross ( match_var )+ ) | match_var );
 	[GrammarRule("match_cross")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> match_cross()
 	{
@@ -3696,21 +3700,21 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		AstParserRuleReturnScope<CommonTree, CommonToken> match_var95 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
 
 		CommonTree char_literal93_tree = default(CommonTree);
-		RewriteRuleITokenStream stream_61=new RewriteRuleITokenStream(adaptor,"token 61");
+		RewriteRuleITokenStream stream_64=new RewriteRuleITokenStream(adaptor,"token 64");
 		RewriteRuleSubtreeStream stream_match_var=new RewriteRuleSubtreeStream(adaptor,"rule match_var");
 		try { DebugEnterRule(GrammarFileName, "match_cross");
-		DebugLocation(195, 1);
+		DebugLocation(199, 1);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 19)) { return retval; }
 
-			// Stone.g:200:2: ( match_var ( ',' match_var )+ -> ^( Match_Cross ( match_var )+ ) | match_var )
+			// Stone.g:204:2: ( match_var ( ',' match_var )+ -> ^( Match_Cross ( match_var )+ ) | match_var )
 			int alt32=2;
 			try { DebugEnterDecision(32, false);
-			int LA32_0 = input.LA(1);
-
-			if ((LA32_0==IDENT))
+			switch (input.LA(1))
 			{
+			case IDENT:
+				{
 				int LA32_1 = input.LA(2);
 
 				if ((EvaluatePredicate(synpred1_Stone_fragment)))
@@ -3728,9 +3732,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
-			}
-			else if ((LA32_0==59))
-			{
+				}
+				break;
+			case 84:
+				{
 				int LA32_2 = input.LA(2);
 
 				if ((EvaluatePredicate(synpred1_Stone_fragment)))
@@ -3748,29 +3753,53 @@ public partial class StoneParser : Antlr.Runtime.Parser
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
+				}
+				break;
+			case 62:
+				{
+				int LA32_3 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred1_Stone_fragment)))
+				{
+					alt32 = 1;
+				}
+				else if ((true))
+				{
+					alt32 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return retval;}
+					NoViableAltException nvae = new NoViableAltException("", 32, 3, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			default:
+				{
+					if (state.backtracking>0) {state.failed=true; return retval;}
+					NoViableAltException nvae = new NoViableAltException("", 32, 0, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
 			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return retval;}
-				NoViableAltException nvae = new NoViableAltException("", 32, 0, input);
-				DebugRecognitionException(nvae);
-				throw nvae;
-			}
+
 			} finally { DebugExitDecision(32); }
 			switch (alt32)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// Stone.g:200:4: match_var ( ',' match_var )+
+				// Stone.g:204:4: match_var ( ',' match_var )+
 				{
-				DebugLocation(200, 4);
-				PushFollow(Follow._match_var_in_match_cross960);
+				DebugLocation(204, 4);
+				PushFollow(Follow._match_var_in_match_cross973);
 				match_var92=match_var();
 				PopFollow();
 				if (state.failed) return retval;
 				if (state.backtracking == 0) stream_match_var.Add(match_var92.Tree);
-				DebugLocation(200, 14);
-				// Stone.g:200:14: ( ',' match_var )+
+				DebugLocation(204, 14);
+				// Stone.g:204:14: ( ',' match_var )+
 				int cnt31=0;
 				try { DebugEnterSubRule(31);
 				while (true)
@@ -3779,7 +3808,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 					try { DebugEnterDecision(31, false);
 					int LA31_0 = input.LA(1);
 
-					if ((LA31_0==61))
+					if ((LA31_0==64))
 					{
 						alt31 = 1;
 					}
@@ -3790,14 +3819,14 @@ public partial class StoneParser : Antlr.Runtime.Parser
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// Stone.g:200:15: ',' match_var
+						// Stone.g:204:15: ',' match_var
 						{
-						DebugLocation(200, 15);
-						char_literal93=(CommonToken)Match(input,61,Follow._61_in_match_cross963); if (state.failed) return retval; 
-						if (state.backtracking == 0) stream_61.Add(char_literal93);
+						DebugLocation(204, 15);
+						char_literal93=(CommonToken)Match(input,64,Follow._64_in_match_cross976); if (state.failed) return retval; 
+						if (state.backtracking == 0) stream_64.Add(char_literal93);
 
-						DebugLocation(200, 19);
-						PushFollow(Follow._match_var_in_match_cross965);
+						DebugLocation(204, 19);
+						PushFollow(Follow._match_var_in_match_cross978);
 						match_var94=match_var();
 						PopFollow();
 						if (state.failed) return retval;
@@ -3837,23 +3866,23 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 				root_0 = (CommonTree)adaptor.Nil();
-				// 200:31: -> ^( Match_Cross ( match_var )+ )
+				// 204:31: -> ^( Match_Cross ( match_var )+ )
 				{
-					DebugLocation(200, 34);
-					// Stone.g:200:34: ^( Match_Cross ( match_var )+ )
+					DebugLocation(204, 34);
+					// Stone.g:204:34: ^( Match_Cross ( match_var )+ )
 					{
 					CommonTree root_1 = (CommonTree)adaptor.Nil();
-					DebugLocation(200, 36);
+					DebugLocation(204, 36);
 					root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Match_Cross, "Match_Cross"), root_1);
 
-					DebugLocation(200, 48);
+					DebugLocation(204, 48);
 					if (!(stream_match_var.HasNext))
 					{
 						throw new RewriteEarlyExitException();
 					}
 					while ( stream_match_var.HasNext )
 					{
-						DebugLocation(200, 48);
+						DebugLocation(204, 48);
 						adaptor.AddChild(root_1, stream_match_var.NextTree());
 
 					}
@@ -3872,12 +3901,12 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// Stone.g:201:4: match_var
+				// Stone.g:205:4: match_var
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
-				DebugLocation(201, 4);
-				PushFollow(Follow._match_var_in_match_cross981);
+				DebugLocation(205, 4);
+				PushFollow(Follow._match_var_in_match_cross994);
 				match_var95=match_var();
 				PopFollow();
 				if (state.failed) return retval;
@@ -3909,7 +3938,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			if (state.backtracking > 0) { Memoize(input, 19, match_cross_StartIndex); }
 
 		}
-		DebugLocation(202, 1);
+		DebugLocation(206, 1);
 		} finally { DebugExitRule(GrammarFileName, "match_cross"); }
 		return retval;
 
@@ -3920,7 +3949,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_match_var();
 
 	// $ANTLR start "match_var"
-	// Stone.g:204:1: match_var : ( IDENT -> ^( Match_Var IDENT ) | '(' match ')' -> match );
+	// Stone.g:208:1: match_var : ( IDENT -> ^( Match_Assign_Var IDENT ) | '|' IDENT '|' -> ^( Match_Alloc_Var IDENT ) | '(' match ')' -> match );
 	[GrammarRule("match_var")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> match_var()
 	{
@@ -3934,49 +3963,65 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 		CommonToken IDENT96 = default(CommonToken);
 		CommonToken char_literal97 = default(CommonToken);
+		CommonToken IDENT98 = default(CommonToken);
 		CommonToken char_literal99 = default(CommonToken);
-		AstParserRuleReturnScope<CommonTree, CommonToken> match98 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		CommonToken char_literal100 = default(CommonToken);
+		CommonToken char_literal102 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> match101 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
 
 		CommonTree IDENT96_tree = default(CommonTree);
 		CommonTree char_literal97_tree = default(CommonTree);
+		CommonTree IDENT98_tree = default(CommonTree);
 		CommonTree char_literal99_tree = default(CommonTree);
+		CommonTree char_literal100_tree = default(CommonTree);
+		CommonTree char_literal102_tree = default(CommonTree);
 		RewriteRuleITokenStream stream_IDENT=new RewriteRuleITokenStream(adaptor,"token IDENT");
-		RewriteRuleITokenStream stream_59=new RewriteRuleITokenStream(adaptor,"token 59");
-		RewriteRuleITokenStream stream_60=new RewriteRuleITokenStream(adaptor,"token 60");
+		RewriteRuleITokenStream stream_62=new RewriteRuleITokenStream(adaptor,"token 62");
+		RewriteRuleITokenStream stream_63=new RewriteRuleITokenStream(adaptor,"token 63");
+		RewriteRuleITokenStream stream_84=new RewriteRuleITokenStream(adaptor,"token 84");
 		RewriteRuleSubtreeStream stream_match=new RewriteRuleSubtreeStream(adaptor,"rule match");
 		try { DebugEnterRule(GrammarFileName, "match_var");
-		DebugLocation(204, 1);
+		DebugLocation(208, 1);
 		try
 		{
-			// Stone.g:205:2: ( IDENT -> ^( Match_Var IDENT ) | '(' match ')' -> match )
-			int alt33=2;
+			// Stone.g:209:2: ( IDENT -> ^( Match_Assign_Var IDENT ) | '|' IDENT '|' -> ^( Match_Alloc_Var IDENT ) | '(' match ')' -> match )
+			int alt33=3;
 			try { DebugEnterDecision(33, false);
-			int LA33_0 = input.LA(1);
-
-			if ((LA33_0==IDENT))
+			switch (input.LA(1))
 			{
+			case IDENT:
+				{
 				alt33 = 1;
-			}
-			else if ((LA33_0==59))
-			{
+				}
+				break;
+			case 84:
+				{
 				alt33 = 2;
+				}
+				break;
+			case 62:
+				{
+				alt33 = 3;
+				}
+				break;
+			default:
+				{
+					if (state.backtracking>0) {state.failed=true; return retval;}
+					NoViableAltException nvae = new NoViableAltException("", 33, 0, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
 			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return retval;}
-				NoViableAltException nvae = new NoViableAltException("", 33, 0, input);
-				DebugRecognitionException(nvae);
-				throw nvae;
-			}
+
 			} finally { DebugExitDecision(33); }
 			switch (alt33)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// Stone.g:205:4: IDENT
+				// Stone.g:209:4: IDENT
 				{
-				DebugLocation(205, 4);
-				IDENT96=(CommonToken)Match(input,IDENT,Follow._IDENT_in_match_var992); if (state.failed) return retval; 
+				DebugLocation(209, 4);
+				IDENT96=(CommonToken)Match(input,IDENT,Follow._IDENT_in_match_var1005); if (state.failed) return retval; 
 				if (state.backtracking == 0) stream_IDENT.Add(IDENT96);
 
 
@@ -3994,16 +4039,16 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 				root_0 = (CommonTree)adaptor.Nil();
-				// 205:10: -> ^( Match_Var IDENT )
+				// 209:10: -> ^( Match_Assign_Var IDENT )
 				{
-					DebugLocation(205, 13);
-					// Stone.g:205:13: ^( Match_Var IDENT )
+					DebugLocation(209, 13);
+					// Stone.g:209:13: ^( Match_Assign_Var IDENT )
 					{
 					CommonTree root_1 = (CommonTree)adaptor.Nil();
-					DebugLocation(205, 15);
-					root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Match_Var, "Match_Var"), root_1);
+					DebugLocation(209, 15);
+					root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Match_Assign_Var, "Match_Assign_Var"), root_1);
 
-					DebugLocation(205, 25);
+					DebugLocation(209, 32);
 					adaptor.AddChild(root_1, stream_IDENT.NextNode());
 
 					adaptor.AddChild(root_0, root_1);
@@ -4019,21 +4064,75 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// Stone.g:206:4: '(' match ')'
+				// Stone.g:210:4: '|' IDENT '|'
 				{
-				DebugLocation(206, 4);
-				char_literal97=(CommonToken)Match(input,59,Follow._59_in_match_var1005); if (state.failed) return retval; 
-				if (state.backtracking == 0) stream_59.Add(char_literal97);
+				DebugLocation(210, 4);
+				char_literal97=(CommonToken)Match(input,84,Follow._84_in_match_var1018); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_84.Add(char_literal97);
 
-				DebugLocation(206, 8);
-				PushFollow(Follow._match_in_match_var1007);
-				match98=match();
+				DebugLocation(210, 8);
+				IDENT98=(CommonToken)Match(input,IDENT,Follow._IDENT_in_match_var1020); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_IDENT.Add(IDENT98);
+
+				DebugLocation(210, 14);
+				char_literal99=(CommonToken)Match(input,84,Follow._84_in_match_var1022); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_84.Add(char_literal99);
+
+
+
+				{
+				// AST REWRITE
+				// elements: IDENT
+				// token labels: 
+				// rule labels: retval
+				// token list labels: 
+				// rule list labels: 
+				// wildcard labels: 
+				if (state.backtracking == 0) {
+				retval.Tree = root_0;
+				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
+
+				root_0 = (CommonTree)adaptor.Nil();
+				// 210:18: -> ^( Match_Alloc_Var IDENT )
+				{
+					DebugLocation(210, 21);
+					// Stone.g:210:21: ^( Match_Alloc_Var IDENT )
+					{
+					CommonTree root_1 = (CommonTree)adaptor.Nil();
+					DebugLocation(210, 23);
+					root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Match_Alloc_Var, "Match_Alloc_Var"), root_1);
+
+					DebugLocation(210, 39);
+					adaptor.AddChild(root_1, stream_IDENT.NextNode());
+
+					adaptor.AddChild(root_0, root_1);
+					}
+
+				}
+
+				retval.Tree = root_0;
+				}
+				}
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// Stone.g:211:4: '(' match ')'
+				{
+				DebugLocation(211, 4);
+				char_literal100=(CommonToken)Match(input,62,Follow._62_in_match_var1035); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_62.Add(char_literal100);
+
+				DebugLocation(211, 8);
+				PushFollow(Follow._match_in_match_var1037);
+				match101=match();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) stream_match.Add(match98.Tree);
-				DebugLocation(206, 14);
-				char_literal99=(CommonToken)Match(input,60,Follow._60_in_match_var1009); if (state.failed) return retval; 
-				if (state.backtracking == 0) stream_60.Add(char_literal99);
+				if (state.backtracking == 0) stream_match.Add(match101.Tree);
+				DebugLocation(211, 14);
+				char_literal102=(CommonToken)Match(input,63,Follow._63_in_match_var1039); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_63.Add(char_literal102);
 
 
 
@@ -4050,9 +4149,9 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 				root_0 = (CommonTree)adaptor.Nil();
-				// 206:18: -> match
+				// 211:18: -> match
 				{
-					DebugLocation(206, 21);
+					DebugLocation(211, 21);
 					adaptor.AddChild(root_0, stream_match.NextTree());
 
 				}
@@ -4085,7 +4184,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			LeaveRule("match_var", 20);
 			LeaveRule_match_var();
 		}
-		DebugLocation(207, 1);
+		DebugLocation(212, 1);
 		} finally { DebugExitRule(GrammarFileName, "match_var"); }
 		return retval;
 
@@ -4096,7 +4195,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_type();
 
 	// $ANTLR start "type"
-	// Stone.g:210:1: type : type_func ;
+	// Stone.g:215:1: type : type_func ;
 	[GrammarRule("type")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> type()
 	{
@@ -4108,24 +4207,24 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 		CommonTree root_0 = default(CommonTree);
 
-		AstParserRuleReturnScope<CommonTree, CommonToken> type_func100 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> type_func103 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
 
 		try { DebugEnterRule(GrammarFileName, "type");
-		DebugLocation(210, 1);
+		DebugLocation(215, 1);
 		try
 		{
-			// Stone.g:211:2: ( type_func )
+			// Stone.g:216:2: ( type_func )
 			DebugEnterAlt(1);
-			// Stone.g:211:4: type_func
+			// Stone.g:216:4: type_func
 			{
 			root_0 = (CommonTree)adaptor.Nil();
 
-			DebugLocation(211, 4);
-			PushFollow(Follow._type_func_in_type1025);
-			type_func100=type_func();
+			DebugLocation(216, 4);
+			PushFollow(Follow._type_func_in_type1055);
+			type_func103=type_func();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, type_func100.Tree);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, type_func103.Tree);
 
 			}
 
@@ -4149,7 +4248,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			LeaveRule("type", 21);
 			LeaveRule_type();
 		}
-		DebugLocation(212, 1);
+		DebugLocation(217, 1);
 		} finally { DebugExitRule(GrammarFileName, "type"); }
 		return retval;
 
@@ -4160,7 +4259,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_type_func();
 
 	// $ANTLR start "type_func"
-	// Stone.g:214:1: type_func options {backtrack=true; memoize=true; } : ( type_cross '->' type_cross -> ^( Type_Func type_cross type_cross ) | type_cross );
+	// Stone.g:219:1: type_func options {backtrack=true; memoize=true; } : ( type_cross '->' type_cross -> ^( Type_Func type_cross type_cross ) | type_cross );
 	[GrammarRule("type_func")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> type_func()
 	{
@@ -4173,27 +4272,27 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 		CommonTree root_0 = default(CommonTree);
 
-		CommonToken string_literal102 = default(CommonToken);
-		AstParserRuleReturnScope<CommonTree, CommonToken> type_cross101 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
-		AstParserRuleReturnScope<CommonTree, CommonToken> type_cross103 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		CommonToken string_literal105 = default(CommonToken);
 		AstParserRuleReturnScope<CommonTree, CommonToken> type_cross104 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> type_cross106 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> type_cross107 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
 
-		CommonTree string_literal102_tree = default(CommonTree);
-		RewriteRuleITokenStream stream_62=new RewriteRuleITokenStream(adaptor,"token 62");
+		CommonTree string_literal105_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_65=new RewriteRuleITokenStream(adaptor,"token 65");
 		RewriteRuleSubtreeStream stream_type_cross=new RewriteRuleSubtreeStream(adaptor,"rule type_cross");
 		try { DebugEnterRule(GrammarFileName, "type_func");
-		DebugLocation(214, 1);
+		DebugLocation(219, 1);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 22)) { return retval; }
 
-			// Stone.g:219:2: ( type_cross '->' type_cross -> ^( Type_Func type_cross type_cross ) | type_cross )
+			// Stone.g:224:2: ( type_cross '->' type_cross -> ^( Type_Func type_cross type_cross ) | type_cross )
 			int alt34=2;
 			try { DebugEnterDecision(34, false);
-			int LA34_0 = input.LA(1);
-
-			if ((LA34_0==IDENT))
+			switch (input.LA(1))
 			{
+			case IDENT:
+				{
 				int LA34_1 = input.LA(2);
 
 				if ((EvaluatePredicate(synpred2_Stone_fragment)))
@@ -4211,9 +4310,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
-			}
-			else if ((LA34_0==59))
-			{
+				}
+				break;
+			case 62:
+				{
 				int LA34_2 = input.LA(2);
 
 				if ((EvaluatePredicate(synpred2_Stone_fragment)))
@@ -4231,37 +4331,61 @@ public partial class StoneParser : Antlr.Runtime.Parser
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
+				}
+				break;
+			case 70:
+				{
+				int LA34_3 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred2_Stone_fragment)))
+				{
+					alt34 = 1;
+				}
+				else if ((true))
+				{
+					alt34 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return retval;}
+					NoViableAltException nvae = new NoViableAltException("", 34, 3, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			default:
+				{
+					if (state.backtracking>0) {state.failed=true; return retval;}
+					NoViableAltException nvae = new NoViableAltException("", 34, 0, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
 			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return retval;}
-				NoViableAltException nvae = new NoViableAltException("", 34, 0, input);
-				DebugRecognitionException(nvae);
-				throw nvae;
-			}
+
 			} finally { DebugExitDecision(34); }
 			switch (alt34)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// Stone.g:219:4: type_cross '->' type_cross
+				// Stone.g:224:4: type_cross '->' type_cross
 				{
-				DebugLocation(219, 4);
-				PushFollow(Follow._type_cross_in_type_func1052);
-				type_cross101=type_cross();
+				DebugLocation(224, 4);
+				PushFollow(Follow._type_cross_in_type_func1082);
+				type_cross104=type_cross();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) stream_type_cross.Add(type_cross101.Tree);
-				DebugLocation(219, 15);
-				string_literal102=(CommonToken)Match(input,62,Follow._62_in_type_func1054); if (state.failed) return retval; 
-				if (state.backtracking == 0) stream_62.Add(string_literal102);
+				if (state.backtracking == 0) stream_type_cross.Add(type_cross104.Tree);
+				DebugLocation(224, 15);
+				string_literal105=(CommonToken)Match(input,65,Follow._65_in_type_func1084); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_65.Add(string_literal105);
 
-				DebugLocation(219, 20);
-				PushFollow(Follow._type_cross_in_type_func1056);
-				type_cross103=type_cross();
+				DebugLocation(224, 20);
+				PushFollow(Follow._type_cross_in_type_func1086);
+				type_cross106=type_cross();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) stream_type_cross.Add(type_cross103.Tree);
+				if (state.backtracking == 0) stream_type_cross.Add(type_cross106.Tree);
 
 
 				{
@@ -4277,18 +4401,18 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 				root_0 = (CommonTree)adaptor.Nil();
-				// 219:31: -> ^( Type_Func type_cross type_cross )
+				// 224:31: -> ^( Type_Func type_cross type_cross )
 				{
-					DebugLocation(219, 34);
-					// Stone.g:219:34: ^( Type_Func type_cross type_cross )
+					DebugLocation(224, 34);
+					// Stone.g:224:34: ^( Type_Func type_cross type_cross )
 					{
 					CommonTree root_1 = (CommonTree)adaptor.Nil();
-					DebugLocation(219, 36);
+					DebugLocation(224, 36);
 					root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Type_Func, "Type_Func"), root_1);
 
-					DebugLocation(219, 46);
+					DebugLocation(224, 46);
 					adaptor.AddChild(root_1, stream_type_cross.NextTree());
-					DebugLocation(219, 57);
+					DebugLocation(224, 57);
 					adaptor.AddChild(root_1, stream_type_cross.NextTree());
 
 					adaptor.AddChild(root_0, root_1);
@@ -4304,16 +4428,16 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// Stone.g:220:4: type_cross
+				// Stone.g:225:4: type_cross
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
-				DebugLocation(220, 4);
-				PushFollow(Follow._type_cross_in_type_func1071);
-				type_cross104=type_cross();
+				DebugLocation(225, 4);
+				PushFollow(Follow._type_cross_in_type_func1101);
+				type_cross107=type_cross();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, type_cross104.Tree);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, type_cross107.Tree);
 
 				}
 				break;
@@ -4341,7 +4465,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			if (state.backtracking > 0) { Memoize(input, 22, type_func_StartIndex); }
 
 		}
-		DebugLocation(221, 1);
+		DebugLocation(226, 1);
 		} finally { DebugExitRule(GrammarFileName, "type_func"); }
 		return retval;
 
@@ -4352,7 +4476,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_type_cross();
 
 	// $ANTLR start "type_cross"
-	// Stone.g:223:1: type_cross options {backtrack=true; memoize=true; } : ( type_atom ( '*' type_atom )+ -> ^( Type_Cross ( type_atom )+ ) | type_atom );
+	// Stone.g:228:1: type_cross options {backtrack=true; memoize=true; } : ( type_atom ( '*' type_atom )+ -> ^( Type_Cross ( type_atom )+ ) | type_atom );
 	[GrammarRule("type_cross")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> type_cross()
 	{
@@ -4365,27 +4489,27 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 		CommonTree root_0 = default(CommonTree);
 
-		CommonToken char_literal106 = default(CommonToken);
-		AstParserRuleReturnScope<CommonTree, CommonToken> type_atom105 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
-		AstParserRuleReturnScope<CommonTree, CommonToken> type_atom107 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		CommonToken char_literal109 = default(CommonToken);
 		AstParserRuleReturnScope<CommonTree, CommonToken> type_atom108 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> type_atom110 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> type_atom111 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
 
-		CommonTree char_literal106_tree = default(CommonTree);
+		CommonTree char_literal109_tree = default(CommonTree);
 		RewriteRuleITokenStream stream_OP_MUL=new RewriteRuleITokenStream(adaptor,"token OP_MUL");
 		RewriteRuleSubtreeStream stream_type_atom=new RewriteRuleSubtreeStream(adaptor,"rule type_atom");
 		try { DebugEnterRule(GrammarFileName, "type_cross");
-		DebugLocation(223, 1);
+		DebugLocation(228, 1);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 23)) { return retval; }
 
-			// Stone.g:228:2: ( type_atom ( '*' type_atom )+ -> ^( Type_Cross ( type_atom )+ ) | type_atom )
+			// Stone.g:233:2: ( type_atom ( '*' type_atom )+ -> ^( Type_Cross ( type_atom )+ ) | type_atom )
 			int alt36=2;
 			try { DebugEnterDecision(36, false);
-			int LA36_0 = input.LA(1);
-
-			if ((LA36_0==IDENT))
+			switch (input.LA(1))
 			{
+			case IDENT:
+				{
 				int LA36_1 = input.LA(2);
 
 				if ((EvaluatePredicate(synpred3_Stone_fragment)))
@@ -4403,9 +4527,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
-			}
-			else if ((LA36_0==59))
-			{
+				}
+				break;
+			case 62:
+				{
 				int LA36_2 = input.LA(2);
 
 				if ((EvaluatePredicate(synpred3_Stone_fragment)))
@@ -4423,29 +4548,53 @@ public partial class StoneParser : Antlr.Runtime.Parser
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
+				}
+				break;
+			case 70:
+				{
+				int LA36_3 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred3_Stone_fragment)))
+				{
+					alt36 = 1;
+				}
+				else if ((true))
+				{
+					alt36 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return retval;}
+					NoViableAltException nvae = new NoViableAltException("", 36, 3, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			default:
+				{
+					if (state.backtracking>0) {state.failed=true; return retval;}
+					NoViableAltException nvae = new NoViableAltException("", 36, 0, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
 			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return retval;}
-				NoViableAltException nvae = new NoViableAltException("", 36, 0, input);
-				DebugRecognitionException(nvae);
-				throw nvae;
-			}
+
 			} finally { DebugExitDecision(36); }
 			switch (alt36)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// Stone.g:228:4: type_atom ( '*' type_atom )+
+				// Stone.g:233:4: type_atom ( '*' type_atom )+
 				{
-				DebugLocation(228, 4);
-				PushFollow(Follow._type_atom_in_type_cross1098);
-				type_atom105=type_atom();
+				DebugLocation(233, 4);
+				PushFollow(Follow._type_atom_in_type_cross1128);
+				type_atom108=type_atom();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) stream_type_atom.Add(type_atom105.Tree);
-				DebugLocation(228, 14);
-				// Stone.g:228:14: ( '*' type_atom )+
+				if (state.backtracking == 0) stream_type_atom.Add(type_atom108.Tree);
+				DebugLocation(233, 14);
+				// Stone.g:233:14: ( '*' type_atom )+
 				int cnt35=0;
 				try { DebugEnterSubRule(35);
 				while (true)
@@ -4465,18 +4614,18 @@ public partial class StoneParser : Antlr.Runtime.Parser
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// Stone.g:228:15: '*' type_atom
+						// Stone.g:233:15: '*' type_atom
 						{
-						DebugLocation(228, 15);
-						char_literal106=(CommonToken)Match(input,OP_MUL,Follow._OP_MUL_in_type_cross1101); if (state.failed) return retval; 
-						if (state.backtracking == 0) stream_OP_MUL.Add(char_literal106);
+						DebugLocation(233, 15);
+						char_literal109=(CommonToken)Match(input,OP_MUL,Follow._OP_MUL_in_type_cross1131); if (state.failed) return retval; 
+						if (state.backtracking == 0) stream_OP_MUL.Add(char_literal109);
 
-						DebugLocation(228, 19);
-						PushFollow(Follow._type_atom_in_type_cross1103);
-						type_atom107=type_atom();
+						DebugLocation(233, 19);
+						PushFollow(Follow._type_atom_in_type_cross1133);
+						type_atom110=type_atom();
 						PopFollow();
 						if (state.failed) return retval;
-						if (state.backtracking == 0) stream_type_atom.Add(type_atom107.Tree);
+						if (state.backtracking == 0) stream_type_atom.Add(type_atom110.Tree);
 
 						}
 						break;
@@ -4512,23 +4661,23 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 				root_0 = (CommonTree)adaptor.Nil();
-				// 228:31: -> ^( Type_Cross ( type_atom )+ )
+				// 233:31: -> ^( Type_Cross ( type_atom )+ )
 				{
-					DebugLocation(228, 34);
-					// Stone.g:228:34: ^( Type_Cross ( type_atom )+ )
+					DebugLocation(233, 34);
+					// Stone.g:233:34: ^( Type_Cross ( type_atom )+ )
 					{
 					CommonTree root_1 = (CommonTree)adaptor.Nil();
-					DebugLocation(228, 36);
+					DebugLocation(233, 36);
 					root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Type_Cross, "Type_Cross"), root_1);
 
-					DebugLocation(228, 47);
+					DebugLocation(233, 47);
 					if (!(stream_type_atom.HasNext))
 					{
 						throw new RewriteEarlyExitException();
 					}
 					while ( stream_type_atom.HasNext )
 					{
-						DebugLocation(228, 47);
+						DebugLocation(233, 47);
 						adaptor.AddChild(root_1, stream_type_atom.NextTree());
 
 					}
@@ -4547,16 +4696,16 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// Stone.g:229:4: type_atom
+				// Stone.g:234:4: type_atom
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
-				DebugLocation(229, 4);
-				PushFollow(Follow._type_atom_in_type_cross1119);
-				type_atom108=type_atom();
+				DebugLocation(234, 4);
+				PushFollow(Follow._type_atom_in_type_cross1149);
+				type_atom111=type_atom();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, type_atom108.Tree);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, type_atom111.Tree);
 
 				}
 				break;
@@ -4584,7 +4733,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			if (state.backtracking > 0) { Memoize(input, 23, type_cross_StartIndex); }
 
 		}
-		DebugLocation(230, 1);
+		DebugLocation(235, 1);
 		} finally { DebugExitRule(GrammarFileName, "type_cross"); }
 		return retval;
 
@@ -4595,7 +4744,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_type_atom();
 
 	// $ANTLR start "type_atom"
-	// Stone.g:232:1: type_atom : ( IDENT -> ^( Type_Atom IDENT ) | '(' type ')' -> type );
+	// Stone.g:237:1: type_atom : ( IDENT -> ^( Type_Atom IDENT ) | '(' type ')' -> type | '[' type ']' -> ^( Type_Enum type ) );
 	[GrammarRule("type_atom")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> type_atom()
 	{
@@ -4607,52 +4756,68 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 		CommonTree root_0 = default(CommonTree);
 
-		CommonToken IDENT109 = default(CommonToken);
-		CommonToken char_literal110 = default(CommonToken);
-		CommonToken char_literal112 = default(CommonToken);
-		AstParserRuleReturnScope<CommonTree, CommonToken> type111 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		CommonToken IDENT112 = default(CommonToken);
+		CommonToken char_literal113 = default(CommonToken);
+		CommonToken char_literal115 = default(CommonToken);
+		CommonToken char_literal116 = default(CommonToken);
+		CommonToken char_literal118 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> type114 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> type117 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
 
-		CommonTree IDENT109_tree = default(CommonTree);
-		CommonTree char_literal110_tree = default(CommonTree);
-		CommonTree char_literal112_tree = default(CommonTree);
+		CommonTree IDENT112_tree = default(CommonTree);
+		CommonTree char_literal113_tree = default(CommonTree);
+		CommonTree char_literal115_tree = default(CommonTree);
+		CommonTree char_literal116_tree = default(CommonTree);
+		CommonTree char_literal118_tree = default(CommonTree);
 		RewriteRuleITokenStream stream_IDENT=new RewriteRuleITokenStream(adaptor,"token IDENT");
-		RewriteRuleITokenStream stream_59=new RewriteRuleITokenStream(adaptor,"token 59");
-		RewriteRuleITokenStream stream_60=new RewriteRuleITokenStream(adaptor,"token 60");
+		RewriteRuleITokenStream stream_70=new RewriteRuleITokenStream(adaptor,"token 70");
+		RewriteRuleITokenStream stream_62=new RewriteRuleITokenStream(adaptor,"token 62");
+		RewriteRuleITokenStream stream_72=new RewriteRuleITokenStream(adaptor,"token 72");
+		RewriteRuleITokenStream stream_63=new RewriteRuleITokenStream(adaptor,"token 63");
 		RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type");
 		try { DebugEnterRule(GrammarFileName, "type_atom");
-		DebugLocation(232, 1);
+		DebugLocation(237, 1);
 		try
 		{
-			// Stone.g:233:2: ( IDENT -> ^( Type_Atom IDENT ) | '(' type ')' -> type )
-			int alt37=2;
+			// Stone.g:238:2: ( IDENT -> ^( Type_Atom IDENT ) | '(' type ')' -> type | '[' type ']' -> ^( Type_Enum type ) )
+			int alt37=3;
 			try { DebugEnterDecision(37, false);
-			int LA37_0 = input.LA(1);
-
-			if ((LA37_0==IDENT))
+			switch (input.LA(1))
 			{
+			case IDENT:
+				{
 				alt37 = 1;
-			}
-			else if ((LA37_0==59))
-			{
+				}
+				break;
+			case 62:
+				{
 				alt37 = 2;
+				}
+				break;
+			case 70:
+				{
+				alt37 = 3;
+				}
+				break;
+			default:
+				{
+					if (state.backtracking>0) {state.failed=true; return retval;}
+					NoViableAltException nvae = new NoViableAltException("", 37, 0, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
 			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return retval;}
-				NoViableAltException nvae = new NoViableAltException("", 37, 0, input);
-				DebugRecognitionException(nvae);
-				throw nvae;
-			}
+
 			} finally { DebugExitDecision(37); }
 			switch (alt37)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// Stone.g:233:4: IDENT
+				// Stone.g:238:4: IDENT
 				{
-				DebugLocation(233, 4);
-				IDENT109=(CommonToken)Match(input,IDENT,Follow._IDENT_in_type_atom1130); if (state.failed) return retval; 
-				if (state.backtracking == 0) stream_IDENT.Add(IDENT109);
+				DebugLocation(238, 4);
+				IDENT112=(CommonToken)Match(input,IDENT,Follow._IDENT_in_type_atom1160); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_IDENT.Add(IDENT112);
 
 
 
@@ -4669,16 +4834,16 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 				root_0 = (CommonTree)adaptor.Nil();
-				// 233:10: -> ^( Type_Atom IDENT )
+				// 238:10: -> ^( Type_Atom IDENT )
 				{
-					DebugLocation(233, 13);
-					// Stone.g:233:13: ^( Type_Atom IDENT )
+					DebugLocation(238, 13);
+					// Stone.g:238:13: ^( Type_Atom IDENT )
 					{
 					CommonTree root_1 = (CommonTree)adaptor.Nil();
-					DebugLocation(233, 15);
+					DebugLocation(238, 15);
 					root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Type_Atom, "Type_Atom"), root_1);
 
-					DebugLocation(233, 25);
+					DebugLocation(238, 25);
 					adaptor.AddChild(root_1, stream_IDENT.NextNode());
 
 					adaptor.AddChild(root_0, root_1);
@@ -4694,21 +4859,21 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// Stone.g:234:4: '(' type ')'
+				// Stone.g:239:4: '(' type ')'
 				{
-				DebugLocation(234, 4);
-				char_literal110=(CommonToken)Match(input,59,Follow._59_in_type_atom1143); if (state.failed) return retval; 
-				if (state.backtracking == 0) stream_59.Add(char_literal110);
+				DebugLocation(239, 4);
+				char_literal113=(CommonToken)Match(input,62,Follow._62_in_type_atom1173); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_62.Add(char_literal113);
 
-				DebugLocation(234, 8);
-				PushFollow(Follow._type_in_type_atom1145);
-				type111=type();
+				DebugLocation(239, 8);
+				PushFollow(Follow._type_in_type_atom1175);
+				type114=type();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) stream_type.Add(type111.Tree);
-				DebugLocation(234, 13);
-				char_literal112=(CommonToken)Match(input,60,Follow._60_in_type_atom1147); if (state.failed) return retval; 
-				if (state.backtracking == 0) stream_60.Add(char_literal112);
+				if (state.backtracking == 0) stream_type.Add(type114.Tree);
+				DebugLocation(239, 13);
+				char_literal115=(CommonToken)Match(input,63,Follow._63_in_type_atom1177); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_63.Add(char_literal115);
 
 
 
@@ -4725,10 +4890,66 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 				root_0 = (CommonTree)adaptor.Nil();
-				// 234:17: -> type
+				// 239:17: -> type
 				{
-					DebugLocation(234, 20);
+					DebugLocation(239, 20);
 					adaptor.AddChild(root_0, stream_type.NextTree());
+
+				}
+
+				retval.Tree = root_0;
+				}
+				}
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// Stone.g:240:4: '[' type ']'
+				{
+				DebugLocation(240, 4);
+				char_literal116=(CommonToken)Match(input,70,Follow._70_in_type_atom1186); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_70.Add(char_literal116);
+
+				DebugLocation(240, 8);
+				PushFollow(Follow._type_in_type_atom1188);
+				type117=type();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) stream_type.Add(type117.Tree);
+				DebugLocation(240, 13);
+				char_literal118=(CommonToken)Match(input,72,Follow._72_in_type_atom1190); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_72.Add(char_literal118);
+
+
+
+				{
+				// AST REWRITE
+				// elements: type
+				// token labels: 
+				// rule labels: retval
+				// token list labels: 
+				// rule list labels: 
+				// wildcard labels: 
+				if (state.backtracking == 0) {
+				retval.Tree = root_0;
+				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
+
+				root_0 = (CommonTree)adaptor.Nil();
+				// 240:17: -> ^( Type_Enum type )
+				{
+					DebugLocation(240, 20);
+					// Stone.g:240:20: ^( Type_Enum type )
+					{
+					CommonTree root_1 = (CommonTree)adaptor.Nil();
+					DebugLocation(240, 22);
+					root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Type_Enum, "Type_Enum"), root_1);
+
+					DebugLocation(240, 32);
+					adaptor.AddChild(root_1, stream_type.NextTree());
+
+					adaptor.AddChild(root_0, root_1);
+					}
 
 				}
 
@@ -4760,7 +4981,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			LeaveRule("type_atom", 24);
 			LeaveRule_type_atom();
 		}
-		DebugLocation(235, 1);
+		DebugLocation(241, 1);
 		} finally { DebugExitRule(GrammarFileName, "type_atom"); }
 		return retval;
 
@@ -4771,7 +4992,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_stmt_block();
 
 	// $ANTLR start "stmt_block"
-	// Stone.g:238:1: stmt_block : ( ( stmt )+ -> ^( Stmt_Block ( stmt )+ ) | INDENT stmt_block ( NEWLINE )* DEDENT -> stmt_block );
+	// Stone.g:244:1: stmt_block : ( ( stmt )+ -> ^( Stmt_Block ( stmt )+ ) | INDENT stmt_block ( NEWLINE )* DEDENT -> stmt_block );
 	[GrammarRule("stmt_block")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> stmt_block()
 	{
@@ -4783,30 +5004,30 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 		CommonTree root_0 = default(CommonTree);
 
-		CommonToken INDENT114 = default(CommonToken);
-		CommonToken NEWLINE116 = default(CommonToken);
-		CommonToken DEDENT117 = default(CommonToken);
-		AstParserRuleReturnScope<CommonTree, CommonToken> stmt113 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
-		AstParserRuleReturnScope<CommonTree, CommonToken> stmt_block115 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		CommonToken INDENT120 = default(CommonToken);
+		CommonToken NEWLINE122 = default(CommonToken);
+		CommonToken DEDENT123 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> stmt119 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> stmt_block121 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
 
-		CommonTree INDENT114_tree = default(CommonTree);
-		CommonTree NEWLINE116_tree = default(CommonTree);
-		CommonTree DEDENT117_tree = default(CommonTree);
+		CommonTree INDENT120_tree = default(CommonTree);
+		CommonTree NEWLINE122_tree = default(CommonTree);
+		CommonTree DEDENT123_tree = default(CommonTree);
 		RewriteRuleITokenStream stream_DEDENT=new RewriteRuleITokenStream(adaptor,"token DEDENT");
 		RewriteRuleITokenStream stream_NEWLINE=new RewriteRuleITokenStream(adaptor,"token NEWLINE");
 		RewriteRuleITokenStream stream_INDENT=new RewriteRuleITokenStream(adaptor,"token INDENT");
 		RewriteRuleSubtreeStream stream_stmt=new RewriteRuleSubtreeStream(adaptor,"rule stmt");
 		RewriteRuleSubtreeStream stream_stmt_block=new RewriteRuleSubtreeStream(adaptor,"rule stmt_block");
 		try { DebugEnterRule(GrammarFileName, "stmt_block");
-		DebugLocation(238, 1);
+		DebugLocation(244, 1);
 		try
 		{
-			// Stone.g:239:2: ( ( stmt )+ -> ^( Stmt_Block ( stmt )+ ) | INDENT stmt_block ( NEWLINE )* DEDENT -> stmt_block )
+			// Stone.g:245:2: ( ( stmt )+ -> ^( Stmt_Block ( stmt )+ ) | INDENT stmt_block ( NEWLINE )* DEDENT -> stmt_block )
 			int alt40=2;
 			try { DebugEnterDecision(40, false);
 			int LA40_0 = input.LA(1);
 
-			if ((LA40_0==IDENT||(LA40_0>=72 && LA40_0<=73)||(LA40_0>=78 && LA40_0<=80)))
+			if ((LA40_0==IDENT||(LA40_0>=75 && LA40_0<=76)||(LA40_0>=81 && LA40_0<=84)))
 			{
 				alt40 = 1;
 			}
@@ -4826,10 +5047,10 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// Stone.g:239:4: ( stmt )+
+				// Stone.g:245:4: ( stmt )+
 				{
-				DebugLocation(239, 4);
-				// Stone.g:239:4: ( stmt )+
+				DebugLocation(245, 4);
+				// Stone.g:245:4: ( stmt )+
 				int cnt38=0;
 				try { DebugEnterSubRule(38);
 				while (true)
@@ -4842,14 +5063,14 @@ public partial class StoneParser : Antlr.Runtime.Parser
 					{
 						int LA38_2 = input.LA(2);
 
-						if ((LA38_2==59||LA38_2==65))
+						if ((LA38_2==62||LA38_2==68))
 						{
 							alt38 = 1;
 						}
 
 
 					}
-					else if (((LA38_0>=72 && LA38_0<=73)||(LA38_0>=78 && LA38_0<=80)))
+					else if (((LA38_0>=75 && LA38_0<=76)||(LA38_0>=81 && LA38_0<=84)))
 					{
 						alt38 = 1;
 					}
@@ -4860,14 +5081,14 @@ public partial class StoneParser : Antlr.Runtime.Parser
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// Stone.g:239:4: stmt
+						// Stone.g:245:4: stmt
 						{
-						DebugLocation(239, 4);
-						PushFollow(Follow._stmt_in_stmt_block1163);
-						stmt113=stmt();
+						DebugLocation(245, 4);
+						PushFollow(Follow._stmt_in_stmt_block1210);
+						stmt119=stmt();
 						PopFollow();
 						if (state.failed) return retval;
-						if (state.backtracking == 0) stream_stmt.Add(stmt113.Tree);
+						if (state.backtracking == 0) stream_stmt.Add(stmt119.Tree);
 
 						}
 						break;
@@ -4903,23 +5124,23 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 				root_0 = (CommonTree)adaptor.Nil();
-				// 239:10: -> ^( Stmt_Block ( stmt )+ )
+				// 245:10: -> ^( Stmt_Block ( stmt )+ )
 				{
-					DebugLocation(239, 13);
-					// Stone.g:239:13: ^( Stmt_Block ( stmt )+ )
+					DebugLocation(245, 13);
+					// Stone.g:245:13: ^( Stmt_Block ( stmt )+ )
 					{
 					CommonTree root_1 = (CommonTree)adaptor.Nil();
-					DebugLocation(239, 15);
+					DebugLocation(245, 15);
 					root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Stmt_Block, "Stmt_Block"), root_1);
 
-					DebugLocation(239, 26);
+					DebugLocation(245, 26);
 					if (!(stream_stmt.HasNext))
 					{
 						throw new RewriteEarlyExitException();
 					}
 					while ( stream_stmt.HasNext )
 					{
-						DebugLocation(239, 26);
+						DebugLocation(245, 26);
 						adaptor.AddChild(root_1, stream_stmt.NextTree());
 
 					}
@@ -4938,20 +5159,20 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// Stone.g:240:4: INDENT stmt_block ( NEWLINE )* DEDENT
+				// Stone.g:246:4: INDENT stmt_block ( NEWLINE )* DEDENT
 				{
-				DebugLocation(240, 4);
-				INDENT114=(CommonToken)Match(input,INDENT,Follow._INDENT_in_stmt_block1178); if (state.failed) return retval; 
-				if (state.backtracking == 0) stream_INDENT.Add(INDENT114);
+				DebugLocation(246, 4);
+				INDENT120=(CommonToken)Match(input,INDENT,Follow._INDENT_in_stmt_block1225); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_INDENT.Add(INDENT120);
 
-				DebugLocation(240, 11);
-				PushFollow(Follow._stmt_block_in_stmt_block1180);
-				stmt_block115=stmt_block();
+				DebugLocation(246, 11);
+				PushFollow(Follow._stmt_block_in_stmt_block1227);
+				stmt_block121=stmt_block();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) stream_stmt_block.Add(stmt_block115.Tree);
-				DebugLocation(240, 22);
-				// Stone.g:240:22: ( NEWLINE )*
+				if (state.backtracking == 0) stream_stmt_block.Add(stmt_block121.Tree);
+				DebugLocation(246, 22);
+				// Stone.g:246:22: ( NEWLINE )*
 				try { DebugEnterSubRule(39);
 				while (true)
 				{
@@ -4970,11 +5191,11 @@ public partial class StoneParser : Antlr.Runtime.Parser
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// Stone.g:240:22: NEWLINE
+						// Stone.g:246:22: NEWLINE
 						{
-						DebugLocation(240, 22);
-						NEWLINE116=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_stmt_block1182); if (state.failed) return retval; 
-						if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE116);
+						DebugLocation(246, 22);
+						NEWLINE122=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_stmt_block1229); if (state.failed) return retval; 
+						if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE122);
 
 
 						}
@@ -4990,9 +5211,9 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 				} finally { DebugExitSubRule(39); }
 
-				DebugLocation(240, 31);
-				DEDENT117=(CommonToken)Match(input,DEDENT,Follow._DEDENT_in_stmt_block1185); if (state.failed) return retval; 
-				if (state.backtracking == 0) stream_DEDENT.Add(DEDENT117);
+				DebugLocation(246, 31);
+				DEDENT123=(CommonToken)Match(input,DEDENT,Follow._DEDENT_in_stmt_block1232); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_DEDENT.Add(DEDENT123);
 
 
 
@@ -5009,9 +5230,9 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 				root_0 = (CommonTree)adaptor.Nil();
-				// 240:38: -> stmt_block
+				// 246:38: -> stmt_block
 				{
-					DebugLocation(240, 41);
+					DebugLocation(246, 41);
 					adaptor.AddChild(root_0, stream_stmt_block.NextTree());
 
 				}
@@ -5044,7 +5265,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			LeaveRule("stmt_block", 25);
 			LeaveRule_stmt_block();
 		}
-		DebugLocation(241, 1);
+		DebugLocation(247, 1);
 		} finally { DebugExitRule(GrammarFileName, "stmt_block"); }
 		return retval;
 
@@ -5055,7 +5276,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_stmt();
 
 	// $ANTLR start "stmt"
-	// Stone.g:243:1: stmt : ( stmt_return | stmt_alloc | stmt_assign | stmt_call | stmt_if | stmt_while | stmt_for );
+	// Stone.g:249:1: stmt : ( stmt_return | stmt_alloc | stmt_assign | stmt_call | stmt_if | stmt_while | stmt_for | stmt_yield );
 	[GrammarRule("stmt")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> stmt()
 	{
@@ -5067,29 +5288,30 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 		CommonTree root_0 = default(CommonTree);
 
-		AstParserRuleReturnScope<CommonTree, CommonToken> stmt_return118 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
-		AstParserRuleReturnScope<CommonTree, CommonToken> stmt_alloc119 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
-		AstParserRuleReturnScope<CommonTree, CommonToken> stmt_assign120 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
-		AstParserRuleReturnScope<CommonTree, CommonToken> stmt_call121 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
-		AstParserRuleReturnScope<CommonTree, CommonToken> stmt_if122 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
-		AstParserRuleReturnScope<CommonTree, CommonToken> stmt_while123 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
-		AstParserRuleReturnScope<CommonTree, CommonToken> stmt_for124 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> stmt_return124 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> stmt_alloc125 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> stmt_assign126 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> stmt_call127 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> stmt_if128 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> stmt_while129 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> stmt_for130 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> stmt_yield131 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
 
 		try { DebugEnterRule(GrammarFileName, "stmt");
-		DebugLocation(243, 1);
+		DebugLocation(249, 1);
 		try
 		{
-			// Stone.g:244:2: ( stmt_return | stmt_alloc | stmt_assign | stmt_call | stmt_if | stmt_while | stmt_for )
-			int alt41=7;
+			// Stone.g:250:2: ( stmt_return | stmt_alloc | stmt_assign | stmt_call | stmt_if | stmt_while | stmt_for | stmt_yield )
+			int alt41=8;
 			try { DebugEnterDecision(41, false);
 			switch (input.LA(1))
 			{
-			case 78:
+			case 81:
 				{
 				alt41 = 1;
 				}
 				break;
-			case 80:
+			case 84:
 				{
 				alt41 = 2;
 				}
@@ -5098,11 +5320,11 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				{
 				int LA41_3 = input.LA(2);
 
-				if ((LA41_3==65))
+				if ((LA41_3==68))
 				{
 					alt41 = 3;
 				}
-				else if ((LA41_3==59))
+				else if ((LA41_3==62))
 				{
 					alt41 = 4;
 				}
@@ -5115,19 +5337,24 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				}
 				}
 				break;
-			case 73:
+			case 76:
 				{
 				alt41 = 5;
 				}
 				break;
-			case 79:
+			case 82:
 				{
 				alt41 = 6;
 				}
 				break;
-			case 72:
+			case 75:
 				{
 				alt41 = 7;
+				}
+				break;
+			case 83:
+				{
+				alt41 = 8;
 				}
 				break;
 			default:
@@ -5144,106 +5371,121 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// Stone.g:244:4: stmt_return
+				// Stone.g:250:4: stmt_return
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
-				DebugLocation(244, 4);
-				PushFollow(Follow._stmt_return_in_stmt1200);
-				stmt_return118=stmt_return();
+				DebugLocation(250, 4);
+				PushFollow(Follow._stmt_return_in_stmt1247);
+				stmt_return124=stmt_return();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, stmt_return118.Tree);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, stmt_return124.Tree);
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// Stone.g:245:4: stmt_alloc
+				// Stone.g:251:4: stmt_alloc
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
-				DebugLocation(245, 4);
-				PushFollow(Follow._stmt_alloc_in_stmt1205);
-				stmt_alloc119=stmt_alloc();
+				DebugLocation(251, 4);
+				PushFollow(Follow._stmt_alloc_in_stmt1252);
+				stmt_alloc125=stmt_alloc();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, stmt_alloc119.Tree);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, stmt_alloc125.Tree);
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// Stone.g:246:4: stmt_assign
+				// Stone.g:252:4: stmt_assign
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
-				DebugLocation(246, 4);
-				PushFollow(Follow._stmt_assign_in_stmt1210);
-				stmt_assign120=stmt_assign();
+				DebugLocation(252, 4);
+				PushFollow(Follow._stmt_assign_in_stmt1257);
+				stmt_assign126=stmt_assign();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, stmt_assign120.Tree);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, stmt_assign126.Tree);
 
 				}
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// Stone.g:247:4: stmt_call
+				// Stone.g:253:4: stmt_call
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
-				DebugLocation(247, 4);
-				PushFollow(Follow._stmt_call_in_stmt1215);
-				stmt_call121=stmt_call();
+				DebugLocation(253, 4);
+				PushFollow(Follow._stmt_call_in_stmt1262);
+				stmt_call127=stmt_call();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, stmt_call121.Tree);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, stmt_call127.Tree);
 
 				}
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// Stone.g:248:4: stmt_if
+				// Stone.g:254:4: stmt_if
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
-				DebugLocation(248, 4);
-				PushFollow(Follow._stmt_if_in_stmt1220);
-				stmt_if122=stmt_if();
+				DebugLocation(254, 4);
+				PushFollow(Follow._stmt_if_in_stmt1267);
+				stmt_if128=stmt_if();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, stmt_if122.Tree);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, stmt_if128.Tree);
 
 				}
 				break;
 			case 6:
 				DebugEnterAlt(6);
-				// Stone.g:249:4: stmt_while
+				// Stone.g:255:4: stmt_while
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
-				DebugLocation(249, 4);
-				PushFollow(Follow._stmt_while_in_stmt1225);
-				stmt_while123=stmt_while();
+				DebugLocation(255, 4);
+				PushFollow(Follow._stmt_while_in_stmt1272);
+				stmt_while129=stmt_while();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, stmt_while123.Tree);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, stmt_while129.Tree);
 
 				}
 				break;
 			case 7:
 				DebugEnterAlt(7);
-				// Stone.g:250:4: stmt_for
+				// Stone.g:256:4: stmt_for
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
-				DebugLocation(250, 4);
-				PushFollow(Follow._stmt_for_in_stmt1230);
-				stmt_for124=stmt_for();
+				DebugLocation(256, 4);
+				PushFollow(Follow._stmt_for_in_stmt1277);
+				stmt_for130=stmt_for();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, stmt_for124.Tree);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, stmt_for130.Tree);
+
+				}
+				break;
+			case 8:
+				DebugEnterAlt(8);
+				// Stone.g:257:4: stmt_yield
+				{
+				root_0 = (CommonTree)adaptor.Nil();
+
+				DebugLocation(257, 4);
+				PushFollow(Follow._stmt_yield_in_stmt1282);
+				stmt_yield131=stmt_yield();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, stmt_yield131.Tree);
 
 				}
 				break;
@@ -5269,7 +5511,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			LeaveRule("stmt", 26);
 			LeaveRule_stmt();
 		}
-		DebugLocation(251, 1);
+		DebugLocation(258, 1);
 		} finally { DebugExitRule(GrammarFileName, "stmt"); }
 		return retval;
 
@@ -5280,7 +5522,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_stmt_return();
 
 	// $ANTLR start "stmt_return"
-	// Stone.g:254:1: stmt_return : 'return' expr NEWLINE -> ^( Stmt_Return expr ) ;
+	// Stone.g:261:1: stmt_return : 'return' ( expr )? NEWLINE -> ^( Stmt_Return ( expr )? ) ;
 	[GrammarRule("stmt_return")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> stmt_return()
 	{
@@ -5292,36 +5534,61 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 		CommonTree root_0 = default(CommonTree);
 
-		CommonToken string_literal125 = default(CommonToken);
-		CommonToken NEWLINE127 = default(CommonToken);
-		AstParserRuleReturnScope<CommonTree, CommonToken> expr126 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		CommonToken string_literal132 = default(CommonToken);
+		CommonToken NEWLINE134 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> expr133 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
 
-		CommonTree string_literal125_tree = default(CommonTree);
-		CommonTree NEWLINE127_tree = default(CommonTree);
-		RewriteRuleITokenStream stream_78=new RewriteRuleITokenStream(adaptor,"token 78");
+		CommonTree string_literal132_tree = default(CommonTree);
+		CommonTree NEWLINE134_tree = default(CommonTree);
 		RewriteRuleITokenStream stream_NEWLINE=new RewriteRuleITokenStream(adaptor,"token NEWLINE");
+		RewriteRuleITokenStream stream_81=new RewriteRuleITokenStream(adaptor,"token 81");
 		RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
 		try { DebugEnterRule(GrammarFileName, "stmt_return");
-		DebugLocation(254, 1);
+		DebugLocation(261, 1);
 		try
 		{
-			// Stone.g:255:2: ( 'return' expr NEWLINE -> ^( Stmt_Return expr ) )
+			// Stone.g:262:2: ( 'return' ( expr )? NEWLINE -> ^( Stmt_Return ( expr )? ) )
 			DebugEnterAlt(1);
-			// Stone.g:255:4: 'return' expr NEWLINE
+			// Stone.g:262:4: 'return' ( expr )? NEWLINE
 			{
-			DebugLocation(255, 4);
-			string_literal125=(CommonToken)Match(input,78,Follow._78_in_stmt_return1242); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_78.Add(string_literal125);
+			DebugLocation(262, 4);
+			string_literal132=(CommonToken)Match(input,81,Follow._81_in_stmt_return1294); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_81.Add(string_literal132);
 
-			DebugLocation(255, 13);
-			PushFollow(Follow._expr_in_stmt_return1244);
-			expr126=expr();
-			PopFollow();
-			if (state.failed) return retval;
-			if (state.backtracking == 0) stream_expr.Add(expr126.Tree);
-			DebugLocation(255, 18);
-			NEWLINE127=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_stmt_return1246); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE127);
+			DebugLocation(262, 13);
+			// Stone.g:262:13: ( expr )?
+			int alt42=2;
+			try { DebugEnterSubRule(42);
+			try { DebugEnterDecision(42, false);
+			int LA42_0 = input.LA(1);
+
+			if ((LA42_0==DOUBLE||LA42_0==IDENT||LA42_0==INT||LA42_0==NORMAL_STRING||LA42_0==62||(LA42_0>=70 && LA42_0<=71)||LA42_0==79))
+			{
+				alt42 = 1;
+			}
+			} finally { DebugExitDecision(42); }
+			switch (alt42)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// Stone.g:262:13: expr
+				{
+				DebugLocation(262, 13);
+				PushFollow(Follow._expr_in_stmt_return1296);
+				expr133=expr();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) stream_expr.Add(expr133.Tree);
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(42); }
+
+			DebugLocation(262, 19);
+			NEWLINE134=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_stmt_return1299); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE134);
 
 
 
@@ -5338,17 +5605,24 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 255:26: -> ^( Stmt_Return expr )
+			// 262:27: -> ^( Stmt_Return ( expr )? )
 			{
-				DebugLocation(255, 29);
-				// Stone.g:255:29: ^( Stmt_Return expr )
+				DebugLocation(262, 30);
+				// Stone.g:262:30: ^( Stmt_Return ( expr )? )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(255, 31);
+				DebugLocation(262, 32);
 				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Stmt_Return, "Stmt_Return"), root_1);
 
-				DebugLocation(255, 43);
-				adaptor.AddChild(root_1, stream_expr.NextTree());
+				DebugLocation(262, 44);
+				// Stone.g:262:44: ( expr )?
+				if (stream_expr.HasNext)
+				{
+					DebugLocation(262, 44);
+					adaptor.AddChild(root_1, stream_expr.NextTree());
+
+				}
+				stream_expr.Reset();
 
 				adaptor.AddChild(root_0, root_1);
 				}
@@ -5381,79 +5655,191 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			LeaveRule("stmt_return", 27);
 			LeaveRule_stmt_return();
 		}
-		DebugLocation(256, 1);
+		DebugLocation(263, 1);
 		} finally { DebugExitRule(GrammarFileName, "stmt_return"); }
 		return retval;
 
 	}
 	// $ANTLR end "stmt_return"
 
-	partial void EnterRule_stmt_alloc();
-	partial void LeaveRule_stmt_alloc();
+	partial void EnterRule_stmt_yield();
+	partial void LeaveRule_stmt_yield();
 
-	// $ANTLR start "stmt_alloc"
-	// Stone.g:258:1: stmt_alloc : '|' IDENT '|' '=' expr NEWLINE -> ^( Stmt_Alloc IDENT expr ) ;
-	[GrammarRule("stmt_alloc")]
-	private AstParserRuleReturnScope<CommonTree, CommonToken> stmt_alloc()
+	// $ANTLR start "stmt_yield"
+	// Stone.g:265:1: stmt_yield : 'yield' expr NEWLINE -> ^( Stmt_Yield expr ) ;
+	[GrammarRule("stmt_yield")]
+	private AstParserRuleReturnScope<CommonTree, CommonToken> stmt_yield()
 	{
-		EnterRule_stmt_alloc();
-		EnterRule("stmt_alloc", 28);
-		TraceIn("stmt_alloc", 28);
+		EnterRule_stmt_yield();
+		EnterRule("stmt_yield", 28);
+		TraceIn("stmt_yield", 28);
 		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
 		retval.Start = (CommonToken)input.LT(1);
 
 		CommonTree root_0 = default(CommonTree);
 
-		CommonToken char_literal128 = default(CommonToken);
-		CommonToken IDENT129 = default(CommonToken);
-		CommonToken char_literal130 = default(CommonToken);
-		CommonToken char_literal131 = default(CommonToken);
-		CommonToken NEWLINE133 = default(CommonToken);
-		AstParserRuleReturnScope<CommonTree, CommonToken> expr132 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		CommonToken string_literal135 = default(CommonToken);
+		CommonToken NEWLINE137 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> expr136 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
 
-		CommonTree char_literal128_tree = default(CommonTree);
-		CommonTree IDENT129_tree = default(CommonTree);
-		CommonTree char_literal130_tree = default(CommonTree);
-		CommonTree char_literal131_tree = default(CommonTree);
-		CommonTree NEWLINE133_tree = default(CommonTree);
-		RewriteRuleITokenStream stream_IDENT=new RewriteRuleITokenStream(adaptor,"token IDENT");
+		CommonTree string_literal135_tree = default(CommonTree);
+		CommonTree NEWLINE137_tree = default(CommonTree);
 		RewriteRuleITokenStream stream_NEWLINE=new RewriteRuleITokenStream(adaptor,"token NEWLINE");
-		RewriteRuleITokenStream stream_65=new RewriteRuleITokenStream(adaptor,"token 65");
-		RewriteRuleITokenStream stream_80=new RewriteRuleITokenStream(adaptor,"token 80");
+		RewriteRuleITokenStream stream_83=new RewriteRuleITokenStream(adaptor,"token 83");
 		RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
-		try { DebugEnterRule(GrammarFileName, "stmt_alloc");
-		DebugLocation(258, 1);
+		try { DebugEnterRule(GrammarFileName, "stmt_yield");
+		DebugLocation(265, 1);
 		try
 		{
-			// Stone.g:259:2: ( '|' IDENT '|' '=' expr NEWLINE -> ^( Stmt_Alloc IDENT expr ) )
+			// Stone.g:266:2: ( 'yield' expr NEWLINE -> ^( Stmt_Yield expr ) )
 			DebugEnterAlt(1);
-			// Stone.g:259:4: '|' IDENT '|' '=' expr NEWLINE
+			// Stone.g:266:4: 'yield' expr NEWLINE
 			{
-			DebugLocation(259, 4);
-			char_literal128=(CommonToken)Match(input,80,Follow._80_in_stmt_alloc1266); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_80.Add(char_literal128);
+			DebugLocation(266, 4);
+			string_literal135=(CommonToken)Match(input,83,Follow._83_in_stmt_yield1319); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_83.Add(string_literal135);
 
-			DebugLocation(259, 8);
-			IDENT129=(CommonToken)Match(input,IDENT,Follow._IDENT_in_stmt_alloc1268); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_IDENT.Add(IDENT129);
-
-			DebugLocation(259, 14);
-			char_literal130=(CommonToken)Match(input,80,Follow._80_in_stmt_alloc1270); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_80.Add(char_literal130);
-
-			DebugLocation(259, 18);
-			char_literal131=(CommonToken)Match(input,65,Follow._65_in_stmt_alloc1272); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_65.Add(char_literal131);
-
-			DebugLocation(259, 22);
-			PushFollow(Follow._expr_in_stmt_alloc1274);
-			expr132=expr();
+			DebugLocation(266, 12);
+			PushFollow(Follow._expr_in_stmt_yield1321);
+			expr136=expr();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) stream_expr.Add(expr132.Tree);
-			DebugLocation(259, 27);
-			NEWLINE133=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_stmt_alloc1276); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE133);
+			if (state.backtracking == 0) stream_expr.Add(expr136.Tree);
+			DebugLocation(266, 17);
+			NEWLINE137=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_stmt_yield1323); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE137);
+
+
+
+			{
+			// AST REWRITE
+			// elements: expr
+			// token labels: 
+			// rule labels: retval
+			// token list labels: 
+			// rule list labels: 
+			// wildcard labels: 
+			if (state.backtracking == 0) {
+			retval.Tree = root_0;
+			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
+
+			root_0 = (CommonTree)adaptor.Nil();
+			// 266:25: -> ^( Stmt_Yield expr )
+			{
+				DebugLocation(266, 28);
+				// Stone.g:266:28: ^( Stmt_Yield expr )
+				{
+				CommonTree root_1 = (CommonTree)adaptor.Nil();
+				DebugLocation(266, 30);
+				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Stmt_Yield, "Stmt_Yield"), root_1);
+
+				DebugLocation(266, 41);
+				adaptor.AddChild(root_1, stream_expr.NextTree());
+
+				adaptor.AddChild(root_0, root_1);
+				}
+
+			}
+
+			retval.Tree = root_0;
+			}
+			}
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("stmt_yield", 28);
+			LeaveRule("stmt_yield", 28);
+			LeaveRule_stmt_yield();
+		}
+		DebugLocation(267, 1);
+		} finally { DebugExitRule(GrammarFileName, "stmt_yield"); }
+		return retval;
+
+	}
+	// $ANTLR end "stmt_yield"
+
+	partial void EnterRule_stmt_alloc();
+	partial void LeaveRule_stmt_alloc();
+
+	// $ANTLR start "stmt_alloc"
+	// Stone.g:269:1: stmt_alloc : '|' IDENT '|' '=' expr NEWLINE -> ^( Stmt_Alloc IDENT expr ) ;
+	[GrammarRule("stmt_alloc")]
+	private AstParserRuleReturnScope<CommonTree, CommonToken> stmt_alloc()
+	{
+		EnterRule_stmt_alloc();
+		EnterRule("stmt_alloc", 29);
+		TraceIn("stmt_alloc", 29);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken char_literal138 = default(CommonToken);
+		CommonToken IDENT139 = default(CommonToken);
+		CommonToken char_literal140 = default(CommonToken);
+		CommonToken char_literal141 = default(CommonToken);
+		CommonToken NEWLINE143 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> expr142 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+
+		CommonTree char_literal138_tree = default(CommonTree);
+		CommonTree IDENT139_tree = default(CommonTree);
+		CommonTree char_literal140_tree = default(CommonTree);
+		CommonTree char_literal141_tree = default(CommonTree);
+		CommonTree NEWLINE143_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_IDENT=new RewriteRuleITokenStream(adaptor,"token IDENT");
+		RewriteRuleITokenStream stream_68=new RewriteRuleITokenStream(adaptor,"token 68");
+		RewriteRuleITokenStream stream_NEWLINE=new RewriteRuleITokenStream(adaptor,"token NEWLINE");
+		RewriteRuleITokenStream stream_84=new RewriteRuleITokenStream(adaptor,"token 84");
+		RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
+		try { DebugEnterRule(GrammarFileName, "stmt_alloc");
+		DebugLocation(269, 1);
+		try
+		{
+			// Stone.g:270:2: ( '|' IDENT '|' '=' expr NEWLINE -> ^( Stmt_Alloc IDENT expr ) )
+			DebugEnterAlt(1);
+			// Stone.g:270:4: '|' IDENT '|' '=' expr NEWLINE
+			{
+			DebugLocation(270, 4);
+			char_literal138=(CommonToken)Match(input,84,Follow._84_in_stmt_alloc1343); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_84.Add(char_literal138);
+
+			DebugLocation(270, 8);
+			IDENT139=(CommonToken)Match(input,IDENT,Follow._IDENT_in_stmt_alloc1345); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_IDENT.Add(IDENT139);
+
+			DebugLocation(270, 14);
+			char_literal140=(CommonToken)Match(input,84,Follow._84_in_stmt_alloc1347); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_84.Add(char_literal140);
+
+			DebugLocation(270, 18);
+			char_literal141=(CommonToken)Match(input,68,Follow._68_in_stmt_alloc1349); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_68.Add(char_literal141);
+
+			DebugLocation(270, 22);
+			PushFollow(Follow._expr_in_stmt_alloc1351);
+			expr142=expr();
+			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) stream_expr.Add(expr142.Tree);
+			DebugLocation(270, 27);
+			NEWLINE143=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_stmt_alloc1353); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE143);
 
 
 
@@ -5470,18 +5856,18 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 259:35: -> ^( Stmt_Alloc IDENT expr )
+			// 270:35: -> ^( Stmt_Alloc IDENT expr )
 			{
-				DebugLocation(259, 38);
-				// Stone.g:259:38: ^( Stmt_Alloc IDENT expr )
+				DebugLocation(270, 38);
+				// Stone.g:270:38: ^( Stmt_Alloc IDENT expr )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(259, 40);
+				DebugLocation(270, 40);
 				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Stmt_Alloc, "Stmt_Alloc"), root_1);
 
-				DebugLocation(259, 51);
+				DebugLocation(270, 51);
 				adaptor.AddChild(root_1, stream_IDENT.NextNode());
-				DebugLocation(259, 57);
+				DebugLocation(270, 57);
 				adaptor.AddChild(root_1, stream_expr.NextTree());
 
 				adaptor.AddChild(root_0, root_1);
@@ -5511,11 +5897,11 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("stmt_alloc", 28);
-			LeaveRule("stmt_alloc", 28);
+			TraceOut("stmt_alloc", 29);
+			LeaveRule("stmt_alloc", 29);
 			LeaveRule_stmt_alloc();
 		}
-		DebugLocation(260, 1);
+		DebugLocation(271, 1);
 		} finally { DebugExitRule(GrammarFileName, "stmt_alloc"); }
 		return retval;
 
@@ -5526,55 +5912,55 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_stmt_assign();
 
 	// $ANTLR start "stmt_assign"
-	// Stone.g:262:1: stmt_assign : IDENT '=' expr NEWLINE -> ^( Stmt_Assign IDENT expr ) ;
+	// Stone.g:273:1: stmt_assign : IDENT '=' expr NEWLINE -> ^( Stmt_Assign IDENT expr ) ;
 	[GrammarRule("stmt_assign")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> stmt_assign()
 	{
 		EnterRule_stmt_assign();
-		EnterRule("stmt_assign", 29);
-		TraceIn("stmt_assign", 29);
+		EnterRule("stmt_assign", 30);
+		TraceIn("stmt_assign", 30);
 		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
 		retval.Start = (CommonToken)input.LT(1);
 
 		CommonTree root_0 = default(CommonTree);
 
-		CommonToken IDENT134 = default(CommonToken);
-		CommonToken char_literal135 = default(CommonToken);
-		CommonToken NEWLINE137 = default(CommonToken);
-		AstParserRuleReturnScope<CommonTree, CommonToken> expr136 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		CommonToken IDENT144 = default(CommonToken);
+		CommonToken char_literal145 = default(CommonToken);
+		CommonToken NEWLINE147 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> expr146 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
 
-		CommonTree IDENT134_tree = default(CommonTree);
-		CommonTree char_literal135_tree = default(CommonTree);
-		CommonTree NEWLINE137_tree = default(CommonTree);
+		CommonTree IDENT144_tree = default(CommonTree);
+		CommonTree char_literal145_tree = default(CommonTree);
+		CommonTree NEWLINE147_tree = default(CommonTree);
 		RewriteRuleITokenStream stream_IDENT=new RewriteRuleITokenStream(adaptor,"token IDENT");
+		RewriteRuleITokenStream stream_68=new RewriteRuleITokenStream(adaptor,"token 68");
 		RewriteRuleITokenStream stream_NEWLINE=new RewriteRuleITokenStream(adaptor,"token NEWLINE");
-		RewriteRuleITokenStream stream_65=new RewriteRuleITokenStream(adaptor,"token 65");
 		RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
 		try { DebugEnterRule(GrammarFileName, "stmt_assign");
-		DebugLocation(262, 1);
+		DebugLocation(273, 1);
 		try
 		{
-			// Stone.g:263:2: ( IDENT '=' expr NEWLINE -> ^( Stmt_Assign IDENT expr ) )
+			// Stone.g:274:2: ( IDENT '=' expr NEWLINE -> ^( Stmt_Assign IDENT expr ) )
 			DebugEnterAlt(1);
-			// Stone.g:263:4: IDENT '=' expr NEWLINE
+			// Stone.g:274:4: IDENT '=' expr NEWLINE
 			{
-			DebugLocation(263, 4);
-			IDENT134=(CommonToken)Match(input,IDENT,Follow._IDENT_in_stmt_assign1297); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_IDENT.Add(IDENT134);
+			DebugLocation(274, 4);
+			IDENT144=(CommonToken)Match(input,IDENT,Follow._IDENT_in_stmt_assign1374); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_IDENT.Add(IDENT144);
 
-			DebugLocation(263, 10);
-			char_literal135=(CommonToken)Match(input,65,Follow._65_in_stmt_assign1299); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_65.Add(char_literal135);
+			DebugLocation(274, 10);
+			char_literal145=(CommonToken)Match(input,68,Follow._68_in_stmt_assign1376); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_68.Add(char_literal145);
 
-			DebugLocation(263, 14);
-			PushFollow(Follow._expr_in_stmt_assign1301);
-			expr136=expr();
+			DebugLocation(274, 14);
+			PushFollow(Follow._expr_in_stmt_assign1378);
+			expr146=expr();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) stream_expr.Add(expr136.Tree);
-			DebugLocation(263, 19);
-			NEWLINE137=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_stmt_assign1303); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE137);
+			if (state.backtracking == 0) stream_expr.Add(expr146.Tree);
+			DebugLocation(274, 19);
+			NEWLINE147=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_stmt_assign1380); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE147);
 
 
 
@@ -5591,18 +5977,18 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 263:27: -> ^( Stmt_Assign IDENT expr )
+			// 274:27: -> ^( Stmt_Assign IDENT expr )
 			{
-				DebugLocation(263, 30);
-				// Stone.g:263:30: ^( Stmt_Assign IDENT expr )
+				DebugLocation(274, 30);
+				// Stone.g:274:30: ^( Stmt_Assign IDENT expr )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(263, 32);
+				DebugLocation(274, 32);
 				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Stmt_Assign, "Stmt_Assign"), root_1);
 
-				DebugLocation(263, 44);
+				DebugLocation(274, 44);
 				adaptor.AddChild(root_1, stream_IDENT.NextNode());
-				DebugLocation(263, 50);
+				DebugLocation(274, 50);
 				adaptor.AddChild(root_1, stream_expr.NextTree());
 
 				adaptor.AddChild(root_0, root_1);
@@ -5632,11 +6018,11 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("stmt_assign", 29);
-			LeaveRule("stmt_assign", 29);
+			TraceOut("stmt_assign", 30);
+			LeaveRule("stmt_assign", 30);
 			LeaveRule_stmt_assign();
 		}
-		DebugLocation(264, 1);
+		DebugLocation(275, 1);
 		} finally { DebugExitRule(GrammarFileName, "stmt_assign"); }
 		return retval;
 
@@ -5647,87 +6033,87 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_stmt_call();
 
 	// $ANTLR start "stmt_call"
-	// Stone.g:266:1: stmt_call : IDENT '(' ( args_list )? ')' NEWLINE -> ^( Stmt_Call IDENT ( args_list )? ) ;
+	// Stone.g:277:1: stmt_call : IDENT '(' ( args_list )? ')' NEWLINE -> ^( Stmt_Call IDENT ( args_list )? ) ;
 	[GrammarRule("stmt_call")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> stmt_call()
 	{
 		EnterRule_stmt_call();
-		EnterRule("stmt_call", 30);
-		TraceIn("stmt_call", 30);
+		EnterRule("stmt_call", 31);
+		TraceIn("stmt_call", 31);
 		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
 		retval.Start = (CommonToken)input.LT(1);
 
 		CommonTree root_0 = default(CommonTree);
 
-		CommonToken IDENT138 = default(CommonToken);
-		CommonToken char_literal139 = default(CommonToken);
-		CommonToken char_literal141 = default(CommonToken);
-		CommonToken NEWLINE142 = default(CommonToken);
-		AstParserRuleReturnScope<CommonTree, CommonToken> args_list140 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		CommonToken IDENT148 = default(CommonToken);
+		CommonToken char_literal149 = default(CommonToken);
+		CommonToken char_literal151 = default(CommonToken);
+		CommonToken NEWLINE152 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> args_list150 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
 
-		CommonTree IDENT138_tree = default(CommonTree);
-		CommonTree char_literal139_tree = default(CommonTree);
-		CommonTree char_literal141_tree = default(CommonTree);
-		CommonTree NEWLINE142_tree = default(CommonTree);
+		CommonTree IDENT148_tree = default(CommonTree);
+		CommonTree char_literal149_tree = default(CommonTree);
+		CommonTree char_literal151_tree = default(CommonTree);
+		CommonTree NEWLINE152_tree = default(CommonTree);
 		RewriteRuleITokenStream stream_IDENT=new RewriteRuleITokenStream(adaptor,"token IDENT");
-		RewriteRuleITokenStream stream_59=new RewriteRuleITokenStream(adaptor,"token 59");
 		RewriteRuleITokenStream stream_NEWLINE=new RewriteRuleITokenStream(adaptor,"token NEWLINE");
-		RewriteRuleITokenStream stream_60=new RewriteRuleITokenStream(adaptor,"token 60");
+		RewriteRuleITokenStream stream_62=new RewriteRuleITokenStream(adaptor,"token 62");
+		RewriteRuleITokenStream stream_63=new RewriteRuleITokenStream(adaptor,"token 63");
 		RewriteRuleSubtreeStream stream_args_list=new RewriteRuleSubtreeStream(adaptor,"rule args_list");
 		try { DebugEnterRule(GrammarFileName, "stmt_call");
-		DebugLocation(266, 1);
+		DebugLocation(277, 1);
 		try
 		{
-			// Stone.g:267:2: ( IDENT '(' ( args_list )? ')' NEWLINE -> ^( Stmt_Call IDENT ( args_list )? ) )
+			// Stone.g:278:2: ( IDENT '(' ( args_list )? ')' NEWLINE -> ^( Stmt_Call IDENT ( args_list )? ) )
 			DebugEnterAlt(1);
-			// Stone.g:267:4: IDENT '(' ( args_list )? ')' NEWLINE
+			// Stone.g:278:4: IDENT '(' ( args_list )? ')' NEWLINE
 			{
-			DebugLocation(267, 4);
-			IDENT138=(CommonToken)Match(input,IDENT,Follow._IDENT_in_stmt_call1324); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_IDENT.Add(IDENT138);
+			DebugLocation(278, 4);
+			IDENT148=(CommonToken)Match(input,IDENT,Follow._IDENT_in_stmt_call1401); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_IDENT.Add(IDENT148);
 
-			DebugLocation(267, 10);
-			char_literal139=(CommonToken)Match(input,59,Follow._59_in_stmt_call1326); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_59.Add(char_literal139);
+			DebugLocation(278, 10);
+			char_literal149=(CommonToken)Match(input,62,Follow._62_in_stmt_call1403); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_62.Add(char_literal149);
 
-			DebugLocation(267, 14);
-			// Stone.g:267:14: ( args_list )?
-			int alt42=2;
-			try { DebugEnterSubRule(42);
-			try { DebugEnterDecision(42, false);
-			int LA42_0 = input.LA(1);
+			DebugLocation(278, 14);
+			// Stone.g:278:14: ( args_list )?
+			int alt43=2;
+			try { DebugEnterSubRule(43);
+			try { DebugEnterDecision(43, false);
+			int LA43_0 = input.LA(1);
 
-			if ((LA42_0==DOUBLE||LA42_0==IDENT||LA42_0==INT||LA42_0==NORMAL_STRING||LA42_0==59||(LA42_0>=67 && LA42_0<=68)||LA42_0==76))
+			if ((LA43_0==DOUBLE||LA43_0==IDENT||LA43_0==INT||LA43_0==NORMAL_STRING||LA43_0==62||(LA43_0>=70 && LA43_0<=71)||LA43_0==79))
 			{
-				alt42 = 1;
+				alt43 = 1;
 			}
-			} finally { DebugExitDecision(42); }
-			switch (alt42)
+			} finally { DebugExitDecision(43); }
+			switch (alt43)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// Stone.g:267:14: args_list
+				// Stone.g:278:14: args_list
 				{
-				DebugLocation(267, 14);
-				PushFollow(Follow._args_list_in_stmt_call1328);
-				args_list140=args_list();
+				DebugLocation(278, 14);
+				PushFollow(Follow._args_list_in_stmt_call1405);
+				args_list150=args_list();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) stream_args_list.Add(args_list140.Tree);
+				if (state.backtracking == 0) stream_args_list.Add(args_list150.Tree);
 
 				}
 				break;
 
 			}
-			} finally { DebugExitSubRule(42); }
+			} finally { DebugExitSubRule(43); }
 
-			DebugLocation(267, 25);
-			char_literal141=(CommonToken)Match(input,60,Follow._60_in_stmt_call1331); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_60.Add(char_literal141);
+			DebugLocation(278, 25);
+			char_literal151=(CommonToken)Match(input,63,Follow._63_in_stmt_call1408); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_63.Add(char_literal151);
 
-			DebugLocation(267, 29);
-			NEWLINE142=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_stmt_call1333); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE142);
+			DebugLocation(278, 29);
+			NEWLINE152=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_stmt_call1410); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE152);
 
 
 
@@ -5744,22 +6130,22 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 267:37: -> ^( Stmt_Call IDENT ( args_list )? )
+			// 278:37: -> ^( Stmt_Call IDENT ( args_list )? )
 			{
-				DebugLocation(267, 40);
-				// Stone.g:267:40: ^( Stmt_Call IDENT ( args_list )? )
+				DebugLocation(278, 40);
+				// Stone.g:278:40: ^( Stmt_Call IDENT ( args_list )? )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(267, 42);
+				DebugLocation(278, 42);
 				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Stmt_Call, "Stmt_Call"), root_1);
 
-				DebugLocation(267, 52);
+				DebugLocation(278, 52);
 				adaptor.AddChild(root_1, stream_IDENT.NextNode());
-				DebugLocation(267, 58);
-				// Stone.g:267:58: ( args_list )?
+				DebugLocation(278, 58);
+				// Stone.g:278:58: ( args_list )?
 				if (stream_args_list.HasNext)
 				{
-					DebugLocation(267, 58);
+					DebugLocation(278, 58);
 					adaptor.AddChild(root_1, stream_args_list.NextTree());
 
 				}
@@ -5792,11 +6178,11 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("stmt_call", 30);
-			LeaveRule("stmt_call", 30);
+			TraceOut("stmt_call", 31);
+			LeaveRule("stmt_call", 31);
 			LeaveRule_stmt_call();
 		}
-		DebugLocation(268, 1);
+		DebugLocation(279, 1);
 		} finally { DebugExitRule(GrammarFileName, "stmt_call"); }
 		return retval;
 
@@ -5807,262 +6193,76 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_stmt_if();
 
 	// $ANTLR start "stmt_if"
-	// Stone.g:270:1: stmt_if : 'if' expr NEWLINE ( INDENT stmt_block ( NEWLINE )* DEDENT ) -> ^( Stmt_If expr stmt_block ) ;
+	// Stone.g:281:1: stmt_if : 'if' expr NEWLINE ( INDENT stmt_block ( NEWLINE )* DEDENT ) -> ^( Stmt_If expr stmt_block ) ;
 	[GrammarRule("stmt_if")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> stmt_if()
 	{
 		EnterRule_stmt_if();
-		EnterRule("stmt_if", 31);
-		TraceIn("stmt_if", 31);
+		EnterRule("stmt_if", 32);
+		TraceIn("stmt_if", 32);
 		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
 		retval.Start = (CommonToken)input.LT(1);
 
 		CommonTree root_0 = default(CommonTree);
 
-		CommonToken string_literal143 = default(CommonToken);
-		CommonToken NEWLINE145 = default(CommonToken);
-		CommonToken INDENT146 = default(CommonToken);
-		CommonToken NEWLINE148 = default(CommonToken);
-		CommonToken DEDENT149 = default(CommonToken);
-		AstParserRuleReturnScope<CommonTree, CommonToken> expr144 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
-		AstParserRuleReturnScope<CommonTree, CommonToken> stmt_block147 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		CommonToken string_literal153 = default(CommonToken);
+		CommonToken NEWLINE155 = default(CommonToken);
+		CommonToken INDENT156 = default(CommonToken);
+		CommonToken NEWLINE158 = default(CommonToken);
+		CommonToken DEDENT159 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> expr154 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> stmt_block157 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
 
-		CommonTree string_literal143_tree = default(CommonTree);
-		CommonTree NEWLINE145_tree = default(CommonTree);
-		CommonTree INDENT146_tree = default(CommonTree);
-		CommonTree NEWLINE148_tree = default(CommonTree);
-		CommonTree DEDENT149_tree = default(CommonTree);
+		CommonTree string_literal153_tree = default(CommonTree);
+		CommonTree NEWLINE155_tree = default(CommonTree);
+		CommonTree INDENT156_tree = default(CommonTree);
+		CommonTree NEWLINE158_tree = default(CommonTree);
+		CommonTree DEDENT159_tree = default(CommonTree);
 		RewriteRuleITokenStream stream_DEDENT=new RewriteRuleITokenStream(adaptor,"token DEDENT");
 		RewriteRuleITokenStream stream_NEWLINE=new RewriteRuleITokenStream(adaptor,"token NEWLINE");
-		RewriteRuleITokenStream stream_73=new RewriteRuleITokenStream(adaptor,"token 73");
 		RewriteRuleITokenStream stream_INDENT=new RewriteRuleITokenStream(adaptor,"token INDENT");
+		RewriteRuleITokenStream stream_76=new RewriteRuleITokenStream(adaptor,"token 76");
 		RewriteRuleSubtreeStream stream_stmt_block=new RewriteRuleSubtreeStream(adaptor,"rule stmt_block");
 		RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
 		try { DebugEnterRule(GrammarFileName, "stmt_if");
-		DebugLocation(270, 1);
+		DebugLocation(281, 1);
 		try
 		{
-			// Stone.g:271:2: ( 'if' expr NEWLINE ( INDENT stmt_block ( NEWLINE )* DEDENT ) -> ^( Stmt_If expr stmt_block ) )
+			// Stone.g:282:2: ( 'if' expr NEWLINE ( INDENT stmt_block ( NEWLINE )* DEDENT ) -> ^( Stmt_If expr stmt_block ) )
 			DebugEnterAlt(1);
-			// Stone.g:271:4: 'if' expr NEWLINE ( INDENT stmt_block ( NEWLINE )* DEDENT )
+			// Stone.g:282:4: 'if' expr NEWLINE ( INDENT stmt_block ( NEWLINE )* DEDENT )
 			{
-			DebugLocation(271, 4);
-			string_literal143=(CommonToken)Match(input,73,Follow._73_in_stmt_if1355); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_73.Add(string_literal143);
+			DebugLocation(282, 4);
+			string_literal153=(CommonToken)Match(input,76,Follow._76_in_stmt_if1432); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_76.Add(string_literal153);
 
-			DebugLocation(271, 9);
-			PushFollow(Follow._expr_in_stmt_if1357);
-			expr144=expr();
+			DebugLocation(282, 9);
+			PushFollow(Follow._expr_in_stmt_if1434);
+			expr154=expr();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) stream_expr.Add(expr144.Tree);
-			DebugLocation(271, 14);
-			NEWLINE145=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_stmt_if1359); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE145);
+			if (state.backtracking == 0) stream_expr.Add(expr154.Tree);
+			DebugLocation(282, 14);
+			NEWLINE155=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_stmt_if1436); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE155);
 
-			DebugLocation(271, 22);
-			// Stone.g:271:22: ( INDENT stmt_block ( NEWLINE )* DEDENT )
+			DebugLocation(282, 22);
+			// Stone.g:282:22: ( INDENT stmt_block ( NEWLINE )* DEDENT )
 			DebugEnterAlt(1);
-			// Stone.g:271:23: INDENT stmt_block ( NEWLINE )* DEDENT
+			// Stone.g:282:23: INDENT stmt_block ( NEWLINE )* DEDENT
 			{
-			DebugLocation(271, 23);
-			INDENT146=(CommonToken)Match(input,INDENT,Follow._INDENT_in_stmt_if1362); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_INDENT.Add(INDENT146);
+			DebugLocation(282, 23);
+			INDENT156=(CommonToken)Match(input,INDENT,Follow._INDENT_in_stmt_if1439); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_INDENT.Add(INDENT156);
 
-			DebugLocation(271, 30);
-			PushFollow(Follow._stmt_block_in_stmt_if1364);
-			stmt_block147=stmt_block();
+			DebugLocation(282, 30);
+			PushFollow(Follow._stmt_block_in_stmt_if1441);
+			stmt_block157=stmt_block();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) stream_stmt_block.Add(stmt_block147.Tree);
-			DebugLocation(271, 41);
-			// Stone.g:271:41: ( NEWLINE )*
-			try { DebugEnterSubRule(43);
-			while (true)
-			{
-				int alt43=2;
-				try { DebugEnterDecision(43, false);
-				int LA43_0 = input.LA(1);
-
-				if ((LA43_0==NEWLINE))
-				{
-					alt43 = 1;
-				}
-
-
-				} finally { DebugExitDecision(43); }
-				switch ( alt43 )
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// Stone.g:271:41: NEWLINE
-					{
-					DebugLocation(271, 41);
-					NEWLINE148=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_stmt_if1366); if (state.failed) return retval; 
-					if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE148);
-
-
-					}
-					break;
-
-				default:
-					goto loop43;
-				}
-			}
-
-			loop43:
-				;
-
-			} finally { DebugExitSubRule(43); }
-
-			DebugLocation(271, 50);
-			DEDENT149=(CommonToken)Match(input,DEDENT,Follow._DEDENT_in_stmt_if1369); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_DEDENT.Add(DEDENT149);
-
-
-			}
-
-
-
-			{
-			// AST REWRITE
-			// elements: expr, stmt_block
-			// token labels: 
-			// rule labels: retval
-			// token list labels: 
-			// rule list labels: 
-			// wildcard labels: 
-			if (state.backtracking == 0) {
-			retval.Tree = root_0;
-			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
-
-			root_0 = (CommonTree)adaptor.Nil();
-			// 271:58: -> ^( Stmt_If expr stmt_block )
-			{
-				DebugLocation(271, 61);
-				// Stone.g:271:61: ^( Stmt_If expr stmt_block )
-				{
-				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(271, 63);
-				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Stmt_If, "Stmt_If"), root_1);
-
-				DebugLocation(271, 71);
-				adaptor.AddChild(root_1, stream_expr.NextTree());
-				DebugLocation(271, 76);
-				adaptor.AddChild(root_1, stream_stmt_block.NextTree());
-
-				adaptor.AddChild(root_0, root_1);
-				}
-
-			}
-
-			retval.Tree = root_0;
-			}
-			}
-
-			}
-
-			retval.Stop = (CommonToken)input.LT(-1);
-
-			if (state.backtracking == 0) {
-			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-			}
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("stmt_if", 31);
-			LeaveRule("stmt_if", 31);
-			LeaveRule_stmt_if();
-		}
-		DebugLocation(272, 1);
-		} finally { DebugExitRule(GrammarFileName, "stmt_if"); }
-		return retval;
-
-	}
-	// $ANTLR end "stmt_if"
-
-	partial void EnterRule_stmt_while();
-	partial void LeaveRule_stmt_while();
-
-	// $ANTLR start "stmt_while"
-	// Stone.g:274:1: stmt_while : 'while' expr NEWLINE ( INDENT stmt_block ( NEWLINE )* DEDENT ) -> ^( Stmt_While expr stmt_block ) ;
-	[GrammarRule("stmt_while")]
-	private AstParserRuleReturnScope<CommonTree, CommonToken> stmt_while()
-	{
-		EnterRule_stmt_while();
-		EnterRule("stmt_while", 32);
-		TraceIn("stmt_while", 32);
-		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
-		retval.Start = (CommonToken)input.LT(1);
-
-		CommonTree root_0 = default(CommonTree);
-
-		CommonToken string_literal150 = default(CommonToken);
-		CommonToken NEWLINE152 = default(CommonToken);
-		CommonToken INDENT153 = default(CommonToken);
-		CommonToken NEWLINE155 = default(CommonToken);
-		CommonToken DEDENT156 = default(CommonToken);
-		AstParserRuleReturnScope<CommonTree, CommonToken> expr151 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
-		AstParserRuleReturnScope<CommonTree, CommonToken> stmt_block154 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
-
-		CommonTree string_literal150_tree = default(CommonTree);
-		CommonTree NEWLINE152_tree = default(CommonTree);
-		CommonTree INDENT153_tree = default(CommonTree);
-		CommonTree NEWLINE155_tree = default(CommonTree);
-		CommonTree DEDENT156_tree = default(CommonTree);
-		RewriteRuleITokenStream stream_79=new RewriteRuleITokenStream(adaptor,"token 79");
-		RewriteRuleITokenStream stream_DEDENT=new RewriteRuleITokenStream(adaptor,"token DEDENT");
-		RewriteRuleITokenStream stream_NEWLINE=new RewriteRuleITokenStream(adaptor,"token NEWLINE");
-		RewriteRuleITokenStream stream_INDENT=new RewriteRuleITokenStream(adaptor,"token INDENT");
-		RewriteRuleSubtreeStream stream_stmt_block=new RewriteRuleSubtreeStream(adaptor,"rule stmt_block");
-		RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
-		try { DebugEnterRule(GrammarFileName, "stmt_while");
-		DebugLocation(274, 1);
-		try
-		{
-			// Stone.g:275:2: ( 'while' expr NEWLINE ( INDENT stmt_block ( NEWLINE )* DEDENT ) -> ^( Stmt_While expr stmt_block ) )
-			DebugEnterAlt(1);
-			// Stone.g:275:4: 'while' expr NEWLINE ( INDENT stmt_block ( NEWLINE )* DEDENT )
-			{
-			DebugLocation(275, 4);
-			string_literal150=(CommonToken)Match(input,79,Follow._79_in_stmt_while1391); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_79.Add(string_literal150);
-
-			DebugLocation(275, 12);
-			PushFollow(Follow._expr_in_stmt_while1393);
-			expr151=expr();
-			PopFollow();
-			if (state.failed) return retval;
-			if (state.backtracking == 0) stream_expr.Add(expr151.Tree);
-			DebugLocation(275, 17);
-			NEWLINE152=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_stmt_while1395); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE152);
-
-			DebugLocation(275, 25);
-			// Stone.g:275:25: ( INDENT stmt_block ( NEWLINE )* DEDENT )
-			DebugEnterAlt(1);
-			// Stone.g:275:26: INDENT stmt_block ( NEWLINE )* DEDENT
-			{
-			DebugLocation(275, 26);
-			INDENT153=(CommonToken)Match(input,INDENT,Follow._INDENT_in_stmt_while1398); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_INDENT.Add(INDENT153);
-
-			DebugLocation(275, 33);
-			PushFollow(Follow._stmt_block_in_stmt_while1400);
-			stmt_block154=stmt_block();
-			PopFollow();
-			if (state.failed) return retval;
-			if (state.backtracking == 0) stream_stmt_block.Add(stmt_block154.Tree);
-			DebugLocation(275, 44);
-			// Stone.g:275:44: ( NEWLINE )*
+			if (state.backtracking == 0) stream_stmt_block.Add(stmt_block157.Tree);
+			DebugLocation(282, 41);
+			// Stone.g:282:41: ( NEWLINE )*
 			try { DebugEnterSubRule(44);
 			while (true)
 			{
@@ -6081,11 +6281,11 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Stone.g:275:44: NEWLINE
+					// Stone.g:282:41: NEWLINE
 					{
-					DebugLocation(275, 44);
-					NEWLINE155=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_stmt_while1402); if (state.failed) return retval; 
-					if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE155);
+					DebugLocation(282, 41);
+					NEWLINE158=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_stmt_if1443); if (state.failed) return retval; 
+					if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE158);
 
 
 					}
@@ -6101,9 +6301,9 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 			} finally { DebugExitSubRule(44); }
 
-			DebugLocation(275, 53);
-			DEDENT156=(CommonToken)Match(input,DEDENT,Follow._DEDENT_in_stmt_while1405); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_DEDENT.Add(DEDENT156);
+			DebugLocation(282, 50);
+			DEDENT159=(CommonToken)Match(input,DEDENT,Follow._DEDENT_in_stmt_if1446); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_DEDENT.Add(DEDENT159);
 
 
 			}
@@ -6123,18 +6323,18 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 275:61: -> ^( Stmt_While expr stmt_block )
+			// 282:58: -> ^( Stmt_If expr stmt_block )
 			{
-				DebugLocation(275, 64);
-				// Stone.g:275:64: ^( Stmt_While expr stmt_block )
+				DebugLocation(282, 61);
+				// Stone.g:282:61: ^( Stmt_If expr stmt_block )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(275, 66);
-				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Stmt_While, "Stmt_While"), root_1);
+				DebugLocation(282, 63);
+				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Stmt_If, "Stmt_If"), root_1);
 
-				DebugLocation(275, 77);
+				DebugLocation(282, 71);
 				adaptor.AddChild(root_1, stream_expr.NextTree());
-				DebugLocation(275, 82);
+				DebugLocation(282, 76);
 				adaptor.AddChild(root_1, stream_stmt_block.NextTree());
 
 				adaptor.AddChild(root_0, root_1);
@@ -6164,118 +6364,91 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("stmt_while", 32);
-			LeaveRule("stmt_while", 32);
-			LeaveRule_stmt_while();
+			TraceOut("stmt_if", 32);
+			LeaveRule("stmt_if", 32);
+			LeaveRule_stmt_if();
 		}
-		DebugLocation(276, 1);
-		} finally { DebugExitRule(GrammarFileName, "stmt_while"); }
+		DebugLocation(283, 1);
+		} finally { DebugExitRule(GrammarFileName, "stmt_if"); }
 		return retval;
 
 	}
-	// $ANTLR end "stmt_while"
+	// $ANTLR end "stmt_if"
 
-	partial void EnterRule_stmt_for();
-	partial void LeaveRule_stmt_for();
+	partial void EnterRule_stmt_while();
+	partial void LeaveRule_stmt_while();
 
-	// $ANTLR start "stmt_for"
-	// Stone.g:278:1: stmt_for : 'for' '|' IDENT '|' 'in' expr NEWLINE ( INDENT stmt_block ( NEWLINE )* DEDENT ) -> ^( Stmt_For IDENT expr stmt_block ) ;
-	[GrammarRule("stmt_for")]
-	private AstParserRuleReturnScope<CommonTree, CommonToken> stmt_for()
+	// $ANTLR start "stmt_while"
+	// Stone.g:285:1: stmt_while : 'while' expr NEWLINE ( INDENT stmt_block ( NEWLINE )* DEDENT ) -> ^( Stmt_While expr stmt_block ) ;
+	[GrammarRule("stmt_while")]
+	private AstParserRuleReturnScope<CommonTree, CommonToken> stmt_while()
 	{
-		EnterRule_stmt_for();
-		EnterRule("stmt_for", 33);
-		TraceIn("stmt_for", 33);
+		EnterRule_stmt_while();
+		EnterRule("stmt_while", 33);
+		TraceIn("stmt_while", 33);
 		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
 		retval.Start = (CommonToken)input.LT(1);
 
 		CommonTree root_0 = default(CommonTree);
 
-		CommonToken string_literal157 = default(CommonToken);
-		CommonToken char_literal158 = default(CommonToken);
-		CommonToken IDENT159 = default(CommonToken);
-		CommonToken char_literal160 = default(CommonToken);
-		CommonToken string_literal161 = default(CommonToken);
-		CommonToken NEWLINE163 = default(CommonToken);
-		CommonToken INDENT164 = default(CommonToken);
-		CommonToken NEWLINE166 = default(CommonToken);
-		CommonToken DEDENT167 = default(CommonToken);
-		AstParserRuleReturnScope<CommonTree, CommonToken> expr162 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
-		AstParserRuleReturnScope<CommonTree, CommonToken> stmt_block165 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		CommonToken string_literal160 = default(CommonToken);
+		CommonToken NEWLINE162 = default(CommonToken);
+		CommonToken INDENT163 = default(CommonToken);
+		CommonToken NEWLINE165 = default(CommonToken);
+		CommonToken DEDENT166 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> expr161 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> stmt_block164 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
 
-		CommonTree string_literal157_tree = default(CommonTree);
-		CommonTree char_literal158_tree = default(CommonTree);
-		CommonTree IDENT159_tree = default(CommonTree);
-		CommonTree char_literal160_tree = default(CommonTree);
-		CommonTree string_literal161_tree = default(CommonTree);
-		CommonTree NEWLINE163_tree = default(CommonTree);
-		CommonTree INDENT164_tree = default(CommonTree);
-		CommonTree NEWLINE166_tree = default(CommonTree);
-		CommonTree DEDENT167_tree = default(CommonTree);
-		RewriteRuleITokenStream stream_IDENT=new RewriteRuleITokenStream(adaptor,"token IDENT");
+		CommonTree string_literal160_tree = default(CommonTree);
+		CommonTree NEWLINE162_tree = default(CommonTree);
+		CommonTree INDENT163_tree = default(CommonTree);
+		CommonTree NEWLINE165_tree = default(CommonTree);
+		CommonTree DEDENT166_tree = default(CommonTree);
 		RewriteRuleITokenStream stream_DEDENT=new RewriteRuleITokenStream(adaptor,"token DEDENT");
 		RewriteRuleITokenStream stream_NEWLINE=new RewriteRuleITokenStream(adaptor,"token NEWLINE");
-		RewriteRuleITokenStream stream_80=new RewriteRuleITokenStream(adaptor,"token 80");
-		RewriteRuleITokenStream stream_72=new RewriteRuleITokenStream(adaptor,"token 72");
+		RewriteRuleITokenStream stream_82=new RewriteRuleITokenStream(adaptor,"token 82");
 		RewriteRuleITokenStream stream_INDENT=new RewriteRuleITokenStream(adaptor,"token INDENT");
-		RewriteRuleITokenStream stream_74=new RewriteRuleITokenStream(adaptor,"token 74");
 		RewriteRuleSubtreeStream stream_stmt_block=new RewriteRuleSubtreeStream(adaptor,"rule stmt_block");
 		RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
-		try { DebugEnterRule(GrammarFileName, "stmt_for");
-		DebugLocation(278, 1);
+		try { DebugEnterRule(GrammarFileName, "stmt_while");
+		DebugLocation(285, 1);
 		try
 		{
-			// Stone.g:279:2: ( 'for' '|' IDENT '|' 'in' expr NEWLINE ( INDENT stmt_block ( NEWLINE )* DEDENT ) -> ^( Stmt_For IDENT expr stmt_block ) )
+			// Stone.g:286:2: ( 'while' expr NEWLINE ( INDENT stmt_block ( NEWLINE )* DEDENT ) -> ^( Stmt_While expr stmt_block ) )
 			DebugEnterAlt(1);
-			// Stone.g:279:4: 'for' '|' IDENT '|' 'in' expr NEWLINE ( INDENT stmt_block ( NEWLINE )* DEDENT )
+			// Stone.g:286:4: 'while' expr NEWLINE ( INDENT stmt_block ( NEWLINE )* DEDENT )
 			{
-			DebugLocation(279, 4);
-			string_literal157=(CommonToken)Match(input,72,Follow._72_in_stmt_for1427); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_72.Add(string_literal157);
+			DebugLocation(286, 4);
+			string_literal160=(CommonToken)Match(input,82,Follow._82_in_stmt_while1468); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_82.Add(string_literal160);
 
-			DebugLocation(279, 10);
-			char_literal158=(CommonToken)Match(input,80,Follow._80_in_stmt_for1429); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_80.Add(char_literal158);
-
-			DebugLocation(279, 14);
-			IDENT159=(CommonToken)Match(input,IDENT,Follow._IDENT_in_stmt_for1431); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_IDENT.Add(IDENT159);
-
-			DebugLocation(279, 20);
-			char_literal160=(CommonToken)Match(input,80,Follow._80_in_stmt_for1433); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_80.Add(char_literal160);
-
-			DebugLocation(279, 24);
-			string_literal161=(CommonToken)Match(input,74,Follow._74_in_stmt_for1435); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_74.Add(string_literal161);
-
-			DebugLocation(279, 29);
-			PushFollow(Follow._expr_in_stmt_for1437);
-			expr162=expr();
+			DebugLocation(286, 12);
+			PushFollow(Follow._expr_in_stmt_while1470);
+			expr161=expr();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) stream_expr.Add(expr162.Tree);
-			DebugLocation(279, 34);
-			NEWLINE163=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_stmt_for1439); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE163);
+			if (state.backtracking == 0) stream_expr.Add(expr161.Tree);
+			DebugLocation(286, 17);
+			NEWLINE162=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_stmt_while1472); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE162);
 
-			DebugLocation(279, 42);
-			// Stone.g:279:42: ( INDENT stmt_block ( NEWLINE )* DEDENT )
+			DebugLocation(286, 25);
+			// Stone.g:286:25: ( INDENT stmt_block ( NEWLINE )* DEDENT )
 			DebugEnterAlt(1);
-			// Stone.g:279:43: INDENT stmt_block ( NEWLINE )* DEDENT
+			// Stone.g:286:26: INDENT stmt_block ( NEWLINE )* DEDENT
 			{
-			DebugLocation(279, 43);
-			INDENT164=(CommonToken)Match(input,INDENT,Follow._INDENT_in_stmt_for1442); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_INDENT.Add(INDENT164);
+			DebugLocation(286, 26);
+			INDENT163=(CommonToken)Match(input,INDENT,Follow._INDENT_in_stmt_while1475); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_INDENT.Add(INDENT163);
 
-			DebugLocation(279, 50);
-			PushFollow(Follow._stmt_block_in_stmt_for1444);
-			stmt_block165=stmt_block();
+			DebugLocation(286, 33);
+			PushFollow(Follow._stmt_block_in_stmt_while1477);
+			stmt_block164=stmt_block();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) stream_stmt_block.Add(stmt_block165.Tree);
-			DebugLocation(279, 61);
-			// Stone.g:279:61: ( NEWLINE )*
+			if (state.backtracking == 0) stream_stmt_block.Add(stmt_block164.Tree);
+			DebugLocation(286, 44);
+			// Stone.g:286:44: ( NEWLINE )*
 			try { DebugEnterSubRule(45);
 			while (true)
 			{
@@ -6294,11 +6467,11 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Stone.g:279:61: NEWLINE
+					// Stone.g:286:44: NEWLINE
 					{
-					DebugLocation(279, 61);
-					NEWLINE166=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_stmt_for1446); if (state.failed) return retval; 
-					if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE166);
+					DebugLocation(286, 44);
+					NEWLINE165=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_stmt_while1479); if (state.failed) return retval; 
+					if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE165);
 
 
 					}
@@ -6314,9 +6487,9 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 			} finally { DebugExitSubRule(45); }
 
-			DebugLocation(279, 70);
-			DEDENT167=(CommonToken)Match(input,DEDENT,Follow._DEDENT_in_stmt_for1449); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_DEDENT.Add(DEDENT167);
+			DebugLocation(286, 53);
+			DEDENT166=(CommonToken)Match(input,DEDENT,Follow._DEDENT_in_stmt_while1482); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_DEDENT.Add(DEDENT166);
 
 
 			}
@@ -6325,7 +6498,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 			{
 			// AST REWRITE
-			// elements: stmt_block, expr, IDENT
+			// elements: stmt_block, expr
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -6336,20 +6509,18 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 279:78: -> ^( Stmt_For IDENT expr stmt_block )
+			// 286:61: -> ^( Stmt_While expr stmt_block )
 			{
-				DebugLocation(279, 81);
-				// Stone.g:279:81: ^( Stmt_For IDENT expr stmt_block )
+				DebugLocation(286, 64);
+				// Stone.g:286:64: ^( Stmt_While expr stmt_block )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(279, 83);
-				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Stmt_For, "Stmt_For"), root_1);
+				DebugLocation(286, 66);
+				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Stmt_While, "Stmt_While"), root_1);
 
-				DebugLocation(279, 92);
-				adaptor.AddChild(root_1, stream_IDENT.NextNode());
-				DebugLocation(279, 98);
+				DebugLocation(286, 77);
 				adaptor.AddChild(root_1, stream_expr.NextTree());
-				DebugLocation(279, 103);
+				DebugLocation(286, 82);
 				adaptor.AddChild(root_1, stream_stmt_block.NextTree());
 
 				adaptor.AddChild(root_0, root_1);
@@ -6379,11 +6550,226 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("stmt_for", 33);
-			LeaveRule("stmt_for", 33);
+			TraceOut("stmt_while", 33);
+			LeaveRule("stmt_while", 33);
+			LeaveRule_stmt_while();
+		}
+		DebugLocation(287, 1);
+		} finally { DebugExitRule(GrammarFileName, "stmt_while"); }
+		return retval;
+
+	}
+	// $ANTLR end "stmt_while"
+
+	partial void EnterRule_stmt_for();
+	partial void LeaveRule_stmt_for();
+
+	// $ANTLR start "stmt_for"
+	// Stone.g:289:1: stmt_for : 'for' '|' IDENT '|' 'in' expr NEWLINE ( INDENT stmt_block ( NEWLINE )* DEDENT ) -> ^( Stmt_For IDENT expr stmt_block ) ;
+	[GrammarRule("stmt_for")]
+	private AstParserRuleReturnScope<CommonTree, CommonToken> stmt_for()
+	{
+		EnterRule_stmt_for();
+		EnterRule("stmt_for", 34);
+		TraceIn("stmt_for", 34);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken string_literal167 = default(CommonToken);
+		CommonToken char_literal168 = default(CommonToken);
+		CommonToken IDENT169 = default(CommonToken);
+		CommonToken char_literal170 = default(CommonToken);
+		CommonToken string_literal171 = default(CommonToken);
+		CommonToken NEWLINE173 = default(CommonToken);
+		CommonToken INDENT174 = default(CommonToken);
+		CommonToken NEWLINE176 = default(CommonToken);
+		CommonToken DEDENT177 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> expr172 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> stmt_block175 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+
+		CommonTree string_literal167_tree = default(CommonTree);
+		CommonTree char_literal168_tree = default(CommonTree);
+		CommonTree IDENT169_tree = default(CommonTree);
+		CommonTree char_literal170_tree = default(CommonTree);
+		CommonTree string_literal171_tree = default(CommonTree);
+		CommonTree NEWLINE173_tree = default(CommonTree);
+		CommonTree INDENT174_tree = default(CommonTree);
+		CommonTree NEWLINE176_tree = default(CommonTree);
+		CommonTree DEDENT177_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_IDENT=new RewriteRuleITokenStream(adaptor,"token IDENT");
+		RewriteRuleITokenStream stream_77=new RewriteRuleITokenStream(adaptor,"token 77");
+		RewriteRuleITokenStream stream_DEDENT=new RewriteRuleITokenStream(adaptor,"token DEDENT");
+		RewriteRuleITokenStream stream_NEWLINE=new RewriteRuleITokenStream(adaptor,"token NEWLINE");
+		RewriteRuleITokenStream stream_INDENT=new RewriteRuleITokenStream(adaptor,"token INDENT");
+		RewriteRuleITokenStream stream_75=new RewriteRuleITokenStream(adaptor,"token 75");
+		RewriteRuleITokenStream stream_84=new RewriteRuleITokenStream(adaptor,"token 84");
+		RewriteRuleSubtreeStream stream_stmt_block=new RewriteRuleSubtreeStream(adaptor,"rule stmt_block");
+		RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
+		try { DebugEnterRule(GrammarFileName, "stmt_for");
+		DebugLocation(289, 1);
+		try
+		{
+			// Stone.g:290:2: ( 'for' '|' IDENT '|' 'in' expr NEWLINE ( INDENT stmt_block ( NEWLINE )* DEDENT ) -> ^( Stmt_For IDENT expr stmt_block ) )
+			DebugEnterAlt(1);
+			// Stone.g:290:4: 'for' '|' IDENT '|' 'in' expr NEWLINE ( INDENT stmt_block ( NEWLINE )* DEDENT )
+			{
+			DebugLocation(290, 4);
+			string_literal167=(CommonToken)Match(input,75,Follow._75_in_stmt_for1504); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_75.Add(string_literal167);
+
+			DebugLocation(290, 10);
+			char_literal168=(CommonToken)Match(input,84,Follow._84_in_stmt_for1506); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_84.Add(char_literal168);
+
+			DebugLocation(290, 14);
+			IDENT169=(CommonToken)Match(input,IDENT,Follow._IDENT_in_stmt_for1508); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_IDENT.Add(IDENT169);
+
+			DebugLocation(290, 20);
+			char_literal170=(CommonToken)Match(input,84,Follow._84_in_stmt_for1510); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_84.Add(char_literal170);
+
+			DebugLocation(290, 24);
+			string_literal171=(CommonToken)Match(input,77,Follow._77_in_stmt_for1512); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_77.Add(string_literal171);
+
+			DebugLocation(290, 29);
+			PushFollow(Follow._expr_in_stmt_for1514);
+			expr172=expr();
+			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) stream_expr.Add(expr172.Tree);
+			DebugLocation(290, 34);
+			NEWLINE173=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_stmt_for1516); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE173);
+
+			DebugLocation(290, 42);
+			// Stone.g:290:42: ( INDENT stmt_block ( NEWLINE )* DEDENT )
+			DebugEnterAlt(1);
+			// Stone.g:290:43: INDENT stmt_block ( NEWLINE )* DEDENT
+			{
+			DebugLocation(290, 43);
+			INDENT174=(CommonToken)Match(input,INDENT,Follow._INDENT_in_stmt_for1519); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_INDENT.Add(INDENT174);
+
+			DebugLocation(290, 50);
+			PushFollow(Follow._stmt_block_in_stmt_for1521);
+			stmt_block175=stmt_block();
+			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) stream_stmt_block.Add(stmt_block175.Tree);
+			DebugLocation(290, 61);
+			// Stone.g:290:61: ( NEWLINE )*
+			try { DebugEnterSubRule(46);
+			while (true)
+			{
+				int alt46=2;
+				try { DebugEnterDecision(46, false);
+				int LA46_0 = input.LA(1);
+
+				if ((LA46_0==NEWLINE))
+				{
+					alt46 = 1;
+				}
+
+
+				} finally { DebugExitDecision(46); }
+				switch ( alt46 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// Stone.g:290:61: NEWLINE
+					{
+					DebugLocation(290, 61);
+					NEWLINE176=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_stmt_for1523); if (state.failed) return retval; 
+					if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE176);
+
+
+					}
+					break;
+
+				default:
+					goto loop46;
+				}
+			}
+
+			loop46:
+				;
+
+			} finally { DebugExitSubRule(46); }
+
+			DebugLocation(290, 70);
+			DEDENT177=(CommonToken)Match(input,DEDENT,Follow._DEDENT_in_stmt_for1526); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_DEDENT.Add(DEDENT177);
+
+
+			}
+
+
+
+			{
+			// AST REWRITE
+			// elements: IDENT, stmt_block, expr
+			// token labels: 
+			// rule labels: retval
+			// token list labels: 
+			// rule list labels: 
+			// wildcard labels: 
+			if (state.backtracking == 0) {
+			retval.Tree = root_0;
+			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
+
+			root_0 = (CommonTree)adaptor.Nil();
+			// 290:78: -> ^( Stmt_For IDENT expr stmt_block )
+			{
+				DebugLocation(290, 81);
+				// Stone.g:290:81: ^( Stmt_For IDENT expr stmt_block )
+				{
+				CommonTree root_1 = (CommonTree)adaptor.Nil();
+				DebugLocation(290, 83);
+				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Stmt_For, "Stmt_For"), root_1);
+
+				DebugLocation(290, 92);
+				adaptor.AddChild(root_1, stream_IDENT.NextNode());
+				DebugLocation(290, 98);
+				adaptor.AddChild(root_1, stream_expr.NextTree());
+				DebugLocation(290, 103);
+				adaptor.AddChild(root_1, stream_stmt_block.NextTree());
+
+				adaptor.AddChild(root_0, root_1);
+				}
+
+			}
+
+			retval.Tree = root_0;
+			}
+			}
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("stmt_for", 34);
+			LeaveRule("stmt_for", 34);
 			LeaveRule_stmt_for();
 		}
-		DebugLocation(280, 1);
+		DebugLocation(291, 1);
 		} finally { DebugExitRule(GrammarFileName, "stmt_for"); }
 		return retval;
 
@@ -6394,105 +6780,105 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_expr();
 
 	// $ANTLR start "expr"
-	// Stone.g:283:1: expr : ( logic_expr | lambda_expr | array_expr );
+	// Stone.g:294:1: expr : ( logic_expr | lambda_expr | array_expr );
 	[GrammarRule("expr")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> expr()
 	{
 		EnterRule_expr();
-		EnterRule("expr", 34);
-		TraceIn("expr", 34);
+		EnterRule("expr", 35);
+		TraceIn("expr", 35);
 		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
 		retval.Start = (CommonToken)input.LT(1);
 
 		CommonTree root_0 = default(CommonTree);
 
-		AstParserRuleReturnScope<CommonTree, CommonToken> logic_expr168 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
-		AstParserRuleReturnScope<CommonTree, CommonToken> lambda_expr169 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
-		AstParserRuleReturnScope<CommonTree, CommonToken> array_expr170 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> logic_expr178 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> lambda_expr179 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> array_expr180 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
 
 		try { DebugEnterRule(GrammarFileName, "expr");
-		DebugLocation(283, 1);
+		DebugLocation(294, 1);
 		try
 		{
-			// Stone.g:284:2: ( logic_expr | lambda_expr | array_expr )
-			int alt46=3;
-			try { DebugEnterDecision(46, false);
+			// Stone.g:295:2: ( logic_expr | lambda_expr | array_expr )
+			int alt47=3;
+			try { DebugEnterDecision(47, false);
 			switch (input.LA(1))
 			{
 			case DOUBLE:
 			case IDENT:
 			case INT:
 			case NORMAL_STRING:
-			case 59:
-			case 76:
+			case 62:
+			case 79:
 				{
-				alt46 = 1;
+				alt47 = 1;
 				}
 				break;
-			case 68:
+			case 71:
 				{
-				alt46 = 2;
+				alt47 = 2;
 				}
 				break;
-			case 67:
+			case 70:
 				{
-				alt46 = 3;
+				alt47 = 3;
 				}
 				break;
 			default:
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 46, 0, input);
+					NoViableAltException nvae = new NoViableAltException("", 47, 0, input);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 			}
 
-			} finally { DebugExitDecision(46); }
-			switch (alt46)
+			} finally { DebugExitDecision(47); }
+			switch (alt47)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// Stone.g:284:4: logic_expr
+				// Stone.g:295:4: logic_expr
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
-				DebugLocation(284, 4);
-				PushFollow(Follow._logic_expr_in_expr1474);
-				logic_expr168=logic_expr();
+				DebugLocation(295, 4);
+				PushFollow(Follow._logic_expr_in_expr1551);
+				logic_expr178=logic_expr();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, logic_expr168.Tree);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, logic_expr178.Tree);
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// Stone.g:285:4: lambda_expr
+				// Stone.g:296:4: lambda_expr
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
-				DebugLocation(285, 4);
-				PushFollow(Follow._lambda_expr_in_expr1479);
-				lambda_expr169=lambda_expr();
+				DebugLocation(296, 4);
+				PushFollow(Follow._lambda_expr_in_expr1556);
+				lambda_expr179=lambda_expr();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, lambda_expr169.Tree);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, lambda_expr179.Tree);
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// Stone.g:286:4: array_expr
+				// Stone.g:297:4: array_expr
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
-				DebugLocation(286, 4);
-				PushFollow(Follow._array_expr_in_expr1484);
-				array_expr170=array_expr();
+				DebugLocation(297, 4);
+				PushFollow(Follow._array_expr_in_expr1561);
+				array_expr180=array_expr();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, array_expr170.Tree);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, array_expr180.Tree);
 
 				}
 				break;
@@ -6514,11 +6900,11 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("expr", 34);
-			LeaveRule("expr", 34);
+			TraceOut("expr", 35);
+			LeaveRule("expr", 35);
 			LeaveRule_expr();
 		}
-		DebugLocation(287, 1);
+		DebugLocation(298, 1);
 		} finally { DebugExitRule(GrammarFileName, "expr"); }
 		return retval;
 
@@ -6529,132 +6915,132 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_lambda_expr();
 
 	// $ANTLR start "lambda_expr"
-	// Stone.g:289:1: lambda_expr : '\\\\' lambda_args '=>' type NEWLINE ( INDENT stmt_block ( NEWLINE )* DEDENT ) -> ^( Expr_Lambda lambda_args type stmt_block ) ;
+	// Stone.g:300:1: lambda_expr : '\\\\' lambda_args '=>' type NEWLINE ( INDENT stmt_block ( NEWLINE )* DEDENT ) -> ^( Expr_Lambda lambda_args type stmt_block ) ;
 	[GrammarRule("lambda_expr")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> lambda_expr()
 	{
 		EnterRule_lambda_expr();
-		EnterRule("lambda_expr", 35);
-		TraceIn("lambda_expr", 35);
+		EnterRule("lambda_expr", 36);
+		TraceIn("lambda_expr", 36);
 		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
 		retval.Start = (CommonToken)input.LT(1);
 
 		CommonTree root_0 = default(CommonTree);
 
-		CommonToken char_literal171 = default(CommonToken);
-		CommonToken string_literal173 = default(CommonToken);
-		CommonToken NEWLINE175 = default(CommonToken);
-		CommonToken INDENT176 = default(CommonToken);
-		CommonToken NEWLINE178 = default(CommonToken);
-		CommonToken DEDENT179 = default(CommonToken);
-		AstParserRuleReturnScope<CommonTree, CommonToken> lambda_args172 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
-		AstParserRuleReturnScope<CommonTree, CommonToken> type174 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
-		AstParserRuleReturnScope<CommonTree, CommonToken> stmt_block177 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		CommonToken char_literal181 = default(CommonToken);
+		CommonToken string_literal183 = default(CommonToken);
+		CommonToken NEWLINE185 = default(CommonToken);
+		CommonToken INDENT186 = default(CommonToken);
+		CommonToken NEWLINE188 = default(CommonToken);
+		CommonToken DEDENT189 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> lambda_args182 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> type184 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> stmt_block187 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
 
-		CommonTree char_literal171_tree = default(CommonTree);
-		CommonTree string_literal173_tree = default(CommonTree);
-		CommonTree NEWLINE175_tree = default(CommonTree);
-		CommonTree INDENT176_tree = default(CommonTree);
-		CommonTree NEWLINE178_tree = default(CommonTree);
-		CommonTree DEDENT179_tree = default(CommonTree);
-		RewriteRuleITokenStream stream_66=new RewriteRuleITokenStream(adaptor,"token 66");
-		RewriteRuleITokenStream stream_68=new RewriteRuleITokenStream(adaptor,"token 68");
+		CommonTree char_literal181_tree = default(CommonTree);
+		CommonTree string_literal183_tree = default(CommonTree);
+		CommonTree NEWLINE185_tree = default(CommonTree);
+		CommonTree INDENT186_tree = default(CommonTree);
+		CommonTree NEWLINE188_tree = default(CommonTree);
+		CommonTree DEDENT189_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_69=new RewriteRuleITokenStream(adaptor,"token 69");
 		RewriteRuleITokenStream stream_DEDENT=new RewriteRuleITokenStream(adaptor,"token DEDENT");
 		RewriteRuleITokenStream stream_NEWLINE=new RewriteRuleITokenStream(adaptor,"token NEWLINE");
+		RewriteRuleITokenStream stream_71=new RewriteRuleITokenStream(adaptor,"token 71");
 		RewriteRuleITokenStream stream_INDENT=new RewriteRuleITokenStream(adaptor,"token INDENT");
 		RewriteRuleSubtreeStream stream_lambda_args=new RewriteRuleSubtreeStream(adaptor,"rule lambda_args");
 		RewriteRuleSubtreeStream stream_stmt_block=new RewriteRuleSubtreeStream(adaptor,"rule stmt_block");
 		RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type");
 		try { DebugEnterRule(GrammarFileName, "lambda_expr");
-		DebugLocation(289, 1);
+		DebugLocation(300, 1);
 		try
 		{
-			// Stone.g:290:2: ( '\\\\' lambda_args '=>' type NEWLINE ( INDENT stmt_block ( NEWLINE )* DEDENT ) -> ^( Expr_Lambda lambda_args type stmt_block ) )
+			// Stone.g:301:2: ( '\\\\' lambda_args '=>' type NEWLINE ( INDENT stmt_block ( NEWLINE )* DEDENT ) -> ^( Expr_Lambda lambda_args type stmt_block ) )
 			DebugEnterAlt(1);
-			// Stone.g:290:4: '\\\\' lambda_args '=>' type NEWLINE ( INDENT stmt_block ( NEWLINE )* DEDENT )
+			// Stone.g:301:4: '\\\\' lambda_args '=>' type NEWLINE ( INDENT stmt_block ( NEWLINE )* DEDENT )
 			{
-			DebugLocation(290, 4);
-			char_literal171=(CommonToken)Match(input,68,Follow._68_in_lambda_expr1495); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_68.Add(char_literal171);
+			DebugLocation(301, 4);
+			char_literal181=(CommonToken)Match(input,71,Follow._71_in_lambda_expr1572); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_71.Add(char_literal181);
 
-			DebugLocation(290, 9);
-			PushFollow(Follow._lambda_args_in_lambda_expr1497);
-			lambda_args172=lambda_args();
+			DebugLocation(301, 9);
+			PushFollow(Follow._lambda_args_in_lambda_expr1574);
+			lambda_args182=lambda_args();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) stream_lambda_args.Add(lambda_args172.Tree);
-			DebugLocation(290, 21);
-			string_literal173=(CommonToken)Match(input,66,Follow._66_in_lambda_expr1499); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_66.Add(string_literal173);
+			if (state.backtracking == 0) stream_lambda_args.Add(lambda_args182.Tree);
+			DebugLocation(301, 21);
+			string_literal183=(CommonToken)Match(input,69,Follow._69_in_lambda_expr1576); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_69.Add(string_literal183);
 
-			DebugLocation(290, 26);
-			PushFollow(Follow._type_in_lambda_expr1501);
-			type174=type();
+			DebugLocation(301, 26);
+			PushFollow(Follow._type_in_lambda_expr1578);
+			type184=type();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) stream_type.Add(type174.Tree);
-			DebugLocation(290, 31);
-			NEWLINE175=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_lambda_expr1503); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE175);
+			if (state.backtracking == 0) stream_type.Add(type184.Tree);
+			DebugLocation(301, 31);
+			NEWLINE185=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_lambda_expr1580); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE185);
 
-			DebugLocation(290, 39);
-			// Stone.g:290:39: ( INDENT stmt_block ( NEWLINE )* DEDENT )
+			DebugLocation(301, 39);
+			// Stone.g:301:39: ( INDENT stmt_block ( NEWLINE )* DEDENT )
 			DebugEnterAlt(1);
-			// Stone.g:290:40: INDENT stmt_block ( NEWLINE )* DEDENT
+			// Stone.g:301:40: INDENT stmt_block ( NEWLINE )* DEDENT
 			{
-			DebugLocation(290, 40);
-			INDENT176=(CommonToken)Match(input,INDENT,Follow._INDENT_in_lambda_expr1506); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_INDENT.Add(INDENT176);
+			DebugLocation(301, 40);
+			INDENT186=(CommonToken)Match(input,INDENT,Follow._INDENT_in_lambda_expr1583); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_INDENT.Add(INDENT186);
 
-			DebugLocation(290, 47);
-			PushFollow(Follow._stmt_block_in_lambda_expr1508);
-			stmt_block177=stmt_block();
+			DebugLocation(301, 47);
+			PushFollow(Follow._stmt_block_in_lambda_expr1585);
+			stmt_block187=stmt_block();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) stream_stmt_block.Add(stmt_block177.Tree);
-			DebugLocation(290, 58);
-			// Stone.g:290:58: ( NEWLINE )*
-			try { DebugEnterSubRule(47);
+			if (state.backtracking == 0) stream_stmt_block.Add(stmt_block187.Tree);
+			DebugLocation(301, 58);
+			// Stone.g:301:58: ( NEWLINE )*
+			try { DebugEnterSubRule(48);
 			while (true)
 			{
-				int alt47=2;
-				try { DebugEnterDecision(47, false);
-				int LA47_0 = input.LA(1);
+				int alt48=2;
+				try { DebugEnterDecision(48, false);
+				int LA48_0 = input.LA(1);
 
-				if ((LA47_0==NEWLINE))
+				if ((LA48_0==NEWLINE))
 				{
-					alt47 = 1;
+					alt48 = 1;
 				}
 
 
-				} finally { DebugExitDecision(47); }
-				switch ( alt47 )
+				} finally { DebugExitDecision(48); }
+				switch ( alt48 )
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Stone.g:290:58: NEWLINE
+					// Stone.g:301:58: NEWLINE
 					{
-					DebugLocation(290, 58);
-					NEWLINE178=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_lambda_expr1510); if (state.failed) return retval; 
-					if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE178);
+					DebugLocation(301, 58);
+					NEWLINE188=(CommonToken)Match(input,NEWLINE,Follow._NEWLINE_in_lambda_expr1587); if (state.failed) return retval; 
+					if (state.backtracking == 0) stream_NEWLINE.Add(NEWLINE188);
 
 
 					}
 					break;
 
 				default:
-					goto loop47;
+					goto loop48;
 				}
 			}
 
-			loop47:
+			loop48:
 				;
 
-			} finally { DebugExitSubRule(47); }
+			} finally { DebugExitSubRule(48); }
 
-			DebugLocation(290, 67);
-			DEDENT179=(CommonToken)Match(input,DEDENT,Follow._DEDENT_in_lambda_expr1513); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_DEDENT.Add(DEDENT179);
+			DebugLocation(301, 67);
+			DEDENT189=(CommonToken)Match(input,DEDENT,Follow._DEDENT_in_lambda_expr1590); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_DEDENT.Add(DEDENT189);
 
 
 			}
@@ -6663,7 +7049,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 
 			{
 			// AST REWRITE
-			// elements: lambda_args, type, stmt_block
+			// elements: stmt_block, type, lambda_args
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -6674,20 +7060,20 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 290:75: -> ^( Expr_Lambda lambda_args type stmt_block )
+			// 301:75: -> ^( Expr_Lambda lambda_args type stmt_block )
 			{
-				DebugLocation(290, 78);
-				// Stone.g:290:78: ^( Expr_Lambda lambda_args type stmt_block )
+				DebugLocation(301, 78);
+				// Stone.g:301:78: ^( Expr_Lambda lambda_args type stmt_block )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(290, 80);
+				DebugLocation(301, 80);
 				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Expr_Lambda, "Expr_Lambda"), root_1);
 
-				DebugLocation(290, 92);
+				DebugLocation(301, 92);
 				adaptor.AddChild(root_1, stream_lambda_args.NextTree());
-				DebugLocation(290, 104);
+				DebugLocation(301, 104);
 				adaptor.AddChild(root_1, stream_type.NextTree());
-				DebugLocation(290, 109);
+				DebugLocation(301, 109);
 				adaptor.AddChild(root_1, stream_stmt_block.NextTree());
 
 				adaptor.AddChild(root_0, root_1);
@@ -6717,11 +7103,11 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("lambda_expr", 35);
-			LeaveRule("lambda_expr", 35);
+			TraceOut("lambda_expr", 36);
+			LeaveRule("lambda_expr", 36);
 			LeaveRule_lambda_expr();
 		}
-		DebugLocation(291, 1);
+		DebugLocation(302, 1);
 		} finally { DebugExitRule(GrammarFileName, "lambda_expr"); }
 		return retval;
 
@@ -6732,59 +7118,59 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_lambda_args();
 
 	// $ANTLR start "lambda_args"
-	// Stone.g:293:1: lambda_args : ( match )? -> ^( Lambda_Args ( match )? ) ;
+	// Stone.g:304:1: lambda_args : ( match )? -> ^( Lambda_Args ( match )? ) ;
 	[GrammarRule("lambda_args")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> lambda_args()
 	{
 		EnterRule_lambda_args();
-		EnterRule("lambda_args", 36);
-		TraceIn("lambda_args", 36);
+		EnterRule("lambda_args", 37);
+		TraceIn("lambda_args", 37);
 		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
 		retval.Start = (CommonToken)input.LT(1);
 
 		CommonTree root_0 = default(CommonTree);
 
-		AstParserRuleReturnScope<CommonTree, CommonToken> match180 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> match190 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
 
 		RewriteRuleSubtreeStream stream_match=new RewriteRuleSubtreeStream(adaptor,"rule match");
 		try { DebugEnterRule(GrammarFileName, "lambda_args");
-		DebugLocation(293, 1);
+		DebugLocation(304, 1);
 		try
 		{
-			// Stone.g:294:2: ( ( match )? -> ^( Lambda_Args ( match )? ) )
+			// Stone.g:305:2: ( ( match )? -> ^( Lambda_Args ( match )? ) )
 			DebugEnterAlt(1);
-			// Stone.g:294:4: ( match )?
+			// Stone.g:305:4: ( match )?
 			{
-			DebugLocation(294, 4);
-			// Stone.g:294:4: ( match )?
-			int alt48=2;
-			try { DebugEnterSubRule(48);
-			try { DebugEnterDecision(48, false);
-			int LA48_0 = input.LA(1);
+			DebugLocation(305, 4);
+			// Stone.g:305:4: ( match )?
+			int alt49=2;
+			try { DebugEnterSubRule(49);
+			try { DebugEnterDecision(49, false);
+			int LA49_0 = input.LA(1);
 
-			if ((LA48_0==IDENT||LA48_0==59))
+			if ((LA49_0==IDENT||LA49_0==62||LA49_0==84))
 			{
-				alt48 = 1;
+				alt49 = 1;
 			}
-			} finally { DebugExitDecision(48); }
-			switch (alt48)
+			} finally { DebugExitDecision(49); }
+			switch (alt49)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// Stone.g:294:4: match
+				// Stone.g:305:4: match
 				{
-				DebugLocation(294, 4);
-				PushFollow(Follow._match_in_lambda_args1537);
-				match180=match();
+				DebugLocation(305, 4);
+				PushFollow(Follow._match_in_lambda_args1614);
+				match190=match();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) stream_match.Add(match180.Tree);
+				if (state.backtracking == 0) stream_match.Add(match190.Tree);
 
 				}
 				break;
 
 			}
-			} finally { DebugExitSubRule(48); }
+			} finally { DebugExitSubRule(49); }
 
 
 
@@ -6801,20 +7187,20 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 294:11: -> ^( Lambda_Args ( match )? )
+			// 305:11: -> ^( Lambda_Args ( match )? )
 			{
-				DebugLocation(294, 14);
-				// Stone.g:294:14: ^( Lambda_Args ( match )? )
+				DebugLocation(305, 14);
+				// Stone.g:305:14: ^( Lambda_Args ( match )? )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(294, 16);
+				DebugLocation(305, 16);
 				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Lambda_Args, "Lambda_Args"), root_1);
 
-				DebugLocation(294, 28);
-				// Stone.g:294:28: ( match )?
+				DebugLocation(305, 28);
+				// Stone.g:305:28: ( match )?
 				if (stream_match.HasNext)
 				{
-					DebugLocation(294, 28);
+					DebugLocation(305, 28);
 					adaptor.AddChild(root_1, stream_match.NextTree());
 
 				}
@@ -6847,11 +7233,11 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("lambda_args", 36);
-			LeaveRule("lambda_args", 36);
+			TraceOut("lambda_args", 37);
+			LeaveRule("lambda_args", 37);
 			LeaveRule_lambda_args();
 		}
-		DebugLocation(295, 1);
+		DebugLocation(306, 1);
 		} finally { DebugExitRule(GrammarFileName, "lambda_args"); }
 		return retval;
 
@@ -6862,48 +7248,48 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_array_expr();
 
 	// $ANTLR start "array_expr"
-	// Stone.g:297:1: array_expr : '[' array_list ']' -> ^( Expr_Array array_list ) ;
+	// Stone.g:308:1: array_expr : '[' array_list ']' -> ^( Expr_Array array_list ) ;
 	[GrammarRule("array_expr")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> array_expr()
 	{
 		EnterRule_array_expr();
-		EnterRule("array_expr", 37);
-		TraceIn("array_expr", 37);
+		EnterRule("array_expr", 38);
+		TraceIn("array_expr", 38);
 		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
 		retval.Start = (CommonToken)input.LT(1);
 
 		CommonTree root_0 = default(CommonTree);
 
-		CommonToken char_literal181 = default(CommonToken);
-		CommonToken char_literal183 = default(CommonToken);
-		AstParserRuleReturnScope<CommonTree, CommonToken> array_list182 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		CommonToken char_literal191 = default(CommonToken);
+		CommonToken char_literal193 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> array_list192 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
 
-		CommonTree char_literal181_tree = default(CommonTree);
-		CommonTree char_literal183_tree = default(CommonTree);
-		RewriteRuleITokenStream stream_67=new RewriteRuleITokenStream(adaptor,"token 67");
-		RewriteRuleITokenStream stream_69=new RewriteRuleITokenStream(adaptor,"token 69");
+		CommonTree char_literal191_tree = default(CommonTree);
+		CommonTree char_literal193_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_70=new RewriteRuleITokenStream(adaptor,"token 70");
+		RewriteRuleITokenStream stream_72=new RewriteRuleITokenStream(adaptor,"token 72");
 		RewriteRuleSubtreeStream stream_array_list=new RewriteRuleSubtreeStream(adaptor,"rule array_list");
 		try { DebugEnterRule(GrammarFileName, "array_expr");
-		DebugLocation(297, 1);
+		DebugLocation(308, 1);
 		try
 		{
-			// Stone.g:298:2: ( '[' array_list ']' -> ^( Expr_Array array_list ) )
+			// Stone.g:309:2: ( '[' array_list ']' -> ^( Expr_Array array_list ) )
 			DebugEnterAlt(1);
-			// Stone.g:298:4: '[' array_list ']'
+			// Stone.g:309:4: '[' array_list ']'
 			{
-			DebugLocation(298, 4);
-			char_literal181=(CommonToken)Match(input,67,Follow._67_in_array_expr1558); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_67.Add(char_literal181);
+			DebugLocation(309, 4);
+			char_literal191=(CommonToken)Match(input,70,Follow._70_in_array_expr1635); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_70.Add(char_literal191);
 
-			DebugLocation(298, 8);
-			PushFollow(Follow._array_list_in_array_expr1560);
-			array_list182=array_list();
+			DebugLocation(309, 8);
+			PushFollow(Follow._array_list_in_array_expr1637);
+			array_list192=array_list();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) stream_array_list.Add(array_list182.Tree);
-			DebugLocation(298, 19);
-			char_literal183=(CommonToken)Match(input,69,Follow._69_in_array_expr1562); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_69.Add(char_literal183);
+			if (state.backtracking == 0) stream_array_list.Add(array_list192.Tree);
+			DebugLocation(309, 19);
+			char_literal193=(CommonToken)Match(input,72,Follow._72_in_array_expr1639); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_72.Add(char_literal193);
 
 
 
@@ -6920,16 +7306,16 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 298:23: -> ^( Expr_Array array_list )
+			// 309:23: -> ^( Expr_Array array_list )
 			{
-				DebugLocation(298, 26);
-				// Stone.g:298:26: ^( Expr_Array array_list )
+				DebugLocation(309, 26);
+				// Stone.g:309:26: ^( Expr_Array array_list )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(298, 28);
+				DebugLocation(309, 28);
 				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Expr_Array, "Expr_Array"), root_1);
 
-				DebugLocation(298, 39);
+				DebugLocation(309, 39);
 				adaptor.AddChild(root_1, stream_array_list.NextTree());
 
 				adaptor.AddChild(root_0, root_1);
@@ -6959,11 +7345,11 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("array_expr", 37);
-			LeaveRule("array_expr", 37);
+			TraceOut("array_expr", 38);
+			LeaveRule("array_expr", 38);
 			LeaveRule_array_expr();
 		}
-		DebugLocation(299, 1);
+		DebugLocation(310, 1);
 		} finally { DebugExitRule(GrammarFileName, "array_expr"); }
 		return retval;
 
@@ -6974,109 +7360,109 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_array_list();
 
 	// $ANTLR start "array_list"
-	// Stone.g:301:1: array_list : ( expr ( ',' expr )* )? -> ( expr )* ;
+	// Stone.g:312:1: array_list : ( expr ( ',' expr )* )? -> ( expr )* ;
 	[GrammarRule("array_list")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> array_list()
 	{
 		EnterRule_array_list();
-		EnterRule("array_list", 38);
-		TraceIn("array_list", 38);
+		EnterRule("array_list", 39);
+		TraceIn("array_list", 39);
 		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
 		retval.Start = (CommonToken)input.LT(1);
 
 		CommonTree root_0 = default(CommonTree);
 
-		CommonToken char_literal185 = default(CommonToken);
-		AstParserRuleReturnScope<CommonTree, CommonToken> expr184 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
-		AstParserRuleReturnScope<CommonTree, CommonToken> expr186 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		CommonToken char_literal195 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> expr194 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> expr196 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
 
-		CommonTree char_literal185_tree = default(CommonTree);
-		RewriteRuleITokenStream stream_61=new RewriteRuleITokenStream(adaptor,"token 61");
+		CommonTree char_literal195_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_64=new RewriteRuleITokenStream(adaptor,"token 64");
 		RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
 		try { DebugEnterRule(GrammarFileName, "array_list");
-		DebugLocation(301, 1);
+		DebugLocation(312, 1);
 		try
 		{
-			// Stone.g:302:2: ( ( expr ( ',' expr )* )? -> ( expr )* )
+			// Stone.g:313:2: ( ( expr ( ',' expr )* )? -> ( expr )* )
 			DebugEnterAlt(1);
-			// Stone.g:302:4: ( expr ( ',' expr )* )?
+			// Stone.g:313:4: ( expr ( ',' expr )* )?
 			{
-			DebugLocation(302, 4);
-			// Stone.g:302:4: ( expr ( ',' expr )* )?
-			int alt50=2;
-			try { DebugEnterSubRule(50);
-			try { DebugEnterDecision(50, false);
-			int LA50_0 = input.LA(1);
+			DebugLocation(313, 4);
+			// Stone.g:313:4: ( expr ( ',' expr )* )?
+			int alt51=2;
+			try { DebugEnterSubRule(51);
+			try { DebugEnterDecision(51, false);
+			int LA51_0 = input.LA(1);
 
-			if ((LA50_0==DOUBLE||LA50_0==IDENT||LA50_0==INT||LA50_0==NORMAL_STRING||LA50_0==59||(LA50_0>=67 && LA50_0<=68)||LA50_0==76))
+			if ((LA51_0==DOUBLE||LA51_0==IDENT||LA51_0==INT||LA51_0==NORMAL_STRING||LA51_0==62||(LA51_0>=70 && LA51_0<=71)||LA51_0==79))
 			{
-				alt50 = 1;
+				alt51 = 1;
 			}
-			} finally { DebugExitDecision(50); }
-			switch (alt50)
+			} finally { DebugExitDecision(51); }
+			switch (alt51)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// Stone.g:302:5: expr ( ',' expr )*
+				// Stone.g:313:5: expr ( ',' expr )*
 				{
-				DebugLocation(302, 5);
-				PushFollow(Follow._expr_in_array_list1582);
-				expr184=expr();
+				DebugLocation(313, 5);
+				PushFollow(Follow._expr_in_array_list1659);
+				expr194=expr();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) stream_expr.Add(expr184.Tree);
-				DebugLocation(302, 10);
-				// Stone.g:302:10: ( ',' expr )*
-				try { DebugEnterSubRule(49);
+				if (state.backtracking == 0) stream_expr.Add(expr194.Tree);
+				DebugLocation(313, 10);
+				// Stone.g:313:10: ( ',' expr )*
+				try { DebugEnterSubRule(50);
 				while (true)
 				{
-					int alt49=2;
-					try { DebugEnterDecision(49, false);
-					int LA49_0 = input.LA(1);
+					int alt50=2;
+					try { DebugEnterDecision(50, false);
+					int LA50_0 = input.LA(1);
 
-					if ((LA49_0==61))
+					if ((LA50_0==64))
 					{
-						alt49 = 1;
+						alt50 = 1;
 					}
 
 
-					} finally { DebugExitDecision(49); }
-					switch ( alt49 )
+					} finally { DebugExitDecision(50); }
+					switch ( alt50 )
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// Stone.g:302:11: ',' expr
+						// Stone.g:313:11: ',' expr
 						{
-						DebugLocation(302, 11);
-						char_literal185=(CommonToken)Match(input,61,Follow._61_in_array_list1585); if (state.failed) return retval; 
-						if (state.backtracking == 0) stream_61.Add(char_literal185);
+						DebugLocation(313, 11);
+						char_literal195=(CommonToken)Match(input,64,Follow._64_in_array_list1662); if (state.failed) return retval; 
+						if (state.backtracking == 0) stream_64.Add(char_literal195);
 
-						DebugLocation(302, 15);
-						PushFollow(Follow._expr_in_array_list1587);
-						expr186=expr();
+						DebugLocation(313, 15);
+						PushFollow(Follow._expr_in_array_list1664);
+						expr196=expr();
 						PopFollow();
 						if (state.failed) return retval;
-						if (state.backtracking == 0) stream_expr.Add(expr186.Tree);
+						if (state.backtracking == 0) stream_expr.Add(expr196.Tree);
 
 						}
 						break;
 
 					default:
-						goto loop49;
+						goto loop50;
 					}
 				}
 
-				loop49:
+				loop50:
 					;
 
-				} finally { DebugExitSubRule(49); }
+				} finally { DebugExitSubRule(50); }
 
 
 				}
 				break;
 
 			}
-			} finally { DebugExitSubRule(50); }
+			} finally { DebugExitSubRule(51); }
 
 
 
@@ -7093,13 +7479,13 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 302:24: -> ( expr )*
+			// 313:24: -> ( expr )*
 			{
-				DebugLocation(302, 27);
-				// Stone.g:302:27: ( expr )*
+				DebugLocation(313, 27);
+				// Stone.g:313:27: ( expr )*
 				while ( stream_expr.HasNext )
 				{
-					DebugLocation(302, 27);
+					DebugLocation(313, 27);
 					adaptor.AddChild(root_0, stream_expr.NextTree());
 
 				}
@@ -7129,11 +7515,11 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("array_list", 38);
-			LeaveRule("array_list", 38);
+			TraceOut("array_list", 39);
+			LeaveRule("array_list", 39);
 			LeaveRule_array_list();
 		}
-		DebugLocation(303, 1);
+		DebugLocation(314, 1);
 		} finally { DebugExitRule(GrammarFileName, "array_list"); }
 		return retval;
 
@@ -7144,69 +7530,69 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_logic_expr();
 
 	// $ANTLR start "logic_expr"
-	// Stone.g:305:1: logic_expr : message_expr ( ( OP_EQU | OP_NEQ | OP_LSS | OP_LEQ | OP_GTR | OP_GEQ ) ^ message_expr )* ;
+	// Stone.g:316:1: logic_expr : message_expr ( ( OP_EQU | OP_NEQ | OP_LSS | OP_LEQ | OP_GTR | OP_GEQ ) ^ message_expr )* ;
 	[GrammarRule("logic_expr")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> logic_expr()
 	{
 		EnterRule_logic_expr();
-		EnterRule("logic_expr", 39);
-		TraceIn("logic_expr", 39);
+		EnterRule("logic_expr", 40);
+		TraceIn("logic_expr", 40);
 		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
 		retval.Start = (CommonToken)input.LT(1);
 
 		CommonTree root_0 = default(CommonTree);
 
-		CommonToken set188 = default(CommonToken);
-		AstParserRuleReturnScope<CommonTree, CommonToken> message_expr187 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
-		AstParserRuleReturnScope<CommonTree, CommonToken> message_expr189 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		CommonToken set198 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> message_expr197 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> message_expr199 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
 
-		CommonTree set188_tree = default(CommonTree);
+		CommonTree set198_tree = default(CommonTree);
 		try { DebugEnterRule(GrammarFileName, "logic_expr");
-		DebugLocation(305, 1);
+		DebugLocation(316, 1);
 		try
 		{
-			// Stone.g:306:2: ( message_expr ( ( OP_EQU | OP_NEQ | OP_LSS | OP_LEQ | OP_GTR | OP_GEQ ) ^ message_expr )* )
+			// Stone.g:317:2: ( message_expr ( ( OP_EQU | OP_NEQ | OP_LSS | OP_LEQ | OP_GTR | OP_GEQ ) ^ message_expr )* )
 			DebugEnterAlt(1);
-			// Stone.g:306:4: message_expr ( ( OP_EQU | OP_NEQ | OP_LSS | OP_LEQ | OP_GTR | OP_GEQ ) ^ message_expr )*
+			// Stone.g:317:4: message_expr ( ( OP_EQU | OP_NEQ | OP_LSS | OP_LEQ | OP_GTR | OP_GEQ ) ^ message_expr )*
 			{
 			root_0 = (CommonTree)adaptor.Nil();
 
-			DebugLocation(306, 4);
-			PushFollow(Follow._message_expr_in_logic_expr1607);
-			message_expr187=message_expr();
+			DebugLocation(317, 4);
+			PushFollow(Follow._message_expr_in_logic_expr1684);
+			message_expr197=message_expr();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, message_expr187.Tree);
-			DebugLocation(306, 17);
-			// Stone.g:306:17: ( ( OP_EQU | OP_NEQ | OP_LSS | OP_LEQ | OP_GTR | OP_GEQ ) ^ message_expr )*
-			try { DebugEnterSubRule(51);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, message_expr197.Tree);
+			DebugLocation(317, 17);
+			// Stone.g:317:17: ( ( OP_EQU | OP_NEQ | OP_LSS | OP_LEQ | OP_GTR | OP_GEQ ) ^ message_expr )*
+			try { DebugEnterSubRule(52);
 			while (true)
 			{
-				int alt51=2;
-				try { DebugEnterDecision(51, false);
-				int LA51_0 = input.LA(1);
+				int alt52=2;
+				try { DebugEnterDecision(52, false);
+				int LA52_0 = input.LA(1);
 
-				if (((LA51_0>=OP_EQU && LA51_0<=OP_LSS)||LA51_0==OP_NEQ))
+				if (((LA52_0>=OP_EQU && LA52_0<=OP_LSS)||LA52_0==OP_NEQ))
 				{
-					alt51 = 1;
+					alt52 = 1;
 				}
 
 
-				} finally { DebugExitDecision(51); }
-				switch ( alt51 )
+				} finally { DebugExitDecision(52); }
+				switch ( alt52 )
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Stone.g:306:18: ( OP_EQU | OP_NEQ | OP_LSS | OP_LEQ | OP_GTR | OP_GEQ ) ^ message_expr
+					// Stone.g:317:18: ( OP_EQU | OP_NEQ | OP_LSS | OP_LEQ | OP_GTR | OP_GEQ ) ^ message_expr
 					{
-					DebugLocation(306, 71);
+					DebugLocation(317, 71);
 
-					set188=(CommonToken)input.LT(1);
-					set188=(CommonToken)input.LT(1);
+					set198=(CommonToken)input.LT(1);
+					set198=(CommonToken)input.LT(1);
 					if ((input.LA(1)>=OP_EQU && input.LA(1)<=OP_LSS)||input.LA(1)==OP_NEQ)
 					{
 						input.Consume();
-						if (state.backtracking == 0) root_0 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(set188), root_0);
+						if (state.backtracking == 0) root_0 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(set198), root_0);
 						state.errorRecovery=false;state.failed=false;
 					}
 					else
@@ -7217,25 +7603,25 @@ public partial class StoneParser : Antlr.Runtime.Parser
 						throw mse;
 					}
 
-					DebugLocation(306, 73);
-					PushFollow(Follow._message_expr_in_logic_expr1635);
-					message_expr189=message_expr();
+					DebugLocation(317, 73);
+					PushFollow(Follow._message_expr_in_logic_expr1712);
+					message_expr199=message_expr();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, message_expr189.Tree);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, message_expr199.Tree);
 
 					}
 					break;
 
 				default:
-					goto loop51;
+					goto loop52;
 				}
 			}
 
-			loop51:
+			loop52:
 				;
 
-			} finally { DebugExitSubRule(51); }
+			} finally { DebugExitSubRule(52); }
 
 
 			}
@@ -7256,11 +7642,11 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("logic_expr", 39);
-			LeaveRule("logic_expr", 39);
+			TraceOut("logic_expr", 40);
+			LeaveRule("logic_expr", 40);
 			LeaveRule_logic_expr();
 		}
-		DebugLocation(307, 1);
+		DebugLocation(318, 1);
 		} finally { DebugExitRule(GrammarFileName, "logic_expr"); }
 		return retval;
 
@@ -7271,52 +7657,52 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_message_expr();
 
 	// $ANTLR start "message_expr"
-	// Stone.g:309:1: message_expr options {backtrack=true; memoize=true; } : ( add_expr ( message_item )+ -> ^( Expr_Message add_expr ( message_item )+ ) | add_expr );
+	// Stone.g:320:1: message_expr options {backtrack=true; memoize=true; } : ( add_expr ( message_item )+ -> ^( Expr_Message add_expr ( message_item )+ ) | add_expr );
 	[GrammarRule("message_expr")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> message_expr()
 	{
 		EnterRule_message_expr();
-		EnterRule("message_expr", 40);
-		TraceIn("message_expr", 40);
+		EnterRule("message_expr", 41);
+		TraceIn("message_expr", 41);
 		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
 		retval.Start = (CommonToken)input.LT(1);
 		int message_expr_StartIndex = input.Index;
 
 		CommonTree root_0 = default(CommonTree);
 
-		AstParserRuleReturnScope<CommonTree, CommonToken> add_expr190 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
-		AstParserRuleReturnScope<CommonTree, CommonToken> message_item191 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
-		AstParserRuleReturnScope<CommonTree, CommonToken> add_expr192 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> add_expr200 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> message_item201 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> add_expr202 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
 
 		RewriteRuleSubtreeStream stream_message_item=new RewriteRuleSubtreeStream(adaptor,"rule message_item");
 		RewriteRuleSubtreeStream stream_add_expr=new RewriteRuleSubtreeStream(adaptor,"rule add_expr");
 		try { DebugEnterRule(GrammarFileName, "message_expr");
-		DebugLocation(309, 1);
+		DebugLocation(320, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 40)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 41)) { return retval; }
 
-			// Stone.g:314:2: ( add_expr ( message_item )+ -> ^( Expr_Message add_expr ( message_item )+ ) | add_expr )
-			int alt53=2;
-			try { DebugEnterDecision(53, false);
+			// Stone.g:325:2: ( add_expr ( message_item )+ -> ^( Expr_Message add_expr ( message_item )+ ) | add_expr )
+			int alt54=2;
+			try { DebugEnterDecision(54, false);
 			switch (input.LA(1))
 			{
 			case IDENT:
 				{
-				int LA53_1 = input.LA(2);
+				int LA54_1 = input.LA(2);
 
 				if ((EvaluatePredicate(synpred4_Stone_fragment)))
 				{
-					alt53 = 1;
+					alt54 = 1;
 				}
 				else if ((true))
 				{
-					alt53 = 2;
+					alt54 = 2;
 				}
 				else
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 53, 1, input);
+					NoViableAltException nvae = new NoViableAltException("", 54, 1, input);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
@@ -7324,20 +7710,20 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				break;
 			case INT:
 				{
-				int LA53_2 = input.LA(2);
+				int LA54_2 = input.LA(2);
 
 				if ((EvaluatePredicate(synpred4_Stone_fragment)))
 				{
-					alt53 = 1;
+					alt54 = 1;
 				}
 				else if ((true))
 				{
-					alt53 = 2;
+					alt54 = 2;
 				}
 				else
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 53, 2, input);
+					NoViableAltException nvae = new NoViableAltException("", 54, 2, input);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
@@ -7345,20 +7731,20 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				break;
 			case DOUBLE:
 				{
-				int LA53_3 = input.LA(2);
+				int LA54_3 = input.LA(2);
 
 				if ((EvaluatePredicate(synpred4_Stone_fragment)))
 				{
-					alt53 = 1;
+					alt54 = 1;
 				}
 				else if ((true))
 				{
-					alt53 = 2;
+					alt54 = 2;
 				}
 				else
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 53, 3, input);
+					NoViableAltException nvae = new NoViableAltException("", 54, 3, input);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
@@ -7366,62 +7752,62 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				break;
 			case NORMAL_STRING:
 				{
-				int LA53_4 = input.LA(2);
+				int LA54_4 = input.LA(2);
 
 				if ((EvaluatePredicate(synpred4_Stone_fragment)))
 				{
-					alt53 = 1;
+					alt54 = 1;
 				}
 				else if ((true))
 				{
-					alt53 = 2;
+					alt54 = 2;
 				}
 				else
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 53, 4, input);
+					NoViableAltException nvae = new NoViableAltException("", 54, 4, input);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 				}
 				break;
-			case 76:
+			case 79:
 				{
-				int LA53_5 = input.LA(2);
+				int LA54_5 = input.LA(2);
 
 				if ((EvaluatePredicate(synpred4_Stone_fragment)))
 				{
-					alt53 = 1;
+					alt54 = 1;
 				}
 				else if ((true))
 				{
-					alt53 = 2;
+					alt54 = 2;
 				}
 				else
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 53, 5, input);
+					NoViableAltException nvae = new NoViableAltException("", 54, 5, input);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 				}
 				break;
-			case 59:
+			case 62:
 				{
-				int LA53_6 = input.LA(2);
+				int LA54_6 = input.LA(2);
 
 				if ((EvaluatePredicate(synpred4_Stone_fragment)))
 				{
-					alt53 = 1;
+					alt54 = 1;
 				}
 				else if ((true))
 				{
-					alt53 = 2;
+					alt54 = 2;
 				}
 				else
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 53, 6, input);
+					NoViableAltException nvae = new NoViableAltException("", 54, 6, input);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
@@ -7430,73 +7816,73 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			default:
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 53, 0, input);
+					NoViableAltException nvae = new NoViableAltException("", 54, 0, input);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 			}
 
-			} finally { DebugExitDecision(53); }
-			switch (alt53)
+			} finally { DebugExitDecision(54); }
+			switch (alt54)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// Stone.g:314:4: add_expr ( message_item )+
+				// Stone.g:325:4: add_expr ( message_item )+
 				{
-				DebugLocation(314, 4);
-				PushFollow(Follow._add_expr_in_message_expr1664);
-				add_expr190=add_expr();
+				DebugLocation(325, 4);
+				PushFollow(Follow._add_expr_in_message_expr1741);
+				add_expr200=add_expr();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) stream_add_expr.Add(add_expr190.Tree);
-				DebugLocation(314, 13);
-				// Stone.g:314:13: ( message_item )+
-				int cnt52=0;
-				try { DebugEnterSubRule(52);
+				if (state.backtracking == 0) stream_add_expr.Add(add_expr200.Tree);
+				DebugLocation(325, 13);
+				// Stone.g:325:13: ( message_item )+
+				int cnt53=0;
+				try { DebugEnterSubRule(53);
 				while (true)
 				{
-					int alt52=2;
-					try { DebugEnterDecision(52, false);
-					int LA52_0 = input.LA(1);
+					int alt53=2;
+					try { DebugEnterDecision(53, false);
+					int LA53_0 = input.LA(1);
 
-					if ((LA52_0==IDENT))
+					if ((LA53_0==IDENT))
 					{
-						alt52 = 1;
+						alt53 = 1;
 					}
 
 
-					} finally { DebugExitDecision(52); }
-					switch (alt52)
+					} finally { DebugExitDecision(53); }
+					switch (alt53)
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// Stone.g:314:13: message_item
+						// Stone.g:325:13: message_item
 						{
-						DebugLocation(314, 13);
-						PushFollow(Follow._message_item_in_message_expr1666);
-						message_item191=message_item();
+						DebugLocation(325, 13);
+						PushFollow(Follow._message_item_in_message_expr1743);
+						message_item201=message_item();
 						PopFollow();
 						if (state.failed) return retval;
-						if (state.backtracking == 0) stream_message_item.Add(message_item191.Tree);
+						if (state.backtracking == 0) stream_message_item.Add(message_item201.Tree);
 
 						}
 						break;
 
 					default:
-						if (cnt52 >= 1)
-							goto loop52;
+						if (cnt53 >= 1)
+							goto loop53;
 
 						if (state.backtracking>0) {state.failed=true; return retval;}
-						EarlyExitException eee52 = new EarlyExitException( 52, input );
-						DebugRecognitionException(eee52);
-						throw eee52;
+						EarlyExitException eee53 = new EarlyExitException( 53, input );
+						DebugRecognitionException(eee53);
+						throw eee53;
 					}
-					cnt52++;
+					cnt53++;
 				}
-				loop52:
+				loop53:
 					;
 
-				} finally { DebugExitSubRule(52); }
+				} finally { DebugExitSubRule(53); }
 
 
 
@@ -7513,25 +7899,25 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 				root_0 = (CommonTree)adaptor.Nil();
-				// 314:27: -> ^( Expr_Message add_expr ( message_item )+ )
+				// 325:27: -> ^( Expr_Message add_expr ( message_item )+ )
 				{
-					DebugLocation(314, 30);
-					// Stone.g:314:30: ^( Expr_Message add_expr ( message_item )+ )
+					DebugLocation(325, 30);
+					// Stone.g:325:30: ^( Expr_Message add_expr ( message_item )+ )
 					{
 					CommonTree root_1 = (CommonTree)adaptor.Nil();
-					DebugLocation(314, 32);
+					DebugLocation(325, 32);
 					root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Expr_Message, "Expr_Message"), root_1);
 
-					DebugLocation(314, 45);
+					DebugLocation(325, 45);
 					adaptor.AddChild(root_1, stream_add_expr.NextTree());
-					DebugLocation(314, 54);
+					DebugLocation(325, 54);
 					if (!(stream_message_item.HasNext))
 					{
 						throw new RewriteEarlyExitException();
 					}
 					while ( stream_message_item.HasNext )
 					{
-						DebugLocation(314, 54);
+						DebugLocation(325, 54);
 						adaptor.AddChild(root_1, stream_message_item.NextTree());
 
 					}
@@ -7550,16 +7936,16 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// Stone.g:315:4: add_expr
+				// Stone.g:326:4: add_expr
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
-				DebugLocation(315, 4);
-				PushFollow(Follow._add_expr_in_message_expr1683);
-				add_expr192=add_expr();
+				DebugLocation(326, 4);
+				PushFollow(Follow._add_expr_in_message_expr1760);
+				add_expr202=add_expr();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, add_expr192.Tree);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, add_expr202.Tree);
 
 				}
 				break;
@@ -7581,13 +7967,13 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("message_expr", 40);
-			LeaveRule("message_expr", 40);
+			TraceOut("message_expr", 41);
+			LeaveRule("message_expr", 41);
 			LeaveRule_message_expr();
-			if (state.backtracking > 0) { Memoize(input, 40, message_expr_StartIndex); }
+			if (state.backtracking > 0) { Memoize(input, 41, message_expr_StartIndex); }
 
 		}
-		DebugLocation(316, 1);
+		DebugLocation(327, 1);
 		} finally { DebugExitRule(GrammarFileName, "message_expr"); }
 		return retval;
 
@@ -7598,86 +7984,86 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_message_item();
 
 	// $ANTLR start "message_item"
-	// Stone.g:318:1: message_item : IDENT '(' ( args_list )? ')' -> ^( Message_Item IDENT ( args_list )? ) ;
+	// Stone.g:329:1: message_item : IDENT '(' ( args_list )? ')' -> ^( Message_Item IDENT ( args_list )? ) ;
 	[GrammarRule("message_item")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> message_item()
 	{
 		EnterRule_message_item();
-		EnterRule("message_item", 41);
-		TraceIn("message_item", 41);
+		EnterRule("message_item", 42);
+		TraceIn("message_item", 42);
 		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
 		retval.Start = (CommonToken)input.LT(1);
 
 		CommonTree root_0 = default(CommonTree);
 
-		CommonToken IDENT193 = default(CommonToken);
-		CommonToken char_literal194 = default(CommonToken);
-		CommonToken char_literal196 = default(CommonToken);
-		AstParserRuleReturnScope<CommonTree, CommonToken> args_list195 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		CommonToken IDENT203 = default(CommonToken);
+		CommonToken char_literal204 = default(CommonToken);
+		CommonToken char_literal206 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> args_list205 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
 
-		CommonTree IDENT193_tree = default(CommonTree);
-		CommonTree char_literal194_tree = default(CommonTree);
-		CommonTree char_literal196_tree = default(CommonTree);
+		CommonTree IDENT203_tree = default(CommonTree);
+		CommonTree char_literal204_tree = default(CommonTree);
+		CommonTree char_literal206_tree = default(CommonTree);
 		RewriteRuleITokenStream stream_IDENT=new RewriteRuleITokenStream(adaptor,"token IDENT");
-		RewriteRuleITokenStream stream_59=new RewriteRuleITokenStream(adaptor,"token 59");
-		RewriteRuleITokenStream stream_60=new RewriteRuleITokenStream(adaptor,"token 60");
+		RewriteRuleITokenStream stream_62=new RewriteRuleITokenStream(adaptor,"token 62");
+		RewriteRuleITokenStream stream_63=new RewriteRuleITokenStream(adaptor,"token 63");
 		RewriteRuleSubtreeStream stream_args_list=new RewriteRuleSubtreeStream(adaptor,"rule args_list");
 		try { DebugEnterRule(GrammarFileName, "message_item");
-		DebugLocation(318, 1);
+		DebugLocation(329, 1);
 		try
 		{
-			// Stone.g:319:2: ( IDENT '(' ( args_list )? ')' -> ^( Message_Item IDENT ( args_list )? ) )
+			// Stone.g:330:2: ( IDENT '(' ( args_list )? ')' -> ^( Message_Item IDENT ( args_list )? ) )
 			DebugEnterAlt(1);
-			// Stone.g:319:4: IDENT '(' ( args_list )? ')'
+			// Stone.g:330:4: IDENT '(' ( args_list )? ')'
 			{
-			DebugLocation(319, 4);
-			IDENT193=(CommonToken)Match(input,IDENT,Follow._IDENT_in_message_item1694); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_IDENT.Add(IDENT193);
+			DebugLocation(330, 4);
+			IDENT203=(CommonToken)Match(input,IDENT,Follow._IDENT_in_message_item1771); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_IDENT.Add(IDENT203);
 
-			DebugLocation(319, 10);
-			char_literal194=(CommonToken)Match(input,59,Follow._59_in_message_item1696); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_59.Add(char_literal194);
+			DebugLocation(330, 10);
+			char_literal204=(CommonToken)Match(input,62,Follow._62_in_message_item1773); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_62.Add(char_literal204);
 
-			DebugLocation(319, 14);
-			// Stone.g:319:14: ( args_list )?
-			int alt54=2;
-			try { DebugEnterSubRule(54);
-			try { DebugEnterDecision(54, false);
-			int LA54_0 = input.LA(1);
+			DebugLocation(330, 14);
+			// Stone.g:330:14: ( args_list )?
+			int alt55=2;
+			try { DebugEnterSubRule(55);
+			try { DebugEnterDecision(55, false);
+			int LA55_0 = input.LA(1);
 
-			if ((LA54_0==DOUBLE||LA54_0==IDENT||LA54_0==INT||LA54_0==NORMAL_STRING||LA54_0==59||(LA54_0>=67 && LA54_0<=68)||LA54_0==76))
+			if ((LA55_0==DOUBLE||LA55_0==IDENT||LA55_0==INT||LA55_0==NORMAL_STRING||LA55_0==62||(LA55_0>=70 && LA55_0<=71)||LA55_0==79))
 			{
-				alt54 = 1;
+				alt55 = 1;
 			}
-			} finally { DebugExitDecision(54); }
-			switch (alt54)
+			} finally { DebugExitDecision(55); }
+			switch (alt55)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// Stone.g:319:14: args_list
+				// Stone.g:330:14: args_list
 				{
-				DebugLocation(319, 14);
-				PushFollow(Follow._args_list_in_message_item1698);
-				args_list195=args_list();
+				DebugLocation(330, 14);
+				PushFollow(Follow._args_list_in_message_item1775);
+				args_list205=args_list();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) stream_args_list.Add(args_list195.Tree);
+				if (state.backtracking == 0) stream_args_list.Add(args_list205.Tree);
 
 				}
 				break;
 
 			}
-			} finally { DebugExitSubRule(54); }
+			} finally { DebugExitSubRule(55); }
 
-			DebugLocation(319, 25);
-			char_literal196=(CommonToken)Match(input,60,Follow._60_in_message_item1701); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_60.Add(char_literal196);
+			DebugLocation(330, 25);
+			char_literal206=(CommonToken)Match(input,63,Follow._63_in_message_item1778); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_63.Add(char_literal206);
 
 
 
 			{
 			// AST REWRITE
-			// elements: IDENT, args_list
+			// elements: args_list, IDENT
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -7688,22 +8074,22 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 319:29: -> ^( Message_Item IDENT ( args_list )? )
+			// 330:29: -> ^( Message_Item IDENT ( args_list )? )
 			{
-				DebugLocation(319, 32);
-				// Stone.g:319:32: ^( Message_Item IDENT ( args_list )? )
+				DebugLocation(330, 32);
+				// Stone.g:330:32: ^( Message_Item IDENT ( args_list )? )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(319, 34);
+				DebugLocation(330, 34);
 				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Message_Item, "Message_Item"), root_1);
 
-				DebugLocation(319, 47);
+				DebugLocation(330, 47);
 				adaptor.AddChild(root_1, stream_IDENT.NextNode());
-				DebugLocation(319, 53);
-				// Stone.g:319:53: ( args_list )?
+				DebugLocation(330, 53);
+				// Stone.g:330:53: ( args_list )?
 				if (stream_args_list.HasNext)
 				{
-					DebugLocation(319, 53);
+					DebugLocation(330, 53);
 					adaptor.AddChild(root_1, stream_args_list.NextTree());
 
 				}
@@ -7736,11 +8122,11 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("message_item", 41);
-			LeaveRule("message_item", 41);
+			TraceOut("message_item", 42);
+			LeaveRule("message_item", 42);
 			LeaveRule_message_item();
 		}
-		DebugLocation(320, 1);
+		DebugLocation(331, 1);
 		} finally { DebugExitRule(GrammarFileName, "message_item"); }
 		return retval;
 
@@ -7751,84 +8137,84 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_args_list();
 
 	// $ANTLR start "args_list"
-	// Stone.g:322:1: args_list : expr ( ',' expr )* -> ( expr )* ;
+	// Stone.g:333:1: args_list : expr ( ',' expr )* -> ( expr )* ;
 	[GrammarRule("args_list")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> args_list()
 	{
 		EnterRule_args_list();
-		EnterRule("args_list", 42);
-		TraceIn("args_list", 42);
+		EnterRule("args_list", 43);
+		TraceIn("args_list", 43);
 		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
 		retval.Start = (CommonToken)input.LT(1);
 
 		CommonTree root_0 = default(CommonTree);
 
-		CommonToken char_literal198 = default(CommonToken);
-		AstParserRuleReturnScope<CommonTree, CommonToken> expr197 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
-		AstParserRuleReturnScope<CommonTree, CommonToken> expr199 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		CommonToken char_literal208 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> expr207 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> expr209 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
 
-		CommonTree char_literal198_tree = default(CommonTree);
-		RewriteRuleITokenStream stream_61=new RewriteRuleITokenStream(adaptor,"token 61");
+		CommonTree char_literal208_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_64=new RewriteRuleITokenStream(adaptor,"token 64");
 		RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
 		try { DebugEnterRule(GrammarFileName, "args_list");
-		DebugLocation(322, 1);
+		DebugLocation(333, 1);
 		try
 		{
-			// Stone.g:323:2: ( expr ( ',' expr )* -> ( expr )* )
+			// Stone.g:334:2: ( expr ( ',' expr )* -> ( expr )* )
 			DebugEnterAlt(1);
-			// Stone.g:323:4: expr ( ',' expr )*
+			// Stone.g:334:4: expr ( ',' expr )*
 			{
-			DebugLocation(323, 4);
-			PushFollow(Follow._expr_in_args_list1723);
-			expr197=expr();
+			DebugLocation(334, 4);
+			PushFollow(Follow._expr_in_args_list1800);
+			expr207=expr();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) stream_expr.Add(expr197.Tree);
-			DebugLocation(323, 9);
-			// Stone.g:323:9: ( ',' expr )*
-			try { DebugEnterSubRule(55);
+			if (state.backtracking == 0) stream_expr.Add(expr207.Tree);
+			DebugLocation(334, 9);
+			// Stone.g:334:9: ( ',' expr )*
+			try { DebugEnterSubRule(56);
 			while (true)
 			{
-				int alt55=2;
-				try { DebugEnterDecision(55, false);
-				int LA55_0 = input.LA(1);
+				int alt56=2;
+				try { DebugEnterDecision(56, false);
+				int LA56_0 = input.LA(1);
 
-				if ((LA55_0==61))
+				if ((LA56_0==64))
 				{
-					alt55 = 1;
+					alt56 = 1;
 				}
 
 
-				} finally { DebugExitDecision(55); }
-				switch ( alt55 )
+				} finally { DebugExitDecision(56); }
+				switch ( alt56 )
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Stone.g:323:10: ',' expr
+					// Stone.g:334:10: ',' expr
 					{
-					DebugLocation(323, 10);
-					char_literal198=(CommonToken)Match(input,61,Follow._61_in_args_list1726); if (state.failed) return retval; 
-					if (state.backtracking == 0) stream_61.Add(char_literal198);
+					DebugLocation(334, 10);
+					char_literal208=(CommonToken)Match(input,64,Follow._64_in_args_list1803); if (state.failed) return retval; 
+					if (state.backtracking == 0) stream_64.Add(char_literal208);
 
-					DebugLocation(323, 14);
-					PushFollow(Follow._expr_in_args_list1728);
-					expr199=expr();
+					DebugLocation(334, 14);
+					PushFollow(Follow._expr_in_args_list1805);
+					expr209=expr();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) stream_expr.Add(expr199.Tree);
+					if (state.backtracking == 0) stream_expr.Add(expr209.Tree);
 
 					}
 					break;
 
 				default:
-					goto loop55;
+					goto loop56;
 				}
 			}
 
-			loop55:
+			loop56:
 				;
 
-			} finally { DebugExitSubRule(55); }
+			} finally { DebugExitSubRule(56); }
 
 
 
@@ -7845,13 +8231,13 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 323:21: -> ( expr )*
+			// 334:21: -> ( expr )*
 			{
-				DebugLocation(323, 24);
-				// Stone.g:323:24: ( expr )*
+				DebugLocation(334, 24);
+				// Stone.g:334:24: ( expr )*
 				while ( stream_expr.HasNext )
 				{
-					DebugLocation(323, 24);
+					DebugLocation(334, 24);
 					adaptor.AddChild(root_0, stream_expr.NextTree());
 
 				}
@@ -7881,11 +8267,11 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("args_list", 42);
-			LeaveRule("args_list", 42);
+			TraceOut("args_list", 43);
+			LeaveRule("args_list", 43);
 			LeaveRule_args_list();
 		}
-		DebugLocation(324, 1);
+		DebugLocation(335, 1);
 		} finally { DebugExitRule(GrammarFileName, "args_list"); }
 		return retval;
 
@@ -7896,168 +8282,41 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_add_expr();
 
 	// $ANTLR start "add_expr"
-	// Stone.g:326:1: add_expr : mul_expr ( ( OP_PLUS | OP_MINUS ) ^ mul_expr )* ;
+	// Stone.g:337:1: add_expr : mul_expr ( ( OP_PLUS | OP_MINUS ) ^ mul_expr )* ;
 	[GrammarRule("add_expr")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> add_expr()
 	{
 		EnterRule_add_expr();
-		EnterRule("add_expr", 43);
-		TraceIn("add_expr", 43);
+		EnterRule("add_expr", 44);
+		TraceIn("add_expr", 44);
 		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
 		retval.Start = (CommonToken)input.LT(1);
 
 		CommonTree root_0 = default(CommonTree);
 
-		CommonToken set201 = default(CommonToken);
-		AstParserRuleReturnScope<CommonTree, CommonToken> mul_expr200 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
-		AstParserRuleReturnScope<CommonTree, CommonToken> mul_expr202 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		CommonToken set211 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> mul_expr210 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> mul_expr212 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
 
-		CommonTree set201_tree = default(CommonTree);
+		CommonTree set211_tree = default(CommonTree);
 		try { DebugEnterRule(GrammarFileName, "add_expr");
-		DebugLocation(326, 1);
+		DebugLocation(337, 1);
 		try
 		{
-			// Stone.g:327:2: ( mul_expr ( ( OP_PLUS | OP_MINUS ) ^ mul_expr )* )
+			// Stone.g:338:2: ( mul_expr ( ( OP_PLUS | OP_MINUS ) ^ mul_expr )* )
 			DebugEnterAlt(1);
-			// Stone.g:327:4: mul_expr ( ( OP_PLUS | OP_MINUS ) ^ mul_expr )*
+			// Stone.g:338:4: mul_expr ( ( OP_PLUS | OP_MINUS ) ^ mul_expr )*
 			{
 			root_0 = (CommonTree)adaptor.Nil();
 
-			DebugLocation(327, 4);
-			PushFollow(Follow._mul_expr_in_add_expr1746);
-			mul_expr200=mul_expr();
+			DebugLocation(338, 4);
+			PushFollow(Follow._mul_expr_in_add_expr1823);
+			mul_expr210=mul_expr();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, mul_expr200.Tree);
-			DebugLocation(327, 13);
-			// Stone.g:327:13: ( ( OP_PLUS | OP_MINUS ) ^ mul_expr )*
-			try { DebugEnterSubRule(56);
-			while (true)
-			{
-				int alt56=2;
-				try { DebugEnterDecision(56, false);
-				int LA56_0 = input.LA(1);
-
-				if ((LA56_0==OP_MINUS||LA56_0==OP_PLUS))
-				{
-					alt56 = 1;
-				}
-
-
-				} finally { DebugExitDecision(56); }
-				switch ( alt56 )
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// Stone.g:327:14: ( OP_PLUS | OP_MINUS ) ^ mul_expr
-					{
-					DebugLocation(327, 34);
-
-					set201=(CommonToken)input.LT(1);
-					set201=(CommonToken)input.LT(1);
-					if (input.LA(1)==OP_MINUS||input.LA(1)==OP_PLUS)
-					{
-						input.Consume();
-						if (state.backtracking == 0) root_0 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(set201), root_0);
-						state.errorRecovery=false;state.failed=false;
-					}
-					else
-					{
-						if (state.backtracking>0) {state.failed=true; return retval;}
-						MismatchedSetException mse = new MismatchedSetException(null,input);
-						DebugRecognitionException(mse);
-						throw mse;
-					}
-
-					DebugLocation(327, 36);
-					PushFollow(Follow._mul_expr_in_add_expr1758);
-					mul_expr202=mul_expr();
-					PopFollow();
-					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, mul_expr202.Tree);
-
-					}
-					break;
-
-				default:
-					goto loop56;
-				}
-			}
-
-			loop56:
-				;
-
-			} finally { DebugExitSubRule(56); }
-
-
-			}
-
-			retval.Stop = (CommonToken)input.LT(-1);
-
-			if (state.backtracking == 0) {
-			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-			}
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("add_expr", 43);
-			LeaveRule("add_expr", 43);
-			LeaveRule_add_expr();
-		}
-		DebugLocation(328, 1);
-		} finally { DebugExitRule(GrammarFileName, "add_expr"); }
-		return retval;
-
-	}
-	// $ANTLR end "add_expr"
-
-	partial void EnterRule_mul_expr();
-	partial void LeaveRule_mul_expr();
-
-	// $ANTLR start "mul_expr"
-	// Stone.g:330:1: mul_expr : call_expr ( ( OP_MUL | OP_DIV ) ^ call_expr )* ;
-	[GrammarRule("mul_expr")]
-	private AstParserRuleReturnScope<CommonTree, CommonToken> mul_expr()
-	{
-		EnterRule_mul_expr();
-		EnterRule("mul_expr", 44);
-		TraceIn("mul_expr", 44);
-		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
-		retval.Start = (CommonToken)input.LT(1);
-
-		CommonTree root_0 = default(CommonTree);
-
-		CommonToken set204 = default(CommonToken);
-		AstParserRuleReturnScope<CommonTree, CommonToken> call_expr203 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
-		AstParserRuleReturnScope<CommonTree, CommonToken> call_expr205 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
-
-		CommonTree set204_tree = default(CommonTree);
-		try { DebugEnterRule(GrammarFileName, "mul_expr");
-		DebugLocation(330, 1);
-		try
-		{
-			// Stone.g:331:2: ( call_expr ( ( OP_MUL | OP_DIV ) ^ call_expr )* )
-			DebugEnterAlt(1);
-			// Stone.g:331:4: call_expr ( ( OP_MUL | OP_DIV ) ^ call_expr )*
-			{
-			root_0 = (CommonTree)adaptor.Nil();
-
-			DebugLocation(331, 4);
-			PushFollow(Follow._call_expr_in_mul_expr1771);
-			call_expr203=call_expr();
-			PopFollow();
-			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, call_expr203.Tree);
-			DebugLocation(331, 14);
-			// Stone.g:331:14: ( ( OP_MUL | OP_DIV ) ^ call_expr )*
+			if (state.backtracking == 0) adaptor.AddChild(root_0, mul_expr210.Tree);
+			DebugLocation(338, 13);
+			// Stone.g:338:13: ( ( OP_PLUS | OP_MINUS ) ^ mul_expr )*
 			try { DebugEnterSubRule(57);
 			while (true)
 			{
@@ -8065,7 +8324,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				try { DebugEnterDecision(57, false);
 				int LA57_0 = input.LA(1);
 
-				if ((LA57_0==OP_DIV||LA57_0==OP_MUL))
+				if ((LA57_0==OP_MINUS||LA57_0==OP_PLUS))
 				{
 					alt57 = 1;
 				}
@@ -8076,16 +8335,16 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Stone.g:331:15: ( OP_MUL | OP_DIV ) ^ call_expr
+					// Stone.g:338:14: ( OP_PLUS | OP_MINUS ) ^ mul_expr
 					{
-					DebugLocation(331, 32);
+					DebugLocation(338, 34);
 
-					set204=(CommonToken)input.LT(1);
-					set204=(CommonToken)input.LT(1);
-					if (input.LA(1)==OP_DIV||input.LA(1)==OP_MUL)
+					set211=(CommonToken)input.LT(1);
+					set211=(CommonToken)input.LT(1);
+					if (input.LA(1)==OP_MINUS||input.LA(1)==OP_PLUS)
 					{
 						input.Consume();
-						if (state.backtracking == 0) root_0 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(set204), root_0);
+						if (state.backtracking == 0) root_0 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(set211), root_0);
 						state.errorRecovery=false;state.failed=false;
 					}
 					else
@@ -8096,12 +8355,12 @@ public partial class StoneParser : Antlr.Runtime.Parser
 						throw mse;
 					}
 
-					DebugLocation(331, 34);
-					PushFollow(Follow._call_expr_in_mul_expr1783);
-					call_expr205=call_expr();
+					DebugLocation(338, 36);
+					PushFollow(Follow._mul_expr_in_add_expr1835);
+					mul_expr212=mul_expr();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, call_expr205.Tree);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, mul_expr212.Tree);
 
 					}
 					break;
@@ -8135,11 +8394,138 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("mul_expr", 44);
-			LeaveRule("mul_expr", 44);
+			TraceOut("add_expr", 44);
+			LeaveRule("add_expr", 44);
+			LeaveRule_add_expr();
+		}
+		DebugLocation(339, 1);
+		} finally { DebugExitRule(GrammarFileName, "add_expr"); }
+		return retval;
+
+	}
+	// $ANTLR end "add_expr"
+
+	partial void EnterRule_mul_expr();
+	partial void LeaveRule_mul_expr();
+
+	// $ANTLR start "mul_expr"
+	// Stone.g:341:1: mul_expr : call_expr ( ( OP_MUL | OP_DIV ) ^ call_expr )* ;
+	[GrammarRule("mul_expr")]
+	private AstParserRuleReturnScope<CommonTree, CommonToken> mul_expr()
+	{
+		EnterRule_mul_expr();
+		EnterRule("mul_expr", 45);
+		TraceIn("mul_expr", 45);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken set214 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> call_expr213 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> call_expr215 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+
+		CommonTree set214_tree = default(CommonTree);
+		try { DebugEnterRule(GrammarFileName, "mul_expr");
+		DebugLocation(341, 1);
+		try
+		{
+			// Stone.g:342:2: ( call_expr ( ( OP_MUL | OP_DIV ) ^ call_expr )* )
+			DebugEnterAlt(1);
+			// Stone.g:342:4: call_expr ( ( OP_MUL | OP_DIV ) ^ call_expr )*
+			{
+			root_0 = (CommonTree)adaptor.Nil();
+
+			DebugLocation(342, 4);
+			PushFollow(Follow._call_expr_in_mul_expr1848);
+			call_expr213=call_expr();
+			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, call_expr213.Tree);
+			DebugLocation(342, 14);
+			// Stone.g:342:14: ( ( OP_MUL | OP_DIV ) ^ call_expr )*
+			try { DebugEnterSubRule(58);
+			while (true)
+			{
+				int alt58=2;
+				try { DebugEnterDecision(58, false);
+				int LA58_0 = input.LA(1);
+
+				if ((LA58_0==OP_DIV||LA58_0==OP_MUL))
+				{
+					alt58 = 1;
+				}
+
+
+				} finally { DebugExitDecision(58); }
+				switch ( alt58 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// Stone.g:342:15: ( OP_MUL | OP_DIV ) ^ call_expr
+					{
+					DebugLocation(342, 32);
+
+					set214=(CommonToken)input.LT(1);
+					set214=(CommonToken)input.LT(1);
+					if (input.LA(1)==OP_DIV||input.LA(1)==OP_MUL)
+					{
+						input.Consume();
+						if (state.backtracking == 0) root_0 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(set214), root_0);
+						state.errorRecovery=false;state.failed=false;
+					}
+					else
+					{
+						if (state.backtracking>0) {state.failed=true; return retval;}
+						MismatchedSetException mse = new MismatchedSetException(null,input);
+						DebugRecognitionException(mse);
+						throw mse;
+					}
+
+					DebugLocation(342, 34);
+					PushFollow(Follow._call_expr_in_mul_expr1860);
+					call_expr215=call_expr();
+					PopFollow();
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, call_expr215.Tree);
+
+					}
+					break;
+
+				default:
+					goto loop58;
+				}
+			}
+
+			loop58:
+				;
+
+			} finally { DebugExitSubRule(58); }
+
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("mul_expr", 45);
+			LeaveRule("mul_expr", 45);
 			LeaveRule_mul_expr();
 		}
-		DebugLocation(332, 1);
+		DebugLocation(343, 1);
 		} finally { DebugExitRule(GrammarFileName, "mul_expr"); }
 		return retval;
 
@@ -8150,120 +8536,120 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_call_expr();
 
 	// $ANTLR start "call_expr"
-	// Stone.g:334:1: call_expr : ( IDENT '(' ( args_list )? ')' -> ^( Expr_Call IDENT ( args_list )? ) | access_expr );
+	// Stone.g:345:1: call_expr : ( IDENT '(' ( args_list )? ')' -> ^( Expr_Call IDENT ( args_list )? ) | access_expr );
 	[GrammarRule("call_expr")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> call_expr()
 	{
 		EnterRule_call_expr();
-		EnterRule("call_expr", 45);
-		TraceIn("call_expr", 45);
+		EnterRule("call_expr", 46);
+		TraceIn("call_expr", 46);
 		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
 		retval.Start = (CommonToken)input.LT(1);
 
 		CommonTree root_0 = default(CommonTree);
 
-		CommonToken IDENT206 = default(CommonToken);
-		CommonToken char_literal207 = default(CommonToken);
-		CommonToken char_literal209 = default(CommonToken);
-		AstParserRuleReturnScope<CommonTree, CommonToken> args_list208 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
-		AstParserRuleReturnScope<CommonTree, CommonToken> access_expr210 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		CommonToken IDENT216 = default(CommonToken);
+		CommonToken char_literal217 = default(CommonToken);
+		CommonToken char_literal219 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> args_list218 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> access_expr220 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
 
-		CommonTree IDENT206_tree = default(CommonTree);
-		CommonTree char_literal207_tree = default(CommonTree);
-		CommonTree char_literal209_tree = default(CommonTree);
+		CommonTree IDENT216_tree = default(CommonTree);
+		CommonTree char_literal217_tree = default(CommonTree);
+		CommonTree char_literal219_tree = default(CommonTree);
 		RewriteRuleITokenStream stream_IDENT=new RewriteRuleITokenStream(adaptor,"token IDENT");
-		RewriteRuleITokenStream stream_59=new RewriteRuleITokenStream(adaptor,"token 59");
-		RewriteRuleITokenStream stream_60=new RewriteRuleITokenStream(adaptor,"token 60");
+		RewriteRuleITokenStream stream_62=new RewriteRuleITokenStream(adaptor,"token 62");
+		RewriteRuleITokenStream stream_63=new RewriteRuleITokenStream(adaptor,"token 63");
 		RewriteRuleSubtreeStream stream_args_list=new RewriteRuleSubtreeStream(adaptor,"rule args_list");
 		try { DebugEnterRule(GrammarFileName, "call_expr");
-		DebugLocation(334, 1);
+		DebugLocation(345, 1);
 		try
 		{
-			// Stone.g:335:2: ( IDENT '(' ( args_list )? ')' -> ^( Expr_Call IDENT ( args_list )? ) | access_expr )
-			int alt59=2;
-			try { DebugEnterDecision(59, false);
-			int LA59_0 = input.LA(1);
+			// Stone.g:346:2: ( IDENT '(' ( args_list )? ')' -> ^( Expr_Call IDENT ( args_list )? ) | access_expr )
+			int alt60=2;
+			try { DebugEnterDecision(60, false);
+			int LA60_0 = input.LA(1);
 
-			if ((LA59_0==IDENT))
+			if ((LA60_0==IDENT))
 			{
-				int LA59_1 = input.LA(2);
+				int LA60_1 = input.LA(2);
 
-				if ((LA59_1==59))
+				if ((LA60_1==62))
 				{
-					alt59 = 1;
+					alt60 = 1;
 				}
-				else if ((LA59_1==Expr_Access||LA59_1==IDENT||LA59_1==NEWLINE||(LA59_1>=OP_DIV && LA59_1<=OP_PLUS)||(LA59_1>=60 && LA59_1<=61)||LA59_1==69))
+				else if ((LA60_1==Expr_Access||LA60_1==IDENT||LA60_1==NEWLINE||(LA60_1>=OP_DIV && LA60_1<=OP_PLUS)||(LA60_1>=63 && LA60_1<=64)||LA60_1==72))
 				{
-					alt59 = 2;
+					alt60 = 2;
 				}
 				else
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 59, 1, input);
+					NoViableAltException nvae = new NoViableAltException("", 60, 1, input);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 			}
-			else if ((LA59_0==DOUBLE||LA59_0==INT||LA59_0==NORMAL_STRING||LA59_0==59||LA59_0==76))
+			else if ((LA60_0==DOUBLE||LA60_0==INT||LA60_0==NORMAL_STRING||LA60_0==62||LA60_0==79))
 			{
-				alt59 = 2;
+				alt60 = 2;
 			}
 			else
 			{
 				if (state.backtracking>0) {state.failed=true; return retval;}
-				NoViableAltException nvae = new NoViableAltException("", 59, 0, input);
+				NoViableAltException nvae = new NoViableAltException("", 60, 0, input);
 				DebugRecognitionException(nvae);
 				throw nvae;
 			}
-			} finally { DebugExitDecision(59); }
-			switch (alt59)
+			} finally { DebugExitDecision(60); }
+			switch (alt60)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// Stone.g:335:4: IDENT '(' ( args_list )? ')'
+				// Stone.g:346:4: IDENT '(' ( args_list )? ')'
 				{
-				DebugLocation(335, 4);
-				IDENT206=(CommonToken)Match(input,IDENT,Follow._IDENT_in_call_expr1796); if (state.failed) return retval; 
-				if (state.backtracking == 0) stream_IDENT.Add(IDENT206);
+				DebugLocation(346, 4);
+				IDENT216=(CommonToken)Match(input,IDENT,Follow._IDENT_in_call_expr1873); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_IDENT.Add(IDENT216);
 
-				DebugLocation(335, 10);
-				char_literal207=(CommonToken)Match(input,59,Follow._59_in_call_expr1798); if (state.failed) return retval; 
-				if (state.backtracking == 0) stream_59.Add(char_literal207);
+				DebugLocation(346, 10);
+				char_literal217=(CommonToken)Match(input,62,Follow._62_in_call_expr1875); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_62.Add(char_literal217);
 
-				DebugLocation(335, 14);
-				// Stone.g:335:14: ( args_list )?
-				int alt58=2;
-				try { DebugEnterSubRule(58);
-				try { DebugEnterDecision(58, false);
-				int LA58_0 = input.LA(1);
+				DebugLocation(346, 14);
+				// Stone.g:346:14: ( args_list )?
+				int alt59=2;
+				try { DebugEnterSubRule(59);
+				try { DebugEnterDecision(59, false);
+				int LA59_0 = input.LA(1);
 
-				if ((LA58_0==DOUBLE||LA58_0==IDENT||LA58_0==INT||LA58_0==NORMAL_STRING||LA58_0==59||(LA58_0>=67 && LA58_0<=68)||LA58_0==76))
+				if ((LA59_0==DOUBLE||LA59_0==IDENT||LA59_0==INT||LA59_0==NORMAL_STRING||LA59_0==62||(LA59_0>=70 && LA59_0<=71)||LA59_0==79))
 				{
-					alt58 = 1;
+					alt59 = 1;
 				}
-				} finally { DebugExitDecision(58); }
-				switch (alt58)
+				} finally { DebugExitDecision(59); }
+				switch (alt59)
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Stone.g:335:14: args_list
+					// Stone.g:346:14: args_list
 					{
-					DebugLocation(335, 14);
-					PushFollow(Follow._args_list_in_call_expr1800);
-					args_list208=args_list();
+					DebugLocation(346, 14);
+					PushFollow(Follow._args_list_in_call_expr1877);
+					args_list218=args_list();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) stream_args_list.Add(args_list208.Tree);
+					if (state.backtracking == 0) stream_args_list.Add(args_list218.Tree);
 
 					}
 					break;
 
 				}
-				} finally { DebugExitSubRule(58); }
+				} finally { DebugExitSubRule(59); }
 
-				DebugLocation(335, 25);
-				char_literal209=(CommonToken)Match(input,60,Follow._60_in_call_expr1803); if (state.failed) return retval; 
-				if (state.backtracking == 0) stream_60.Add(char_literal209);
+				DebugLocation(346, 25);
+				char_literal219=(CommonToken)Match(input,63,Follow._63_in_call_expr1880); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_63.Add(char_literal219);
 
 
 
@@ -8280,22 +8666,22 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 				root_0 = (CommonTree)adaptor.Nil();
-				// 335:29: -> ^( Expr_Call IDENT ( args_list )? )
+				// 346:29: -> ^( Expr_Call IDENT ( args_list )? )
 				{
-					DebugLocation(335, 32);
-					// Stone.g:335:32: ^( Expr_Call IDENT ( args_list )? )
+					DebugLocation(346, 32);
+					// Stone.g:346:32: ^( Expr_Call IDENT ( args_list )? )
 					{
 					CommonTree root_1 = (CommonTree)adaptor.Nil();
-					DebugLocation(335, 34);
+					DebugLocation(346, 34);
 					root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Expr_Call, "Expr_Call"), root_1);
 
-					DebugLocation(335, 44);
+					DebugLocation(346, 44);
 					adaptor.AddChild(root_1, stream_IDENT.NextNode());
-					DebugLocation(335, 50);
-					// Stone.g:335:50: ( args_list )?
+					DebugLocation(346, 50);
+					// Stone.g:346:50: ( args_list )?
 					if (stream_args_list.HasNext)
 					{
-						DebugLocation(335, 50);
+						DebugLocation(346, 50);
 						adaptor.AddChild(root_1, stream_args_list.NextTree());
 
 					}
@@ -8314,16 +8700,16 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// Stone.g:336:4: access_expr
+				// Stone.g:347:4: access_expr
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
-				DebugLocation(336, 4);
-				PushFollow(Follow._access_expr_in_call_expr1819);
-				access_expr210=access_expr();
+				DebugLocation(347, 4);
+				PushFollow(Follow._access_expr_in_call_expr1896);
+				access_expr220=access_expr();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, access_expr210.Tree);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, access_expr220.Tree);
 
 				}
 				break;
@@ -8345,11 +8731,11 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("call_expr", 45);
-			LeaveRule("call_expr", 45);
+			TraceOut("call_expr", 46);
+			LeaveRule("call_expr", 46);
 			LeaveRule_call_expr();
 		}
-		DebugLocation(337, 1);
+		DebugLocation(348, 1);
 		} finally { DebugExitRule(GrammarFileName, "call_expr"); }
 		return retval;
 
@@ -8360,87 +8746,87 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_access_expr();
 
 	// $ANTLR start "access_expr"
-	// Stone.g:339:1: access_expr : atom_expr ( Expr_Access ^ IDENT )* ;
+	// Stone.g:350:1: access_expr : atom_expr ( Expr_Access ^ IDENT )* ;
 	[GrammarRule("access_expr")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> access_expr()
 	{
 		EnterRule_access_expr();
-		EnterRule("access_expr", 46);
-		TraceIn("access_expr", 46);
+		EnterRule("access_expr", 47);
+		TraceIn("access_expr", 47);
 		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
 		retval.Start = (CommonToken)input.LT(1);
 
 		CommonTree root_0 = default(CommonTree);
 
-		CommonToken Expr_Access212 = default(CommonToken);
-		CommonToken IDENT213 = default(CommonToken);
-		AstParserRuleReturnScope<CommonTree, CommonToken> atom_expr211 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		CommonToken Expr_Access222 = default(CommonToken);
+		CommonToken IDENT223 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> atom_expr221 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
 
-		CommonTree Expr_Access212_tree = default(CommonTree);
-		CommonTree IDENT213_tree = default(CommonTree);
+		CommonTree Expr_Access222_tree = default(CommonTree);
+		CommonTree IDENT223_tree = default(CommonTree);
 		try { DebugEnterRule(GrammarFileName, "access_expr");
-		DebugLocation(339, 1);
+		DebugLocation(350, 1);
 		try
 		{
-			// Stone.g:340:2: ( atom_expr ( Expr_Access ^ IDENT )* )
+			// Stone.g:351:2: ( atom_expr ( Expr_Access ^ IDENT )* )
 			DebugEnterAlt(1);
-			// Stone.g:340:4: atom_expr ( Expr_Access ^ IDENT )*
+			// Stone.g:351:4: atom_expr ( Expr_Access ^ IDENT )*
 			{
 			root_0 = (CommonTree)adaptor.Nil();
 
-			DebugLocation(340, 4);
-			PushFollow(Follow._atom_expr_in_access_expr1830);
-			atom_expr211=atom_expr();
+			DebugLocation(351, 4);
+			PushFollow(Follow._atom_expr_in_access_expr1907);
+			atom_expr221=atom_expr();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, atom_expr211.Tree);
-			DebugLocation(340, 14);
-			// Stone.g:340:14: ( Expr_Access ^ IDENT )*
-			try { DebugEnterSubRule(60);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, atom_expr221.Tree);
+			DebugLocation(351, 14);
+			// Stone.g:351:14: ( Expr_Access ^ IDENT )*
+			try { DebugEnterSubRule(61);
 			while (true)
 			{
-				int alt60=2;
-				try { DebugEnterDecision(60, false);
-				int LA60_0 = input.LA(1);
+				int alt61=2;
+				try { DebugEnterDecision(61, false);
+				int LA61_0 = input.LA(1);
 
-				if ((LA60_0==Expr_Access))
+				if ((LA61_0==Expr_Access))
 				{
-					alt60 = 1;
+					alt61 = 1;
 				}
 
 
-				} finally { DebugExitDecision(60); }
-				switch ( alt60 )
+				} finally { DebugExitDecision(61); }
+				switch ( alt61 )
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Stone.g:340:15: Expr_Access ^ IDENT
+					// Stone.g:351:15: Expr_Access ^ IDENT
 					{
-					DebugLocation(340, 26);
-					Expr_Access212=(CommonToken)Match(input,Expr_Access,Follow._Expr_Access_in_access_expr1833); if (state.failed) return retval;
+					DebugLocation(351, 26);
+					Expr_Access222=(CommonToken)Match(input,Expr_Access,Follow._Expr_Access_in_access_expr1910); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					Expr_Access212_tree = (CommonTree)adaptor.Create(Expr_Access212);
-					root_0 = (CommonTree)adaptor.BecomeRoot(Expr_Access212_tree, root_0);
+					Expr_Access222_tree = (CommonTree)adaptor.Create(Expr_Access222);
+					root_0 = (CommonTree)adaptor.BecomeRoot(Expr_Access222_tree, root_0);
 					}
-					DebugLocation(340, 28);
-					IDENT213=(CommonToken)Match(input,IDENT,Follow._IDENT_in_access_expr1836); if (state.failed) return retval;
+					DebugLocation(351, 28);
+					IDENT223=(CommonToken)Match(input,IDENT,Follow._IDENT_in_access_expr1913); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					IDENT213_tree = (CommonTree)adaptor.Create(IDENT213);
-					adaptor.AddChild(root_0, IDENT213_tree);
+					IDENT223_tree = (CommonTree)adaptor.Create(IDENT223);
+					adaptor.AddChild(root_0, IDENT223_tree);
 					}
 
 					}
 					break;
 
 				default:
-					goto loop60;
+					goto loop61;
 				}
 			}
 
-			loop60:
+			loop61:
 				;
 
-			} finally { DebugExitSubRule(60); }
+			} finally { DebugExitSubRule(61); }
 
 
 			}
@@ -8461,11 +8847,11 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("access_expr", 46);
-			LeaveRule("access_expr", 46);
+			TraceOut("access_expr", 47);
+			LeaveRule("access_expr", 47);
 			LeaveRule_access_expr();
 		}
-		DebugLocation(341, 1);
+		DebugLocation(352, 1);
 		} finally { DebugExitRule(GrammarFileName, "access_expr"); }
 		return retval;
 
@@ -8476,183 +8862,183 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	partial void LeaveRule_atom_expr();
 
 	// $ANTLR start "atom_expr"
-	// Stone.g:343:1: atom_expr : ( IDENT | INT | DOUBLE | NORMAL_STRING | 'new' IDENT '(' args_list ')' -> ^( Expr_New_Data IDENT args_list ) | '(' expr ')' -> expr );
+	// Stone.g:354:1: atom_expr : ( IDENT | INT | DOUBLE | NORMAL_STRING | 'new' IDENT '(' args_list ')' -> ^( Expr_New_Data IDENT args_list ) | '(' expr ')' -> expr );
 	[GrammarRule("atom_expr")]
 	private AstParserRuleReturnScope<CommonTree, CommonToken> atom_expr()
 	{
 		EnterRule_atom_expr();
-		EnterRule("atom_expr", 47);
-		TraceIn("atom_expr", 47);
+		EnterRule("atom_expr", 48);
+		TraceIn("atom_expr", 48);
 		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
 		retval.Start = (CommonToken)input.LT(1);
 
 		CommonTree root_0 = default(CommonTree);
 
-		CommonToken IDENT214 = default(CommonToken);
-		CommonToken INT215 = default(CommonToken);
-		CommonToken DOUBLE216 = default(CommonToken);
-		CommonToken NORMAL_STRING217 = default(CommonToken);
-		CommonToken string_literal218 = default(CommonToken);
-		CommonToken IDENT219 = default(CommonToken);
-		CommonToken char_literal220 = default(CommonToken);
-		CommonToken char_literal222 = default(CommonToken);
-		CommonToken char_literal223 = default(CommonToken);
-		CommonToken char_literal225 = default(CommonToken);
-		AstParserRuleReturnScope<CommonTree, CommonToken> args_list221 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
-		AstParserRuleReturnScope<CommonTree, CommonToken> expr224 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		CommonToken IDENT224 = default(CommonToken);
+		CommonToken INT225 = default(CommonToken);
+		CommonToken DOUBLE226 = default(CommonToken);
+		CommonToken NORMAL_STRING227 = default(CommonToken);
+		CommonToken string_literal228 = default(CommonToken);
+		CommonToken IDENT229 = default(CommonToken);
+		CommonToken char_literal230 = default(CommonToken);
+		CommonToken char_literal232 = default(CommonToken);
+		CommonToken char_literal233 = default(CommonToken);
+		CommonToken char_literal235 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> args_list231 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> expr234 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
 
-		CommonTree IDENT214_tree = default(CommonTree);
-		CommonTree INT215_tree = default(CommonTree);
-		CommonTree DOUBLE216_tree = default(CommonTree);
-		CommonTree NORMAL_STRING217_tree = default(CommonTree);
-		CommonTree string_literal218_tree = default(CommonTree);
-		CommonTree IDENT219_tree = default(CommonTree);
-		CommonTree char_literal220_tree = default(CommonTree);
-		CommonTree char_literal222_tree = default(CommonTree);
-		CommonTree char_literal223_tree = default(CommonTree);
-		CommonTree char_literal225_tree = default(CommonTree);
+		CommonTree IDENT224_tree = default(CommonTree);
+		CommonTree INT225_tree = default(CommonTree);
+		CommonTree DOUBLE226_tree = default(CommonTree);
+		CommonTree NORMAL_STRING227_tree = default(CommonTree);
+		CommonTree string_literal228_tree = default(CommonTree);
+		CommonTree IDENT229_tree = default(CommonTree);
+		CommonTree char_literal230_tree = default(CommonTree);
+		CommonTree char_literal232_tree = default(CommonTree);
+		CommonTree char_literal233_tree = default(CommonTree);
+		CommonTree char_literal235_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_79=new RewriteRuleITokenStream(adaptor,"token 79");
 		RewriteRuleITokenStream stream_IDENT=new RewriteRuleITokenStream(adaptor,"token IDENT");
-		RewriteRuleITokenStream stream_59=new RewriteRuleITokenStream(adaptor,"token 59");
-		RewriteRuleITokenStream stream_60=new RewriteRuleITokenStream(adaptor,"token 60");
-		RewriteRuleITokenStream stream_76=new RewriteRuleITokenStream(adaptor,"token 76");
+		RewriteRuleITokenStream stream_62=new RewriteRuleITokenStream(adaptor,"token 62");
+		RewriteRuleITokenStream stream_63=new RewriteRuleITokenStream(adaptor,"token 63");
 		RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
 		RewriteRuleSubtreeStream stream_args_list=new RewriteRuleSubtreeStream(adaptor,"rule args_list");
 		try { DebugEnterRule(GrammarFileName, "atom_expr");
-		DebugLocation(343, 1);
+		DebugLocation(354, 1);
 		try
 		{
-			// Stone.g:344:2: ( IDENT | INT | DOUBLE | NORMAL_STRING | 'new' IDENT '(' args_list ')' -> ^( Expr_New_Data IDENT args_list ) | '(' expr ')' -> expr )
-			int alt61=6;
-			try { DebugEnterDecision(61, false);
+			// Stone.g:355:2: ( IDENT | INT | DOUBLE | NORMAL_STRING | 'new' IDENT '(' args_list ')' -> ^( Expr_New_Data IDENT args_list ) | '(' expr ')' -> expr )
+			int alt62=6;
+			try { DebugEnterDecision(62, false);
 			switch (input.LA(1))
 			{
 			case IDENT:
 				{
-				alt61 = 1;
+				alt62 = 1;
 				}
 				break;
 			case INT:
 				{
-				alt61 = 2;
+				alt62 = 2;
 				}
 				break;
 			case DOUBLE:
 				{
-				alt61 = 3;
+				alt62 = 3;
 				}
 				break;
 			case NORMAL_STRING:
 				{
-				alt61 = 4;
+				alt62 = 4;
 				}
 				break;
-			case 76:
+			case 79:
 				{
-				alt61 = 5;
+				alt62 = 5;
 				}
 				break;
-			case 59:
+			case 62:
 				{
-				alt61 = 6;
+				alt62 = 6;
 				}
 				break;
 			default:
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 61, 0, input);
+					NoViableAltException nvae = new NoViableAltException("", 62, 0, input);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 			}
 
-			} finally { DebugExitDecision(61); }
-			switch (alt61)
+			} finally { DebugExitDecision(62); }
+			switch (alt62)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// Stone.g:344:4: IDENT
+				// Stone.g:355:4: IDENT
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
-				DebugLocation(344, 4);
-				IDENT214=(CommonToken)Match(input,IDENT,Follow._IDENT_in_atom_expr1849); if (state.failed) return retval;
+				DebugLocation(355, 4);
+				IDENT224=(CommonToken)Match(input,IDENT,Follow._IDENT_in_atom_expr1926); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				IDENT214_tree = (CommonTree)adaptor.Create(IDENT214);
-				adaptor.AddChild(root_0, IDENT214_tree);
+				IDENT224_tree = (CommonTree)adaptor.Create(IDENT224);
+				adaptor.AddChild(root_0, IDENT224_tree);
 				}
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// Stone.g:345:4: INT
+				// Stone.g:356:4: INT
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
-				DebugLocation(345, 4);
-				INT215=(CommonToken)Match(input,INT,Follow._INT_in_atom_expr1854); if (state.failed) return retval;
+				DebugLocation(356, 4);
+				INT225=(CommonToken)Match(input,INT,Follow._INT_in_atom_expr1931); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				INT215_tree = (CommonTree)adaptor.Create(INT215);
-				adaptor.AddChild(root_0, INT215_tree);
+				INT225_tree = (CommonTree)adaptor.Create(INT225);
+				adaptor.AddChild(root_0, INT225_tree);
 				}
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// Stone.g:346:4: DOUBLE
+				// Stone.g:357:4: DOUBLE
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
-				DebugLocation(346, 4);
-				DOUBLE216=(CommonToken)Match(input,DOUBLE,Follow._DOUBLE_in_atom_expr1859); if (state.failed) return retval;
+				DebugLocation(357, 4);
+				DOUBLE226=(CommonToken)Match(input,DOUBLE,Follow._DOUBLE_in_atom_expr1936); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				DOUBLE216_tree = (CommonTree)adaptor.Create(DOUBLE216);
-				adaptor.AddChild(root_0, DOUBLE216_tree);
+				DOUBLE226_tree = (CommonTree)adaptor.Create(DOUBLE226);
+				adaptor.AddChild(root_0, DOUBLE226_tree);
 				}
 
 				}
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// Stone.g:347:4: NORMAL_STRING
+				// Stone.g:358:4: NORMAL_STRING
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
-				DebugLocation(347, 4);
-				NORMAL_STRING217=(CommonToken)Match(input,NORMAL_STRING,Follow._NORMAL_STRING_in_atom_expr1864); if (state.failed) return retval;
+				DebugLocation(358, 4);
+				NORMAL_STRING227=(CommonToken)Match(input,NORMAL_STRING,Follow._NORMAL_STRING_in_atom_expr1941); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				NORMAL_STRING217_tree = (CommonTree)adaptor.Create(NORMAL_STRING217);
-				adaptor.AddChild(root_0, NORMAL_STRING217_tree);
+				NORMAL_STRING227_tree = (CommonTree)adaptor.Create(NORMAL_STRING227);
+				adaptor.AddChild(root_0, NORMAL_STRING227_tree);
 				}
 
 				}
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// Stone.g:348:4: 'new' IDENT '(' args_list ')'
+				// Stone.g:359:4: 'new' IDENT '(' args_list ')'
 				{
-				DebugLocation(348, 4);
-				string_literal218=(CommonToken)Match(input,76,Follow._76_in_atom_expr1869); if (state.failed) return retval; 
-				if (state.backtracking == 0) stream_76.Add(string_literal218);
+				DebugLocation(359, 4);
+				string_literal228=(CommonToken)Match(input,79,Follow._79_in_atom_expr1946); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_79.Add(string_literal228);
 
-				DebugLocation(348, 10);
-				IDENT219=(CommonToken)Match(input,IDENT,Follow._IDENT_in_atom_expr1871); if (state.failed) return retval; 
-				if (state.backtracking == 0) stream_IDENT.Add(IDENT219);
+				DebugLocation(359, 10);
+				IDENT229=(CommonToken)Match(input,IDENT,Follow._IDENT_in_atom_expr1948); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_IDENT.Add(IDENT229);
 
-				DebugLocation(348, 16);
-				char_literal220=(CommonToken)Match(input,59,Follow._59_in_atom_expr1873); if (state.failed) return retval; 
-				if (state.backtracking == 0) stream_59.Add(char_literal220);
+				DebugLocation(359, 16);
+				char_literal230=(CommonToken)Match(input,62,Follow._62_in_atom_expr1950); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_62.Add(char_literal230);
 
-				DebugLocation(348, 20);
-				PushFollow(Follow._args_list_in_atom_expr1875);
-				args_list221=args_list();
+				DebugLocation(359, 20);
+				PushFollow(Follow._args_list_in_atom_expr1952);
+				args_list231=args_list();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) stream_args_list.Add(args_list221.Tree);
-				DebugLocation(348, 30);
-				char_literal222=(CommonToken)Match(input,60,Follow._60_in_atom_expr1877); if (state.failed) return retval; 
-				if (state.backtracking == 0) stream_60.Add(char_literal222);
+				if (state.backtracking == 0) stream_args_list.Add(args_list231.Tree);
+				DebugLocation(359, 30);
+				char_literal232=(CommonToken)Match(input,63,Follow._63_in_atom_expr1954); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_63.Add(char_literal232);
 
 
 
@@ -8669,18 +9055,18 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 				root_0 = (CommonTree)adaptor.Nil();
-				// 348:34: -> ^( Expr_New_Data IDENT args_list )
+				// 359:34: -> ^( Expr_New_Data IDENT args_list )
 				{
-					DebugLocation(348, 37);
-					// Stone.g:348:37: ^( Expr_New_Data IDENT args_list )
+					DebugLocation(359, 37);
+					// Stone.g:359:37: ^( Expr_New_Data IDENT args_list )
 					{
 					CommonTree root_1 = (CommonTree)adaptor.Nil();
-					DebugLocation(348, 39);
+					DebugLocation(359, 39);
 					root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Expr_New_Data, "Expr_New_Data"), root_1);
 
-					DebugLocation(348, 53);
+					DebugLocation(359, 53);
 					adaptor.AddChild(root_1, stream_IDENT.NextNode());
-					DebugLocation(348, 59);
+					DebugLocation(359, 59);
 					adaptor.AddChild(root_1, stream_args_list.NextTree());
 
 					adaptor.AddChild(root_0, root_1);
@@ -8696,21 +9082,21 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				break;
 			case 6:
 				DebugEnterAlt(6);
-				// Stone.g:349:4: '(' expr ')'
+				// Stone.g:360:4: '(' expr ')'
 				{
-				DebugLocation(349, 4);
-				char_literal223=(CommonToken)Match(input,59,Follow._59_in_atom_expr1892); if (state.failed) return retval; 
-				if (state.backtracking == 0) stream_59.Add(char_literal223);
+				DebugLocation(360, 4);
+				char_literal233=(CommonToken)Match(input,62,Follow._62_in_atom_expr1969); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_62.Add(char_literal233);
 
-				DebugLocation(349, 8);
-				PushFollow(Follow._expr_in_atom_expr1894);
-				expr224=expr();
+				DebugLocation(360, 8);
+				PushFollow(Follow._expr_in_atom_expr1971);
+				expr234=expr();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) stream_expr.Add(expr224.Tree);
-				DebugLocation(349, 13);
-				char_literal225=(CommonToken)Match(input,60,Follow._60_in_atom_expr1896); if (state.failed) return retval; 
-				if (state.backtracking == 0) stream_60.Add(char_literal225);
+				if (state.backtracking == 0) stream_expr.Add(expr234.Tree);
+				DebugLocation(360, 13);
+				char_literal235=(CommonToken)Match(input,63,Follow._63_in_atom_expr1973); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_63.Add(char_literal235);
 
 
 
@@ -8727,9 +9113,9 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 				root_0 = (CommonTree)adaptor.Nil();
-				// 349:17: -> expr
+				// 360:17: -> expr
 				{
-					DebugLocation(349, 20);
+					DebugLocation(360, 20);
 					adaptor.AddChild(root_0, stream_expr.NextTree());
 
 				}
@@ -8758,11 +9144,11 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("atom_expr", 47);
-			LeaveRule("atom_expr", 47);
+			TraceOut("atom_expr", 48);
+			LeaveRule("atom_expr", 48);
 			LeaveRule_atom_expr();
 		}
-		DebugLocation(350, 1);
+		DebugLocation(361, 1);
 		} finally { DebugExitRule(GrammarFileName, "atom_expr"); }
 		return retval;
 
@@ -8776,144 +9162,21 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	public void synpred1_Stone_fragment()
 	{
 		EnterRule_synpred1_Stone_fragment();
-		EnterRule("synpred1_Stone_fragment", 48);
-		TraceIn("synpred1_Stone_fragment", 48);
+		EnterRule("synpred1_Stone_fragment", 49);
+		TraceIn("synpred1_Stone_fragment", 49);
 		try
 		{
-			// Stone.g:200:4: ( match_var ( ',' match_var )+ )
+			// Stone.g:204:4: ( match_var ( ',' match_var )+ )
 			DebugEnterAlt(1);
-			// Stone.g:200:4: match_var ( ',' match_var )+
+			// Stone.g:204:4: match_var ( ',' match_var )+
 			{
-			DebugLocation(200, 4);
-			PushFollow(Follow._match_var_in_synpred1_Stone960);
+			DebugLocation(204, 4);
+			PushFollow(Follow._match_var_in_synpred1_Stone973);
 			match_var();
 			PopFollow();
 			if (state.failed) return;
-			DebugLocation(200, 14);
-			// Stone.g:200:14: ( ',' match_var )+
-			int cnt62=0;
-			try { DebugEnterSubRule(62);
-			while (true)
-			{
-				int alt62=2;
-				try { DebugEnterDecision(62, false);
-				int LA62_0 = input.LA(1);
-
-				if ((LA62_0==61))
-				{
-					alt62 = 1;
-				}
-
-
-				} finally { DebugExitDecision(62); }
-				switch (alt62)
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// Stone.g:200:15: ',' match_var
-					{
-					DebugLocation(200, 15);
-					Match(input,61,Follow._61_in_synpred1_Stone963); if (state.failed) return;
-					DebugLocation(200, 19);
-					PushFollow(Follow._match_var_in_synpred1_Stone965);
-					match_var();
-					PopFollow();
-					if (state.failed) return;
-
-					}
-					break;
-
-				default:
-					if (cnt62 >= 1)
-						goto loop62;
-
-					if (state.backtracking>0) {state.failed=true; return;}
-					EarlyExitException eee62 = new EarlyExitException( 62, input );
-					DebugRecognitionException(eee62);
-					throw eee62;
-				}
-				cnt62++;
-			}
-			loop62:
-				;
-
-			} finally { DebugExitSubRule(62); }
-
-
-			}
-
-		}
-		finally
-		{
-			TraceOut("synpred1_Stone_fragment", 48);
-			LeaveRule("synpred1_Stone_fragment", 48);
-			LeaveRule_synpred1_Stone_fragment();
-		}
-	}
-	// $ANTLR end synpred1_Stone
-
-	partial void EnterRule_synpred2_Stone_fragment();
-	partial void LeaveRule_synpred2_Stone_fragment();
-
-	// $ANTLR start synpred2_Stone
-	public void synpred2_Stone_fragment()
-	{
-		EnterRule_synpred2_Stone_fragment();
-		EnterRule("synpred2_Stone_fragment", 49);
-		TraceIn("synpred2_Stone_fragment", 49);
-		try
-		{
-			// Stone.g:219:4: ( type_cross '->' type_cross )
-			DebugEnterAlt(1);
-			// Stone.g:219:4: type_cross '->' type_cross
-			{
-			DebugLocation(219, 4);
-			PushFollow(Follow._type_cross_in_synpred2_Stone1052);
-			type_cross();
-			PopFollow();
-			if (state.failed) return;
-			DebugLocation(219, 15);
-			Match(input,62,Follow._62_in_synpred2_Stone1054); if (state.failed) return;
-			DebugLocation(219, 20);
-			PushFollow(Follow._type_cross_in_synpred2_Stone1056);
-			type_cross();
-			PopFollow();
-			if (state.failed) return;
-
-			}
-
-		}
-		finally
-		{
-			TraceOut("synpred2_Stone_fragment", 49);
-			LeaveRule("synpred2_Stone_fragment", 49);
-			LeaveRule_synpred2_Stone_fragment();
-		}
-	}
-	// $ANTLR end synpred2_Stone
-
-	partial void EnterRule_synpred3_Stone_fragment();
-	partial void LeaveRule_synpred3_Stone_fragment();
-
-	// $ANTLR start synpred3_Stone
-	public void synpred3_Stone_fragment()
-	{
-		EnterRule_synpred3_Stone_fragment();
-		EnterRule("synpred3_Stone_fragment", 50);
-		TraceIn("synpred3_Stone_fragment", 50);
-		try
-		{
-			// Stone.g:228:4: ( type_atom ( '*' type_atom )+ )
-			DebugEnterAlt(1);
-			// Stone.g:228:4: type_atom ( '*' type_atom )+
-			{
-			DebugLocation(228, 4);
-			PushFollow(Follow._type_atom_in_synpred3_Stone1098);
-			type_atom();
-			PopFollow();
-			if (state.failed) return;
-			DebugLocation(228, 14);
-			// Stone.g:228:14: ( '*' type_atom )+
+			DebugLocation(204, 14);
+			// Stone.g:204:14: ( ',' match_var )+
 			int cnt63=0;
 			try { DebugEnterSubRule(63);
 			while (true)
@@ -8922,7 +9185,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				try { DebugEnterDecision(63, false);
 				int LA63_0 = input.LA(1);
 
-				if ((LA63_0==OP_MUL))
+				if ((LA63_0==64))
 				{
 					alt63 = 1;
 				}
@@ -8933,13 +9196,13 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Stone.g:228:15: '*' type_atom
+					// Stone.g:204:15: ',' match_var
 					{
-					DebugLocation(228, 15);
-					Match(input,OP_MUL,Follow._OP_MUL_in_synpred3_Stone1101); if (state.failed) return;
-					DebugLocation(228, 19);
-					PushFollow(Follow._type_atom_in_synpred3_Stone1103);
-					type_atom();
+					DebugLocation(204, 15);
+					Match(input,64,Follow._64_in_synpred1_Stone976); if (state.failed) return;
+					DebugLocation(204, 19);
+					PushFollow(Follow._match_var_in_synpred1_Stone978);
+					match_var();
 					PopFollow();
 					if (state.failed) return;
 
@@ -8968,35 +9231,75 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("synpred3_Stone_fragment", 50);
-			LeaveRule("synpred3_Stone_fragment", 50);
-			LeaveRule_synpred3_Stone_fragment();
+			TraceOut("synpred1_Stone_fragment", 49);
+			LeaveRule("synpred1_Stone_fragment", 49);
+			LeaveRule_synpred1_Stone_fragment();
 		}
 	}
-	// $ANTLR end synpred3_Stone
+	// $ANTLR end synpred1_Stone
 
-	partial void EnterRule_synpred4_Stone_fragment();
-	partial void LeaveRule_synpred4_Stone_fragment();
+	partial void EnterRule_synpred2_Stone_fragment();
+	partial void LeaveRule_synpred2_Stone_fragment();
 
-	// $ANTLR start synpred4_Stone
-	public void synpred4_Stone_fragment()
+	// $ANTLR start synpred2_Stone
+	public void synpred2_Stone_fragment()
 	{
-		EnterRule_synpred4_Stone_fragment();
-		EnterRule("synpred4_Stone_fragment", 51);
-		TraceIn("synpred4_Stone_fragment", 51);
+		EnterRule_synpred2_Stone_fragment();
+		EnterRule("synpred2_Stone_fragment", 50);
+		TraceIn("synpred2_Stone_fragment", 50);
 		try
 		{
-			// Stone.g:314:4: ( add_expr ( message_item )+ )
+			// Stone.g:224:4: ( type_cross '->' type_cross )
 			DebugEnterAlt(1);
-			// Stone.g:314:4: add_expr ( message_item )+
+			// Stone.g:224:4: type_cross '->' type_cross
 			{
-			DebugLocation(314, 4);
-			PushFollow(Follow._add_expr_in_synpred4_Stone1664);
-			add_expr();
+			DebugLocation(224, 4);
+			PushFollow(Follow._type_cross_in_synpred2_Stone1082);
+			type_cross();
 			PopFollow();
 			if (state.failed) return;
-			DebugLocation(314, 13);
-			// Stone.g:314:13: ( message_item )+
+			DebugLocation(224, 15);
+			Match(input,65,Follow._65_in_synpred2_Stone1084); if (state.failed) return;
+			DebugLocation(224, 20);
+			PushFollow(Follow._type_cross_in_synpred2_Stone1086);
+			type_cross();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred2_Stone_fragment", 50);
+			LeaveRule("synpred2_Stone_fragment", 50);
+			LeaveRule_synpred2_Stone_fragment();
+		}
+	}
+	// $ANTLR end synpred2_Stone
+
+	partial void EnterRule_synpred3_Stone_fragment();
+	partial void LeaveRule_synpred3_Stone_fragment();
+
+	// $ANTLR start synpred3_Stone
+	public void synpred3_Stone_fragment()
+	{
+		EnterRule_synpred3_Stone_fragment();
+		EnterRule("synpred3_Stone_fragment", 51);
+		TraceIn("synpred3_Stone_fragment", 51);
+		try
+		{
+			// Stone.g:233:4: ( type_atom ( '*' type_atom )+ )
+			DebugEnterAlt(1);
+			// Stone.g:233:4: type_atom ( '*' type_atom )+
+			{
+			DebugLocation(233, 4);
+			PushFollow(Follow._type_atom_in_synpred3_Stone1128);
+			type_atom();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(233, 14);
+			// Stone.g:233:14: ( '*' type_atom )+
 			int cnt64=0;
 			try { DebugEnterSubRule(64);
 			while (true)
@@ -9005,7 +9308,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				try { DebugEnterDecision(64, false);
 				int LA64_0 = input.LA(1);
 
-				if ((LA64_0==IDENT))
+				if ((LA64_0==OP_MUL))
 				{
 					alt64 = 1;
 				}
@@ -9016,11 +9319,13 @@ public partial class StoneParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Stone.g:314:13: message_item
+					// Stone.g:233:15: '*' type_atom
 					{
-					DebugLocation(314, 13);
-					PushFollow(Follow._message_item_in_synpred4_Stone1666);
-					message_item();
+					DebugLocation(233, 15);
+					Match(input,OP_MUL,Follow._OP_MUL_in_synpred3_Stone1131); if (state.failed) return;
+					DebugLocation(233, 19);
+					PushFollow(Follow._type_atom_in_synpred3_Stone1133);
+					type_atom();
 					PopFollow();
 					if (state.failed) return;
 
@@ -9049,8 +9354,89 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("synpred4_Stone_fragment", 51);
-			LeaveRule("synpred4_Stone_fragment", 51);
+			TraceOut("synpred3_Stone_fragment", 51);
+			LeaveRule("synpred3_Stone_fragment", 51);
+			LeaveRule_synpred3_Stone_fragment();
+		}
+	}
+	// $ANTLR end synpred3_Stone
+
+	partial void EnterRule_synpred4_Stone_fragment();
+	partial void LeaveRule_synpred4_Stone_fragment();
+
+	// $ANTLR start synpred4_Stone
+	public void synpred4_Stone_fragment()
+	{
+		EnterRule_synpred4_Stone_fragment();
+		EnterRule("synpred4_Stone_fragment", 52);
+		TraceIn("synpred4_Stone_fragment", 52);
+		try
+		{
+			// Stone.g:325:4: ( add_expr ( message_item )+ )
+			DebugEnterAlt(1);
+			// Stone.g:325:4: add_expr ( message_item )+
+			{
+			DebugLocation(325, 4);
+			PushFollow(Follow._add_expr_in_synpred4_Stone1741);
+			add_expr();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(325, 13);
+			// Stone.g:325:13: ( message_item )+
+			int cnt65=0;
+			try { DebugEnterSubRule(65);
+			while (true)
+			{
+				int alt65=2;
+				try { DebugEnterDecision(65, false);
+				int LA65_0 = input.LA(1);
+
+				if ((LA65_0==IDENT))
+				{
+					alt65 = 1;
+				}
+
+
+				} finally { DebugExitDecision(65); }
+				switch (alt65)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// Stone.g:325:13: message_item
+					{
+					DebugLocation(325, 13);
+					PushFollow(Follow._message_item_in_synpred4_Stone1743);
+					message_item();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					if (cnt65 >= 1)
+						goto loop65;
+
+					if (state.backtracking>0) {state.failed=true; return;}
+					EarlyExitException eee65 = new EarlyExitException( 65, input );
+					DebugRecognitionException(eee65);
+					throw eee65;
+				}
+				cnt65++;
+			}
+			loop65:
+				;
+
+			} finally { DebugExitSubRule(65); }
+
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred4_Stone_fragment", 52);
+			LeaveRule("synpred4_Stone_fragment", 52);
 			LeaveRule_synpred4_Stone_fragment();
 		}
 	}
@@ -9108,17 +9494,17 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		private const string DFA1_eofS =
 			"\x2\x2\x2\xFFFF";
 		private const string DFA1_minS =
-			"\x2\x20\x2\xFFFF";
+			"\x2\x21\x2\xFFFF";
 		private const string DFA1_maxS =
-			"\x2\x4B\x2\xFFFF";
+			"\x2\x4E\x2\xFFFF";
 		private const string DFA1_acceptS =
 			"\x2\xFFFF\x1\x2\x1\x1";
 		private const string DFA1_specialS =
 			"\x4\xFFFF}>";
 		private static readonly string[] DFA1_transitionS =
 			{
-				"\x1\x1\x2A\xFFFF\x1\x3",
-				"\x1\x1\x2A\xFFFF\x1\x3",
+				"\x1\x1\x2C\xFFFF\x1\x3",
+				"\x1\x1\x2C\xFFFF\x1\x3",
 				"",
 				""
 			};
@@ -9154,7 +9540,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			this.transition = DFA1_transition;
 		}
 
-		public override string Description { get { return "()+ loopback of 110:4: ( module_def )+"; } }
+		public override string Description { get { return "()+ loopback of 114:4: ( module_def )+"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{
@@ -9171,16 +9557,16 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		private const string DFA5_minS =
 			"\x2\x6\x2\xFFFF";
 		private const string DFA5_maxS =
-			"\x2\x4D\x2\xFFFF";
+			"\x2\x50\x2\xFFFF";
 		private const string DFA5_acceptS =
 			"\x2\xFFFF\x1\x2\x1\x1";
 		private const string DFA5_specialS =
 			"\x4\xFFFF}>";
 		private static readonly string[] DFA5_transitionS =
 			{
-				"\x1\x2\xE\xFFFF\x1\x3\xA\xFFFF\x1\x1\x25\xFFFF\x2\x3\x3\xFFFF\x1\x3"+
+				"\x1\x2\xE\xFFFF\x1\x3\xB\xFFFF\x1\x1\x27\xFFFF\x2\x3\x3\xFFFF\x1\x3"+
 				"\x1\xFFFF\x1\x3",
-				"\x1\x2\xE\xFFFF\x1\x3\xA\xFFFF\x1\x1\x25\xFFFF\x2\x3\x3\xFFFF\x1\x3"+
+				"\x1\x2\xE\xFFFF\x1\x3\xB\xFFFF\x1\x1\x27\xFFFF\x2\x3\x3\xFFFF\x1\x3"+
 				"\x1\xFFFF\x1\x3",
 				"",
 				""
@@ -9217,7 +9603,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			this.transition = DFA5_transition;
 		}
 
-		public override string Description { get { return "()+ loopback of 118:4: ( block )+"; } }
+		public override string Description { get { return "()+ loopback of 122:4: ( block )+"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{
@@ -9234,16 +9620,16 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		private const string DFA8_minS =
 			"\x2\x15\x5\xFFFF";
 		private const string DFA8_maxS =
-			"\x2\x4D\x5\xFFFF";
+			"\x2\x50\x5\xFFFF";
 		private const string DFA8_acceptS =
 			"\x2\xFFFF\x1\x1\x1\x2\x1\x3\x1\x4\x1\x5";
 		private const string DFA8_specialS =
 			"\x7\xFFFF}>";
 		private static readonly string[] DFA8_transitionS =
 			{
-				"\x1\x5\xA\xFFFF\x1\x1\x25\xFFFF\x1\x3\x1\x2\x3\xFFFF\x1\x6\x1\xFFFF"+
+				"\x1\x5\xB\xFFFF\x1\x1\x27\xFFFF\x1\x3\x1\x2\x3\xFFFF\x1\x6\x1\xFFFF"+
 				"\x1\x4",
-				"\x1\x5\xA\xFFFF\x1\x1\x25\xFFFF\x1\x3\x1\x2\x3\xFFFF\x1\x6\x1\xFFFF"+
+				"\x1\x5\xB\xFFFF\x1\x1\x27\xFFFF\x1\x3\x1\x2\x3\xFFFF\x1\x6\x1\xFFFF"+
 				"\x1\x4",
 				"",
 				"",
@@ -9283,7 +9669,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			this.transition = DFA8_transition;
 		}
 
-		public override string Description { get { return "122:1: block : ( data_def | class_def | proxy_def | func_def | module_def );"; } }
+		public override string Description { get { return "126:1: block : ( data_def | class_def | proxy_def | func_def | module_def );"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{
@@ -9300,15 +9686,15 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		private const string DFA11_minS =
 			"\x2\x6\x2\xFFFF";
 		private const string DFA11_maxS =
-			"\x2\x20\x2\xFFFF";
+			"\x2\x21\x2\xFFFF";
 		private const string DFA11_acceptS =
 			"\x2\xFFFF\x1\x2\x1\x1";
 		private const string DFA11_specialS =
 			"\x4\xFFFF}>";
 		private static readonly string[] DFA11_transitionS =
 			{
-				"\x1\x2\xE\xFFFF\x1\x3\xA\xFFFF\x1\x1",
-				"\x1\x2\xE\xFFFF\x1\x3\xA\xFFFF\x1\x1",
+				"\x1\x2\xE\xFFFF\x1\x3\xB\xFFFF\x1\x1",
+				"\x1\x2\xE\xFFFF\x1\x3\xB\xFFFF\x1\x1",
 				"",
 				""
 			};
@@ -9344,7 +9730,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			this.transition = DFA11_transition;
 		}
 
-		public override string Description { get { return "()+ loopback of 136:4: ( data_def_item )+"; } }
+		public override string Description { get { return "()+ loopback of 140:4: ( data_def_item )+"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{
@@ -9361,15 +9747,15 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		private const string DFA17_minS =
 			"\x2\x6\x2\xFFFF";
 		private const string DFA17_maxS =
-			"\x2\x20\x2\xFFFF";
+			"\x2\x21\x2\xFFFF";
 		private const string DFA17_acceptS =
 			"\x2\xFFFF\x1\x2\x1\x1";
 		private const string DFA17_specialS =
 			"\x4\xFFFF}>";
 		private static readonly string[] DFA17_transitionS =
 			{
-				"\x1\x2\xE\xFFFF\x1\x3\xA\xFFFF\x1\x1",
-				"\x1\x2\xE\xFFFF\x1\x3\xA\xFFFF\x1\x1",
+				"\x1\x2\xE\xFFFF\x1\x3\xB\xFFFF\x1\x1",
+				"\x1\x2\xE\xFFFF\x1\x3\xB\xFFFF\x1\x1",
 				"",
 				""
 			};
@@ -9405,7 +9791,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			this.transition = DFA17_transition;
 		}
 
-		public override string Description { get { return "()+ loopback of 150:4: ( message_declare )+"; } }
+		public override string Description { get { return "()+ loopback of 154:4: ( message_declare )+"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{
@@ -9422,15 +9808,15 @@ public partial class StoneParser : Antlr.Runtime.Parser
 		private const string DFA22_minS =
 			"\x2\x6\x2\xFFFF";
 		private const string DFA22_maxS =
-			"\x2\x20\x2\xFFFF";
+			"\x2\x21\x2\xFFFF";
 		private const string DFA22_acceptS =
 			"\x2\xFFFF\x1\x2\x1\x1";
 		private const string DFA22_specialS =
 			"\x4\xFFFF}>";
 		private static readonly string[] DFA22_transitionS =
 			{
-				"\x1\x2\xE\xFFFF\x1\x3\xA\xFFFF\x1\x1",
-				"\x1\x2\xE\xFFFF\x1\x3\xA\xFFFF\x1\x1",
+				"\x1\x2\xE\xFFFF\x1\x3\xB\xFFFF\x1\x1",
+				"\x1\x2\xE\xFFFF\x1\x3\xB\xFFFF\x1\x1",
 				"",
 				""
 			};
@@ -9466,7 +9852,7 @@ public partial class StoneParser : Antlr.Runtime.Parser
 			this.transition = DFA22_transition;
 		}
 
-		public override string Description { get { return "()+ loopback of 160:4: ( message_def )+"; } }
+		public override string Description { get { return "()+ loopback of 164:4: ( message_def )+"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{
@@ -9480,242 +9866,252 @@ public partial class StoneParser : Antlr.Runtime.Parser
 	#region Follow sets
 	private static class Follow
 	{
-		public static readonly BitSet _module_def_in_parse360 = new BitSet(new ulong[]{0x100000000UL,0x800UL});
-		public static readonly BitSet _NEWLINE_in_parse363 = new BitSet(new ulong[]{0x100000000UL});
-		public static readonly BitSet _EOF_in_parse366 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _NEWLINE_in_module_def386 = new BitSet(new ulong[]{0x100000000UL,0x800UL});
-		public static readonly BitSet _75_in_module_def389 = new BitSet(new ulong[]{0x200000UL});
-		public static readonly BitSet _IDENT_in_module_def391 = new BitSet(new ulong[]{0x100000000UL});
-		public static readonly BitSet _NEWLINE_in_module_def393 = new BitSet(new ulong[]{0x400000UL});
-		public static readonly BitSet _INDENT_in_module_def396 = new BitSet(new ulong[]{0x100600000UL,0x28C0UL});
-		public static readonly BitSet _module_inner_in_module_def398 = new BitSet(new ulong[]{0x100000040UL});
-		public static readonly BitSet _NEWLINE_in_module_def400 = new BitSet(new ulong[]{0x100000040UL});
-		public static readonly BitSet _DEDENT_in_module_def403 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _block_in_module_inner425 = new BitSet(new ulong[]{0x100200002UL,0x28C0UL});
-		public static readonly BitSet _INDENT_in_module_inner436 = new BitSet(new ulong[]{0x100600000UL,0x28C0UL});
-		public static readonly BitSet _module_inner_in_module_inner438 = new BitSet(new ulong[]{0x100000040UL});
-		public static readonly BitSet _NEWLINE_in_module_inner440 = new BitSet(new ulong[]{0x100000040UL});
-		public static readonly BitSet _DEDENT_in_module_inner443 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _data_def_in_block458 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _class_def_in_block463 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _proxy_def_in_block468 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _func_def_in_block473 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _module_def_in_block478 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _NEWLINE_in_data_def490 = new BitSet(new ulong[]{0x100000000UL,0x80UL});
-		public static readonly BitSet _71_in_data_def493 = new BitSet(new ulong[]{0x200000UL});
-		public static readonly BitSet _IDENT_in_data_def495 = new BitSet(new ulong[]{0x100000000UL});
-		public static readonly BitSet _NEWLINE_in_data_def497 = new BitSet(new ulong[]{0x400000UL});
-		public static readonly BitSet _INDENT_in_data_def500 = new BitSet(new ulong[]{0x100600000UL});
-		public static readonly BitSet _data_def_inner_in_data_def502 = new BitSet(new ulong[]{0x100000040UL});
-		public static readonly BitSet _NEWLINE_in_data_def504 = new BitSet(new ulong[]{0x100000040UL});
-		public static readonly BitSet _DEDENT_in_data_def507 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _data_def_item_in_data_def_inner529 = new BitSet(new ulong[]{0x100200002UL});
-		public static readonly BitSet _INDENT_in_data_def_inner544 = new BitSet(new ulong[]{0x100600000UL});
-		public static readonly BitSet _data_def_inner_in_data_def_inner546 = new BitSet(new ulong[]{0x100000040UL});
-		public static readonly BitSet _NEWLINE_in_data_def_inner548 = new BitSet(new ulong[]{0x100000040UL});
-		public static readonly BitSet _DEDENT_in_data_def_inner551 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _NEWLINE_in_data_def_item566 = new BitSet(new ulong[]{0x100200000UL});
-		public static readonly BitSet _IDENT_in_data_def_item569 = new BitSet(new ulong[]{0x0UL,0x1UL});
-		public static readonly BitSet _64_in_data_def_item571 = new BitSet(new ulong[]{0x800000000200000UL});
-		public static readonly BitSet _type_in_data_def_item573 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _NEWLINE_in_class_def595 = new BitSet(new ulong[]{0x100000000UL,0x40UL});
-		public static readonly BitSet _70_in_class_def598 = new BitSet(new ulong[]{0x200000UL});
-		public static readonly BitSet _IDENT_in_class_def600 = new BitSet(new ulong[]{0x100000000UL});
-		public static readonly BitSet _NEWLINE_in_class_def602 = new BitSet(new ulong[]{0x400000UL});
-		public static readonly BitSet _INDENT_in_class_def605 = new BitSet(new ulong[]{0x100600000UL});
-		public static readonly BitSet _class_def_inner_in_class_def607 = new BitSet(new ulong[]{0x100000040UL});
-		public static readonly BitSet _NEWLINE_in_class_def609 = new BitSet(new ulong[]{0x100000040UL});
-		public static readonly BitSet _DEDENT_in_class_def612 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _message_declare_in_class_def_inner634 = new BitSet(new ulong[]{0x100200002UL});
-		public static readonly BitSet _INDENT_in_class_def_inner649 = new BitSet(new ulong[]{0x100600000UL});
-		public static readonly BitSet _class_def_inner_in_class_def_inner651 = new BitSet(new ulong[]{0x100000040UL});
-		public static readonly BitSet _NEWLINE_in_class_def_inner653 = new BitSet(new ulong[]{0x100000040UL});
-		public static readonly BitSet _DEDENT_in_class_def_inner656 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _NEWLINE_in_proxy_def672 = new BitSet(new ulong[]{0x100000000UL,0x2000UL});
-		public static readonly BitSet _77_in_proxy_def675 = new BitSet(new ulong[]{0x200000UL});
-		public static readonly BitSet _IDENT_in_proxy_def677 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _63_in_proxy_def679 = new BitSet(new ulong[]{0x200000UL});
-		public static readonly BitSet _IDENT_in_proxy_def681 = new BitSet(new ulong[]{0x100000000UL});
-		public static readonly BitSet _NEWLINE_in_proxy_def683 = new BitSet(new ulong[]{0x400000UL});
-		public static readonly BitSet _INDENT_in_proxy_def686 = new BitSet(new ulong[]{0x100600000UL});
-		public static readonly BitSet _proxy_def_inner_in_proxy_def688 = new BitSet(new ulong[]{0x100000040UL});
-		public static readonly BitSet _NEWLINE_in_proxy_def690 = new BitSet(new ulong[]{0x100000040UL});
-		public static readonly BitSet _DEDENT_in_proxy_def693 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _message_def_in_proxy_def_inner717 = new BitSet(new ulong[]{0x100200002UL});
-		public static readonly BitSet _INDENT_in_proxy_def_inner732 = new BitSet(new ulong[]{0x100600000UL});
-		public static readonly BitSet _proxy_def_inner_in_proxy_def_inner734 = new BitSet(new ulong[]{0x100000040UL});
-		public static readonly BitSet _NEWLINE_in_proxy_def_inner736 = new BitSet(new ulong[]{0x100000040UL});
-		public static readonly BitSet _DEDENT_in_proxy_def_inner739 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _NEWLINE_in_message_declare755 = new BitSet(new ulong[]{0x100200000UL});
-		public static readonly BitSet _IDENT_in_message_declare758 = new BitSet(new ulong[]{0x0UL,0x1UL});
-		public static readonly BitSet _64_in_message_declare760 = new BitSet(new ulong[]{0x800000000200000UL});
-		public static readonly BitSet _type_in_message_declare762 = new BitSet(new ulong[]{0x100000000UL});
-		public static readonly BitSet _NEWLINE_in_message_declare764 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _message_declare_in_message_def786 = new BitSet(new ulong[]{0x100200000UL});
-		public static readonly BitSet _NEWLINE_in_message_def788 = new BitSet(new ulong[]{0x100200000UL});
-		public static readonly BitSet _IDENT_in_message_def791 = new BitSet(new ulong[]{0x800000100200000UL});
-		public static readonly BitSet _message_def_args_in_message_def793 = new BitSet(new ulong[]{0x100000000UL});
-		public static readonly BitSet _NEWLINE_in_message_def795 = new BitSet(new ulong[]{0x600000UL,0x1C300UL});
-		public static readonly BitSet _stmt_block_in_message_def797 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _match_in_message_def_args822 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _NEWLINE_in_func_declare844 = new BitSet(new ulong[]{0x100200000UL});
-		public static readonly BitSet _IDENT_in_func_declare847 = new BitSet(new ulong[]{0x0UL,0x1UL});
-		public static readonly BitSet _64_in_func_declare849 = new BitSet(new ulong[]{0x800000000200000UL});
-		public static readonly BitSet _type_in_func_declare851 = new BitSet(new ulong[]{0x100000000UL});
-		public static readonly BitSet _NEWLINE_in_func_declare853 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _func_declare_in_func_def875 = new BitSet(new ulong[]{0x100200000UL});
-		public static readonly BitSet _NEWLINE_in_func_def877 = new BitSet(new ulong[]{0x100200000UL});
-		public static readonly BitSet _IDENT_in_func_def880 = new BitSet(new ulong[]{0x800000100200000UL});
-		public static readonly BitSet _func_def_args_in_func_def882 = new BitSet(new ulong[]{0x100000000UL});
-		public static readonly BitSet _NEWLINE_in_func_def884 = new BitSet(new ulong[]{0x600000UL,0x1C300UL});
-		public static readonly BitSet _stmt_block_in_func_def886 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _match_in_func_def_args911 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _match_cross_in_match933 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _match_var_in_match_cross960 = new BitSet(new ulong[]{0x2000000000000000UL});
-		public static readonly BitSet _61_in_match_cross963 = new BitSet(new ulong[]{0x800000000200000UL});
-		public static readonly BitSet _match_var_in_match_cross965 = new BitSet(new ulong[]{0x2000000000000002UL});
-		public static readonly BitSet _match_var_in_match_cross981 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _IDENT_in_match_var992 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _59_in_match_var1005 = new BitSet(new ulong[]{0x800000000200000UL});
-		public static readonly BitSet _match_in_match_var1007 = new BitSet(new ulong[]{0x1000000000000000UL});
-		public static readonly BitSet _60_in_match_var1009 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _type_func_in_type1025 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _type_cross_in_type_func1052 = new BitSet(new ulong[]{0x4000000000000000UL});
-		public static readonly BitSet _62_in_type_func1054 = new BitSet(new ulong[]{0x800000000200000UL});
-		public static readonly BitSet _type_cross_in_type_func1056 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _type_cross_in_type_func1071 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _type_atom_in_type_cross1098 = new BitSet(new ulong[]{0x20000000000UL});
-		public static readonly BitSet _OP_MUL_in_type_cross1101 = new BitSet(new ulong[]{0x800000000200000UL});
-		public static readonly BitSet _type_atom_in_type_cross1103 = new BitSet(new ulong[]{0x20000000002UL});
-		public static readonly BitSet _type_atom_in_type_cross1119 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _IDENT_in_type_atom1130 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _59_in_type_atom1143 = new BitSet(new ulong[]{0x800000000200000UL});
-		public static readonly BitSet _type_in_type_atom1145 = new BitSet(new ulong[]{0x1000000000000000UL});
-		public static readonly BitSet _60_in_type_atom1147 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _stmt_in_stmt_block1163 = new BitSet(new ulong[]{0x200002UL,0x1C300UL});
-		public static readonly BitSet _INDENT_in_stmt_block1178 = new BitSet(new ulong[]{0x600000UL,0x1C300UL});
-		public static readonly BitSet _stmt_block_in_stmt_block1180 = new BitSet(new ulong[]{0x100000040UL});
-		public static readonly BitSet _NEWLINE_in_stmt_block1182 = new BitSet(new ulong[]{0x100000040UL});
-		public static readonly BitSet _DEDENT_in_stmt_block1185 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _stmt_return_in_stmt1200 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _stmt_alloc_in_stmt1205 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _stmt_assign_in_stmt1210 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _stmt_call_in_stmt1215 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _stmt_if_in_stmt1220 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _stmt_while_in_stmt1225 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _stmt_for_in_stmt1230 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _78_in_stmt_return1242 = new BitSet(new ulong[]{0x800000200A00080UL,0x1018UL});
-		public static readonly BitSet _expr_in_stmt_return1244 = new BitSet(new ulong[]{0x100000000UL});
-		public static readonly BitSet _NEWLINE_in_stmt_return1246 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _80_in_stmt_alloc1266 = new BitSet(new ulong[]{0x200000UL});
-		public static readonly BitSet _IDENT_in_stmt_alloc1268 = new BitSet(new ulong[]{0x0UL,0x10000UL});
-		public static readonly BitSet _80_in_stmt_alloc1270 = new BitSet(new ulong[]{0x0UL,0x2UL});
-		public static readonly BitSet _65_in_stmt_alloc1272 = new BitSet(new ulong[]{0x800000200A00080UL,0x1018UL});
-		public static readonly BitSet _expr_in_stmt_alloc1274 = new BitSet(new ulong[]{0x100000000UL});
-		public static readonly BitSet _NEWLINE_in_stmt_alloc1276 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _IDENT_in_stmt_assign1297 = new BitSet(new ulong[]{0x0UL,0x2UL});
-		public static readonly BitSet _65_in_stmt_assign1299 = new BitSet(new ulong[]{0x800000200A00080UL,0x1018UL});
-		public static readonly BitSet _expr_in_stmt_assign1301 = new BitSet(new ulong[]{0x100000000UL});
-		public static readonly BitSet _NEWLINE_in_stmt_assign1303 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _IDENT_in_stmt_call1324 = new BitSet(new ulong[]{0x800000000000000UL});
-		public static readonly BitSet _59_in_stmt_call1326 = new BitSet(new ulong[]{0x1800000200A00080UL,0x1018UL});
-		public static readonly BitSet _args_list_in_stmt_call1328 = new BitSet(new ulong[]{0x1000000000000000UL});
-		public static readonly BitSet _60_in_stmt_call1331 = new BitSet(new ulong[]{0x100000000UL});
-		public static readonly BitSet _NEWLINE_in_stmt_call1333 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _73_in_stmt_if1355 = new BitSet(new ulong[]{0x800000200A00080UL,0x1018UL});
-		public static readonly BitSet _expr_in_stmt_if1357 = new BitSet(new ulong[]{0x100000000UL});
-		public static readonly BitSet _NEWLINE_in_stmt_if1359 = new BitSet(new ulong[]{0x400000UL});
-		public static readonly BitSet _INDENT_in_stmt_if1362 = new BitSet(new ulong[]{0x600000UL,0x1C300UL});
-		public static readonly BitSet _stmt_block_in_stmt_if1364 = new BitSet(new ulong[]{0x100000040UL});
-		public static readonly BitSet _NEWLINE_in_stmt_if1366 = new BitSet(new ulong[]{0x100000040UL});
-		public static readonly BitSet _DEDENT_in_stmt_if1369 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _79_in_stmt_while1391 = new BitSet(new ulong[]{0x800000200A00080UL,0x1018UL});
-		public static readonly BitSet _expr_in_stmt_while1393 = new BitSet(new ulong[]{0x100000000UL});
-		public static readonly BitSet _NEWLINE_in_stmt_while1395 = new BitSet(new ulong[]{0x400000UL});
-		public static readonly BitSet _INDENT_in_stmt_while1398 = new BitSet(new ulong[]{0x600000UL,0x1C300UL});
-		public static readonly BitSet _stmt_block_in_stmt_while1400 = new BitSet(new ulong[]{0x100000040UL});
-		public static readonly BitSet _NEWLINE_in_stmt_while1402 = new BitSet(new ulong[]{0x100000040UL});
-		public static readonly BitSet _DEDENT_in_stmt_while1405 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _72_in_stmt_for1427 = new BitSet(new ulong[]{0x0UL,0x10000UL});
-		public static readonly BitSet _80_in_stmt_for1429 = new BitSet(new ulong[]{0x200000UL});
-		public static readonly BitSet _IDENT_in_stmt_for1431 = new BitSet(new ulong[]{0x0UL,0x10000UL});
-		public static readonly BitSet _80_in_stmt_for1433 = new BitSet(new ulong[]{0x0UL,0x400UL});
-		public static readonly BitSet _74_in_stmt_for1435 = new BitSet(new ulong[]{0x800000200A00080UL,0x1018UL});
-		public static readonly BitSet _expr_in_stmt_for1437 = new BitSet(new ulong[]{0x100000000UL});
-		public static readonly BitSet _NEWLINE_in_stmt_for1439 = new BitSet(new ulong[]{0x400000UL});
-		public static readonly BitSet _INDENT_in_stmt_for1442 = new BitSet(new ulong[]{0x600000UL,0x1C300UL});
-		public static readonly BitSet _stmt_block_in_stmt_for1444 = new BitSet(new ulong[]{0x100000040UL});
-		public static readonly BitSet _NEWLINE_in_stmt_for1446 = new BitSet(new ulong[]{0x100000040UL});
-		public static readonly BitSet _DEDENT_in_stmt_for1449 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _logic_expr_in_expr1474 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _lambda_expr_in_expr1479 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _array_expr_in_expr1484 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _68_in_lambda_expr1495 = new BitSet(new ulong[]{0x800000000200000UL,0x4UL});
-		public static readonly BitSet _lambda_args_in_lambda_expr1497 = new BitSet(new ulong[]{0x0UL,0x4UL});
-		public static readonly BitSet _66_in_lambda_expr1499 = new BitSet(new ulong[]{0x800000000200000UL});
-		public static readonly BitSet _type_in_lambda_expr1501 = new BitSet(new ulong[]{0x100000000UL});
-		public static readonly BitSet _NEWLINE_in_lambda_expr1503 = new BitSet(new ulong[]{0x400000UL});
-		public static readonly BitSet _INDENT_in_lambda_expr1506 = new BitSet(new ulong[]{0x600000UL,0x1C300UL});
-		public static readonly BitSet _stmt_block_in_lambda_expr1508 = new BitSet(new ulong[]{0x100000040UL});
-		public static readonly BitSet _NEWLINE_in_lambda_expr1510 = new BitSet(new ulong[]{0x100000040UL});
-		public static readonly BitSet _DEDENT_in_lambda_expr1513 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _match_in_lambda_args1537 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _67_in_array_expr1558 = new BitSet(new ulong[]{0x800000200A00080UL,0x1038UL});
-		public static readonly BitSet _array_list_in_array_expr1560 = new BitSet(new ulong[]{0x0UL,0x20UL});
-		public static readonly BitSet _69_in_array_expr1562 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _expr_in_array_list1582 = new BitSet(new ulong[]{0x2000000000000002UL});
-		public static readonly BitSet _61_in_array_list1585 = new BitSet(new ulong[]{0x800000200A00080UL,0x1018UL});
-		public static readonly BitSet _expr_in_array_list1587 = new BitSet(new ulong[]{0x2000000000000002UL});
-		public static readonly BitSet _message_expr_in_logic_expr1607 = new BitSet(new ulong[]{0x4F800000002UL});
-		public static readonly BitSet _set_in_logic_expr1610 = new BitSet(new ulong[]{0x800000200A00080UL,0x1000UL});
-		public static readonly BitSet _message_expr_in_logic_expr1635 = new BitSet(new ulong[]{0x4F800000002UL});
-		public static readonly BitSet _add_expr_in_message_expr1664 = new BitSet(new ulong[]{0x200000UL});
-		public static readonly BitSet _message_item_in_message_expr1666 = new BitSet(new ulong[]{0x200002UL});
-		public static readonly BitSet _add_expr_in_message_expr1683 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _IDENT_in_message_item1694 = new BitSet(new ulong[]{0x800000000000000UL});
-		public static readonly BitSet _59_in_message_item1696 = new BitSet(new ulong[]{0x1800000200A00080UL,0x1018UL});
-		public static readonly BitSet _args_list_in_message_item1698 = new BitSet(new ulong[]{0x1000000000000000UL});
-		public static readonly BitSet _60_in_message_item1701 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _expr_in_args_list1723 = new BitSet(new ulong[]{0x2000000000000002UL});
-		public static readonly BitSet _61_in_args_list1726 = new BitSet(new ulong[]{0x800000200A00080UL,0x1018UL});
-		public static readonly BitSet _expr_in_args_list1728 = new BitSet(new ulong[]{0x2000000000000002UL});
-		public static readonly BitSet _mul_expr_in_add_expr1746 = new BitSet(new ulong[]{0x90000000002UL});
-		public static readonly BitSet _set_in_add_expr1749 = new BitSet(new ulong[]{0x800000200A00080UL,0x1000UL});
-		public static readonly BitSet _mul_expr_in_add_expr1758 = new BitSet(new ulong[]{0x90000000002UL});
-		public static readonly BitSet _call_expr_in_mul_expr1771 = new BitSet(new ulong[]{0x20400000002UL});
-		public static readonly BitSet _set_in_mul_expr1774 = new BitSet(new ulong[]{0x800000200A00080UL,0x1000UL});
-		public static readonly BitSet _call_expr_in_mul_expr1783 = new BitSet(new ulong[]{0x20400000002UL});
-		public static readonly BitSet _IDENT_in_call_expr1796 = new BitSet(new ulong[]{0x800000000000000UL});
-		public static readonly BitSet _59_in_call_expr1798 = new BitSet(new ulong[]{0x1800000200A00080UL,0x1018UL});
-		public static readonly BitSet _args_list_in_call_expr1800 = new BitSet(new ulong[]{0x1000000000000000UL});
-		public static readonly BitSet _60_in_call_expr1803 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _access_expr_in_call_expr1819 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _atom_expr_in_access_expr1830 = new BitSet(new ulong[]{0x1002UL});
-		public static readonly BitSet _Expr_Access_in_access_expr1833 = new BitSet(new ulong[]{0x200000UL});
-		public static readonly BitSet _IDENT_in_access_expr1836 = new BitSet(new ulong[]{0x1002UL});
-		public static readonly BitSet _IDENT_in_atom_expr1849 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _INT_in_atom_expr1854 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _DOUBLE_in_atom_expr1859 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _NORMAL_STRING_in_atom_expr1864 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _76_in_atom_expr1869 = new BitSet(new ulong[]{0x200000UL});
-		public static readonly BitSet _IDENT_in_atom_expr1871 = new BitSet(new ulong[]{0x800000000000000UL});
-		public static readonly BitSet _59_in_atom_expr1873 = new BitSet(new ulong[]{0x800000200A00080UL,0x1018UL});
-		public static readonly BitSet _args_list_in_atom_expr1875 = new BitSet(new ulong[]{0x1000000000000000UL});
-		public static readonly BitSet _60_in_atom_expr1877 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _59_in_atom_expr1892 = new BitSet(new ulong[]{0x800000200A00080UL,0x1018UL});
-		public static readonly BitSet _expr_in_atom_expr1894 = new BitSet(new ulong[]{0x1000000000000000UL});
-		public static readonly BitSet _60_in_atom_expr1896 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _match_var_in_synpred1_Stone960 = new BitSet(new ulong[]{0x2000000000000000UL});
-		public static readonly BitSet _61_in_synpred1_Stone963 = new BitSet(new ulong[]{0x800000000200000UL});
-		public static readonly BitSet _match_var_in_synpred1_Stone965 = new BitSet(new ulong[]{0x2000000000000002UL});
-		public static readonly BitSet _type_cross_in_synpred2_Stone1052 = new BitSet(new ulong[]{0x4000000000000000UL});
-		public static readonly BitSet _62_in_synpred2_Stone1054 = new BitSet(new ulong[]{0x800000000200000UL});
-		public static readonly BitSet _type_cross_in_synpred2_Stone1056 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _type_atom_in_synpred3_Stone1098 = new BitSet(new ulong[]{0x20000000000UL});
-		public static readonly BitSet _OP_MUL_in_synpred3_Stone1101 = new BitSet(new ulong[]{0x800000000200000UL});
-		public static readonly BitSet _type_atom_in_synpred3_Stone1103 = new BitSet(new ulong[]{0x20000000002UL});
-		public static readonly BitSet _add_expr_in_synpred4_Stone1664 = new BitSet(new ulong[]{0x200000UL});
-		public static readonly BitSet _message_item_in_synpred4_Stone1666 = new BitSet(new ulong[]{0x200002UL});
+		public static readonly BitSet _module_def_in_parse373 = new BitSet(new ulong[]{0x200000000UL,0x4000UL});
+		public static readonly BitSet _NEWLINE_in_parse376 = new BitSet(new ulong[]{0x200000000UL});
+		public static readonly BitSet _EOF_in_parse379 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _NEWLINE_in_module_def399 = new BitSet(new ulong[]{0x200000000UL,0x4000UL});
+		public static readonly BitSet _78_in_module_def402 = new BitSet(new ulong[]{0x200000UL});
+		public static readonly BitSet _IDENT_in_module_def404 = new BitSet(new ulong[]{0x200000000UL});
+		public static readonly BitSet _NEWLINE_in_module_def406 = new BitSet(new ulong[]{0x400000UL});
+		public static readonly BitSet _INDENT_in_module_def409 = new BitSet(new ulong[]{0x200600000UL,0x14600UL});
+		public static readonly BitSet _module_inner_in_module_def411 = new BitSet(new ulong[]{0x200000040UL});
+		public static readonly BitSet _NEWLINE_in_module_def413 = new BitSet(new ulong[]{0x200000040UL});
+		public static readonly BitSet _DEDENT_in_module_def416 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _block_in_module_inner438 = new BitSet(new ulong[]{0x200200002UL,0x14600UL});
+		public static readonly BitSet _INDENT_in_module_inner449 = new BitSet(new ulong[]{0x200600000UL,0x14600UL});
+		public static readonly BitSet _module_inner_in_module_inner451 = new BitSet(new ulong[]{0x200000040UL});
+		public static readonly BitSet _NEWLINE_in_module_inner453 = new BitSet(new ulong[]{0x200000040UL});
+		public static readonly BitSet _DEDENT_in_module_inner456 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _data_def_in_block471 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _class_def_in_block476 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _proxy_def_in_block481 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _func_def_in_block486 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _module_def_in_block491 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _NEWLINE_in_data_def503 = new BitSet(new ulong[]{0x200000000UL,0x400UL});
+		public static readonly BitSet _74_in_data_def506 = new BitSet(new ulong[]{0x200000UL});
+		public static readonly BitSet _IDENT_in_data_def508 = new BitSet(new ulong[]{0x200000000UL});
+		public static readonly BitSet _NEWLINE_in_data_def510 = new BitSet(new ulong[]{0x400000UL});
+		public static readonly BitSet _INDENT_in_data_def513 = new BitSet(new ulong[]{0x200600000UL});
+		public static readonly BitSet _data_def_inner_in_data_def515 = new BitSet(new ulong[]{0x200000040UL});
+		public static readonly BitSet _NEWLINE_in_data_def517 = new BitSet(new ulong[]{0x200000040UL});
+		public static readonly BitSet _DEDENT_in_data_def520 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _data_def_item_in_data_def_inner542 = new BitSet(new ulong[]{0x200200002UL});
+		public static readonly BitSet _INDENT_in_data_def_inner557 = new BitSet(new ulong[]{0x200600000UL});
+		public static readonly BitSet _data_def_inner_in_data_def_inner559 = new BitSet(new ulong[]{0x200000040UL});
+		public static readonly BitSet _NEWLINE_in_data_def_inner561 = new BitSet(new ulong[]{0x200000040UL});
+		public static readonly BitSet _DEDENT_in_data_def_inner564 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _NEWLINE_in_data_def_item579 = new BitSet(new ulong[]{0x200200000UL});
+		public static readonly BitSet _IDENT_in_data_def_item582 = new BitSet(new ulong[]{0x0UL,0x8UL});
+		public static readonly BitSet _67_in_data_def_item584 = new BitSet(new ulong[]{0x4000000000200000UL,0x40UL});
+		public static readonly BitSet _type_in_data_def_item586 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _NEWLINE_in_class_def608 = new BitSet(new ulong[]{0x200000000UL,0x200UL});
+		public static readonly BitSet _73_in_class_def611 = new BitSet(new ulong[]{0x200000UL});
+		public static readonly BitSet _IDENT_in_class_def613 = new BitSet(new ulong[]{0x200000000UL});
+		public static readonly BitSet _NEWLINE_in_class_def615 = new BitSet(new ulong[]{0x400000UL});
+		public static readonly BitSet _INDENT_in_class_def618 = new BitSet(new ulong[]{0x200600000UL});
+		public static readonly BitSet _class_def_inner_in_class_def620 = new BitSet(new ulong[]{0x200000040UL});
+		public static readonly BitSet _NEWLINE_in_class_def622 = new BitSet(new ulong[]{0x200000040UL});
+		public static readonly BitSet _DEDENT_in_class_def625 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _message_declare_in_class_def_inner647 = new BitSet(new ulong[]{0x200200002UL});
+		public static readonly BitSet _INDENT_in_class_def_inner662 = new BitSet(new ulong[]{0x200600000UL});
+		public static readonly BitSet _class_def_inner_in_class_def_inner664 = new BitSet(new ulong[]{0x200000040UL});
+		public static readonly BitSet _NEWLINE_in_class_def_inner666 = new BitSet(new ulong[]{0x200000040UL});
+		public static readonly BitSet _DEDENT_in_class_def_inner669 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _NEWLINE_in_proxy_def685 = new BitSet(new ulong[]{0x200000000UL,0x10000UL});
+		public static readonly BitSet _80_in_proxy_def688 = new BitSet(new ulong[]{0x200000UL});
+		public static readonly BitSet _IDENT_in_proxy_def690 = new BitSet(new ulong[]{0x0UL,0x4UL});
+		public static readonly BitSet _66_in_proxy_def692 = new BitSet(new ulong[]{0x200000UL});
+		public static readonly BitSet _IDENT_in_proxy_def694 = new BitSet(new ulong[]{0x200000000UL});
+		public static readonly BitSet _NEWLINE_in_proxy_def696 = new BitSet(new ulong[]{0x400000UL});
+		public static readonly BitSet _INDENT_in_proxy_def699 = new BitSet(new ulong[]{0x200600000UL});
+		public static readonly BitSet _proxy_def_inner_in_proxy_def701 = new BitSet(new ulong[]{0x200000040UL});
+		public static readonly BitSet _NEWLINE_in_proxy_def703 = new BitSet(new ulong[]{0x200000040UL});
+		public static readonly BitSet _DEDENT_in_proxy_def706 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _message_def_in_proxy_def_inner730 = new BitSet(new ulong[]{0x200200002UL});
+		public static readonly BitSet _INDENT_in_proxy_def_inner745 = new BitSet(new ulong[]{0x200600000UL});
+		public static readonly BitSet _proxy_def_inner_in_proxy_def_inner747 = new BitSet(new ulong[]{0x200000040UL});
+		public static readonly BitSet _NEWLINE_in_proxy_def_inner749 = new BitSet(new ulong[]{0x200000040UL});
+		public static readonly BitSet _DEDENT_in_proxy_def_inner752 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _NEWLINE_in_message_declare768 = new BitSet(new ulong[]{0x200200000UL});
+		public static readonly BitSet _IDENT_in_message_declare771 = new BitSet(new ulong[]{0x0UL,0x8UL});
+		public static readonly BitSet _67_in_message_declare773 = new BitSet(new ulong[]{0x4000000000200000UL,0x40UL});
+		public static readonly BitSet _type_in_message_declare775 = new BitSet(new ulong[]{0x200000000UL});
+		public static readonly BitSet _NEWLINE_in_message_declare777 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _message_declare_in_message_def799 = new BitSet(new ulong[]{0x200200000UL});
+		public static readonly BitSet _NEWLINE_in_message_def801 = new BitSet(new ulong[]{0x200200000UL});
+		public static readonly BitSet _IDENT_in_message_def804 = new BitSet(new ulong[]{0x4000000200200000UL,0x100000UL});
+		public static readonly BitSet _message_def_args_in_message_def806 = new BitSet(new ulong[]{0x200000000UL});
+		public static readonly BitSet _NEWLINE_in_message_def808 = new BitSet(new ulong[]{0x600000UL,0x1E1800UL});
+		public static readonly BitSet _stmt_block_in_message_def810 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _match_in_message_def_args835 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _NEWLINE_in_func_declare857 = new BitSet(new ulong[]{0x200200000UL});
+		public static readonly BitSet _IDENT_in_func_declare860 = new BitSet(new ulong[]{0x0UL,0x8UL});
+		public static readonly BitSet _67_in_func_declare862 = new BitSet(new ulong[]{0x4000000000200000UL,0x40UL});
+		public static readonly BitSet _type_in_func_declare864 = new BitSet(new ulong[]{0x200000000UL});
+		public static readonly BitSet _NEWLINE_in_func_declare866 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _func_declare_in_func_def888 = new BitSet(new ulong[]{0x200200000UL});
+		public static readonly BitSet _NEWLINE_in_func_def890 = new BitSet(new ulong[]{0x200200000UL});
+		public static readonly BitSet _IDENT_in_func_def893 = new BitSet(new ulong[]{0x4000000200200000UL,0x100000UL});
+		public static readonly BitSet _func_def_args_in_func_def895 = new BitSet(new ulong[]{0x200000000UL});
+		public static readonly BitSet _NEWLINE_in_func_def897 = new BitSet(new ulong[]{0x600000UL,0x1E1800UL});
+		public static readonly BitSet _stmt_block_in_func_def899 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _match_in_func_def_args924 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _match_cross_in_match946 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _match_var_in_match_cross973 = new BitSet(new ulong[]{0x0UL,0x1UL});
+		public static readonly BitSet _64_in_match_cross976 = new BitSet(new ulong[]{0x4000000000200000UL,0x100000UL});
+		public static readonly BitSet _match_var_in_match_cross978 = new BitSet(new ulong[]{0x2UL,0x1UL});
+		public static readonly BitSet _match_var_in_match_cross994 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _IDENT_in_match_var1005 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _84_in_match_var1018 = new BitSet(new ulong[]{0x200000UL});
+		public static readonly BitSet _IDENT_in_match_var1020 = new BitSet(new ulong[]{0x0UL,0x100000UL});
+		public static readonly BitSet _84_in_match_var1022 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _62_in_match_var1035 = new BitSet(new ulong[]{0x4000000000200000UL,0x100000UL});
+		public static readonly BitSet _match_in_match_var1037 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _63_in_match_var1039 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _type_func_in_type1055 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _type_cross_in_type_func1082 = new BitSet(new ulong[]{0x0UL,0x2UL});
+		public static readonly BitSet _65_in_type_func1084 = new BitSet(new ulong[]{0x4000000000200000UL,0x40UL});
+		public static readonly BitSet _type_cross_in_type_func1086 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _type_cross_in_type_func1101 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _type_atom_in_type_cross1128 = new BitSet(new ulong[]{0x40000000000UL});
+		public static readonly BitSet _OP_MUL_in_type_cross1131 = new BitSet(new ulong[]{0x4000000000200000UL,0x40UL});
+		public static readonly BitSet _type_atom_in_type_cross1133 = new BitSet(new ulong[]{0x40000000002UL});
+		public static readonly BitSet _type_atom_in_type_cross1149 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _IDENT_in_type_atom1160 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _62_in_type_atom1173 = new BitSet(new ulong[]{0x4000000000200000UL,0x40UL});
+		public static readonly BitSet _type_in_type_atom1175 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _63_in_type_atom1177 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _70_in_type_atom1186 = new BitSet(new ulong[]{0x4000000000200000UL,0x40UL});
+		public static readonly BitSet _type_in_type_atom1188 = new BitSet(new ulong[]{0x0UL,0x100UL});
+		public static readonly BitSet _72_in_type_atom1190 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _stmt_in_stmt_block1210 = new BitSet(new ulong[]{0x200002UL,0x1E1800UL});
+		public static readonly BitSet _INDENT_in_stmt_block1225 = new BitSet(new ulong[]{0x600000UL,0x1E1800UL});
+		public static readonly BitSet _stmt_block_in_stmt_block1227 = new BitSet(new ulong[]{0x200000040UL});
+		public static readonly BitSet _NEWLINE_in_stmt_block1229 = new BitSet(new ulong[]{0x200000040UL});
+		public static readonly BitSet _DEDENT_in_stmt_block1232 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _stmt_return_in_stmt1247 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _stmt_alloc_in_stmt1252 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _stmt_assign_in_stmt1257 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _stmt_call_in_stmt1262 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _stmt_if_in_stmt1267 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _stmt_while_in_stmt1272 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _stmt_for_in_stmt1277 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _stmt_yield_in_stmt1282 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _81_in_stmt_return1294 = new BitSet(new ulong[]{0x4000000600A00080UL,0x80C0UL});
+		public static readonly BitSet _expr_in_stmt_return1296 = new BitSet(new ulong[]{0x200000000UL});
+		public static readonly BitSet _NEWLINE_in_stmt_return1299 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _83_in_stmt_yield1319 = new BitSet(new ulong[]{0x4000000400A00080UL,0x80C0UL});
+		public static readonly BitSet _expr_in_stmt_yield1321 = new BitSet(new ulong[]{0x200000000UL});
+		public static readonly BitSet _NEWLINE_in_stmt_yield1323 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _84_in_stmt_alloc1343 = new BitSet(new ulong[]{0x200000UL});
+		public static readonly BitSet _IDENT_in_stmt_alloc1345 = new BitSet(new ulong[]{0x0UL,0x100000UL});
+		public static readonly BitSet _84_in_stmt_alloc1347 = new BitSet(new ulong[]{0x0UL,0x10UL});
+		public static readonly BitSet _68_in_stmt_alloc1349 = new BitSet(new ulong[]{0x4000000400A00080UL,0x80C0UL});
+		public static readonly BitSet _expr_in_stmt_alloc1351 = new BitSet(new ulong[]{0x200000000UL});
+		public static readonly BitSet _NEWLINE_in_stmt_alloc1353 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _IDENT_in_stmt_assign1374 = new BitSet(new ulong[]{0x0UL,0x10UL});
+		public static readonly BitSet _68_in_stmt_assign1376 = new BitSet(new ulong[]{0x4000000400A00080UL,0x80C0UL});
+		public static readonly BitSet _expr_in_stmt_assign1378 = new BitSet(new ulong[]{0x200000000UL});
+		public static readonly BitSet _NEWLINE_in_stmt_assign1380 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _IDENT_in_stmt_call1401 = new BitSet(new ulong[]{0x4000000000000000UL});
+		public static readonly BitSet _62_in_stmt_call1403 = new BitSet(new ulong[]{0xC000000400A00080UL,0x80C0UL});
+		public static readonly BitSet _args_list_in_stmt_call1405 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _63_in_stmt_call1408 = new BitSet(new ulong[]{0x200000000UL});
+		public static readonly BitSet _NEWLINE_in_stmt_call1410 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _76_in_stmt_if1432 = new BitSet(new ulong[]{0x4000000400A00080UL,0x80C0UL});
+		public static readonly BitSet _expr_in_stmt_if1434 = new BitSet(new ulong[]{0x200000000UL});
+		public static readonly BitSet _NEWLINE_in_stmt_if1436 = new BitSet(new ulong[]{0x400000UL});
+		public static readonly BitSet _INDENT_in_stmt_if1439 = new BitSet(new ulong[]{0x600000UL,0x1E1800UL});
+		public static readonly BitSet _stmt_block_in_stmt_if1441 = new BitSet(new ulong[]{0x200000040UL});
+		public static readonly BitSet _NEWLINE_in_stmt_if1443 = new BitSet(new ulong[]{0x200000040UL});
+		public static readonly BitSet _DEDENT_in_stmt_if1446 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _82_in_stmt_while1468 = new BitSet(new ulong[]{0x4000000400A00080UL,0x80C0UL});
+		public static readonly BitSet _expr_in_stmt_while1470 = new BitSet(new ulong[]{0x200000000UL});
+		public static readonly BitSet _NEWLINE_in_stmt_while1472 = new BitSet(new ulong[]{0x400000UL});
+		public static readonly BitSet _INDENT_in_stmt_while1475 = new BitSet(new ulong[]{0x600000UL,0x1E1800UL});
+		public static readonly BitSet _stmt_block_in_stmt_while1477 = new BitSet(new ulong[]{0x200000040UL});
+		public static readonly BitSet _NEWLINE_in_stmt_while1479 = new BitSet(new ulong[]{0x200000040UL});
+		public static readonly BitSet _DEDENT_in_stmt_while1482 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _75_in_stmt_for1504 = new BitSet(new ulong[]{0x0UL,0x100000UL});
+		public static readonly BitSet _84_in_stmt_for1506 = new BitSet(new ulong[]{0x200000UL});
+		public static readonly BitSet _IDENT_in_stmt_for1508 = new BitSet(new ulong[]{0x0UL,0x100000UL});
+		public static readonly BitSet _84_in_stmt_for1510 = new BitSet(new ulong[]{0x0UL,0x2000UL});
+		public static readonly BitSet _77_in_stmt_for1512 = new BitSet(new ulong[]{0x4000000400A00080UL,0x80C0UL});
+		public static readonly BitSet _expr_in_stmt_for1514 = new BitSet(new ulong[]{0x200000000UL});
+		public static readonly BitSet _NEWLINE_in_stmt_for1516 = new BitSet(new ulong[]{0x400000UL});
+		public static readonly BitSet _INDENT_in_stmt_for1519 = new BitSet(new ulong[]{0x600000UL,0x1E1800UL});
+		public static readonly BitSet _stmt_block_in_stmt_for1521 = new BitSet(new ulong[]{0x200000040UL});
+		public static readonly BitSet _NEWLINE_in_stmt_for1523 = new BitSet(new ulong[]{0x200000040UL});
+		public static readonly BitSet _DEDENT_in_stmt_for1526 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _logic_expr_in_expr1551 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _lambda_expr_in_expr1556 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _array_expr_in_expr1561 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _71_in_lambda_expr1572 = new BitSet(new ulong[]{0x4000000000200000UL,0x100020UL});
+		public static readonly BitSet _lambda_args_in_lambda_expr1574 = new BitSet(new ulong[]{0x0UL,0x20UL});
+		public static readonly BitSet _69_in_lambda_expr1576 = new BitSet(new ulong[]{0x4000000000200000UL,0x40UL});
+		public static readonly BitSet _type_in_lambda_expr1578 = new BitSet(new ulong[]{0x200000000UL});
+		public static readonly BitSet _NEWLINE_in_lambda_expr1580 = new BitSet(new ulong[]{0x400000UL});
+		public static readonly BitSet _INDENT_in_lambda_expr1583 = new BitSet(new ulong[]{0x600000UL,0x1E1800UL});
+		public static readonly BitSet _stmt_block_in_lambda_expr1585 = new BitSet(new ulong[]{0x200000040UL});
+		public static readonly BitSet _NEWLINE_in_lambda_expr1587 = new BitSet(new ulong[]{0x200000040UL});
+		public static readonly BitSet _DEDENT_in_lambda_expr1590 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _match_in_lambda_args1614 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _70_in_array_expr1635 = new BitSet(new ulong[]{0x4000000400A00080UL,0x81C0UL});
+		public static readonly BitSet _array_list_in_array_expr1637 = new BitSet(new ulong[]{0x0UL,0x100UL});
+		public static readonly BitSet _72_in_array_expr1639 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _expr_in_array_list1659 = new BitSet(new ulong[]{0x2UL,0x1UL});
+		public static readonly BitSet _64_in_array_list1662 = new BitSet(new ulong[]{0x4000000400A00080UL,0x80C0UL});
+		public static readonly BitSet _expr_in_array_list1664 = new BitSet(new ulong[]{0x2UL,0x1UL});
+		public static readonly BitSet _message_expr_in_logic_expr1684 = new BitSet(new ulong[]{0x9F000000002UL});
+		public static readonly BitSet _set_in_logic_expr1687 = new BitSet(new ulong[]{0x4000000400A00080UL,0x8000UL});
+		public static readonly BitSet _message_expr_in_logic_expr1712 = new BitSet(new ulong[]{0x9F000000002UL});
+		public static readonly BitSet _add_expr_in_message_expr1741 = new BitSet(new ulong[]{0x200000UL});
+		public static readonly BitSet _message_item_in_message_expr1743 = new BitSet(new ulong[]{0x200002UL});
+		public static readonly BitSet _add_expr_in_message_expr1760 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _IDENT_in_message_item1771 = new BitSet(new ulong[]{0x4000000000000000UL});
+		public static readonly BitSet _62_in_message_item1773 = new BitSet(new ulong[]{0xC000000400A00080UL,0x80C0UL});
+		public static readonly BitSet _args_list_in_message_item1775 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _63_in_message_item1778 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _expr_in_args_list1800 = new BitSet(new ulong[]{0x2UL,0x1UL});
+		public static readonly BitSet _64_in_args_list1803 = new BitSet(new ulong[]{0x4000000400A00080UL,0x80C0UL});
+		public static readonly BitSet _expr_in_args_list1805 = new BitSet(new ulong[]{0x2UL,0x1UL});
+		public static readonly BitSet _mul_expr_in_add_expr1823 = new BitSet(new ulong[]{0x120000000002UL});
+		public static readonly BitSet _set_in_add_expr1826 = new BitSet(new ulong[]{0x4000000400A00080UL,0x8000UL});
+		public static readonly BitSet _mul_expr_in_add_expr1835 = new BitSet(new ulong[]{0x120000000002UL});
+		public static readonly BitSet _call_expr_in_mul_expr1848 = new BitSet(new ulong[]{0x40800000002UL});
+		public static readonly BitSet _set_in_mul_expr1851 = new BitSet(new ulong[]{0x4000000400A00080UL,0x8000UL});
+		public static readonly BitSet _call_expr_in_mul_expr1860 = new BitSet(new ulong[]{0x40800000002UL});
+		public static readonly BitSet _IDENT_in_call_expr1873 = new BitSet(new ulong[]{0x4000000000000000UL});
+		public static readonly BitSet _62_in_call_expr1875 = new BitSet(new ulong[]{0xC000000400A00080UL,0x80C0UL});
+		public static readonly BitSet _args_list_in_call_expr1877 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _63_in_call_expr1880 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _access_expr_in_call_expr1896 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _atom_expr_in_access_expr1907 = new BitSet(new ulong[]{0x1002UL});
+		public static readonly BitSet _Expr_Access_in_access_expr1910 = new BitSet(new ulong[]{0x200000UL});
+		public static readonly BitSet _IDENT_in_access_expr1913 = new BitSet(new ulong[]{0x1002UL});
+		public static readonly BitSet _IDENT_in_atom_expr1926 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _INT_in_atom_expr1931 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _DOUBLE_in_atom_expr1936 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _NORMAL_STRING_in_atom_expr1941 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _79_in_atom_expr1946 = new BitSet(new ulong[]{0x200000UL});
+		public static readonly BitSet _IDENT_in_atom_expr1948 = new BitSet(new ulong[]{0x4000000000000000UL});
+		public static readonly BitSet _62_in_atom_expr1950 = new BitSet(new ulong[]{0x4000000400A00080UL,0x80C0UL});
+		public static readonly BitSet _args_list_in_atom_expr1952 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _63_in_atom_expr1954 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _62_in_atom_expr1969 = new BitSet(new ulong[]{0x4000000400A00080UL,0x80C0UL});
+		public static readonly BitSet _expr_in_atom_expr1971 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _63_in_atom_expr1973 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _match_var_in_synpred1_Stone973 = new BitSet(new ulong[]{0x0UL,0x1UL});
+		public static readonly BitSet _64_in_synpred1_Stone976 = new BitSet(new ulong[]{0x4000000000200000UL,0x100000UL});
+		public static readonly BitSet _match_var_in_synpred1_Stone978 = new BitSet(new ulong[]{0x2UL,0x1UL});
+		public static readonly BitSet _type_cross_in_synpred2_Stone1082 = new BitSet(new ulong[]{0x0UL,0x2UL});
+		public static readonly BitSet _65_in_synpred2_Stone1084 = new BitSet(new ulong[]{0x4000000000200000UL,0x40UL});
+		public static readonly BitSet _type_cross_in_synpred2_Stone1086 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _type_atom_in_synpred3_Stone1128 = new BitSet(new ulong[]{0x40000000000UL});
+		public static readonly BitSet _OP_MUL_in_synpred3_Stone1131 = new BitSet(new ulong[]{0x4000000000200000UL,0x40UL});
+		public static readonly BitSet _type_atom_in_synpred3_Stone1133 = new BitSet(new ulong[]{0x40000000002UL});
+		public static readonly BitSet _add_expr_in_synpred4_Stone1741 = new BitSet(new ulong[]{0x200000UL});
+		public static readonly BitSet _message_item_in_synpred4_Stone1743 = new BitSet(new ulong[]{0x200002UL});
 	}
 	#endregion Follow sets
 }

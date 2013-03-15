@@ -31,19 +31,23 @@ tokens {
 	Type_Cross;
 	Type_Func;
 	Type_Atom;
+	Type_Enum;
 
 	Func_Declare;
 	Func_Args;
 	Func_Def;
 
 	Match_Cross;
-	Match_Var;
+	Match_Assign_Var;
+	Match_Alloc_Var;
 
 	Stmt_Block;
 	Stmt_Return;
 	Stmt_Alloc;
 	Stmt_Assign;
 	Stmt_Call;
+
+	Stmt_Yield;
 
 	Stmt_If;
 	Stmt_While;
@@ -202,7 +206,8 @@ options{
 	;
 
 match_var
-	: IDENT -> ^(Match_Var IDENT)
+	: IDENT -> ^(Match_Assign_Var IDENT)
+	| '|' IDENT '|' -> ^(Match_Alloc_Var IDENT)
 	| '(' match ')' -> match
 	;
 
@@ -232,6 +237,7 @@ options{
 type_atom
 	: IDENT -> ^(Type_Atom IDENT)
 	| '(' type ')' -> type
+	| '[' type ']' -> ^(Type_Enum type)
 	;
 
 // stmt
@@ -248,11 +254,16 @@ stmt
 	| stmt_if
 	| stmt_while
 	| stmt_for
+	| stmt_yield
 	;
 
 // special stmt
 stmt_return
-	: 'return' expr NEWLINE -> ^(Stmt_Return expr)
+	: 'return' expr? NEWLINE -> ^(Stmt_Return expr?)
+	;
+
+stmt_yield
+	: 'yield' expr NEWLINE -> ^(Stmt_Yield expr)
 	;
 	
 stmt_alloc

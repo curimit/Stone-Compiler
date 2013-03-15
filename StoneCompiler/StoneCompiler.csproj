@@ -80,6 +80,7 @@
     <Compile Include="Common\Position.cs" />
     <Compile Include="Common\Scope\ClassScope.cs" />
     <Compile Include="Common\Scope\DataScope.cs" />
+    <Compile Include="Common\Scope\FormalScope.cs" />
     <Compile Include="Common\Scope\LocalScope.cs" />
     <Compile Include="Common\Scope\GlobalScope.cs" />
     <Compile Include="Common\Scope\ProxyScope.cs" />

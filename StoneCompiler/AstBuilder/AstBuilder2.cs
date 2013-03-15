@@ -39,6 +39,28 @@ namespace Stone.Compiler
         }
 
         // can issue error
+        public StmtYield visit_stmt_yield(CommonTree T)
+        {
+            if (T is CommonErrorNode)
+            {
+                issue_error(T);
+                return null;
+            }
+
+            StmtYield stmt_yield = new StmtYield();
+            stmt_yield.pos = get_pos(T);
+
+            stmt_yield.expr = visit_expr(T.GetChild(0) as CommonTree);
+            if (stmt_yield.expr == null)
+            {
+                issue_error(T);
+                return null;
+            }
+
+            return stmt_yield;
+        }
+
+        // can issue error
         public StmtIf visit_stmt_if(CommonTree T)
         {
             if (T is CommonErrorNode)

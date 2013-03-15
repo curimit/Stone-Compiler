@@ -22,6 +22,10 @@ namespace Stone.Compiler
         private ScopeStack scope_stack = new ScopeStack();
         private Root root;
 
+        private FormalScope current_formal_scope;
+
+        private Label[] yield_labels;
+
         public override void visit(Root node)
         {
             root = node;
@@ -86,16 +90,13 @@ namespace Stone.Compiler
             foreach (var ref_scope in node.lambda_expr.ref_scopes)
             {
                 dict[ref_scope.scope] = ref_scope.field;
-                Push(ref_scope.scope, ref_scope.field);
             }
-            foreach (var item in node.lambda_expr.scope.var)
-                if (item.Value is ThisVar)
-                {
-                    ThisVar var = item.Value as ThisVar;
-                    var.this_field = dict[var.ref_scope];
-                    Debug.Assert(var.ref_scope.closure_scope.closure_var.ContainsKey(var.info.name));
-                    var.sub_field = var.ref_scope.closure_scope.closure_var[var.info.name];
-                }
+            foreach (var item in node.lambda_expr.heap_vars)
+            {
+                item.this_field = dict[item.ref_scope];
+                Debug.Assert(item.ref_obj_var != null);
+                item.closure_field = item.ref_obj_var.field;
+            }
 
             method_builder = node.method_builder;
             IL = method_builder.GetILGenerator();
@@ -103,7 +104,7 @@ namespace Stone.Compiler
             // load parameters
             load_parameters(node.lambda_expr.type.params_count() + 1);
 
-            enter_formal_scope(node.lambda_expr.scope);
+            enter(node.lambda_expr.scope);
 
             if (node.lambda_expr.args != null)
             {
@@ -125,6 +126,7 @@ namespace Stone.Compiler
         public override void visit(MessageDef node)
         {
             scope_stack.open(node.scope);
+            current_formal_scope = node.scope;
             root.scope.name_space = node.name_space;
 
             method_builder = node.method_builder;
@@ -133,7 +135,7 @@ namespace Stone.Compiler
             // load parameters
             load_parameters(node.declare.type.params_count() + 1);
 
-            enter_formal_scope(node.scope);
+            enter(node.scope);
 
             if (node.args != null)
             {
@@ -153,25 +155,120 @@ namespace Stone.Compiler
 
         public override void visit(FuncDef node)
         {
-            scope_stack.open(node.scope);
-            root.scope.name_space = node.name_space;
-
-            method_builder = node.method_builder;
-            IL = method_builder.GetILGenerator();
-
-            // load parameters
-            load_parameters(node.declare.type.params_count());
-
-            enter_formal_scope(node.scope);
-
-            if (node.args != null)
+            if (!node.scope.has_yield)
             {
-                node.args.accept(this);
+                scope_stack.open(node.scope);
+                current_formal_scope = node.scope;
+                root.scope.name_space = node.name_space;
+
+                method_builder = node.method_builder;
+                IL = method_builder.GetILGenerator();
+
+                // load parameters
+                load_parameters(node.declare.type.params_count());
+
+                enter(node.scope);
+
+                if (node.args != null)
+                {
+                    node.args.accept(this);
+                }
+
+                node.stmt_block.accept(this);
+
+                scope_stack.close();
             }
+            else
+            {
+                scope_stack.open(node.scope);
+                current_formal_scope = node.scope;
+                root.scope.name_space = node.name_space;
 
-            node.stmt_block.accept(this);
+                // generate the bool MoveNext();
+                method_builder = node.scope.yield_scope.move_next;
+                IL = method_builder.GetILGenerator();
 
-            scope_stack.close();
+                int yield_count = node.scope.yield_count;
+                yield_labels = new Label[yield_count + 2];
+                for (int i = 0; i < yield_labels.Count(); i++) yield_labels[i] = IL.DefineLabel();
+
+                IL.Emit(OpCodes.Ldarg_0);
+                IL.Emit(OpCodes.Ldfld, node.scope.yield_scope.state_field);
+                IL.Emit(OpCodes.Switch, yield_labels);
+
+                IL.MarkLabel(yield_labels[0]);
+
+                enter(node.scope);
+
+                if (node.args != null)
+                {
+                    node.args.accept(this);
+                }
+
+                node.stmt_block.accept(this);
+
+                IL.MarkLabel(yield_labels[1]);
+
+                // this.<>yield_state = -1;
+                IL.Emit(OpCodes.Ldarg_0);
+                IL.Emit(OpCodes.Ldc_I4, -1);
+                IL.Emit(OpCodes.Stfld, node.scope.yield_scope.state_field);
+
+                // return false;
+                IL.Emit(OpCodes.Ldc_I4, 0);
+                IL.Emit(OpCodes.Ret);
+
+                scope_stack.close();
+
+                ConstructorBuilder constructor = node.scope.yield_scope.type_builder.DefineDefaultConstructor(MethodAttributes.Public);
+
+                // generate the IEnumerator<T> GetEnumerator();
+                method_builder = node.scope.yield_scope.get_enumerator;
+                IL = method_builder.GetILGenerator();
+                IL.Emit(OpCodes.Ldarg_0);
+                IL.Emit(OpCodes.Ret);
+
+                // generate the IEnumerator GetEnumerator();
+                method_builder = node.scope.yield_scope.get_enumerator2;
+                IL = method_builder.GetILGenerator();
+                IL.Emit(OpCodes.Ldarg_0);
+                IL.Emit(OpCodes.Ret);
+
+                // generate the T get_Current();
+                method_builder = node.scope.yield_scope.get_current;
+                IL = method_builder.GetILGenerator();
+                IL.Emit(OpCodes.Ldarg_0);
+                IL.Emit(OpCodes.Ldfld, node.scope.yield_scope.current_field);
+                IL.Emit(OpCodes.Ret);
+
+                // generate the object get_Current();
+                method_builder = node.scope.yield_scope.get_current2;
+                IL = method_builder.GetILGenerator();
+                IL.Emit(OpCodes.Ldarg_0);
+                IL.Emit(OpCodes.Ldfld, node.scope.yield_scope.current_field);
+                IL.Emit(OpCodes.Ret);
+
+                // generate the void Dispose();
+                method_builder = node.scope.yield_scope.dispose;
+                IL = method_builder.GetILGenerator();
+                IL.Emit(OpCodes.Ret);
+
+                // generate the void Reset();
+                method_builder = node.scope.yield_scope.reset;
+                IL = method_builder.GetILGenerator();
+                IL.Emit(OpCodes.Ret);
+
+                node.scope.yield_scope.type_builder.CreateType();
+
+                // generate the node.method_builder
+                method_builder = node.method_builder;
+                IL = method_builder.GetILGenerator();
+                IL.Emit(OpCodes.Newobj, constructor);
+                IL.Emit(OpCodes.Dup);
+                IL.Emit(OpCodes.Ldc_I4, 0);
+                IL.Emit(OpCodes.Stfld, node.scope.yield_scope.state_field);
+                IL.Emit(OpCodes.Ret);
+            }
         }
 
         public void load_parameters(int ct)
@@ -187,7 +284,13 @@ namespace Stone.Compiler
             }
         }
 
-        public void enter_formal_scope(LocalScope scope)
+        // FormalScope
+        public void enter(FormalScope scope)
+        {
+            enter(scope.local_scope);
+        }
+
+        public void enter(LocalScope scope)
         {
             // define var in scope
             foreach (var var in scope.var.Values)
@@ -202,13 +305,34 @@ namespace Stone.Compiler
 
             if (!scope.closure_scope.has_closure_value) return;
 
-            scope.closure_scope.anonymous_target = IL.DeclareLocal(scope.closure_scope.anonymous_type);
+            // Todo
+            if (scope.closure_scope.anonymous_target is LocalVar)
+            {
+                LocalVar target_local_var = scope.closure_scope.anonymous_target as LocalVar;
 
-            IL.Emit(OpCodes.Newobj, scope.closure_scope.anonymous_type.GetConstructor(new Type[]{}));
+                target_local_var.local_builder = IL.DeclareLocal(scope.closure_scope.anonymous_type);
+                scope.closure_scope.anonymous_target = target_local_var;
 
-            IL.Emit(OpCodes.Stloc, scope.closure_scope.anonymous_target);
+                IL.Emit(OpCodes.Newobj, scope.closure_scope.anonymous_type.GetConstructor(new Type[]{}));
 
-            Push(scope, scope.closure_scope.anonymous_target);
+                IL.Emit(OpCodes.Stloc, target_local_var.local_builder);
+            }
+            else if (scope.closure_scope.anonymous_target is ThisVar)
+            {
+                ThisVar target_this_var = scope.closure_scope.anonymous_target as ThisVar;
+
+                scope.closure_scope.anonymous_target = target_this_var;
+
+                IL.Emit(OpCodes.Ldarg_0);
+
+                IL.Emit(OpCodes.Newobj, scope.closure_scope.anonymous_type.GetConstructor(new Type[] { }));
+
+                IL.Emit(OpCodes.Stfld, target_this_var.this_field);
+            }
+            else
+            {
+                Debug.Assert(false);
+            }
         }
 
         public override void visit(MatchCross node)
@@ -221,16 +345,27 @@ namespace Stone.Compiler
             }
         }
 
-        public override void visit(MatchVar node)
+        public override void visit(MatchAssignVar node)
         {
             // load a value from stack
-            if (node.symbol.local_builder == null)
+            /*if (node.symbol.local_builder == null)
             {
                 node.symbol.local_builder = IL.DeclareLocal(node.symbol.info.type.get_type());
                 node.symbol.local_builder.SetLocalSymInfo(node.symbol.info.name);
             }
 
-            IL.Emit(OpCodes.Stloc, node.symbol.local_builder);
+            IL.Emit(OpCodes.Stloc, node.symbol.local_builder);*/
+        }
+
+        public override void visit(MatchAllocVar var)
+        {
+            LocalVar local_var = (LocalVar)var.symbol;
+            if (var.symbol is LocalVar)
+            {
+                local_var.local_builder = IL.DeclareLocal(var.symbol.info.type.get_type());
+                local_var.local_builder.SetLocalSymInfo(var.symbol.info.name);
+            }
+            IL.Emit(OpCodes.Stloc, local_var.local_builder);
         }
 
         public override void visit(AstFuncType node)
@@ -242,6 +377,10 @@ namespace Stone.Compiler
         }
 
         public override void visit(AstAtomType node)
+        {
+        }
+
+        public override void visit(AstEnumType node)
         {
         }
 
@@ -268,16 +407,16 @@ namespace Stone.Compiler
                 node.expr.accept(this);
                 IL.Emit(OpCodes.Stloc, (node.symbol as LocalVar).local_builder);
             }
-            else if (node.symbol is ThisVar)
+            else if (node.symbol is HeapVar)
             {
                 IL.Emit(OpCodes.Ldarg_0);
-                IL.Emit(OpCodes.Ldfld, (node.symbol as ThisVar).this_field);
+                IL.Emit(OpCodes.Ldfld, (node.symbol as HeapVar).this_field);
                 node.expr.accept(this);
-                IL.Emit(OpCodes.Stfld, (node.symbol as ThisVar).sub_field);
+                IL.Emit(OpCodes.Stfld, (node.symbol as HeapVar).closure_field);
             }
             else if (node.symbol is ObjectVar)
             {
-                IL.Emit(OpCodes.Ldloc, (node.symbol as ObjectVar).ref_scope.closure_scope.anonymous_target);
+                LoadVarValue((node.symbol as ObjectVar).ref_scope.closure_scope.anonymous_target);
                 node.expr.accept(this);
                 IL.Emit(OpCodes.Stfld, (node.symbol as ObjectVar).field);
             }
@@ -293,16 +432,16 @@ namespace Stone.Compiler
                 node.expr.accept(this);
                 IL.Emit(OpCodes.Stloc, (var as LocalVar).local_builder);
             }
-            else if (var is ThisVar)
+            else if (var is HeapVar)
             {
                 IL.Emit(OpCodes.Ldarg_0);
-                IL.Emit(OpCodes.Ldfld, (var as ThisVar).this_field);
+                IL.Emit(OpCodes.Ldfld, (var as HeapVar).this_field);
                 node.expr.accept(this);
-                IL.Emit(OpCodes.Stfld, (var as ThisVar).sub_field);
+                IL.Emit(OpCodes.Stfld, (var as HeapVar).closure_field);
             }
             else if (var is ObjectVar)
             {
-                IL.Emit(OpCodes.Ldloc, (var as ObjectVar).ref_scope.closure_scope.anonymous_target);
+                LoadVarValue((node.symbol as ObjectVar).ref_scope.closure_scope.anonymous_target);
                 node.expr.accept(this);
                 IL.Emit(OpCodes.Stfld, (var as ObjectVar).field);
             }
@@ -310,13 +449,13 @@ namespace Stone.Compiler
 
         public override void visit(StmtCall node)
         {
-            foreach (var item in node.args)
-            {
-                item.accept(this);
-            }
             // Call
             if (node.owner == "print")
             {
+                foreach (var item in node.args)
+                {
+                    item.accept(this);
+                }
                 Debug.Assert(node.args.Count == 1);
                 if (node.args.First().type == BaseType.INT)
                 {
@@ -333,13 +472,30 @@ namespace Stone.Compiler
             }
             else
             {
-                List<FuncDef> func_list = root.scope.try_find_func(node.owner);
-                Debug.Assert(func_list.Count == 1);
-                FuncDef func = func_list.First();
+                // try if node.owner is a var but type with function
+                VarSymbol var = scope_stack.try_find_var(node.owner, node.pos);
+                if (var != null && var.info.type is FuncType)
+                {
+                    LoadVarValue(var);
+                    foreach (var item in node.args)
+                    {
+                        item.accept(this);
+                    }
+                    IL.Emit(OpCodes.Callvirt, var.info.type.get_type().GetMethod("Invoke"));
+                }
+                else
+                {
+                    foreach (var item in node.args)
+                    {
+                        item.accept(this);
+                    }
+                    List<FuncDef> symbol = root.scope.try_find_func(node.owner);
+                    Debug.Assert(symbol.Count == 1);
+                    FuncDef func = symbol.First();
 
-                IL.Emit(OpCodes.Call, func.method_builder);
+                    IL.Emit(OpCodes.Call, func.method_builder);
+                }
             }
-
         }
 
         public override void visit(ExprCall node)
@@ -390,6 +546,26 @@ namespace Stone.Compiler
             IL.Emit(OpCodes.Ret);
         }
 
+        public override void visit(StmtYield node)
+        {
+            // this.<>yield_current = ...;
+            IL.Emit(OpCodes.Ldarg_0);
+            node.expr.accept(this);
+            IL.Emit(OpCodes.Stfld, current_formal_scope.yield_scope.current_field);
+
+            // this.<>yield_state = node.yield_order + 2
+            IL.Emit(OpCodes.Ldarg_0);
+            IL.Emit(OpCodes.Ldc_I4, node.yield_order + 2);
+            IL.Emit(OpCodes.Stfld, current_formal_scope.yield_scope.state_field);
+
+            // return true;
+            IL.Emit(OpCodes.Ldc_I4, 1);
+            IL.Emit(OpCodes.Ret);
+
+            // Hint: yield_labels[0] and yield_labels[1] are special, so we start from 2
+            IL.MarkLabel(yield_labels[node.yield_order + 2]);
+        }
+
         public override void visit(StmtIf node)
         {
             scope_stack.open(node.scope);
@@ -398,7 +574,7 @@ namespace Stone.Compiler
             node.condition.accept(this);
             IL.Emit(OpCodes.Brfalse, exit);
 
-            enter_formal_scope(node.scope);
+            enter(node.scope);
 
             node.if_true.accept(this);
             IL.MarkLabel(exit);
@@ -412,11 +588,11 @@ namespace Stone.Compiler
 
             Label start = IL.DefineLabel();
             Label check = IL.DefineLabel();
-            
+
             IL.Emit(OpCodes.Br, check);
 
             IL.MarkLabel(start);
-            enter_formal_scope(node.scope);
+            enter(node.scope);
             node.body.accept(this);
 
             IL.MarkLabel(check);
@@ -433,28 +609,32 @@ namespace Stone.Compiler
             Label start = IL.DefineLabel();
             Label check = IL.DefineLabel();
 
-            node.expr.accept(this);
+            if (!current_formal_scope.has_yield)
+            {
+                ((LocalVar)node.iterator).local_builder = IL.DeclareLocal(node.iterator_enumerator_type);
 
-            Type array_type = node.expr.type.get_type();
-            Type member_type = (node.expr.type as ArrayType).member_type.get_type();
+                node.expr.accept(this);
+                IL.Emit(OpCodes.Castclass, node.iterator_enumerable_type);
+                IL.Emit(OpCodes.Callvirt, node.iterator_enumerable_type.GetMethod("GetEnumerator"));
 
-            Type enumerator_type = typeof(IEnumerator<>);
-            enumerator_type = enumerator_type.MakeGenericType(member_type);
+                IL.Emit(OpCodes.Stloc, ((LocalVar)node.iterator).local_builder);
+            }
+            else
+            {
+                IL.Emit(OpCodes.Ldarg_0);
 
-            Type enumerable_type = typeof(IEnumerable<>);
-            enumerable_type = enumerable_type.MakeGenericType(member_type);
+                node.expr.accept(this);
+                IL.Emit(OpCodes.Castclass, node.iterator_enumerable_type);
+                IL.Emit(OpCodes.Callvirt, node.iterator_enumerable_type.GetMethod("GetEnumerator"));
 
-            LocalBuilder iterator = IL.DeclareLocal(enumerator_type);
-
-            IL.Emit(OpCodes.Castclass, enumerable_type);
-            IL.Emit(OpCodes.Callvirt, enumerable_type.GetMethod("GetEnumerator"));
-            IL.Emit(OpCodes.Stloc, iterator);
+                IL.Emit(OpCodes.Stfld, ((ThisVar)node.iterator).this_field);
+            }
 
             IL.Emit(OpCodes.Br, check);
 
             IL.MarkLabel(start);
 
-            enter_formal_scope(node.scope);
+            enter(node.scope);
 
             // set to ref_var
             foreach (var var in scope_stack.stack.First().var.Values)
@@ -467,36 +647,45 @@ namespace Stone.Compiler
 
             if (node.symbol is LocalVar)
             {
-                IL.Emit(OpCodes.Ldloc, iterator);
-                IL.Emit(OpCodes.Callvirt, enumerator_type.GetMethod("get_Current"));
+                LoadVarValue(node.iterator);
+                IL.Emit(OpCodes.Callvirt, node.iterator_enumerator_type.GetMethod("get_Current"));
 
                 IL.Emit(OpCodes.Stloc, (node.symbol as LocalVar).local_builder);
+            }
+            else if (node.symbol is HeapVar)
+            {
+                IL.Emit(OpCodes.Ldarg_0);
+                IL.Emit(OpCodes.Ldfld, (node.symbol as HeapVar).this_field);
+
+                LoadVarValue(node.iterator);
+                IL.Emit(OpCodes.Callvirt, node.iterator_enumerator_type.GetMethod("get_Current"));
+
+                IL.Emit(OpCodes.Stfld, (node.symbol as HeapVar).closure_field);
+            }
+            else if (node.symbol is ObjectVar)
+            {
+                LoadVarValue((node.symbol as ObjectVar).ref_scope.closure_scope.anonymous_target);
+
+                LoadVarValue(node.iterator);
+                IL.Emit(OpCodes.Callvirt, node.iterator_enumerator_type.GetMethod("get_Current"));
+
+                IL.Emit(OpCodes.Stfld, (node.symbol as ObjectVar).field);
             }
             else if (node.symbol is ThisVar)
             {
                 IL.Emit(OpCodes.Ldarg_0);
-                IL.Emit(OpCodes.Ldfld, (node.symbol as ThisVar).this_field);
 
-                IL.Emit(OpCodes.Ldloc, iterator);
-                IL.Emit(OpCodes.Callvirt, enumerator_type.GetMethod("get_Current"));
+                LoadVarValue(node.iterator);
+                IL.Emit(OpCodes.Callvirt, node.iterator_enumerator_type.GetMethod("get_Current"));
 
-                IL.Emit(OpCodes.Stfld, (node.symbol as ThisVar).sub_field);
-            }
-            else if (node.symbol is ObjectVar)
-            {
-                IL.Emit(OpCodes.Ldloc, (node.symbol as ObjectVar).ref_scope.closure_scope.anonymous_target);
-
-                IL.Emit(OpCodes.Ldloc, iterator);
-                IL.Emit(OpCodes.Callvirt, enumerator_type.GetMethod("get_Current"));
-
-                IL.Emit(OpCodes.Stfld, (node.symbol as ObjectVar).field);
+                IL.Emit(OpCodes.Stfld, (node.symbol as ThisVar).this_field);
             }
 
             node.body.accept(this);
 
             IL.MarkLabel(check);
 
-            IL.Emit(OpCodes.Ldloc, iterator);
+            LoadVarValue(node.iterator);
             IL.Emit(OpCodes.Callvirt, typeof(IEnumerator).GetMethod("MoveNext"));
 
             IL.Emit(OpCodes.Brtrue, start);
@@ -511,7 +700,7 @@ namespace Stone.Compiler
             foreach (var up_scope in node.ref_scopes)
             {
                 IL.Emit(OpCodes.Dup);
-                LoadScopeVar(up_scope.scope);
+                LoadVarValue(up_scope.scope.closure_scope.anonymous_target);
                 IL.Emit(OpCodes.Stfld, up_scope.field);
             }
             IL.Emit(OpCodes.Dup);

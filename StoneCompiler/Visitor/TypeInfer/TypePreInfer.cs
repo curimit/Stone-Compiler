@@ -93,7 +93,10 @@ namespace Stone.Compiler
 
             FuncType type = node.lambda_expr.type as FuncType;
 
-            infer_match(node.lambda_expr.args, type.args_type);
+            if (node.lambda_expr.args != null)
+            {
+                infer_match(node.lambda_expr.args, type.args_type);
+            }
         }
 
         public override void visit(MessageDeclare node)
@@ -112,7 +115,10 @@ namespace Stone.Compiler
 
             FuncType type = node.declare.type as FuncType;
 
-            infer_match(node.args, type.args_type);
+            if (node.args != null)
+            {
+                infer_match(node.args, type.args_type);
+            }
         }
 
         public override void visit(FuncDeclare node)
@@ -131,7 +137,10 @@ namespace Stone.Compiler
 
             FuncType type = node.declare.type as FuncType;
 
-            infer_match(node.args, type.args_type);
+            if (node.args != null)
+            {
+                infer_match(node.args, type.args_type);
+            }
         }
 
         private void infer_match(Match match, StoneType type)
@@ -145,9 +154,13 @@ namespace Stone.Compiler
             {
                 infer_match(match as MatchCross, type as CrossType);
             }
-            else
+            else if (match is MatchAssignVar)
             {
-                infer_match(match as MatchVar, type);
+                infer_match(match as MatchAssignVar, type);
+            }
+            else if (match is MatchAllocVar)
+            {
+                infer_match(match as MatchAllocVar, type);
             }
         }
 
@@ -163,7 +176,13 @@ namespace Stone.Compiler
             }
         }
 
-        private void infer_match(MatchVar var, StoneType type)
+        private void infer_match(MatchAssignVar var, StoneType type)
+        {
+            var.symbol.info.type = type;
+            var.type = type;
+        }
+
+        private void infer_match(MatchAllocVar var, StoneType type)
         {
             var.symbol.info.type = type;
             var.type = type;
@@ -173,7 +192,11 @@ namespace Stone.Compiler
         {
         }
 
-        public override void visit(MatchVar node)
+        public override void visit(MatchAssignVar node)
+        {
+        }
+
+        public override void visit(MatchAllocVar node)
         {
         }
 
@@ -222,6 +245,12 @@ namespace Stone.Compiler
             node.type = data.type;
         }
 
+        public override void visit(AstEnumType node)
+        {
+            node.member_type.accept(this);
+            node.type = new EnumType(node.member_type.type);
+        }
+
         public override void visit(StmtBlock node)
         {
         }
@@ -243,6 +272,10 @@ namespace Stone.Compiler
         }
 
         public override void visit(StmtReturn node)
+        {
+        }
+
+        public override void visit(StmtYield node)
         {
         }
 
